@@ -6,5 +6,5 @@ target 'MoyeoRun' do
   use_frameworks!
 
   # Pods for MoyeoRun
-
+  pod 'SwiftLint'
 end
