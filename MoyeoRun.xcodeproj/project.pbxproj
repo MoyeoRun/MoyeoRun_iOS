@@ -44,6 +44,84 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AADB25227EF53ED00AFDE01 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3AADB25627EF552F00AFDE01 /* Login */,
+				3AADB25327EF540700AFDE01 /* MakeRoom */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		3AADB25327EF540700AFDE01 /* MakeRoom */ = {
+			isa = PBXGroup;
+			children = (
+				3AADB25C27EF558F00AFDE01 /* Models */,
+				3AADB25A27EF557D00AFDE01 /* Views */,
+			);
+			path = MakeRoom;
+			sourceTree = "<group>";
+		};
+		3AADB25427EF543200AFDE01 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3AADB25527EF543800AFDE01 /* LifeCycles */ = {
+			isa = PBXGroup;
+			children = (
+				F75E9F9927E9470100000DCD /* AppDelegate.swift */,
+				F75E9F9B27E9470100000DCD /* SceneDelegate.swift */,
+			);
+			path = LifeCycles;
+			sourceTree = "<group>";
+		};
+		3AADB25627EF552F00AFDE01 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3AADB25927EF557500AFDE01 /* Views */,
+				3AADB25827EF556E00AFDE01 /* Models */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3AADB25727EF554D00AFDE01 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		3AADB25827EF556E00AFDE01 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3AADB25927EF557500AFDE01 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3AADB25A27EF557D00AFDE01 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3AADB25C27EF558F00AFDE01 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		AA20DD0103093E9F74BF396A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,12 +160,14 @@
 		F75E9F9827E9470100000DCD /* MoyeoRun */ = {
 			isa = PBXGroup;
 			children = (
-				F75E9F9927E9470100000DCD /* AppDelegate.swift */,
-				F75E9F9B27E9470100000DCD /* SceneDelegate.swift */,
+				3AADB25527EF543800AFDE01 /* LifeCycles */,
+				3AADB25427EF543200AFDE01 /* Data */,
+				3AADB25227EF53ED00AFDE01 /* Scenes */,
 				F75E9F9D27E9470100000DCD /* ViewController.swift */,
 				F75E9F9F27E9470100000DCD /* Main.storyboard */,
 				F75E9FA527E9470200000DCD /* Assets.xcassets */,
 				F75E9FA727E9470200000DCD /* LaunchScreen.storyboard */,
+				3AADB25727EF554D00AFDE01 /* Util */,
 				F75E9FAA27E9470200000DCD /* Info.plist */,
 				F75E9FA227E9470100000DCD /* MoyeoRun.xcdatamodeld */,
 			);
@@ -101,8 +181,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F75E9FAD27E9470200000DCD /* Build configuration list for PBXNativeTarget "MoyeoRun" */;
 			buildPhases = (
-				F7D1AA2527EC9E8100E34ACD /* SwiftLint Script */,
 				051FAB98EB286DDD5F327C48 /* [CP] Check Pods Manifest.lock */,
+				F7D1AA2527EC9E8100E34ACD /* SwiftLint Script */,
 				F75E9F9227E9470100000DCD /* Sources */,
 				F75E9F9327E9470100000DCD /* Frameworks */,
 				F75E9F9427E9470100000DCD /* Resources */,
