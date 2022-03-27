@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A8DE82B27F04CC900077DC6 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE82A27F04CC900077DC6 /* TabBar.storyboard */; };
+		0A8DE83127F04DEC00077DC6 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE83027F04DEC00077DC6 /* HomeTab.storyboard */; };
+		0A8DE83327F04EB100077DC6 /* TabBarViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8DE83227F04EB100077DC6 /* TabBarViewControllers.swift */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E9F9927E9470100000DCD /* AppDelegate.swift */; };
 		F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E9F9B27E9470100000DCD /* SceneDelegate.swift */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		0A8DE82A27F04CC900077DC6 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		0A8DE83027F04DEC00077DC6 /* HomeTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
+		0A8DE83227F04EB100077DC6 /* TabBarViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllers.swift; sourceTree = "<group>"; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.debug.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF6235AE0ADD0047158FA4F /* Pods-MoyeoRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.release.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 		0A8DE82627F048F900077DC6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0A8DE83227F04EB100077DC6 /* TabBarViewControllers.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -78,9 +83,42 @@
 			path = InterfaceBuilders;
 			sourceTree = "<group>";
 		};
+		0A8DE82C27F04D9A00077DC6 /* HomeTab */ = {
+			isa = PBXGroup;
+			children = (
+				0A8DE82D27F04DB700077DC6 /* ViewControllers */,
+				0A8DE82E27F04DC200077DC6 /* Views */,
+			);
+			path = HomeTab;
+			sourceTree = "<group>";
+		};
+		0A8DE82D27F04DB700077DC6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0A8DE82E27F04DC200077DC6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A8DE82F27F04DD400077DC6 /* InterfaceBuilders */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A8DE82F27F04DD400077DC6 /* InterfaceBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				0A8DE83027F04DEC00077DC6 /* HomeTab.storyboard */,
+			);
+			path = InterfaceBuilders;
+			sourceTree = "<group>";
+		};
 		3AADB25227EF53ED00AFDE01 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0A8DE82C27F04D9A00077DC6 /* HomeTab */,
 				0A8DE82427F0489C00077DC6 /* TabBar */,
 				3AADB25627EF552F00AFDE01 /* Login */,
 				3AADB25327EF540700AFDE01 /* MakeRoom */,
@@ -271,6 +309,7 @@
 			files = (
 				0A8DE82B27F04CC900077DC6 /* TabBar.storyboard in Resources */,
 				F75E9FA927E9470200000DCD /* LaunchScreen.storyboard in Resources */,
+				0A8DE83127F04DEC00077DC6 /* HomeTab.storyboard in Resources */,
 				F75E9FA627E9470200000DCD /* Assets.xcassets in Resources */,
 				F75E9FA127E9470100000DCD /* Main.storyboard in Resources */,
 			);
@@ -330,6 +369,7 @@
 				F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */,
 				F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */,
 				F75E9FA427E9470100000DCD /* MoyeoRun.xcdatamodeld in Sources */,
+				0A8DE83327F04EB100077DC6 /* TabBarViewControllers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
