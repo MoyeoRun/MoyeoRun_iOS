@@ -11,6 +11,10 @@
 		0A8DE83127F04DEC00077DC6 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE83027F04DEC00077DC6 /* HomeTab.storyboard */; };
 		0A8DE83327F04EB100077DC6 /* TabBarViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8DE83227F04EB100077DC6 /* TabBarViewControllers.swift */; };
 		0A8DE83527F04F1700077DC6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8DE83427F04F1700077DC6 /* Extensions.swift */; };
+		0A8DE83827F0517700077DC6 /* 참가자.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE83727F0517700077DC6 /* 참가자.png */; };
+		0A8DE83A27F0518500077DC6 /* 프로필 이미지.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE83927F0518500077DC6 /* 프로필 이미지.png */; };
+		0A8DE83C27F0518D00077DC6 /* 모여런 심볼.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE83B27F0518D00077DC6 /* 모여런 심볼.png */; };
+		0A8DE83E27F0519300077DC6 /* 벚꽃.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE83D27F0519300077DC6 /* 벚꽃.jpeg */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E9F9927E9470100000DCD /* AppDelegate.swift */; };
 		F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E9F9B27E9470100000DCD /* SceneDelegate.swift */; };
@@ -26,6 +30,10 @@
 		0A8DE83027F04DEC00077DC6 /* HomeTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
 		0A8DE83227F04EB100077DC6 /* TabBarViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllers.swift; sourceTree = "<group>"; };
 		0A8DE83427F04F1700077DC6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = MoyeoRun/Scenes/TabBar/ViewControllers/Extensions.swift; sourceTree = SOURCE_ROOT; };
+		0A8DE83727F0517700077DC6 /* 참가자.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "참가자.png"; sourceTree = "<group>"; };
+		0A8DE83927F0518500077DC6 /* 프로필 이미지.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "프로필 이미지.png"; sourceTree = "<group>"; };
+		0A8DE83B27F0518D00077DC6 /* 모여런 심볼.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "모여런 심볼.png"; sourceTree = "<group>"; };
+		0A8DE83D27F0519300077DC6 /* 벚꽃.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "벚꽃.jpeg"; sourceTree = "<group>"; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.debug.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF6235AE0ADD0047158FA4F /* Pods-MoyeoRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.release.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +125,18 @@
 			path = InterfaceBuilders;
 			sourceTree = "<group>";
 		};
+		0A8DE83627F0514200077DC6 /* TestImages */ = {
+			isa = PBXGroup;
+			children = (
+				0A8DE83D27F0519300077DC6 /* 벚꽃.jpeg */,
+				0A8DE83B27F0518D00077DC6 /* 모여런 심볼.png */,
+				0A8DE83927F0518500077DC6 /* 프로필 이미지.png */,
+				0A8DE83727F0517700077DC6 /* 참가자.png */,
+			);
+			name = TestImages;
+			path = MoyeoRun/Util/TestImages;
+			sourceTree = "<group>";
+		};
 		3AADB25227EF53ED00AFDE01 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +185,7 @@
 		3AADB25727EF554D00AFDE01 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				0A8DE83627F0514200077DC6 /* TestImages */,
 				0A8DE83427F04F1700077DC6 /* Extensions.swift */,
 			);
 			path = Util;
@@ -311,10 +332,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A8DE82B27F04CC900077DC6 /* TabBar.storyboard in Resources */,
+				0A8DE83C27F0518D00077DC6 /* 모여런 심볼.png in Resources */,
 				F75E9FA927E9470200000DCD /* LaunchScreen.storyboard in Resources */,
 				0A8DE83127F04DEC00077DC6 /* HomeTab.storyboard in Resources */,
 				F75E9FA627E9470200000DCD /* Assets.xcassets in Resources */,
+				0A8DE83827F0517700077DC6 /* 참가자.png in Resources */,
 				F75E9FA127E9470100000DCD /* Main.storyboard in Resources */,
+				0A8DE83A27F0518500077DC6 /* 프로필 이미지.png in Resources */,
+				0A8DE83E27F0519300077DC6 /* 벚꽃.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
