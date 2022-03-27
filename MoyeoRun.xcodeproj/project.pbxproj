@@ -18,6 +18,15 @@
 		0A8DE84027F052C000077DC6 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8DE83F27F052C000077DC6 /* HomeTabViewController.swift */; };
 		0AF2313C27F0556600574776 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2313B27F0556600574776 /* Cell.swift */; };
 		0AF2313E27F0578B00574776 /* HomeTab_Containers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2313D27F0578B00574776 /* HomeTab_Containers.swift */; };
+		0AF2314327F0650000574776 /* HomeTabNowPopular0.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314027F0650000574776 /* HomeTabNowPopular0.png */; };
+		0AF2314427F0650000574776 /* HomeTabNowPopular1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314127F0650000574776 /* HomeTabNowPopular1.png */; };
+		0AF2314527F0650000574776 /* HomeTabNowPopular2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314227F0650000574776 /* HomeTabNowPopular2.png */; };
+		0AF2314C27F0650B00574776 /* HomeTabLastRecord1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314627F0650A00574776 /* HomeTabLastRecord1.png */; };
+		0AF2314D27F0650B00574776 /* HomeTabLastRecord0.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314727F0650A00574776 /* HomeTabLastRecord0.png */; };
+		0AF2314E27F0650B00574776 /* HomeTabNewMission2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314827F0650A00574776 /* HomeTabNewMission2.png */; };
+		0AF2314F27F0650B00574776 /* HomeTabNewMission3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314927F0650A00574776 /* HomeTabNewMission3.png */; };
+		0AF2315027F0650B00574776 /* HomeTabNewMission1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314A27F0650A00574776 /* HomeTabNewMission1.png */; };
+		0AF2315127F0650B00574776 /* HomeTabNewMission0.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314B27F0650A00574776 /* HomeTabNewMission0.png */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E9F9927E9470100000DCD /* AppDelegate.swift */; };
 		F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E9F9B27E9470100000DCD /* SceneDelegate.swift */; };
@@ -40,6 +49,15 @@
 		0A8DE83F27F052C000077DC6 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
 		0AF2313B27F0556600574776 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		0AF2313D27F0578B00574776 /* HomeTab_Containers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTab_Containers.swift; sourceTree = "<group>"; };
+		0AF2314027F0650000574776 /* HomeTabNowPopular0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNowPopular0.png; sourceTree = "<group>"; };
+		0AF2314127F0650000574776 /* HomeTabNowPopular1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNowPopular1.png; sourceTree = "<group>"; };
+		0AF2314227F0650000574776 /* HomeTabNowPopular2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNowPopular2.png; sourceTree = "<group>"; };
+		0AF2314627F0650A00574776 /* HomeTabLastRecord1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabLastRecord1.png; sourceTree = "<group>"; };
+		0AF2314727F0650A00574776 /* HomeTabLastRecord0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabLastRecord0.png; sourceTree = "<group>"; };
+		0AF2314827F0650A00574776 /* HomeTabNewMission2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNewMission2.png; sourceTree = "<group>"; };
+		0AF2314927F0650A00574776 /* HomeTabNewMission3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNewMission3.png; sourceTree = "<group>"; };
+		0AF2314A27F0650A00574776 /* HomeTabNewMission1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNewMission1.png; sourceTree = "<group>"; };
+		0AF2314B27F0650A00574776 /* HomeTabNewMission0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNewMission0.png; sourceTree = "<group>"; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.debug.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF6235AE0ADD0047158FA4F /* Pods-MoyeoRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.release.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,8 +87,8 @@
 		0A8DE82427F0489C00077DC6 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				0A8DE82627F048F900077DC6 /* ViewControllers */,
 				0A8DE82527F048B000077DC6 /* Views */,
+				0A8DE82627F048F900077DC6 /* ViewControllers */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -102,8 +120,8 @@
 		0A8DE82C27F04D9A00077DC6 /* HomeTab */ = {
 			isa = PBXGroup;
 			children = (
-				0A8DE82D27F04DB700077DC6 /* ViewControllers */,
 				0A8DE82E27F04DC200077DC6 /* Views */,
+				0A8DE82D27F04DB700077DC6 /* ViewControllers */,
 			);
 			path = HomeTab;
 			sourceTree = "<group>";
@@ -137,6 +155,7 @@
 		0A8DE83627F0514200077DC6 /* TestImages */ = {
 			isa = PBXGroup;
 			children = (
+				0AF2313F27F064E200574776 /* HomeTab */,
 				0A8DE83D27F0519300077DC6 /* 벚꽃.jpeg */,
 				0A8DE83B27F0518D00077DC6 /* 모여런 심볼.png */,
 				0A8DE83927F0518500077DC6 /* 프로필 이미지.png */,
@@ -146,11 +165,27 @@
 			path = MoyeoRun/Util/TestImages;
 			sourceTree = "<group>";
 		};
+		0AF2313F27F064E200574776 /* HomeTab */ = {
+			isa = PBXGroup;
+			children = (
+				0AF2314727F0650A00574776 /* HomeTabLastRecord0.png */,
+				0AF2314627F0650A00574776 /* HomeTabLastRecord1.png */,
+				0AF2314B27F0650A00574776 /* HomeTabNewMission0.png */,
+				0AF2314A27F0650A00574776 /* HomeTabNewMission1.png */,
+				0AF2314827F0650A00574776 /* HomeTabNewMission2.png */,
+				0AF2314927F0650A00574776 /* HomeTabNewMission3.png */,
+				0AF2314027F0650000574776 /* HomeTabNowPopular0.png */,
+				0AF2314127F0650000574776 /* HomeTabNowPopular1.png */,
+				0AF2314227F0650000574776 /* HomeTabNowPopular2.png */,
+			);
+			path = HomeTab;
+			sourceTree = "<group>";
+		};
 		3AADB25227EF53ED00AFDE01 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				0A8DE82C27F04D9A00077DC6 /* HomeTab */,
 				0A8DE82427F0489C00077DC6 /* TabBar */,
+				0A8DE82C27F04D9A00077DC6 /* HomeTab */,
 				3AADB25627EF552F00AFDE01 /* Login */,
 				3AADB25327EF540700AFDE01 /* MakeRoom */,
 			);
@@ -160,8 +195,8 @@
 		3AADB25327EF540700AFDE01 /* MakeRoom */ = {
 			isa = PBXGroup;
 			children = (
-				3AADB25C27EF558F00AFDE01 /* Models */,
 				3AADB25A27EF557D00AFDE01 /* Views */,
+				3AADB25C27EF558F00AFDE01 /* Models */,
 			);
 			path = MakeRoom;
 			sourceTree = "<group>";
@@ -340,13 +375,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AF2315127F0650B00574776 /* HomeTabNewMission0.png in Resources */,
 				0A8DE82B27F04CC900077DC6 /* TabBar.storyboard in Resources */,
+				0AF2314427F0650000574776 /* HomeTabNowPopular1.png in Resources */,
+				0AF2314327F0650000574776 /* HomeTabNowPopular0.png in Resources */,
 				0A8DE83C27F0518D00077DC6 /* 모여런 심볼.png in Resources */,
+				0AF2315027F0650B00574776 /* HomeTabNewMission1.png in Resources */,
+				0AF2314E27F0650B00574776 /* HomeTabNewMission2.png in Resources */,
 				F75E9FA927E9470200000DCD /* LaunchScreen.storyboard in Resources */,
+				0AF2314527F0650000574776 /* HomeTabNowPopular2.png in Resources */,
 				0A8DE83127F04DEC00077DC6 /* HomeTab.storyboard in Resources */,
 				F75E9FA627E9470200000DCD /* Assets.xcassets in Resources */,
+				0AF2314F27F0650B00574776 /* HomeTabNewMission3.png in Resources */,
 				0A8DE83827F0517700077DC6 /* 참가자.png in Resources */,
 				F75E9FA127E9470100000DCD /* Main.storyboard in Resources */,
+				0AF2314C27F0650B00574776 /* HomeTabLastRecord1.png in Resources */,
+				0AF2314D27F0650B00574776 /* HomeTabLastRecord0.png in Resources */,
 				0A8DE83A27F0518500077DC6 /* 프로필 이미지.png in Resources */,
 				0A8DE83E27F0519300077DC6 /* 벚꽃.jpeg in Resources */,
 			);

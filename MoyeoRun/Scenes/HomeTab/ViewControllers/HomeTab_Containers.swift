@@ -11,13 +11,13 @@ import UIKit
 class HomeTabNowPopularContainer: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     // UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 3
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeTabNowPopularCell", for: indexPath) as? HomeTabNowPopularCell else {
             return UICollectionViewCell()
         }
-        cell.setUI()
+        cell.setUI(forIndex: indexPath.item)
         return cell
     }
     // UICollectionViewDelegateFlowLayout
@@ -39,7 +39,7 @@ class HomeTabNewMissionContainer: UIViewController, UICollectionViewDataSource,U
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeTabNewMissionCell", for: indexPath) as? HomeTabNewMissionCell else {
             return UICollectionViewCell()
         }
-        cell.setUI()
+        cell.setUI(forIndex: indexPath.item)
         return cell
     }
     // UICollectionViewDelegateFlowLayout
@@ -66,7 +66,7 @@ class HomeTabLastRecordContainer: UIViewController, UICollectionViewDataSource,U
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeTabLastRecordCell", for: indexPath) as? HomeTabLastRecordCell else {
             return UICollectionViewCell()
         }
-        cell.setUI()
+        cell.setUI(forIndex: indexPath.item)
         return cell
     }
     // UICollectionViewDelegateFlowLayout
