@@ -10,6 +10,7 @@
 		0A8DE82B27F04CC900077DC6 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE82A27F04CC900077DC6 /* TabBar.storyboard */; };
 		0A8DE83127F04DEC00077DC6 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE83027F04DEC00077DC6 /* HomeTab.storyboard */; };
 		0A8DE83327F04EB100077DC6 /* TabBarViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8DE83227F04EB100077DC6 /* TabBarViewControllers.swift */; };
+		0A8DE83527F04F1700077DC6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8DE83427F04F1700077DC6 /* Extensions.swift */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E9F9927E9470100000DCD /* AppDelegate.swift */; };
 		F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E9F9B27E9470100000DCD /* SceneDelegate.swift */; };
@@ -24,6 +25,7 @@
 		0A8DE82A27F04CC900077DC6 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		0A8DE83027F04DEC00077DC6 /* HomeTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
 		0A8DE83227F04EB100077DC6 /* TabBarViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllers.swift; sourceTree = "<group>"; };
+		0A8DE83427F04F1700077DC6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = MoyeoRun/Scenes/TabBar/ViewControllers/Extensions.swift; sourceTree = SOURCE_ROOT; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.debug.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF6235AE0ADD0047158FA4F /* Pods-MoyeoRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.release.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.release.xcconfig"; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 		3AADB25727EF554D00AFDE01 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				0A8DE83427F04F1700077DC6 /* Extensions.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F75E9F9E27E9470100000DCD /* ViewController.swift in Sources */,
+				0A8DE83527F04F1700077DC6 /* Extensions.swift in Sources */,
 				F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */,
 				F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */,
 				F75E9FA427E9470100000DCD /* MoyeoRun.xcdatamodeld in Sources */,
