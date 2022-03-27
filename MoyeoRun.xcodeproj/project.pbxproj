@@ -15,6 +15,9 @@
 		0A8DE83A27F0518500077DC6 /* 프로필 이미지.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE83927F0518500077DC6 /* 프로필 이미지.png */; };
 		0A8DE83C27F0518D00077DC6 /* 모여런 심볼.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE83B27F0518D00077DC6 /* 모여런 심볼.png */; };
 		0A8DE83E27F0519300077DC6 /* 벚꽃.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE83D27F0519300077DC6 /* 벚꽃.jpeg */; };
+		0A8DE84027F052C000077DC6 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8DE83F27F052C000077DC6 /* HomeTabViewController.swift */; };
+		0AF2313C27F0556600574776 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2313B27F0556600574776 /* Cell.swift */; };
+		0AF2313E27F0578B00574776 /* HomeTab_Containers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2313D27F0578B00574776 /* HomeTab_Containers.swift */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E9F9927E9470100000DCD /* AppDelegate.swift */; };
 		F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E9F9B27E9470100000DCD /* SceneDelegate.swift */; };
@@ -34,6 +37,9 @@
 		0A8DE83927F0518500077DC6 /* 프로필 이미지.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "프로필 이미지.png"; sourceTree = "<group>"; };
 		0A8DE83B27F0518D00077DC6 /* 모여런 심볼.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "모여런 심볼.png"; sourceTree = "<group>"; };
 		0A8DE83D27F0519300077DC6 /* 벚꽃.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "벚꽃.jpeg"; sourceTree = "<group>"; };
+		0A8DE83F27F052C000077DC6 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
+		0AF2313B27F0556600574776 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		0AF2313D27F0578B00574776 /* HomeTab_Containers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTab_Containers.swift; sourceTree = "<group>"; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.debug.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF6235AE0ADD0047158FA4F /* Pods-MoyeoRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.release.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.release.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +111,8 @@
 		0A8DE82D27F04DB700077DC6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0A8DE83F27F052C000077DC6 /* HomeTabViewController.swift */,
+				0AF2313D27F0578B00574776 /* HomeTab_Containers.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -112,6 +120,7 @@
 		0A8DE82E27F04DC200077DC6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0AF2313B27F0556600574776 /* Cell.swift */,
 				0A8DE82F27F04DD400077DC6 /* InterfaceBuilders */,
 			);
 			path = Views;
@@ -395,8 +404,11 @@
 			files = (
 				F75E9F9E27E9470100000DCD /* ViewController.swift in Sources */,
 				0A8DE83527F04F1700077DC6 /* Extensions.swift in Sources */,
+				0AF2313E27F0578B00574776 /* HomeTab_Containers.swift in Sources */,
 				F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */,
 				F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */,
+				0A8DE84027F052C000077DC6 /* HomeTabViewController.swift in Sources */,
+				0AF2313C27F0556600574776 /* Cell.swift in Sources */,
 				F75E9FA427E9470100000DCD /* MoyeoRun.xcdatamodeld in Sources */,
 				0A8DE83327F04EB100077DC6 /* TabBarViewControllers.swift in Sources */,
 			);
@@ -552,7 +564,7 @@
 				INFOPLIST_FILE = MoyeoRun/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -581,7 +593,7 @@
 				INFOPLIST_FILE = MoyeoRun/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
