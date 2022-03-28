@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iN3-gN-7x8">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,7 +12,7 @@
         <!--Popup View Controller-->
         <scene sceneID="ZDH-Tt-Wil">
             <objects>
-                <viewController storyboardIdentifier="PopupViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dd8-5O-MP8" customClass="PopupViewController" customModule="Moyeorun" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PopupViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dd8-5O-MP8" customClass="PopupViewController" customModule="MoyeoRun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="59o-H3-GAh">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="1749" y="63"/>
         </scene>
-        <!--View Controller-->
+        <!--Make Room Controller-->
         <scene sceneID="ocR-kh-gjl">
             <objects>
-                <viewController id="iN3-gN-7x8" customClass="ViewController" customModule="Moyeorun" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iN3-gN-7x8" customClass="MakeRoomController" customModule="MoyeoRun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cCe-9L-LSq">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="998"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
