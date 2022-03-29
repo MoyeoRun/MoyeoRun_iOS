@@ -5,7 +5,6 @@
 //  Created by 김상현 on 2022/03/27.
 //
 
-import Foundation
 import UIKit
 
 // 고정 높이 320
@@ -18,26 +17,27 @@ class HomeTabViewController: UIViewController {
     @IBOutlet weak var scrollViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var nowPopularContainerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var newMissionContainerHeightConstraint: NSLayoutConstraint!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
     }
+
     func setUI() {
         setProfileImageView()
         setHeightConstraint()
     }
+
     func setProfileImageView() {
         self.profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
         self.profileImageView.layer.masksToBounds = true
-        self.profileImageView.layer.borderWidth = 0
     }
+
     func setHeightConstraint() {
         multiplier = (UIScreen.main.bounds.height > 800) ? 1 : 1.1
         screenHeightForSetting = screenHeight * multiplier
         scrollViewHeightConstraint.constant = screenHeightForSetting + fixedHeight
         nowPopularContainerHeightConstraint.constant = screenHeightForSetting * 0.25
         newMissionContainerHeightConstraint.constant = screenHeightForSetting * 0.5 + 110
-        print(multiplier)
     }
 }

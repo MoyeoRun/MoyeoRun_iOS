@@ -9,15 +9,19 @@
 /* Begin PBXBuildFile section */
 		0A8DE82B27F04CC900077DC6 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE82A27F04CC900077DC6 /* TabBar.storyboard */; };
 		0A8DE83127F04DEC00077DC6 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE83027F04DEC00077DC6 /* HomeTab.storyboard */; };
-		0A8DE83327F04EB100077DC6 /* TabBarViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8DE83227F04EB100077DC6 /* TabBarViewControllers.swift */; };
+		0A8DE83327F04EB100077DC6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8DE83227F04EB100077DC6 /* TabBarViewController.swift */; };
 		0A8DE83527F04F1700077DC6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8DE83427F04F1700077DC6 /* Extensions.swift */; };
 		0A8DE83827F0517700077DC6 /* 참가자.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE83727F0517700077DC6 /* 참가자.png */; };
 		0A8DE83A27F0518500077DC6 /* 프로필 이미지.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE83927F0518500077DC6 /* 프로필 이미지.png */; };
 		0A8DE83C27F0518D00077DC6 /* 모여런 심볼.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE83B27F0518D00077DC6 /* 모여런 심볼.png */; };
 		0A8DE83E27F0519300077DC6 /* 벚꽃.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE83D27F0519300077DC6 /* 벚꽃.jpeg */; };
 		0A8DE84027F052C000077DC6 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8DE83F27F052C000077DC6 /* HomeTabViewController.swift */; };
-		0AF2313C27F0556600574776 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2313B27F0556600574776 /* Cell.swift */; };
-		0AF2313E27F0578B00574776 /* HomeTab_Containers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2313D27F0578B00574776 /* HomeTab_Containers.swift */; };
+		0A95B92227F3543600E131E6 /* HomeTabNowPopularCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A95B92127F3543600E131E6 /* HomeTabNowPopularCell.swift */; };
+		0A95B92427F3544200E131E6 /* HomeTabNewMissionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A95B92327F3544200E131E6 /* HomeTabNewMissionCell.swift */; };
+		0A95B92627F3545000E131E6 /* HomeTabLastRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A95B92527F3544F00E131E6 /* HomeTabLastRecordCell.swift */; };
+		0A95B92927F3563100E131E6 /* HomeTabNowPopularContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A95B92827F3563100E131E6 /* HomeTabNowPopularContainer.swift */; };
+		0A95B92B27F3564300E131E6 /* HomeTabNewMissionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A95B92A27F3564300E131E6 /* HomeTabNewMissionContainer.swift */; };
+		0A95B92D27F3565300E131E6 /* HomeTabLastRecordContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A95B92C27F3565300E131E6 /* HomeTabLastRecordContainer.swift */; };
 		0AF2314327F0650000574776 /* HomeTabNowPopular0.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314027F0650000574776 /* HomeTabNowPopular0.png */; };
 		0AF2314427F0650000574776 /* HomeTabNowPopular1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314127F0650000574776 /* HomeTabNowPopular1.png */; };
 		0AF2314527F0650000574776 /* HomeTabNowPopular2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314227F0650000574776 /* HomeTabNowPopular2.png */; };
@@ -40,15 +44,19 @@
 /* Begin PBXFileReference section */
 		0A8DE82A27F04CC900077DC6 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		0A8DE83027F04DEC00077DC6 /* HomeTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
-		0A8DE83227F04EB100077DC6 /* TabBarViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllers.swift; sourceTree = "<group>"; };
+		0A8DE83227F04EB100077DC6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		0A8DE83427F04F1700077DC6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = MoyeoRun/Scenes/TabBar/ViewControllers/Extensions.swift; sourceTree = SOURCE_ROOT; };
 		0A8DE83727F0517700077DC6 /* 참가자.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "참가자.png"; sourceTree = "<group>"; };
 		0A8DE83927F0518500077DC6 /* 프로필 이미지.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "프로필 이미지.png"; sourceTree = "<group>"; };
 		0A8DE83B27F0518D00077DC6 /* 모여런 심볼.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "모여런 심볼.png"; sourceTree = "<group>"; };
 		0A8DE83D27F0519300077DC6 /* 벚꽃.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "벚꽃.jpeg"; sourceTree = "<group>"; };
 		0A8DE83F27F052C000077DC6 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
-		0AF2313B27F0556600574776 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
-		0AF2313D27F0578B00574776 /* HomeTab_Containers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTab_Containers.swift; sourceTree = "<group>"; };
+		0A95B92127F3543600E131E6 /* HomeTabNowPopularCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabNowPopularCell.swift; sourceTree = "<group>"; };
+		0A95B92327F3544200E131E6 /* HomeTabNewMissionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabNewMissionCell.swift; sourceTree = "<group>"; };
+		0A95B92527F3544F00E131E6 /* HomeTabLastRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabLastRecordCell.swift; sourceTree = "<group>"; };
+		0A95B92827F3563100E131E6 /* HomeTabNowPopularContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabNowPopularContainer.swift; sourceTree = "<group>"; };
+		0A95B92A27F3564300E131E6 /* HomeTabNewMissionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabNewMissionContainer.swift; sourceTree = "<group>"; };
+		0A95B92C27F3565300E131E6 /* HomeTabLastRecordContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabLastRecordContainer.swift; sourceTree = "<group>"; };
 		0AF2314027F0650000574776 /* HomeTabNowPopular0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNowPopular0.png; sourceTree = "<group>"; };
 		0AF2314127F0650000574776 /* HomeTabNowPopular1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNowPopular1.png; sourceTree = "<group>"; };
 		0AF2314227F0650000574776 /* HomeTabNowPopular2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNowPopular2.png; sourceTree = "<group>"; };
@@ -104,7 +112,7 @@
 		0A8DE82627F048F900077DC6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0A8DE83227F04EB100077DC6 /* TabBarViewControllers.swift */,
+				0A8DE83227F04EB100077DC6 /* TabBarViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -129,8 +137,8 @@
 		0A8DE82D27F04DB700077DC6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0A95B92727F3561600E131E6 /* HomeTabContainers */,
 				0A8DE83F27F052C000077DC6 /* HomeTabViewController.swift */,
-				0AF2313D27F0578B00574776 /* HomeTab_Containers.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -138,7 +146,7 @@
 		0A8DE82E27F04DC200077DC6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0AF2313B27F0556600574776 /* Cell.swift */,
+				0A95B92027F3542100E131E6 /* Cells */,
 				0A8DE82F27F04DD400077DC6 /* InterfaceBuilders */,
 			);
 			path = Views;
@@ -163,6 +171,26 @@
 			);
 			name = TestImages;
 			path = MoyeoRun/Util/TestImages;
+			sourceTree = "<group>";
+		};
+		0A95B92027F3542100E131E6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0A95B92127F3543600E131E6 /* HomeTabNowPopularCell.swift */,
+				0A95B92327F3544200E131E6 /* HomeTabNewMissionCell.swift */,
+				0A95B92527F3544F00E131E6 /* HomeTabLastRecordCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0A95B92727F3561600E131E6 /* HomeTabContainers */ = {
+			isa = PBXGroup;
+			children = (
+				0A95B92827F3563100E131E6 /* HomeTabNowPopularContainer.swift */,
+				0A95B92A27F3564300E131E6 /* HomeTabNewMissionContainer.swift */,
+				0A95B92C27F3565300E131E6 /* HomeTabLastRecordContainer.swift */,
+			);
+			path = HomeTabContainers;
 			sourceTree = "<group>";
 		};
 		0AF2313F27F064E200574776 /* HomeTab */ = {
@@ -446,15 +474,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A95B92D27F3565300E131E6 /* HomeTabLastRecordContainer.swift in Sources */,
 				F75E9F9E27E9470100000DCD /* ViewController.swift in Sources */,
+				0A95B92627F3545000E131E6 /* HomeTabLastRecordCell.swift in Sources */,
+				0A95B92427F3544200E131E6 /* HomeTabNewMissionCell.swift in Sources */,
 				0A8DE83527F04F1700077DC6 /* Extensions.swift in Sources */,
-				0AF2313E27F0578B00574776 /* HomeTab_Containers.swift in Sources */,
 				F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */,
+				0A95B92B27F3564300E131E6 /* HomeTabNewMissionContainer.swift in Sources */,
+				0A95B92927F3563100E131E6 /* HomeTabNowPopularContainer.swift in Sources */,
 				F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */,
 				0A8DE84027F052C000077DC6 /* HomeTabViewController.swift in Sources */,
-				0AF2313C27F0556600574776 /* Cell.swift in Sources */,
 				F75E9FA427E9470100000DCD /* MoyeoRun.xcdatamodeld in Sources */,
-				0A8DE83327F04EB100077DC6 /* TabBarViewControllers.swift in Sources */,
+				0A8DE83327F04EB100077DC6 /* TabBarViewController.swift in Sources */,
+				0A95B92227F3543600E131E6 /* HomeTabNowPopularCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
