@@ -8,7 +8,7 @@
 import UIKit
 
 class PeopleNumPicker: UIPickerView {
-    var availablePN = [Int] (0 ... 10)
+    var availablePN = [Int](0 ... 10)
     var selectedPN = 0
 
     convenience init(value: Bool) {

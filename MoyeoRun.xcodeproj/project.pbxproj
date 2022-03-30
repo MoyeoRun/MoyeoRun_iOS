@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		3A84080927F21A0800800017 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84080827F21A0800800017 /* PopupViewController.swift */; };
 		3A84080B27F21A1C00800017 /* MakeRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84080A27F21A1C00800017 /* MakeRoomController.swift */; };
-		3A84080D27F21A2500800017 /* PeopleNumPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84080C27F21A2500800017 /* PeopleNumPicker.swift */; };
-		3A84080F27F21A2C00800017 /* DistancePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84080E27F21A2C00800017 /* DistancePicker.swift */; };
 		3A84081427F21B7A00800017 /* MakeRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A84081227F21B7900800017 /* MakeRoom.storyboard */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E9F9927E9470100000DCD /* AppDelegate.swift */; };
@@ -25,8 +23,6 @@
 /* Begin PBXFileReference section */
 		3A84080827F21A0800800017 /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		3A84080A27F21A1C00800017 /* MakeRoomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeRoomController.swift; sourceTree = "<group>"; };
-		3A84080C27F21A2500800017 /* PeopleNumPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleNumPicker.swift; sourceTree = "<group>"; };
-		3A84080E27F21A2C00800017 /* DistancePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistancePicker.swift; sourceTree = "<group>"; };
 		3A84081327F21B7900800017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../../../../../프로그램/moyeorun/Moyeorun/Moyeorun/Base.lproj/MakeRoom.storyboard"; sourceTree = "<group>"; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.debug.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,8 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				3A84080827F21A0800800017 /* PopupViewController.swift */,
-				3A84080C27F21A2500800017 /* PeopleNumPicker.swift */,
-				3A84080E27F21A2C00800017 /* DistancePicker.swift */,
 				3A84080527F1F36600800017 /* InterfaceBuilders */,
 			);
 			path = Views;
@@ -314,11 +308,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A84080F27F21A2C00800017 /* DistancePicker.swift in Sources */,
 				3A84080B27F21A1C00800017 /* MakeRoomController.swift in Sources */,
 				3A84080927F21A0800800017 /* PopupViewController.swift in Sources */,
 				F75E9F9E27E9470100000DCD /* ViewController.swift in Sources */,
-				3A84080D27F21A2500800017 /* PeopleNumPicker.swift in Sources */,
 				F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */,
 				F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */,
 				F75E9FA427E9470100000DCD /* MoyeoRun.xcdatamodeld in Sources */,
