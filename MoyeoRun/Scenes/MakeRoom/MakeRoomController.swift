@@ -26,7 +26,14 @@ class MakeRoomController: UIViewController {
         descriptionTextView.delegate = self
         descriptionPlaceHolder = descriptionTextView.text
         setColorButton(temp: [peopleButton, startTimeButton, distanceButton, limitTimeButton])
-        setBorder(temp: [nameTextView, descriptionTextView, peopleButton, startTimeButton, distanceButton, limitTimeButton])
+        setBorder(temp: [
+            nameTextView,
+            descriptionTextView,
+            peopleButton,
+            startTimeButton,
+            distanceButton,
+            limitTimeButton
+        ])
     }
     func setColorButton(temp: [UIButton]) {
         for value in temp {
