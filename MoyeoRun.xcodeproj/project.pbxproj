@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2040F3A127F469DA0034BA40 /* MapKitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2040F3A027F469DA0034BA40 /* MapKitView.xib */; };
+		2049243527F2F72000CF5A11 /* MapKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049243427F2F72000CF5A11 /* MapKitView.swift */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E9F9927E9470100000DCD /* AppDelegate.swift */; };
 		F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E9F9B27E9470100000DCD /* SceneDelegate.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2040F3A027F469DA0034BA40 /* MapKitView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapKitView.xib; sourceTree = "<group>"; };
+		2049243427F2F72000CF5A11 /* MapKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitView.swift; sourceTree = "<group>"; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.debug.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF6235AE0ADD0047158FA4F /* Pods-MoyeoRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.release.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.release.xcconfig"; sourceTree = "<group>"; };
@@ -44,6 +48,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2049243327F2F3D600CF5A11 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2049243427F2F72000CF5A11 /* MapKitView.swift */,
+				2040F3A027F469DA0034BA40 /* MapKitView.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		3AADB25227EF53ED00AFDE01 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +103,7 @@
 		3AADB25727EF554D00AFDE01 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				2049243327F2F3D600CF5A11 /* Components */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -234,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2040F3A127F469DA0034BA40 /* MapKitView.xib in Resources */,
 				F75E9FA927E9470200000DCD /* LaunchScreen.storyboard in Resources */,
 				F75E9FA627E9470200000DCD /* Assets.xcassets in Resources */,
 				F75E9FA127E9470100000DCD /* Main.storyboard in Resources */,
@@ -292,6 +307,7 @@
 			files = (
 				F75E9F9E27E9470100000DCD /* ViewController.swift in Sources */,
 				F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */,
+				2049243527F2F72000CF5A11 /* MapKitView.swift in Sources */,
 				F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */,
 				F75E9FA427E9470100000DCD /* MoyeoRun.xcdatamodeld in Sources */,
 			);

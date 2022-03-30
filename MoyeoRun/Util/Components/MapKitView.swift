@@ -6,15 +6,141 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
+import CoreMotion
 
-class MapKitView: UIView {
+class MapKitView: MKMapView {
+    @IBOutlet weak var mapView: MKMapView!
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    var previousCoordinate: CLLocationCoordinate2D?
+    var locationManager = CLLocationManager()
+    var currentLocation: CLLocation?
+    let motionManager = CMMotionActivityManager()
+
+    private var distance = 0
+    private var myColor = UIColor()
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setUpXib()
     }
-    */
 
+    private func setUpXib() {
+        // 메타데이터 스트링화
+        let name = String(describing: Self.self)
+        // nib 파일 만듬
+        let nib = UINib(nibName: name, bundle: nil)
+
+        // 인스턴스화
+        guard let view = nib.instantiate(withOwner: self, options: nil).first as? UIView else {
+            fatalError("failed to instantiate MapKitView")
+        }
+
+        view.frame = self.bounds
+        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        addSubview(view)
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setUpXib()
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setUpXib()
+    }
+
+    func configure(with color: UIColor) {
+        self.mapView.mapType = MKMapType.standard
+        self.mapView.showsUserLocation = true
+        self.mapView.setUserTrackingMode(.follow, animated: true)
+        mapView.delegate = self
+        myColor = color
+        // 현재위치 색상 바꾸기
+        mapView.tintColor = myColor
+        locationManager.delegate = self
+        // 정확도를 최고로 설정
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        // 위치 데이터를 추적하기 위해 사용자에게 승인 요구
+        locationManager.requestWhenInUseAuthorization()
+        // 위치 업데이트를 시작
+        locationManager.startUpdatingLocation()
+    }
+}
+
+extension MapKitView: CLLocationManagerDelegate {
+    // 위도와 경도, 스팬(영역 폭)을 입력받아 지도에 표시
+    func goLocation(
+        latitudeValue: CLLocationDegrees,
+        longtudeValue: CLLocationDegrees,
+        delta span: Double
+    ) -> CLLocationCoordinate2D {
+        let pLocation = CLLocationCoordinate2DMake(latitudeValue, longtudeValue)
+        let spanValue = MKCoordinateSpan(latitudeDelta: span, longitudeDelta: span)
+        let pRegion = MKCoordinateRegion(center: pLocation, span: spanValue)
+        mapView.setRegion(pRegion, animated: true)
+        return pLocation
+    }
+
+    func setAnnotation(
+        latitudeValue: CLLocationDegrees,
+        longitudeValue: CLLocationDegrees,
+        delta span: Double,
+        title strTitle: Int
+    ) {
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = goLocation(latitudeValue: latitudeValue, longtudeValue: longitudeValue, delta: span)
+
+        annotation.title = "\(strTitle) m"
+        mapView.addAnnotation(annotation)
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last
+        else { return }
+        let latitude = location.coordinate.latitude
+        let longtitude = location.coordinate.longitude
+
+        if let previousCoordinate = self.previousCoordinate {
+            var points: [CLLocationCoordinate2D] = []
+            let point1 = CLLocationCoordinate2DMake(previousCoordinate.latitude, previousCoordinate.longitude)
+            let point2: CLLocationCoordinate2D
+            = CLLocationCoordinate2DMake(latitude, longtitude)
+            points.append(point1)
+            points.append(point2)
+            let lineDraw = MKPolyline(coordinates: points, count: points.count)
+
+            let distancePoint1 = CLLocation(
+                latitude: previousCoordinate.latitude,
+                longitude: previousCoordinate.longitude)
+
+            let distancePoint2 = CLLocation(latitude: latitude, longitude: longtitude)
+
+            distance += Int(distancePoint2.distance(from: distancePoint1))
+            if distance % 1000 == 0 {
+                setAnnotation(latitudeValue: latitude, longitudeValue: longtitude, delta: 0.001, title: distance)
+            }
+            self.mapView.addOverlay(lineDraw)
+        }
+        self.previousCoordinate = location.coordinate
+    }
+}
+
+extension MapKitView: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        guard let polyLine = overlay as? MKPolyline
+        else {
+            print("can't draw polyline")
+            return MKOverlayRenderer()
+        }
+        let renderer = MKPolylineRenderer(polyline: polyLine)
+        renderer.strokeColor = myColor
+        renderer.fillColor = myColor
+        renderer.lineWidth = 5.0
+        renderer.alpha = 1.0
+
+        return renderer
+    }
 }
