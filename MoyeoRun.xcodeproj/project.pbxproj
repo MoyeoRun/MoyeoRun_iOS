@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A3EA7BE27F480ED00F8F217 /* MakeRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3EA7BD27F480ED00F8F217 /* MakeRoom.storyboard */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E9F9927E9470100000DCD /* AppDelegate.swift */; };
 		F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E9F9B27E9470100000DCD /* SceneDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A3EA7BD27F480ED00F8F217 /* MakeRoom.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MakeRoom.storyboard; sourceTree = "<group>"; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.debug.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF6235AE0ADD0047158FA4F /* Pods-MoyeoRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.release.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.release.xcconfig"; sourceTree = "<group>"; };
@@ -44,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A3EA7BC27F480DC00F8F217 /* InterfaceBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				3A3EA7BD27F480ED00F8F217 /* MakeRoom.storyboard */,
+			);
+			path = InterfaceBuilders;
+			sourceTree = "<group>";
+		};
 		3AADB25227EF53ED00AFDE01 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 		3AADB25A27EF557D00AFDE01 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3A3EA7BC27F480DC00F8F217 /* InterfaceBuilders */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F75E9FA927E9470200000DCD /* LaunchScreen.storyboard in Resources */,
+				3A3EA7BE27F480ED00F8F217 /* MakeRoom.storyboard in Resources */,
 				F75E9FA627E9470200000DCD /* Assets.xcassets in Resources */,
 				F75E9FA127E9470100000DCD /* Main.storyboard in Resources */,
 			);
