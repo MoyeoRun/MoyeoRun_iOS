@@ -16,20 +16,23 @@ protocol SendDataDelegate: AnyObject {
 
 class PopupViewController: UIViewController {
     var index = 0
-    var availablePN = [Int](0...10)
-    var selectedPN = 0
+    var availablePeopleNum = [Int](0...10)
+    var selectedPeopleNum = 0
     var selectedKM = 0
     var availableKM: [Int] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     var availableM = [Int](0...99)
+
     @IBOutlet var myView: UIView!
     @IBOutlet var selectButton: UIButton!
     @IBOutlet var cnacelButton: UIButton!
     @IBOutlet var navigationTitle: UINavigationItem!
     weak var dataDelegate: SendDataDelegate?
+    
     let peopleNumPicker: UIPickerView = {
         let pickerView = UIPickerView(frame: CGRect(x: 30, y: 60, width: 250, height: 160))
         return pickerView
     }()
+
     let startTimePicker: UIDatePicker = {
         let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 60, width: 100, height: 60))
         datePicker.datePickerMode = .time
@@ -40,10 +43,12 @@ class PopupViewController: UIViewController {
         datePicker.minuteInterval = 5
         return datePicker
     }()
+
     let distancePicker: UIPickerView = {
         let pickerView = UIPickerView(frame: CGRect(x: 30, y: 60, width: 250, height: 160))
         return pickerView
     }()
+
     let limitTimePicker: UIDatePicker = {
         let timePicker = UIDatePicker(frame: CGRect(x: 0, y: 60, width: 270, height: 160))
         timePicker.datePickerMode = .countDownTimer
@@ -51,6 +56,7 @@ class PopupViewController: UIViewController {
         timePicker.minuteInterval = 10
         return timePicker
     }()
+
     let label: UILabel = {
         let label = UILabel()
         label.font = label.font.withSize(20)
@@ -58,6 +64,7 @@ class PopupViewController: UIViewController {
         label.frame = CGRect(x: 170, y: 130, width: 30, height: 20)
         return label
     }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         if index == 0 {
@@ -88,9 +95,10 @@ class PopupViewController: UIViewController {
     @IBAction func cancelPopUp(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+
     @IBAction func selected(_ sender: Any) {
         if index == 0 {
-            self.dataDelegate?.sendPeopleNum(peopleNum: selectedPN)
+            self.dataDelegate?.sendPeopleNum(peopleNum: selectedPeopleNum)
         } else if index == 1 {
             let formatter = DateFormatter()
             formatter.dateStyle = .medium
@@ -112,28 +120,32 @@ extension PopupViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
+
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView == distancePicker {
             return availableKM.count
         } else {
-            return availablePN.count
+            return availablePeopleNum.count
         }
     }
+
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == distancePicker {
             return "\(availableKM[row])"
         } else {
-            return "\(availablePN[row])"
+            return "\(availablePeopleNum[row])"
         }
     }
+
     func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
         return 60
     }
+
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == distancePicker {
             selectedKM = availableKM[row]
         } else {
-            selectedPN = availablePN[row]
+            selectedPeopleNum = availablePeopleNum[row]
         }
     }
 }
