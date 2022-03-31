@@ -39,6 +39,7 @@
 		F75E9FA427E9470100000DCD /* MoyeoRun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F75E9FA227E9470100000DCD /* MoyeoRun.xcdatamodeld */; };
 		F75E9FA627E9470200000DCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F75E9FA527E9470200000DCD /* Assets.xcassets */; };
 		F75E9FA927E9470200000DCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F75E9FA727E9470200000DCD /* LaunchScreen.storyboard */; };
+		F7CDF8EB27F5E9C1005F03A7 /* MakeRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CDF8EA27F5E9C1005F03A7 /* MakeRoom.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		F75E9FA527E9470200000DCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F75E9FA827E9470200000DCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F75E9FAA27E9470200000DCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7CDF8EA27F5E9C1005F03A7 /* MakeRoom.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MakeRoom.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +282,7 @@
 		3AADB25A27EF557D00AFDE01 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F7CDF8E927F5E9C1005F03A7 /* InterfaceBuilders */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -341,6 +344,14 @@
 				F75E9FA227E9470100000DCD /* MoyeoRun.xcdatamodeld */,
 			);
 			path = MoyeoRun;
+			sourceTree = "<group>";
+		};
+		F7CDF8E927F5E9C1005F03A7 /* InterfaceBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				F7CDF8EA27F5E9C1005F03A7 /* MakeRoom.storyboard */,
+			);
+			path = InterfaceBuilders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,6 +420,7 @@
 				0AF2314327F0650000574776 /* HomeTabNowPopular0.png in Resources */,
 				0A8DE83C27F0518D00077DC6 /* 모여런 심볼.png in Resources */,
 				0AF2315027F0650B00574776 /* HomeTabNewMission1.png in Resources */,
+				F7CDF8EB27F5E9C1005F03A7 /* MakeRoom.storyboard in Resources */,
 				0AF2314E27F0650B00574776 /* HomeTabNewMission2.png in Resources */,
 				F75E9FA927E9470200000DCD /* LaunchScreen.storyboard in Resources */,
 				0AF2314527F0650000574776 /* HomeTabNowPopular2.png in Resources */,
