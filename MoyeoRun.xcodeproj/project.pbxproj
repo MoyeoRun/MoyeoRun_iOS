@@ -51,10 +51,18 @@
 		2049243327F2F3D600CF5A11 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2089629927F7FBC6006FAC89 /* MapKit */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2089629927F7FBC6006FAC89 /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
 				2049243427F2F72000CF5A11 /* MapKitView.swift */,
 				2040F3A027F469DA0034BA40 /* MapKitView.xib */,
 			);
-			path = Components;
+			path = MapKit;
 			sourceTree = "<group>";
 		};
 		3AADB25227EF53ED00AFDE01 /* Scenes */ = {

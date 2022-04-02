@@ -106,8 +106,7 @@ extension MapKitView: CLLocationManagerDelegate {
         if let previousCoordinate = self.previousCoordinate {
             var points: [CLLocationCoordinate2D] = []
             let point1 = CLLocationCoordinate2DMake(previousCoordinate.latitude, previousCoordinate.longitude)
-            let point2: CLLocationCoordinate2D
-            = CLLocationCoordinate2DMake(latitude, longtitude)
+            let point2 = CLLocationCoordinate2DMake(latitude, longtitude)
             points.append(point1)
             points.append(point2)
             let lineDraw = MKPolyline(coordinates: points, count: points.count)
@@ -130,8 +129,7 @@ extension MapKitView: CLLocationManagerDelegate {
 
 extension MapKitView: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        guard let polyLine = overlay as? MKPolyline
-        else {
+        guard let polyLine = overlay as? MKPolyline else {
             print("can't draw polyline")
             return MKOverlayRenderer()
         }
