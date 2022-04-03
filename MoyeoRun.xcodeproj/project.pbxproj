@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3A84080927F21A0800800017 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84080827F21A0800800017 /* PopupViewController.swift */; };
 		3A84080B27F21A1C00800017 /* MakeRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84080A27F21A1C00800017 /* MakeRoomController.swift */; };
-		3A84081427F21B7A00800017 /* MakeRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A84081227F21B7900800017 /* MakeRoom.storyboard */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E9F9927E9470100000DCD /* AppDelegate.swift */; };
 		F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E9F9B27E9470100000DCD /* SceneDelegate.swift */; };
@@ -23,7 +22,6 @@
 /* Begin PBXFileReference section */
 		3A84080827F21A0800800017 /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		3A84080A27F21A1C00800017 /* MakeRoomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeRoomController.swift; sourceTree = "<group>"; };
-		3A84081327F21B7900800017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../../../../../프로그램/moyeorun/Moyeorun/Moyeorun/Base.lproj/MakeRoom.storyboard"; sourceTree = "<group>"; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.debug.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF6235AE0ADD0047158FA4F /* Pods-MoyeoRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.release.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.release.xcconfig"; sourceTree = "<group>"; };
@@ -53,7 +51,6 @@
 		3A84080527F1F36600800017 /* InterfaceBuilders */ = {
 			isa = PBXGroup;
 			children = (
-				3A84081227F21B7900800017 /* MakeRoom.storyboard */,
 			);
 			path = InterfaceBuilders;
 			sourceTree = "<group>";
@@ -253,7 +250,6 @@
 			files = (
 				F75E9FA927E9470200000DCD /* LaunchScreen.storyboard in Resources */,
 				F75E9FA627E9470200000DCD /* Assets.xcassets in Resources */,
-				3A84081427F21B7A00800017 /* MakeRoom.storyboard in Resources */,
 				F75E9FA127E9470100000DCD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,14 +316,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3A84081227F21B7900800017 /* MakeRoom.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A84081327F21B7900800017 /* Base */,
-			);
-			name = MakeRoom.storyboard;
-			sourceTree = "<group>";
-		};
 		F75E9F9F27E9470100000DCD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
