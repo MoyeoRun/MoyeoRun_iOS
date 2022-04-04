@@ -31,6 +31,7 @@
 		0AF2314F27F0650B00574776 /* HomeTabNewMission3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314927F0650A00574776 /* HomeTabNewMission3.png */; };
 		0AF2315027F0650B00574776 /* HomeTabNewMission1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314A27F0650A00574776 /* HomeTabNewMission1.png */; };
 		0AF2315127F0650B00574776 /* HomeTabNewMission0.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314B27F0650A00574776 /* HomeTabNewMission0.png */; };
+		3A6E06F127FB3BD0007B0AFE /* MainPopupView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6E06F027FB3BD0007B0AFE /* MainPopupView.storyboard */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E9F9927E9470100000DCD /* AppDelegate.swift */; };
 		F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E9F9B27E9470100000DCD /* SceneDelegate.swift */; };
@@ -67,6 +68,7 @@
 		0AF2314927F0650A00574776 /* HomeTabNewMission3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNewMission3.png; sourceTree = "<group>"; };
 		0AF2314A27F0650A00574776 /* HomeTabNewMission1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNewMission1.png; sourceTree = "<group>"; };
 		0AF2314B27F0650A00574776 /* HomeTabNewMission0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNewMission0.png; sourceTree = "<group>"; };
+		3A6E06F027FB3BD0007B0AFE /* MainPopupView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainPopupView.storyboard; sourceTree = "<group>"; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.debug.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF6235AE0ADD0047158FA4F /* Pods-MoyeoRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.release.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.release.xcconfig"; sourceTree = "<group>"; };
@@ -211,9 +213,42 @@
 			path = HomeTab;
 			sourceTree = "<group>";
 		};
+		3A6E06EC27FB39FD007B0AFE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3A6E06EE27FB3AB6007B0AFE /* Models */,
+				3A6E06ED27FB3AAF007B0AFE /* Views */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		3A6E06ED27FB3AAF007B0AFE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3A6E06EF27FB3B80007B0AFE /* InterfaceBuilders */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3A6E06EE27FB3AB6007B0AFE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3A6E06EF27FB3B80007B0AFE /* InterfaceBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				3A6E06F027FB3BD0007B0AFE /* MainPopupView.storyboard */,
+			);
+			path = InterfaceBuilders;
+			sourceTree = "<group>";
+		};
 		3AADB25227EF53ED00AFDE01 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3A6E06EC27FB39FD007B0AFE /* Main */,
 				3AB61DFB27F8534500A30449 /* MoyeorunRoom */,
 				0A8DE82427F0489C00077DC6 /* TabBar */,
 				0A8DE82C27F04D9A00077DC6 /* HomeTab */,
@@ -457,6 +492,7 @@
 				0AF2314D27F0650B00574776 /* HomeTabLastRecord0.png in Resources */,
 				0A8DE83A27F0518500077DC6 /* 프로필 이미지.png in Resources */,
 				0A8DE83E27F0519300077DC6 /* 벚꽃.jpeg in Resources */,
+				3A6E06F127FB3BD0007B0AFE /* MainPopupView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
