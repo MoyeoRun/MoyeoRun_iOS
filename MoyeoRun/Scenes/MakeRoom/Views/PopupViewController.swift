@@ -15,6 +15,12 @@ protocol SendDataDelegate: AnyObject {
 }
 
 class PopupViewController: UIViewController {
+    @IBOutlet var myView: UIView!
+    @IBOutlet var selectButton: UIButton!
+    @IBOutlet var cnacelButton: UIButton!
+    @IBOutlet var navigationTitle: UINavigationItem!
+    weak var dataDelegate: SendDataDelegate?
+
     var index = 0
     var availablePeopleNum = [Int](0...10)
     var selectedPeopleNum = 0
@@ -22,12 +28,6 @@ class PopupViewController: UIViewController {
     var availableKM: [Int] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     var availableM = [Int](0...99)
 
-    @IBOutlet var myView: UIView!
-    @IBOutlet var selectButton: UIButton!
-    @IBOutlet var cnacelButton: UIButton!
-    @IBOutlet var navigationTitle: UINavigationItem!
-    weak var dataDelegate: SendDataDelegate?
-    
     let peopleNumPicker: UIPickerView = {
         let pickerView = UIPickerView(frame: CGRect(x: 30, y: 60, width: 250, height: 160))
         return pickerView
