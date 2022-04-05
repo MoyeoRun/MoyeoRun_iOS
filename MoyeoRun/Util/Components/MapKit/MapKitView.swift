@@ -13,10 +13,10 @@ import CoreMotion
 class MapKitView: MKMapView {
     @IBOutlet weak var mapView: MKMapView!
 
-    var previousCoordinate: CLLocationCoordinate2D?
-    var locationManager = CLLocationManager()
-    var currentLocation: CLLocation?
-    let motionManager = CMMotionActivityManager()
+    private var previousCoordinate: CLLocationCoordinate2D?
+    private var locationManager = CLLocationManager()
+    private var currentLocation: CLLocation?
+    private let motionManager = CMMotionActivityManager()
 
     private var distance = 0
     private var myColor = UIColor()
@@ -77,11 +77,11 @@ extension MapKitView: CLLocationManagerDelegate {
         longtudeValue: CLLocationDegrees,
         delta span: Double
     ) -> CLLocationCoordinate2D {
-        let pLocation = CLLocationCoordinate2DMake(latitudeValue, longtudeValue)
+        let location = CLLocationCoordinate2DMake(latitudeValue, longtudeValue)
         let spanValue = MKCoordinateSpan(latitudeDelta: span, longitudeDelta: span)
-        let pRegion = MKCoordinateRegion(center: pLocation, span: spanValue)
-        mapView.setRegion(pRegion, animated: true)
-        return pLocation
+        let region = MKCoordinateRegion(center: location, span: spanValue)
+        mapView.setRegion(region, animated: true)
+        return location
     }
 
     func setAnnotation(
@@ -98,8 +98,7 @@ extension MapKitView: CLLocationManagerDelegate {
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last
-        else { return }
+        guard let location = locations.last else { return }
         let latitude = location.coordinate.latitude
         let longtitude = location.coordinate.longitude
 
@@ -130,7 +129,7 @@ extension MapKitView: CLLocationManagerDelegate {
 extension MapKitView: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         guard let polyLine = overlay as? MKPolyline else {
-            print("can't draw polyline")
+            debugPrint("can't draw polyline")
             return MKOverlayRenderer()
         }
         let renderer = MKPolylineRenderer(polyline: polyLine)
