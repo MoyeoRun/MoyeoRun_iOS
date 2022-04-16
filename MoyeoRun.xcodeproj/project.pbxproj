@@ -216,6 +216,7 @@
 		3AADB25227EF53ED00AFDE01 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+                0AB1028027F746D800030C06 /* MyPage */,
 				3AB61E0127F8960F00A30449 /* MoyeorunRoom */,
 				0A8DE82427F0489C00077DC6 /* TabBar */,
 				0A8DE82C27F04D9A00077DC6 /* HomeTab */,
