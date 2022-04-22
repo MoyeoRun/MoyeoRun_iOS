@@ -36,9 +36,8 @@
                                             <constraint firstAttribute="width" secondItem="PF7-U6-9Le" secondAttribute="height" id="MYm-vp-V9n"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="camera.circle.fill" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="17"/>
-                                            <color key="baseForegroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="카메라">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="onTapCameraSymbolButton:" destination="cln-es-062" eventType="touchUpInside" id="Jiw-9h-Pxb"/>
@@ -220,7 +219,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="기본 정보" id="Bqt-RQ-MFv">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="rum-09-abO">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" id="rum-09-abO">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="TmM-uF-35W">
                                                 <rect key="frame" x="20" y="0.0" width="92" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -270,10 +269,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera.circle.fill" catalog="system" width="128" height="121"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <image name="성별남" width="20" height="33"/>
         <image name="성별여" width="32" height="31"/>
+        <image name="카메라" width="17" height="16"/>
         <image name="프로필 이미지.png" width="123" height="123"/>
         <namedColor name="buttonColor1">
             <color red="0.067000001668930054" green="0.38400000333786011" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

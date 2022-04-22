@@ -17,39 +17,41 @@ class EnterUserInfoWhenSignUp: UIViewController {
     @IBOutlet weak var genderFemaleButton: UIButton!
     var selectedGender: Int = 0
 
-    override func viewDidLoad(){
+    override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
     }
-    
-    func setUI(){
+
+    func setUI() {
         setProfileImageView()
         setCameraSymbolButton()
 
-        func setProfileImageView(){
+        func setProfileImageView() {
             self.profileImageView.layer.cornerRadius = self.profileImageView.bounds.size.width * 0.5
             self.profileImageView.layer.masksToBounds = true
         }
 
-        func setCameraSymbolButton(){
+        func setCameraSymbolButton() {
             self.cameraSymbolButton.layer.cornerRadius = self.cameraSymbolButton.frame.width / 2
             self.cameraSymbolButton.layer.masksToBounds = true
             self.cameraSymbolButton.layer.borderWidth = 0
             cameraSymbolButton.imageView?.adjustsImageSizeForAccessibilityContentSizeCategory = true
         }
     }
-    
-    @IBAction func onTapCameraSymbolButton(_ sender: Any){
+
+    @IBAction func onTapCameraSymbolButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "SelectProfileImageAlertStoryboard", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "SelectProfileImageAlertViewController")
+        let viewController = storyboard.instantiateViewController(
+            withIdentifier: "SelectProfileImageAlertViewController"
+        )
         viewController.modalPresentationStyle = .overCurrentContext
         self.present(viewController, animated: false)
     }
-    
-    @IBAction func onTapMoveBackwardButton(_ sender: Any){
+
+    @IBAction func onTapMoveBackwardButton(_ sender: Any) {
         self.dismiss(animated: false)
     }
-    
+
     @IBAction func onTapGenderMaleButton(_ sender: Any) {
         switch selectedGender {
         case 0: selectedGender = 1
@@ -59,7 +61,7 @@ class EnterUserInfoWhenSignUp: UIViewController {
         }
         setGenderButtonColor()
     }
-    
+
     @IBAction func onTapGenderFemaleButton(_ sender: Any) {
         switch selectedGender {
         case 0: selectedGender = 2
@@ -69,21 +71,20 @@ class EnterUserInfoWhenSignUp: UIViewController {
         }
         setGenderButtonColor()
     }
-    
-    func setGenderButtonColor(){
+
+    func setGenderButtonColor() {
         switch selectedGender {
-            
         case 0: unsetBothButtonColor()
-            
+
         case 1: setMaleButtonColor()
             unsetFemaleButtonColor()
-            
+
         case 2: setFemaleButtonColor()
             unsetMaleButtonColor()
-            
+
         default: break
         }
-        
+
         func setMaleButtonColor() {
             genderMaleButton.tintColor = .white
             genderMaleButton.backgroundColor = UIColor(named: "buttonColor1")
@@ -98,12 +99,12 @@ class EnterUserInfoWhenSignUp: UIViewController {
             unsetMaleButtonColor()
             unsetFemaleButtonColor()
         }
-        func unsetMaleButtonColor(){
+        func unsetMaleButtonColor() {
             genderMaleButton.tintColor = .black
             genderMaleButton.backgroundColor = .white
             genderMaleButton.borderColor = .systemGray5
         }
-        func unsetFemaleButtonColor(){
+        func unsetFemaleButtonColor() {
             genderFemaleButton.tintColor = .black
             genderFemaleButton.backgroundColor = .white
             genderFemaleButton.borderColor = .systemGray5
