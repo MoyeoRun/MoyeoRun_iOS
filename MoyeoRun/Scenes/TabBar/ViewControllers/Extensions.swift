@@ -9,6 +9,30 @@ import Foundation
 import UIKit
 
 extension CALayer {
+    /// border 추가
+    func addBorder(_ edge: [UIRectEdge], color: UIColor, width: CGFloat) {
+        for edge in edge {
+            let border = CALayer()
+            switch edge {
+            case UIRectEdge.top:
+                border.frame = CGRect.init(x: 0, y: 0, width: frame.width, height: width)
+                break
+            case UIRectEdge.bottom:
+                border.frame = CGRect.init(x: 0, y: frame.height - width, width: frame.width, height: width)
+                break
+            case UIRectEdge.left:
+                border.frame = CGRect.init(x: 0, y: 0, width: width, height: frame.height)
+                break
+            case UIRectEdge.right:
+                border.frame = CGRect.init(x: frame.width - width, y: 0, width: width, height: frame.height)
+                break
+            default:
+                break
+            }
+            border.backgroundColor = color.cgColor;
+            self.addSublayer(border)
+        }
+    }
     /// Sketch 스타일의 그림자를 생성하는 유틸리티 함수
     func applyShadow(
         color: UIColor = .black,
@@ -50,7 +74,7 @@ extension UITabBar {
     }
 }
 
-/// 버튼 cornerradius를 우측 메뉴에서 조정할 수 있게해줌.
+/// Inspector에서 버튼 스타일에 대한 설정 추가.
 @IBDesignable extension UIButton {
     @IBInspectable var borderWidth: CGFloat {
         get {

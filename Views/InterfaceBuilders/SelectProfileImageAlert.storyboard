@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SQI-0J-WGz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Select Profile Image Alert View Controller-->
+        <scene sceneID="oBM-on-Wm9">
+            <objects>
+                <viewController storyboardIdentifier="SelectProfileImageAlertViewController" id="SQI-0J-WGz" customClass="SelectProfileImageAlertViewController" customModule="MoyeoRun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TdG-n2-knJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="usi-gR-Oro">
+                                <rect key="frame" x="40" y="367" width="334" height="172"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로필 사진" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COh-fm-qFe">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="66"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="luV-xq-fLN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OcD-51-zfE">
+                                        <rect key="frame" x="0.0" y="66" width="334" height="1"/>
+                                        <color key="backgroundColor" red="0.92156862750000001" green="0.92549019610000005" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="WYo-CE-b0V"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noL-UT-AgM">
+                                        <rect key="frame" x="0.0" y="67" width="334" height="52"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="1L2-Kj-IM8"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="갤러리에서 선택">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4m-jY-y2I">
+                                        <rect key="frame" x="0.0" y="119" width="334" height="1"/>
+                                        <color key="backgroundColor" red="0.92156862750000001" green="0.92549019610000005" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="Ene-6e-B2t"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utM-uf-gR5">
+                                        <rect key="frame" x="0.0" y="120" width="334" height="52"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="DRC-qA-OlX"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="기존 이미지에서 선택">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5KI-ZK-fhx"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.50434602650000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="usi-gR-Oro" firstAttribute="centerY" secondItem="5KI-ZK-fhx" secondAttribute="centerY" id="Pt8-8E-F5Z"/>
+                            <constraint firstItem="5KI-ZK-fhx" firstAttribute="trailing" secondItem="usi-gR-Oro" secondAttribute="trailing" constant="40" id="sYV-6n-uiO"/>
+                            <constraint firstItem="usi-gR-Oro" firstAttribute="leading" secondItem="5KI-ZK-fhx" secondAttribute="leading" constant="40" id="xch-Ji-nD3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="TdG-n2-knJ" id="lg5-qX-srO"/>
+                        <outlet property="profileImageLabel" destination="COh-fm-qFe" id="h6k-nl-4xX"/>
+                        <outlet property="selectOnExistingImage" destination="utM-uf-gR5" id="UKZ-AM-JxQ"/>
+                        <outlet property="selectOnGalleryButton" destination="noL-UT-AgM" id="OuS-4i-RWt"/>
+                        <outlet property="stackView" destination="usi-gR-Oro" id="F35-vH-bvs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eEo-om-o4T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="203" y="77"/>
+        </scene>
+    </scenes>
+</document>

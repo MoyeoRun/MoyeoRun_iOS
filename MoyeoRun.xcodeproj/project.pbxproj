@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2040F3A127F469DA0034BA40 /* MapKitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2040F3A027F469DA0034BA40 /* MapKitView.xib */; };
-		2049243527F2F72000CF5A11 /* MapKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049243427F2F72000CF5A11 /* MapKitView.swift */; };
+		0A3919AA28130FCA006161C4 /* EnterUserInfoWhenSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3919A928130FCA006161C4 /* EnterUserInfoWhenSignUp.storyboard */; };
+		0A3919AD2813103E006161C4 /* EnterUserInfoWhenSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3919AC2813103E006161C4 /* EnterUserInfoWhenSignUpViewController.swift */; };
+		0A3919AF281310B4006161C4 /* SelectProfileImageAlert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3919AE281310B4006161C4 /* SelectProfileImageAlert.storyboard */; };
+		0A3919B1281310DA006161C4 /* SelectProfileImageAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3919B0281310DA006161C4 /* SelectProfileImageAlertViewController.swift */; };
 		0A8DE82B27F04CC900077DC6 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE82A27F04CC900077DC6 /* TabBar.storyboard */; };
 		0A8DE83127F04DEC00077DC6 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE83027F04DEC00077DC6 /* HomeTab.storyboard */; };
 		0A8DE83327F04EB100077DC6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8DE83227F04EB100077DC6 /* TabBarViewController.swift */; };
@@ -33,6 +35,8 @@
 		0AF2314F27F0650B00574776 /* HomeTabNewMission3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314927F0650A00574776 /* HomeTabNewMission3.png */; };
 		0AF2315027F0650B00574776 /* HomeTabNewMission1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314A27F0650A00574776 /* HomeTabNewMission1.png */; };
 		0AF2315127F0650B00574776 /* HomeTabNewMission0.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314B27F0650A00574776 /* HomeTabNewMission0.png */; };
+		2040F3A127F469DA0034BA40 /* MapKitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2040F3A027F469DA0034BA40 /* MapKitView.xib */; };
+		2049243527F2F72000CF5A11 /* MapKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049243427F2F72000CF5A11 /* MapKitView.swift */; };
 		3AB61E0827F8A0C500A30449 /* MoyeorunRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB61E0727F8A0C500A30449 /* MoyeorunRoom.storyboard */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E9F9927E9470100000DCD /* AppDelegate.swift */; };
@@ -46,8 +50,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2040F3A027F469DA0034BA40 /* MapKitView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapKitView.xib; sourceTree = "<group>"; };
-		2049243427F2F72000CF5A11 /* MapKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitView.swift; sourceTree = "<group>"; };
+		0A3919A928130FCA006161C4 /* EnterUserInfoWhenSignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = EnterUserInfoWhenSignUp.storyboard; path = Views/InterfaceBuilders/EnterUserInfoWhenSignUp.storyboard; sourceTree = SOURCE_ROOT; };
+		0A3919AC2813103E006161C4 /* EnterUserInfoWhenSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterUserInfoWhenSignUpViewController.swift; sourceTree = "<group>"; };
+		0A3919AE281310B4006161C4 /* SelectProfileImageAlert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SelectProfileImageAlert.storyboard; path = Views/InterfaceBuilders/SelectProfileImageAlert.storyboard; sourceTree = SOURCE_ROOT; };
+		0A3919B0281310DA006161C4 /* SelectProfileImageAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectProfileImageAlertViewController.swift; sourceTree = "<group>"; };
 		0A8DE82A27F04CC900077DC6 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		0A8DE83027F04DEC00077DC6 /* HomeTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
 		0A8DE83227F04EB100077DC6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +78,8 @@
 		0AF2314927F0650A00574776 /* HomeTabNewMission3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNewMission3.png; sourceTree = "<group>"; };
 		0AF2314A27F0650A00574776 /* HomeTabNewMission1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNewMission1.png; sourceTree = "<group>"; };
 		0AF2314B27F0650A00574776 /* HomeTabNewMission0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNewMission0.png; sourceTree = "<group>"; };
+		2040F3A027F469DA0034BA40 /* MapKitView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapKitView.xib; sourceTree = "<group>"; };
+		2049243427F2F72000CF5A11 /* MapKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitView.swift; sourceTree = "<group>"; };
 		3AB61E0727F8A0C500A30449 /* MoyeorunRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoyeorunRoom.storyboard; sourceTree = "<group>"; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.debug.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,21 +108,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2049243327F2F3D600CF5A11 /* Components */ = {
+		0A3919A828130F39006161C4 /* InterfaceBuilders */ = {
 			isa = PBXGroup;
 			children = (
-				2089629927F7FBC6006FAC89 /* MapKit */,
+				0A3919A928130FCA006161C4 /* EnterUserInfoWhenSignUp.storyboard */,
+				0A3919AE281310B4006161C4 /* SelectProfileImageAlert.storyboard */,
 			);
-			path = Components;
+			path = InterfaceBuilders;
 			sourceTree = "<group>";
 		};
-		2089629927F7FBC6006FAC89 /* MapKit */ = {
+		0A3919AB28130FF8006161C4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				2049243427F2F72000CF5A11 /* MapKitView.swift */,
-				2040F3A027F469DA0034BA40 /* MapKitView.xib */,
+				0A3919AC2813103E006161C4 /* EnterUserInfoWhenSignUpViewController.swift */,
+				0A3919B0281310DA006161C4 /* SelectProfileImageAlertViewController.swift */,
 			);
-			path = MapKit;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		0A8DE82427F0489C00077DC6 /* TabBar */ = {
@@ -234,10 +243,26 @@
 			path = HomeTab;
 			sourceTree = "<group>";
 		};
+		2049243327F2F3D600CF5A11 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2089629927F7FBC6006FAC89 /* MapKit */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2089629927F7FBC6006FAC89 /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
+				2049243427F2F72000CF5A11 /* MapKitView.swift */,
+				2040F3A027F469DA0034BA40 /* MapKitView.xib */,
+			);
+			path = MapKit;
+			sourceTree = "<group>";
+		};
 		3AADB25227EF53ED00AFDE01 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-                0AB1028027F746D800030C06 /* MyPage */,
 				3AB61E0127F8960F00A30449 /* MoyeorunRoom */,
 				0A8DE82427F0489C00077DC6 /* TabBar */,
 				0A8DE82C27F04D9A00077DC6 /* HomeTab */,
@@ -276,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				3AADB25927EF557500AFDE01 /* Views */,
+				0A3919AB28130FF8006161C4 /* ViewControllers */,
 				3AADB25827EF556E00AFDE01 /* Models */,
 			);
 			path = Login;
@@ -301,6 +327,7 @@
 		3AADB25927EF557500AFDE01 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0A3919A828130F39006161C4 /* InterfaceBuilders */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -486,8 +513,10 @@
 				0AF2314527F0650000574776 /* HomeTabNowPopular2.png in Resources */,
 				0A8DE83127F04DEC00077DC6 /* HomeTab.storyboard in Resources */,
 				F75E9FA627E9470200000DCD /* Assets.xcassets in Resources */,
+				0A3919AF281310B4006161C4 /* SelectProfileImageAlert.storyboard in Resources */,
 				0AF2314F27F0650B00574776 /* HomeTabNewMission3.png in Resources */,
 				0A8DE83827F0517700077DC6 /* 참가자.png in Resources */,
+				0A3919AA28130FCA006161C4 /* EnterUserInfoWhenSignUp.storyboard in Resources */,
 				F75E9FA127E9470100000DCD /* Main.storyboard in Resources */,
 				0AF2314C27F0650B00574776 /* HomeTabLastRecord1.png in Resources */,
 				0AF2314D27F0650B00574776 /* HomeTabLastRecord0.png in Resources */,
@@ -547,9 +576,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A95B92D27F3565300E131E6 /* HomeTabLastRecordContainer.swift in Sources */,
+				0A3919B1281310DA006161C4 /* SelectProfileImageAlertViewController.swift in Sources */,
 				F75E9F9E27E9470100000DCD /* ViewController.swift in Sources */,
 				0A95B92627F3545000E131E6 /* HomeTabLastRecordCell.swift in Sources */,
 				0A95B92427F3544200E131E6 /* HomeTabNewMissionCell.swift in Sources */,
+				0A3919AD2813103E006161C4 /* EnterUserInfoWhenSignUpViewController.swift in Sources */,
 				0A8DE83527F04F1700077DC6 /* Extensions.swift in Sources */,
 				F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */,
 				2049243527F2F72000CF5A11 /* MapKitView.swift in Sources */,
