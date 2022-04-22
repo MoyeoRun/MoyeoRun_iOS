@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0A26EDD4280AD19C0077C042 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A26EDD3280AD19C0077C042 /* MyPageViewController.swift */; };
 		0A26EDD7280AD1B10077C042 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A26EDD6280AD1B10077C042 /* MyPage.storyboard */; };
+		2040F3A127F469DA0034BA40 /* MapKitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2040F3A027F469DA0034BA40 /* MapKitView.xib */; };
+		2049243527F2F72000CF5A11 /* MapKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049243427F2F72000CF5A11 /* MapKitView.swift */; };
 		0A8DE82B27F04CC900077DC6 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE82A27F04CC900077DC6 /* TabBar.storyboard */; };
 		0A8DE83127F04DEC00077DC6 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE83027F04DEC00077DC6 /* HomeTab.storyboard */; };
 		0A8DE83327F04EB100077DC6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8DE83227F04EB100077DC6 /* TabBarViewController.swift */; };
@@ -48,6 +50,8 @@
 /* Begin PBXFileReference section */
 		0A26EDD3280AD19C0077C042 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		0A26EDD6280AD1B10077C042 /* MyPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
+		2040F3A027F469DA0034BA40 /* MapKitView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapKitView.xib; sourceTree = "<group>"; };
+		2049243427F2F72000CF5A11 /* MapKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitView.swift; sourceTree = "<group>"; };
 		0A8DE82A27F04CC900077DC6 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		0A8DE83027F04DEC00077DC6 /* HomeTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
 		0A8DE83227F04EB100077DC6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +135,21 @@
 				0A26EDD6280AD1B10077C042 /* MyPage.storyboard */,
 			);
 			path = InterfaceBuilders;
+		2049243327F2F3D600CF5A11 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2089629927F7FBC6006FAC89 /* MapKit */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2089629927F7FBC6006FAC89 /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
+				2049243427F2F72000CF5A11 /* MapKitView.swift */,
+				2040F3A027F469DA0034BA40 /* MapKitView.xib */,
+			);
+			path = MapKit;
 			sourceTree = "<group>";
 		};
 		0A8DE82427F0489C00077DC6 /* TabBar */ = {
@@ -300,6 +319,7 @@
 		3AADB25727EF554D00AFDE01 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				2049243327F2F3D600CF5A11 /* Components */,
 				0A8DE83627F0514200077DC6 /* TestImages */,
 				0A8DE83427F04F1700077DC6 /* Extensions.swift */,
 			);
@@ -487,6 +507,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2040F3A127F469DA0034BA40 /* MapKitView.xib in Resources */,
 				0AF2315127F0650B00574776 /* HomeTabNewMission0.png in Resources */,
 				0A8DE82B27F04CC900077DC6 /* TabBar.storyboard in Resources */,
 				0AF2314427F0650000574776 /* HomeTabNowPopular1.png in Resources */,
@@ -567,6 +588,7 @@
 				0A95B92427F3544200E131E6 /* HomeTabNewMissionCell.swift in Sources */,
 				0A8DE83527F04F1700077DC6 /* Extensions.swift in Sources */,
 				F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */,
+				2049243527F2F72000CF5A11 /* MapKitView.swift in Sources */,
 				0A95B92B27F3564300E131E6 /* HomeTabNewMissionContainer.swift in Sources */,
 				0A95B92927F3563100E131E6 /* HomeTabNowPopularContainer.swift in Sources */,
 				F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */,
