@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A84080927F21A0800800017 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84080827F21A0800800017 /* PopupViewController.swift */; };
+		3A84080B27F21A1C00800017 /* MakeRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84080A27F21A1C00800017 /* MakeRoomController.swift */; };
 		0A26EDD4280AD19C0077C042 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A26EDD3280AD19C0077C042 /* MyPageViewController.swift */; };
 		0A26EDD7280AD1B10077C042 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A26EDD6280AD1B10077C042 /* MyPage.storyboard */; };
 		2040F3A127F469DA0034BA40 /* MapKitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2040F3A027F469DA0034BA40 /* MapKitView.xib */; };
@@ -48,6 +50,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A84080827F21A0800800017 /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		3A84080A27F21A1C00800017 /* MakeRoomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeRoomController.swift; sourceTree = "<group>"; };
 		0A26EDD3280AD19C0077C042 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		0A26EDD6280AD1B10077C042 /* MyPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		2040F3A027F469DA0034BA40 /* MapKitView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapKitView.xib; sourceTree = "<group>"; };
@@ -286,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				3AADB25A27EF557D00AFDE01 /* Views */,
+				3A84080A27F21A1C00800017 /* MakeRoomController.swift */,
 				3AADB25C27EF558F00AFDE01 /* Models */,
 			);
 			path = MakeRoom;
@@ -343,6 +348,7 @@
 		3AADB25A27EF557D00AFDE01 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3A84080827F21A0800800017 /* PopupViewController.swift */,
 				F7CDF8E927F5E9C1005F03A7 /* InterfaceBuilders */,
 			);
 			path = Views;
@@ -582,6 +588,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A84080B27F21A1C00800017 /* MakeRoomController.swift in Sources */,
+				3A84080927F21A0800800017 /* PopupViewController.swift in Sources */,
 				0A95B92D27F3565300E131E6 /* HomeTabLastRecordContainer.swift in Sources */,
 				F75E9F9E27E9470100000DCD /* ViewController.swift in Sources */,
 				0A95B92627F3545000E131E6 /* HomeTabLastRecordCell.swift in Sources */,
