@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3A84080927F21A0800800017 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84080827F21A0800800017 /* PopupViewController.swift */; };
 		3A84080B27F21A1C00800017 /* MakeRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84080A27F21A1C00800017 /* MakeRoomController.swift */; };
+		0A26EDD4280AD19C0077C042 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A26EDD3280AD19C0077C042 /* MyPageViewController.swift */; };
+		0A26EDD7280AD1B10077C042 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A26EDD6280AD1B10077C042 /* MyPage.storyboard */; };
 		2040F3A127F469DA0034BA40 /* MapKitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2040F3A027F469DA0034BA40 /* MapKitView.xib */; };
 		2049243527F2F72000CF5A11 /* MapKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049243427F2F72000CF5A11 /* MapKitView.swift */; };
 		0A8DE82B27F04CC900077DC6 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE82A27F04CC900077DC6 /* TabBar.storyboard */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		3A84080827F21A0800800017 /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		3A84080A27F21A1C00800017 /* MakeRoomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeRoomController.swift; sourceTree = "<group>"; };
+		0A26EDD3280AD19C0077C042 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		0A26EDD6280AD1B10077C042 /* MyPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		2040F3A027F469DA0034BA40 /* MapKitView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapKitView.xib; sourceTree = "<group>"; };
 		2049243427F2F72000CF5A11 /* MapKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitView.swift; sourceTree = "<group>"; };
 		0A8DE82A27F04CC900077DC6 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
@@ -104,6 +108,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A26EDD0280AD1800077C042 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				0A26EDD2280AD18F0077C042 /* Views */,
+				0A26EDD1280AD1870077C042 /* ViewControllers */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		0A26EDD1280AD1870077C042 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A26EDD3280AD19C0077C042 /* MyPageViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0A26EDD2280AD18F0077C042 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A26EDD5280AD1A30077C042 /* InterfaceBuilders */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A26EDD5280AD1A30077C042 /* InterfaceBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				0A26EDD6280AD1B10077C042 /* MyPage.storyboard */,
+			);
+			path = InterfaceBuilders;
 		2049243327F2F3D600CF5A11 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,7 +276,7 @@
 		3AADB25227EF53ED00AFDE01 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-                0AB1028027F746D800030C06 /* MyPage */,
+				0A26EDD0280AD1800077C042 /* MyPage */,
 				3AB61E0127F8960F00A30449 /* MoyeorunRoom */,
 				0A8DE82427F0489C00077DC6 /* TabBar */,
 				0A8DE82C27F04D9A00077DC6 /* HomeTab */,
@@ -483,6 +518,7 @@
 				0A8DE82B27F04CC900077DC6 /* TabBar.storyboard in Resources */,
 				0AF2314427F0650000574776 /* HomeTabNowPopular1.png in Resources */,
 				0AF2314327F0650000574776 /* HomeTabNowPopular0.png in Resources */,
+				0A26EDD7280AD1B10077C042 /* MyPage.storyboard in Resources */,
 				0A8DE83C27F0518D00077DC6 /* 모여런 심볼.png in Resources */,
 				0AF2315027F0650B00574776 /* HomeTabNewMission1.png in Resources */,
 				F7CDF8EB27F5E9C1005F03A7 /* MakeRoom.storyboard in Resources */,
@@ -564,6 +600,7 @@
 				0A95B92B27F3564300E131E6 /* HomeTabNewMissionContainer.swift in Sources */,
 				0A95B92927F3563100E131E6 /* HomeTabNowPopularContainer.swift in Sources */,
 				F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */,
+				0A26EDD4280AD19C0077C042 /* MyPageViewController.swift in Sources */,
 				0A8DE84027F052C000077DC6 /* HomeTabViewController.swift in Sources */,
 				F75E9FA427E9470100000DCD /* MoyeoRun.xcdatamodeld in Sources */,
 				0A8DE83327F04EB100077DC6 /* TabBarViewController.swift in Sources */,
