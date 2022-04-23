@@ -47,12 +47,8 @@ class HomeTabViewController: UIViewController {
 
     @objc func showMyPage(sender: UITapGestureRecognizer) {
         if sender.state == .ended {
-//            let storyBoard = UIStoryboard(name: "MyPage", bundle: nil)
-//            let viewController = storyBoard.instantiateViewController(withIdentifier: "MyPage")
-//            viewController.modalPresentationStyle = .fullScreen
-//            self.present(viewController, animated: true)
-            let storyBoard = UIStoryboard(name: "EnterUserInfoWhenSignUp", bundle: nil)
-            let viewController = storyBoard.instantiateViewController(withIdentifier: "EnterUserInfoWhenSignUp")
+            let storyBoard = UIStoryboard(name: "MyPage", bundle: nil)
+            let viewController = storyBoard.instantiateViewController(withIdentifier: "MyPage")
             viewController.modalPresentationStyle = .fullScreen
             self.present(viewController, animated: true)
         }
