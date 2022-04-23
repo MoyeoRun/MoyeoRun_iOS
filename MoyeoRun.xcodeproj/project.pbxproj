@@ -50,9 +50,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A3919A928130FCA006161C4 /* EnterUserInfoWhenSignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = EnterUserInfoWhenSignUp.storyboard; path = Views/InterfaceBuilders/EnterUserInfoWhenSignUp.storyboard; sourceTree = SOURCE_ROOT; };
+		0A3919A928130FCA006161C4 /* EnterUserInfoWhenSignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = EnterUserInfoWhenSignUp.storyboard; path = MoyeoRun/Scenes/Login/Views/InterfaceBuilders/EnterUserInfoWhenSignUp.storyboard; sourceTree = SOURCE_ROOT; };
 		0A3919AC2813103E006161C4 /* EnterUserInfoWhenSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterUserInfoWhenSignUpViewController.swift; sourceTree = "<group>"; };
-		0A3919AE281310B4006161C4 /* SelectProfileImageAlert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SelectProfileImageAlert.storyboard; path = Views/InterfaceBuilders/SelectProfileImageAlert.storyboard; sourceTree = SOURCE_ROOT; };
+		0A3919AE281310B4006161C4 /* SelectProfileImageAlert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SelectProfileImageAlert.storyboard; path = MoyeoRun/Scenes/Login/Views/InterfaceBuilders/SelectProfileImageAlert.storyboard; sourceTree = SOURCE_ROOT; };
 		0A3919B0281310DA006161C4 /* SelectProfileImageAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectProfileImageAlertViewController.swift; sourceTree = "<group>"; };
 		0A8DE82A27F04CC900077DC6 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		0A8DE83027F04DEC00077DC6 /* HomeTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
@@ -108,15 +108,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0A3919A828130F39006161C4 /* InterfaceBuilders */ = {
-			isa = PBXGroup;
-			children = (
-				0A3919A928130FCA006161C4 /* EnterUserInfoWhenSignUp.storyboard */,
-				0A3919AE281310B4006161C4 /* SelectProfileImageAlert.storyboard */,
-			);
-			path = InterfaceBuilders;
-			sourceTree = "<group>";
-		};
 		0A3919AB28130FF8006161C4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +115,23 @@
 				0A3919B0281310DA006161C4 /* SelectProfileImageAlertViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0A3919B228141543006161C4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A3919B32814154E006161C4 /* InterfaceBuilders */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A3919B32814154E006161C4 /* InterfaceBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				0A3919AE281310B4006161C4 /* SelectProfileImageAlert.storyboard */,
+				0A3919A928130FCA006161C4 /* EnterUserInfoWhenSignUp.storyboard */,
+			);
+			path = InterfaceBuilders;
 			sourceTree = "<group>";
 		};
 		0A8DE82427F0489C00077DC6 /* TabBar */ = {
@@ -300,7 +308,7 @@
 		3AADB25627EF552F00AFDE01 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				3AADB25927EF557500AFDE01 /* Views */,
+				0A3919B228141543006161C4 /* Views */,
 				0A3919AB28130FF8006161C4 /* ViewControllers */,
 				3AADB25827EF556E00AFDE01 /* Models */,
 			);
@@ -322,14 +330,6 @@
 			children = (
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		3AADB25927EF557500AFDE01 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				0A3919A828130F39006161C4 /* InterfaceBuilders */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		3AADB25A27EF557D00AFDE01 /* Views */ = {
