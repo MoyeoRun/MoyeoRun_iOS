@@ -11,7 +11,7 @@
         <!--Select Profile Image Alert View Controller-->
         <scene sceneID="oBM-on-Wm9">
             <objects>
-                <viewController storyboardIdentifier="SelectProfileImageAlertViewController" id="SQI-0J-WGz" customClass="SelectProfileImageAlertViewController" customModule="MoyeoRun" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectProfileImageAlert" id="SQI-0J-WGz" customClass="SelectProfileImageAlertViewController" customModule="MoyeoRun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TdG-n2-knJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

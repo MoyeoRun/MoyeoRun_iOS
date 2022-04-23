@@ -28,17 +28,16 @@
                                             <constraint firstAttribute="width" secondItem="jcs-Lv-6Je" secondAttribute="height" id="lbF-7H-MgQ"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PF7-U6-9Le">
-                                        <rect key="frame" x="223" y="116" width="40" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PF7-U6-9Le">
+                                        <rect key="frame" x="228" y="121" width="35" height="35"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="7Qk-en-XIr"/>
+                                            <constraint firstAttribute="height" constant="35" id="7Qk-en-XIr"/>
                                             <constraint firstAttribute="width" secondItem="PF7-U6-9Le" secondAttribute="height" id="MYm-vp-V9n"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="카메라">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
-                                        </buttonConfiguration>
+                                        <color key="tintColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="Camera"/>
                                         <connections>
                                             <action selector="onTapCameraSymbolButton:" destination="cln-es-062" eventType="touchUpInside" id="Jiw-9h-Pxb"/>
                                         </connections>
@@ -135,9 +134,9 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WX6-an-Nfj">
                                                         <rect key="frame" x="0.0" y="0.0" width="178.5" height="48"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemGray5Color"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="성별남" title="">
+                                                        <buttonConfiguration key="configuration" style="plain" image="Male" title="">
                                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="ultraLight"/>
                                                         </buttonConfiguration>
                                                         <userDefinedRuntimeAttributes>
@@ -157,9 +156,9 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhI-v9-Seg">
                                                         <rect key="frame" x="187.5" y="0.0" width="178.5" height="48"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemGray5Color"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="성별여" title=""/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="Female" title=""/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                 <color key="value" systemColor="systemGray5Color"/>
@@ -200,11 +199,11 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="lTc-1J-25B"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="다음">
-                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="20"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="다음">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4"/>
@@ -265,14 +264,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kqu-Cu-SqF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="43" y="50"/>
+            <point key="canvasLocation" x="-422" y="41"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Camera" width="17" height="16"/>
+        <image name="Female" width="32" height="31"/>
+        <image name="Male" width="20" height="33"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
-        <image name="성별남" width="20" height="33"/>
-        <image name="성별여" width="32" height="31"/>
-        <image name="카메라" width="17" height="16"/>
         <image name="프로필 이미지.png" width="123" height="123"/>
         <namedColor name="buttonColor1">
             <color red="0.067000001668930054" green="0.38400000333786011" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

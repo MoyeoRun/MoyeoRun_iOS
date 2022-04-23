@@ -34,15 +34,16 @@ class EnterUserInfoWhenSignUp: UIViewController {
         func setCameraSymbolButton() {
             self.cameraSymbolButton.layer.cornerRadius = self.cameraSymbolButton.frame.width / 2
             self.cameraSymbolButton.layer.masksToBounds = true
-            self.cameraSymbolButton.layer.borderWidth = 0
             cameraSymbolButton.imageView?.adjustsImageSizeForAccessibilityContentSizeCategory = true
+            self.cameraSymbolButton.layer.borderWidth = 1
+            self.cameraSymbolButton.borderColor = .systemGray5
         }
     }
 
     @IBAction func onTapCameraSymbolButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "SelectProfileImageAlertStoryboard", bundle: nil)
+        let storyboard = UIStoryboard(name: "SelectProfileImageAlert", bundle: nil)
         let viewController = storyboard.instantiateViewController(
-            withIdentifier: "SelectProfileImageAlertViewController"
+            withIdentifier: "SelectProfileImageAlert"
         )
         viewController.modalPresentationStyle = .overCurrentContext
         self.present(viewController, animated: false)
@@ -100,12 +101,12 @@ class EnterUserInfoWhenSignUp: UIViewController {
             unsetFemaleButtonColor()
         }
         func unsetMaleButtonColor() {
-            genderMaleButton.tintColor = .black
+            genderMaleButton.tintColor = .systemGray5
             genderMaleButton.backgroundColor = .white
             genderMaleButton.borderColor = .systemGray5
         }
         func unsetFemaleButtonColor() {
-            genderFemaleButton.tintColor = .black
+            genderFemaleButton.tintColor = .systemGray5
             genderFemaleButton.backgroundColor = .white
             genderFemaleButton.borderColor = .systemGray5
         }
