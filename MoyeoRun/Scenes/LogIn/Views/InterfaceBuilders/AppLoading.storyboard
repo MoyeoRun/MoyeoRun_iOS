@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MoyeoRunSymbol" translatesAutoresizingMaskIntoConstraints="NO" id="dAF-TR-EsA">
-                                <rect key="frame" x="70" y="316" width="274" height="274"/>
+                                <rect key="frame" x="62" y="308" width="290" height="290"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dAF-TR-EsA" secondAttribute="height" id="xMA-oq-QAD"/>
@@ -28,10 +28,10 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="RunBlue"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dAF-TR-EsA" secondAttribute="trailing" constant="70" id="BSC-Yn-aI2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dAF-TR-EsA" secondAttribute="trailing" constant="62" id="BSC-Yn-aI2"/>
                             <constraint firstItem="dAF-TR-EsA" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="MpF-FE-Nf1"/>
                             <constraint firstItem="dAF-TR-EsA" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="ncj-YQ-YU6"/>
-                            <constraint firstItem="dAF-TR-EsA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="70" id="osC-ZU-JAz"/>
+                            <constraint firstItem="dAF-TR-EsA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="62" id="osC-ZU-JAz"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -43,7 +43,7 @@
     <resources>
         <image name="MoyeoRunSymbol" width="238" height="258"/>
         <namedColor name="RunBlue">
-            <color red="0.066666666666666666" green="0.38431372549019605" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.067000001668930054" green="0.38400000333786011" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
