@@ -139,6 +139,8 @@
 				0A26EDD6280AD1B10077C042 /* MyPage.storyboard */,
 			);
 			path = InterfaceBuilders;
+            sourceTree = "<group>";
+        };
 		2049243327F2F3D600CF5A11 /* Components */ = {
 			isa = PBXGroup;
 			children = (
