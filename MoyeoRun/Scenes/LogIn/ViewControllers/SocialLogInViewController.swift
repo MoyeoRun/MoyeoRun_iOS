@@ -9,21 +9,23 @@ import UIKit
 
 class SocialLogInViewController: UIViewController {
 
+    @IBOutlet weak var SignInWithGoogleButton: UIButton!
+    @IBOutlet weak var AppleSymbolImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUI()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setUI(){
+        setSignInWithGoogleButton()
+        
+        func setSignInWithAppleButton(){
+            AppleSymbolImageView.layer.cornerRadius = 4
+        }
+        func setSignInWithGoogleButton(){
+            let roboto = UIFont(name: "Roboto-Regular", size: 18)
+            
+            SignInWithGoogleButton.titleLabel?.font = roboto
+        }
     }
-    */
-
 }

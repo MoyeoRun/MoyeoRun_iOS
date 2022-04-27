@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A26EDD4280AD19C0077C042 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A26EDD3280AD19C0077C042 /* MyPageViewController.swift */; };
 		0A26EDD7280AD1B10077C042 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A26EDD6280AD1B10077C042 /* MyPage.storyboard */; };
+		0A83ECCA28198C4E00656532 /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = 0A83ECC928198C4E00656532 /* Roboto */; };
 		0A8DE82B27F04CC900077DC6 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE82A27F04CC900077DC6 /* TabBar.storyboard */; };
 		0A8DE83127F04DEC00077DC6 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE83027F04DEC00077DC6 /* HomeTab.storyboard */; };
 		0A8DE83327F04EB100077DC6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8DE83227F04EB100077DC6 /* TabBarViewController.swift */; };
@@ -58,6 +59,7 @@
 /* Begin PBXFileReference section */
 		0A26EDD3280AD19C0077C042 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		0A26EDD6280AD1B10077C042 /* MyPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
+		0A83ECC928198C4E00656532 /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Roboto; sourceTree = "<group>"; };
 		0A8DE82A27F04CC900077DC6 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		0A8DE83027F04DEC00077DC6 /* HomeTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
 		0A8DE83227F04EB100077DC6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,14 @@
 				0A26EDD6280AD1B10077C042 /* MyPage.storyboard */,
 			);
 			path = InterfaceBuilders;
+			sourceTree = "<group>";
+		};
+		0A83ECC828198C4400656532 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				0A83ECC928198C4E00656532 /* Roboto */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		0A8DE82427F0489C00077DC6 /* TabBar */ = {
@@ -359,6 +369,7 @@
 		3AADB25727EF554D00AFDE01 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				0A83ECC828198C4400656532 /* Font */,
 				2049243327F2F3D600CF5A11 /* Components */,
 				0A8DE83627F0514200077DC6 /* TestImages */,
 				0A8DE83427F04F1700077DC6 /* Extensions.swift */,
@@ -562,6 +573,7 @@
 				F7CDF8EB27F5E9C1005F03A7 /* MakeRoom.storyboard in Resources */,
 				0AF2314E27F0650B00574776 /* HomeTabNewMission2.png in Resources */,
 				F75E9FA927E9470200000DCD /* LaunchScreen.storyboard in Resources */,
+				0A83ECCA28198C4E00656532 /* Roboto in Resources */,
 				3AB61E0827F8A0C500A30449 /* MoyeorunRoom.storyboard in Resources */,
 				0AF2314527F0650000574776 /* HomeTabNowPopular2.png in Resources */,
 				0A8DE83127F04DEC00077DC6 /* HomeTab.storyboard in Resources */,
@@ -798,6 +810,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MoyeoRun/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자의 위치 정보를 받으려고 합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
@@ -827,6 +840,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MoyeoRun/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자의 위치 정보를 받으려고 합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
