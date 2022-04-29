@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WQe-He-ioA">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIntroImage" translatesAutoresizingMaskIntoConstraints="NO" id="WQe-He-ioA">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어디서든 함께 즐기는 러닝" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdp-TY-fBn">
@@ -63,8 +63,8 @@
                             <constraint firstAttribute="bottom" secondItem="WQe-He-ioA" secondAttribute="bottom" id="5Xj-Uu-wXo"/>
                             <constraint firstItem="Pdp-TY-fBn" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="160" id="9Ed-xc-FYF"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Pdp-TY-fBn" secondAttribute="trailing" constant="39" id="9NI-yw-f3T"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WQe-He-ioA" secondAttribute="trailing" id="B2L-0d-idV"/>
-                            <constraint firstItem="WQe-He-ioA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="I2E-4d-dY6"/>
+                            <constraint firstAttribute="trailing" secondItem="WQe-He-ioA" secondAttribute="trailing" id="B2L-0d-idV"/>
+                            <constraint firstItem="WQe-He-ioA" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="I2E-4d-dY6"/>
                             <constraint firstItem="XWa-vh-FLi" firstAttribute="leading" secondItem="WQe-He-ioA" secondAttribute="leading" constant="39" id="Ngf-PX-rMw"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="dgp-9s-oJA" secondAttribute="bottom" constant="10" id="OjZ-x9-wOR"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dgp-9s-oJA" secondAttribute="trailing" constant="24" id="Tjy-Y1-DpF"/>
@@ -81,6 +81,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AppIntroImage" width="2560" height="1707"/>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
