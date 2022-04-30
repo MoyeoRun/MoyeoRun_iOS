@@ -25,10 +25,8 @@
 		0A95B92927F3563100E131E6 /* HomeTabNowPopularContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A95B92827F3563100E131E6 /* HomeTabNowPopularContainer.swift */; };
 		0A95B92B27F3564300E131E6 /* HomeTabNewMissionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A95B92A27F3564300E131E6 /* HomeTabNewMissionContainer.swift */; };
 		0A95B92D27F3565300E131E6 /* HomeTabLastRecordContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A95B92C27F3565300E131E6 /* HomeTabLastRecordContainer.swift */; };
-		0AEEAEFA28182D7E0075101A /* AppLoading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEAEF928182D7E0075101A /* AppLoading.storyboard */; };
 		0AEEAEFC28182D8D0075101A /* AppIntro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEAEFB28182D8D0075101A /* AppIntro.storyboard */; };
 		0AEEAEFE28182D9A0075101A /* SocialLogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEAEFD28182D9A0075101A /* SocialLogIn.storyboard */; };
-		0AEEAF0028182DEE0075101A /* AppLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEEAEFF28182DEE0075101A /* AppLoadingViewController.swift */; };
 		0AEEAF0228182DFB0075101A /* AppIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEEAF0128182DFB0075101A /* AppIntroViewController.swift */; };
 		0AEEAF0428182E070075101A /* SocialLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEEAF0328182E070075101A /* SocialLogInViewController.swift */; };
 		0AF2314327F0650000574776 /* HomeTabNowPopular0.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314027F0650000574776 /* HomeTabNowPopular0.png */; };
@@ -75,10 +73,8 @@
 		0A95B92827F3563100E131E6 /* HomeTabNowPopularContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabNowPopularContainer.swift; sourceTree = "<group>"; };
 		0A95B92A27F3564300E131E6 /* HomeTabNewMissionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabNewMissionContainer.swift; sourceTree = "<group>"; };
 		0A95B92C27F3565300E131E6 /* HomeTabLastRecordContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabLastRecordContainer.swift; sourceTree = "<group>"; };
-		0AEEAEF928182D7E0075101A /* AppLoading.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = AppLoading.storyboard; path = MoyeoRun/Scenes/LogIn/Views/InterfaceBuilders/AppLoading.storyboard; sourceTree = SOURCE_ROOT; };
 		0AEEAEFB28182D8D0075101A /* AppIntro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = AppIntro.storyboard; path = MoyeoRun/Scenes/LogIn/Views/InterfaceBuilders/AppIntro.storyboard; sourceTree = SOURCE_ROOT; };
 		0AEEAEFD28182D9A0075101A /* SocialLogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SocialLogIn.storyboard; path = MoyeoRun/Scenes/LogIn/Views/InterfaceBuilders/SocialLogIn.storyboard; sourceTree = SOURCE_ROOT; };
-		0AEEAEFF28182DEE0075101A /* AppLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppLoadingViewController.swift; path = MoyeoRun/Scenes/LogIn/ViewControllers/AppLoadingViewController.swift; sourceTree = SOURCE_ROOT; };
 		0AEEAF0128182DFB0075101A /* AppIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppIntroViewController.swift; path = MoyeoRun/Scenes/LogIn/ViewControllers/AppIntroViewController.swift; sourceTree = SOURCE_ROOT; };
 		0AEEAF0328182E070075101A /* SocialLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SocialLogInViewController.swift; path = MoyeoRun/Scenes/LogIn/ViewControllers/SocialLogInViewController.swift; sourceTree = SOURCE_ROOT; };
 		0AF2314027F0650000574776 /* HomeTabNowPopular0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNowPopular0.png; sourceTree = "<group>"; };
@@ -267,7 +263,6 @@
 		0AEEAEF628182D1A0075101A /* InterfaceBuilders */ = {
 			isa = PBXGroup;
 			children = (
-				0AEEAEF928182D7E0075101A /* AppLoading.storyboard */,
 				0AEEAEFB28182D8D0075101A /* AppIntro.storyboard */,
 				0AEEAEFD28182D9A0075101A /* SocialLogIn.storyboard */,
 			);
@@ -277,7 +272,6 @@
 		0AEEAEF828182D650075101A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0AEEAEFF28182DEE0075101A /* AppLoadingViewController.swift */,
 				0AEEAF0128182DFB0075101A /* AppIntroViewController.swift */,
 				0AEEAF0328182E070075101A /* SocialLogInViewController.swift */,
 			);
@@ -562,7 +556,6 @@
 			files = (
 				2040F3A127F469DA0034BA40 /* MapKitView.xib in Resources */,
 				0AEEAEFE28182D9A0075101A /* SocialLogIn.storyboard in Resources */,
-				0AEEAEFA28182D7E0075101A /* AppLoading.storyboard in Resources */,
 				0AF2315127F0650B00574776 /* HomeTabNewMission0.png in Resources */,
 				0A8DE82B27F04CC900077DC6 /* TabBar.storyboard in Resources */,
 				0AF2314427F0650000574776 /* HomeTabNowPopular1.png in Resources */,
@@ -648,7 +641,6 @@
 				0A8DE83527F04F1700077DC6 /* Extensions.swift in Sources */,
 				F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */,
 				2049243527F2F72000CF5A11 /* MapKitView.swift in Sources */,
-				0AEEAF0028182DEE0075101A /* AppLoadingViewController.swift in Sources */,
 				0A95B92B27F3564300E131E6 /* HomeTabNewMissionContainer.swift in Sources */,
 				0A95B92927F3563100E131E6 /* HomeTabNowPopularContainer.swift in Sources */,
 				0AEEAF0228182DFB0075101A /* AppIntroViewController.swift in Sources */,
