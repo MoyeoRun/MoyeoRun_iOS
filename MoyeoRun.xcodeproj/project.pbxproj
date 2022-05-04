@@ -51,6 +51,9 @@
 		F7BCF36428228FE100C969D3 /* AuthRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF36328228FE100C969D3 /* AuthRemoteDataSource.swift */; };
 		F7BCF3682822904B00C969D3 /* UserRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF3672822904B00C969D3 /* UserRemoteDataSource.swift */; };
 		F7BCF36A2822906900C969D3 /* TargetType+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF3692822906900C969D3 /* TargetType+.swift */; };
+		F7BCF36F282291B900C969D3 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF36E282291B900C969D3 /* Keychain.swift */; };
+		F7BCF371282291CF00C969D3 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF370282291CF00C969D3 /* KeychainStore.swift */; };
+		F7BCF373282291DF00C969D3 /* KeychainKeyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF372282291DF00C969D3 /* KeychainKeyType.swift */; };
 		F7CDF8EB27F5E9C1005F03A7 /* MakeRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CDF8EA27F5E9C1005F03A7 /* MakeRoom.storyboard */; };
 		F7E49D0B27FA1BC5003B923D /* Configuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E49D0A27FA1B8E003B923D /* Configuation.swift */; };
 /* End PBXBuildFile section */
@@ -104,6 +107,9 @@
 		F7BCF36328228FE100C969D3 /* AuthRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRemoteDataSource.swift; sourceTree = "<group>"; };
 		F7BCF3672822904B00C969D3 /* UserRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemoteDataSource.swift; sourceTree = "<group>"; };
 		F7BCF3692822906900C969D3 /* TargetType+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TargetType+.swift"; sourceTree = "<group>"; };
+		F7BCF36E282291B900C969D3 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		F7BCF370282291CF00C969D3 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		F7BCF372282291DF00C969D3 /* KeychainKeyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainKeyType.swift; sourceTree = "<group>"; };
 		F7CDF8EA27F5E9C1005F03A7 /* MakeRoom.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MakeRoom.storyboard; sourceTree = "<group>"; };
 		F7E49D0427FA176A003B923D /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		F7E49D0527FA176A003B923D /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -382,6 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				F7BCF34F28228DFD00C969D3 /* Network */,
+				F7BCF36D282291AB00C969D3 /* Keychain */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -449,6 +456,16 @@
 				F7BCF3672822904B00C969D3 /* UserRemoteDataSource.swift */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		F7BCF36D282291AB00C969D3 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCF36E282291B900C969D3 /* Keychain.swift */,
+				F7BCF370282291CF00C969D3 /* KeychainStore.swift */,
+				F7BCF372282291DF00C969D3 /* KeychainKeyType.swift */,
+			);
+			path = Keychain;
 			sourceTree = "<group>";
 		};
 		F7CDF8E927F5E9C1005F03A7 /* InterfaceBuilders */ = {
@@ -630,9 +647,12 @@
 				F7BCF35828228E7E00C969D3 /* RefreshDTO.swift in Sources */,
 				F7BCF34C28228DCA00C969D3 /* MoyaProvider+.swift in Sources */,
 				0A8DE83527F04F1700077DC6 /* Extensions.swift in Sources */,
+				F7BCF373282291DF00C969D3 /* KeychainKeyType.swift in Sources */,
+				F7BCF371282291CF00C969D3 /* KeychainStore.swift in Sources */,
 				F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */,
 				F7BCF36A2822906900C969D3 /* TargetType+.swift in Sources */,
 				0A95B92B27F3564300E131E6 /* HomeTabNewMissionContainer.swift in Sources */,
+				F7BCF36F282291B900C969D3 /* Keychain.swift in Sources */,
 				F7BCF34E28228DDB00C969D3 /* Response.swift in Sources */,
 				0A95B92927F3563100E131E6 /* HomeTabNowPopularContainer.swift in Sources */,
 				F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */,
