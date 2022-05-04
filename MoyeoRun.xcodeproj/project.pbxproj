@@ -41,6 +41,13 @@
 		F75E9FA927E9470200000DCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F75E9FA727E9470200000DCD /* LaunchScreen.storyboard */; };
 		F7BCF34C28228DCA00C969D3 /* MoyaProvider+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF34B28228DCA00C969D3 /* MoyaProvider+.swift */; };
 		F7BCF34E28228DDB00C969D3 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF34D28228DDB00C969D3 /* Response.swift */; };
+		F7BCF35228228E6600C969D3 /* AuthDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF35128228E6600C969D3 /* AuthDTO.swift */; };
+		F7BCF35428228E6E00C969D3 /* SignInDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF35328228E6E00C969D3 /* SignInDTO.swift */; };
+		F7BCF35628228E7700C969D3 /* SignUpDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF35528228E7700C969D3 /* SignUpDTO.swift */; };
+		F7BCF35828228E7E00C969D3 /* RefreshDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF35728228E7E00C969D3 /* RefreshDTO.swift */; };
+		F7BCF35A28228E8D00C969D3 /* LogoutDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF35928228E8D00C969D3 /* LogoutDTO.swift */; };
+		F7BCF36028228F9C00C969D3 /* DuplicateDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF35F28228F9C00C969D3 /* DuplicateDTO.swift */; };
+		F7BCF36228228FAF00C969D3 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF36128228FAF00C969D3 /* UserDTO.swift */; };
 		F7CDF8EB27F5E9C1005F03A7 /* MakeRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CDF8EA27F5E9C1005F03A7 /* MakeRoom.storyboard */; };
 		F7E49D0B27FA1BC5003B923D /* Configuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E49D0A27FA1B8E003B923D /* Configuation.swift */; };
 /* End PBXBuildFile section */
@@ -84,6 +91,13 @@
 		F75E9FAA27E9470200000DCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7BCF34B28228DCA00C969D3 /* MoyaProvider+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+.swift"; sourceTree = "<group>"; };
 		F7BCF34D28228DDB00C969D3 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		F7BCF35128228E6600C969D3 /* AuthDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDTO.swift; sourceTree = "<group>"; };
+		F7BCF35328228E6E00C969D3 /* SignInDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDTO.swift; sourceTree = "<group>"; };
+		F7BCF35528228E7700C969D3 /* SignUpDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDTO.swift; sourceTree = "<group>"; };
+		F7BCF35728228E7E00C969D3 /* RefreshDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshDTO.swift; sourceTree = "<group>"; };
+		F7BCF35928228E8D00C969D3 /* LogoutDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutDTO.swift; sourceTree = "<group>"; };
+		F7BCF35F28228F9C00C969D3 /* DuplicateDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateDTO.swift; sourceTree = "<group>"; };
+		F7BCF36128228FAF00C969D3 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
 		F7CDF8EA27F5E9C1005F03A7 /* MakeRoom.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MakeRoom.storyboard; sourceTree = "<group>"; };
 		F7E49D0427FA176A003B923D /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		F7E49D0527FA176A003B923D /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -243,6 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				F7BCF34A28228DAE00C969D3 /* Base */,
+				F7BCF35028228E4C00C969D3 /* Auth */,
+				F7BCF35D28228F7A00C969D3 /* User */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -371,6 +387,43 @@
 				F7BCF34D28228DDB00C969D3 /* Response.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		F7BCF35028228E4C00C969D3 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCF35C28228F6800C969D3 /* DTO */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		F7BCF35C28228F6800C969D3 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCF35128228E6600C969D3 /* AuthDTO.swift */,
+				F7BCF35328228E6E00C969D3 /* SignInDTO.swift */,
+				F7BCF35528228E7700C969D3 /* SignUpDTO.swift */,
+				F7BCF35728228E7E00C969D3 /* RefreshDTO.swift */,
+				F7BCF35928228E8D00C969D3 /* LogoutDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		F7BCF35D28228F7A00C969D3 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCF35E28228F8B00C969D3 /* DTO */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		F7BCF35E28228F8B00C969D3 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCF35F28228F9C00C969D3 /* DuplicateDTO.swift */,
+				F7BCF36128228FAF00C969D3 /* UserDTO.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 		F7CDF8E927F5E9C1005F03A7 /* InterfaceBuilders */ = {
@@ -545,6 +598,9 @@
 				F75E9F9E27E9470100000DCD /* ViewController.swift in Sources */,
 				0A95B92627F3545000E131E6 /* HomeTabLastRecordCell.swift in Sources */,
 				0A95B92427F3544200E131E6 /* HomeTabNewMissionCell.swift in Sources */,
+				F7BCF35228228E6600C969D3 /* AuthDTO.swift in Sources */,
+				F7BCF36028228F9C00C969D3 /* DuplicateDTO.swift in Sources */,
+				F7BCF35828228E7E00C969D3 /* RefreshDTO.swift in Sources */,
 				F7BCF34C28228DCA00C969D3 /* MoyaProvider+.swift in Sources */,
 				0A8DE83527F04F1700077DC6 /* Extensions.swift in Sources */,
 				F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */,
@@ -554,7 +610,11 @@
 				F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */,
 				0A8DE84027F052C000077DC6 /* HomeTabViewController.swift in Sources */,
 				F75E9FA427E9470100000DCD /* MoyeoRun.xcdatamodeld in Sources */,
+				F7BCF35628228E7700C969D3 /* SignUpDTO.swift in Sources */,
 				F7E49D0B27FA1BC5003B923D /* Configuation.swift in Sources */,
+				F7BCF36228228FAF00C969D3 /* UserDTO.swift in Sources */,
+				F7BCF35A28228E8D00C969D3 /* LogoutDTO.swift in Sources */,
+				F7BCF35428228E6E00C969D3 /* SignInDTO.swift in Sources */,
 				0A8DE83327F04EB100077DC6 /* TabBarViewController.swift in Sources */,
 				0A95B92227F3543600E131E6 /* HomeTabNowPopularCell.swift in Sources */,
 			);
