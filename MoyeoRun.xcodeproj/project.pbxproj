@@ -48,6 +48,9 @@
 		F7BCF35A28228E8D00C969D3 /* LogoutDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF35928228E8D00C969D3 /* LogoutDTO.swift */; };
 		F7BCF36028228F9C00C969D3 /* DuplicateDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF35F28228F9C00C969D3 /* DuplicateDTO.swift */; };
 		F7BCF36228228FAF00C969D3 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF36128228FAF00C969D3 /* UserDTO.swift */; };
+		F7BCF36428228FE100C969D3 /* AuthRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF36328228FE100C969D3 /* AuthRemoteDataSource.swift */; };
+		F7BCF3682822904B00C969D3 /* UserRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF3672822904B00C969D3 /* UserRemoteDataSource.swift */; };
+		F7BCF36A2822906900C969D3 /* TargetType+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF3692822906900C969D3 /* TargetType+.swift */; };
 		F7CDF8EB27F5E9C1005F03A7 /* MakeRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CDF8EA27F5E9C1005F03A7 /* MakeRoom.storyboard */; };
 		F7E49D0B27FA1BC5003B923D /* Configuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E49D0A27FA1B8E003B923D /* Configuation.swift */; };
 /* End PBXBuildFile section */
@@ -98,6 +101,9 @@
 		F7BCF35928228E8D00C969D3 /* LogoutDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutDTO.swift; sourceTree = "<group>"; };
 		F7BCF35F28228F9C00C969D3 /* DuplicateDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateDTO.swift; sourceTree = "<group>"; };
 		F7BCF36128228FAF00C969D3 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
+		F7BCF36328228FE100C969D3 /* AuthRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRemoteDataSource.swift; sourceTree = "<group>"; };
+		F7BCF3672822904B00C969D3 /* UserRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemoteDataSource.swift; sourceTree = "<group>"; };
+		F7BCF3692822906900C969D3 /* TargetType+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TargetType+.swift"; sourceTree = "<group>"; };
 		F7CDF8EA27F5E9C1005F03A7 /* MakeRoom.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MakeRoom.storyboard; sourceTree = "<group>"; };
 		F7E49D0427FA176A003B923D /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		F7E49D0527FA176A003B923D /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -384,6 +390,7 @@
 			isa = PBXGroup;
 			children = (
 				F7BCF34B28228DCA00C969D3 /* MoyaProvider+.swift */,
+				F7BCF3692822906900C969D3 /* TargetType+.swift */,
 				F7BCF34D28228DDB00C969D3 /* Response.swift */,
 			);
 			path = Network;
@@ -393,6 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				F7BCF35C28228F6800C969D3 /* DTO */,
+				F7BCF36528228FE500C969D3 /* DataSource */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -413,6 +421,7 @@
 			isa = PBXGroup;
 			children = (
 				F7BCF35E28228F8B00C969D3 /* DTO */,
+				F7BCF3662822902600C969D3 /* DataSource */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -424,6 +433,22 @@
 				F7BCF36128228FAF00C969D3 /* UserDTO.swift */,
 			);
 			path = DTO;
+			sourceTree = "<group>";
+		};
+		F7BCF36528228FE500C969D3 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCF36328228FE100C969D3 /* AuthRemoteDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		F7BCF3662822902600C969D3 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCF3672822904B00C969D3 /* UserRemoteDataSource.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		F7CDF8E927F5E9C1005F03A7 /* InterfaceBuilders */ = {
@@ -598,12 +623,15 @@
 				F75E9F9E27E9470100000DCD /* ViewController.swift in Sources */,
 				0A95B92627F3545000E131E6 /* HomeTabLastRecordCell.swift in Sources */,
 				0A95B92427F3544200E131E6 /* HomeTabNewMissionCell.swift in Sources */,
+				F7BCF3682822904B00C969D3 /* UserRemoteDataSource.swift in Sources */,
 				F7BCF35228228E6600C969D3 /* AuthDTO.swift in Sources */,
 				F7BCF36028228F9C00C969D3 /* DuplicateDTO.swift in Sources */,
+				F7BCF36428228FE100C969D3 /* AuthRemoteDataSource.swift in Sources */,
 				F7BCF35828228E7E00C969D3 /* RefreshDTO.swift in Sources */,
 				F7BCF34C28228DCA00C969D3 /* MoyaProvider+.swift in Sources */,
 				0A8DE83527F04F1700077DC6 /* Extensions.swift in Sources */,
 				F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */,
+				F7BCF36A2822906900C969D3 /* TargetType+.swift in Sources */,
 				0A95B92B27F3564300E131E6 /* HomeTabNewMissionContainer.swift in Sources */,
 				F7BCF34E28228DDB00C969D3 /* Response.swift in Sources */,
 				0A95B92927F3563100E131E6 /* HomeTabNowPopularContainer.swift in Sources */,
