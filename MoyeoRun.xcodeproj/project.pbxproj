@@ -55,6 +55,8 @@
 		F7BCF371282291CF00C969D3 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF370282291CF00C969D3 /* KeychainStore.swift */; };
 		F7BCF373282291DF00C969D3 /* KeychainKeyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF372282291DF00C969D3 /* KeychainKeyType.swift */; };
 		F7BCF375282292CE00C969D3 /* AuthLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF374282292CE00C969D3 /* AuthLocalDataSource.swift */; };
+		F7BCF3792822933900C969D3 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF3782822933900C969D3 /* AuthRepository.swift */; };
+		F7BCF37B2822934C00C969D3 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCF37A2822934C00C969D3 /* UserRepository.swift */; };
 		F7CDF8EB27F5E9C1005F03A7 /* MakeRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CDF8EA27F5E9C1005F03A7 /* MakeRoom.storyboard */; };
 		F7E49D0B27FA1BC5003B923D /* Configuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E49D0A27FA1B8E003B923D /* Configuation.swift */; };
 /* End PBXBuildFile section */
@@ -112,6 +114,8 @@
 		F7BCF370282291CF00C969D3 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		F7BCF372282291DF00C969D3 /* KeychainKeyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainKeyType.swift; sourceTree = "<group>"; };
 		F7BCF374282292CE00C969D3 /* AuthLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLocalDataSource.swift; sourceTree = "<group>"; };
+		F7BCF3782822933900C969D3 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		F7BCF37A2822934C00C969D3 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		F7CDF8EA27F5E9C1005F03A7 /* MakeRoom.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MakeRoom.storyboard; sourceTree = "<group>"; };
 		F7E49D0427FA176A003B923D /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		F7E49D0527FA176A003B923D /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -410,6 +414,7 @@
 			children = (
 				F7BCF35C28228F6800C969D3 /* DTO */,
 				F7BCF36528228FE500C969D3 /* DataSource */,
+				F7BCF3762822931600C969D3 /* Repository */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -431,6 +436,7 @@
 			children = (
 				F7BCF35E28228F8B00C969D3 /* DTO */,
 				F7BCF3662822902600C969D3 /* DataSource */,
+				F7BCF3772822931D00C969D3 /* Repository */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -469,6 +475,22 @@
 				F7BCF372282291DF00C969D3 /* KeychainKeyType.swift */,
 			);
 			path = Keychain;
+			sourceTree = "<group>";
+		};
+		F7BCF3762822931600C969D3 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCF3782822933900C969D3 /* AuthRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		F7BCF3772822931D00C969D3 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCF37A2822934C00C969D3 /* UserRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		F7CDF8E927F5E9C1005F03A7 /* InterfaceBuilders */ = {
@@ -653,6 +675,7 @@
 				F7BCF373282291DF00C969D3 /* KeychainKeyType.swift in Sources */,
 				F7BCF375282292CE00C969D3 /* AuthLocalDataSource.swift in Sources */,
 				F7BCF371282291CF00C969D3 /* KeychainStore.swift in Sources */,
+				F7BCF37B2822934C00C969D3 /* UserRepository.swift in Sources */,
 				F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */,
 				F7BCF36A2822906900C969D3 /* TargetType+.swift in Sources */,
 				0A95B92B27F3564300E131E6 /* HomeTabNewMissionContainer.swift in Sources */,
@@ -663,6 +686,7 @@
 				0A8DE84027F052C000077DC6 /* HomeTabViewController.swift in Sources */,
 				F75E9FA427E9470100000DCD /* MoyeoRun.xcdatamodeld in Sources */,
 				F7BCF35628228E7700C969D3 /* SignUpDTO.swift in Sources */,
+				F7BCF3792822933900C969D3 /* AuthRepository.swift in Sources */,
 				F7E49D0B27FA1BC5003B923D /* Configuation.swift in Sources */,
 				F7BCF36228228FAF00C969D3 /* UserDTO.swift in Sources */,
 				F7BCF35A28228E8D00C969D3 /* LogoutDTO.swift in Sources */,

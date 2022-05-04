@@ -28,7 +28,7 @@ final class AuthLocalDataSource: AuthLocalDataSourceable {
     required init(store: KeychainStorable = KeychainStore()) {
         self.store = store
     }
-    
+
     func storeToken(token: TokenResponse) -> Result<Void, Error> {
         do {
             try store.create(value: token.accessToken, forKey: AuthKey.accessToken)
@@ -38,7 +38,7 @@ final class AuthLocalDataSource: AuthLocalDataSourceable {
             return .failure(error)
         }
     }
-    
+
     func refreshAccessToken(accessToken: String) -> Result<Void, Error> {
         do {
             try store.update(value: accessToken, forKey: AuthKey.accessToken)
@@ -47,7 +47,7 @@ final class AuthLocalDataSource: AuthLocalDataSourceable {
             return .failure(error)
         }
     }
-    
+
     func clearToken() -> Result<Void, Error> {
         do {
             try store.delete(forKey: AuthKey.accessToken)
