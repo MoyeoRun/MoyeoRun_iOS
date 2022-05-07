@@ -33,6 +33,6 @@ class SocialLogInViewController: UIViewController {
         let storyBoard = UIStoryboard(name: "InsertUserInfo", bundle: nil)
         let viewController = storyBoard.instantiateViewController(withIdentifier: "InsertUserInfo")
         viewController.modalPresentationStyle = .overFullScreen
-        self.present(viewController, animated: false)
+        self.present(viewController, animated: true)
     }
 }

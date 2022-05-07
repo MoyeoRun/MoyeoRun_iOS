@@ -14,7 +14,7 @@
         <!--홈-->
         <scene sceneID="GSk-AL-PjH">
             <objects>
-                <viewController id="gyb-Fx-FzI" customClass="HomeTabViewController" customModule="MoyeoRun" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeTab" id="gyb-Fx-FzI" customClass="HomeTabViewController" customModule="MoyeoRun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n37-9a-zeC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
