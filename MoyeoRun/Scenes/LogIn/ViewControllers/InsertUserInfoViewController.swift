@@ -65,6 +65,13 @@ class InsertUserInfoViewController: UIViewController {
         self.dismiss(animated: false)
     }
 
+    @IBAction func onTapNextButton(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "SignUpComplete", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "SignUpComplete")
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: true)
+    }
+
     @IBAction func onTapGenderMaleButton(_ sender: Any) {
         switch selectedGender {
         case 0: selectedGender = 1

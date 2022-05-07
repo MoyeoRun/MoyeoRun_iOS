@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1C6ED22826975B00A86F35 /* SignUpComplete.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1C6ED12826975B00A86F35 /* SignUpComplete.storyboard */; };
+		0A1C6ED42826976E00A86F35 /* SignUpCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1C6ED32826976E00A86F35 /* SignUpCompleteViewController.swift */; };
 		0A1DBD65282676B900784098 /* InsertUserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DBD64282676B900784098 /* InsertUserInfo.storyboard */; };
 		0A1DBD67282676EF00784098 /* InsertUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1DBD66282676EF00784098 /* InsertUserInfoViewController.swift */; };
 		0A1DBD692826785200784098 /* ProfileImageMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DBD682826785200784098 /* ProfileImageMenu.storyboard */; };
@@ -59,6 +61,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A1C6ED12826975B00A86F35 /* SignUpComplete.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SignUpComplete.storyboard; path = MoyeoRun/Scenes/LogIn/Views/InterfaceBuilders/SignUpComplete.storyboard; sourceTree = SOURCE_ROOT; };
+		0A1C6ED32826976E00A86F35 /* SignUpCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpCompleteViewController.swift; path = MoyeoRun/Scenes/LogIn/ViewControllers/SignUpCompleteViewController.swift; sourceTree = SOURCE_ROOT; };
 		0A1DBD64282676B900784098 /* InsertUserInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = InsertUserInfo.storyboard; path = MoyeoRun/Scenes/LogIn/Views/InterfaceBuilders/InsertUserInfo.storyboard; sourceTree = SOURCE_ROOT; };
 		0A1DBD66282676EF00784098 /* InsertUserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InsertUserInfoViewController.swift; path = MoyeoRun/Scenes/LogIn/ViewControllers/InsertUserInfoViewController.swift; sourceTree = SOURCE_ROOT; };
 		0A1DBD682826785200784098 /* ProfileImageMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ProfileImageMenu.storyboard; path = MoyeoRun/Scenes/LogIn/Views/InterfaceBuilders/ProfileImageMenu.storyboard; sourceTree = SOURCE_ROOT; };
@@ -275,6 +279,7 @@
 				0AEEAEFD28182D9A0075101A /* SocialLogIn.storyboard */,
 				0A1DBD64282676B900784098 /* InsertUserInfo.storyboard */,
 				0A1DBD682826785200784098 /* ProfileImageMenu.storyboard */,
+				0A1C6ED12826975B00A86F35 /* SignUpComplete.storyboard */,
 			);
 			path = InterfaceBuilders;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 				0AEEAF0328182E070075101A /* SocialLogInViewController.swift */,
 				0A1DBD66282676EF00784098 /* InsertUserInfoViewController.swift */,
 				0A1DBD6A2826787400784098 /* ProfileImageMenuViewController.swift */,
+				0A1C6ED32826976E00A86F35 /* SignUpCompleteViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -578,6 +584,7 @@
 				0A8DE83C27F0518D00077DC6 /* 모여런 심볼.png in Resources */,
 				0A1DBD692826785200784098 /* ProfileImageMenu.storyboard in Resources */,
 				0AF2315027F0650B00574776 /* HomeTabNewMission1.png in Resources */,
+				0A1C6ED22826975B00A86F35 /* SignUpComplete.storyboard in Resources */,
 				F7CDF8EB27F5E9C1005F03A7 /* MakeRoom.storyboard in Resources */,
 				0AF2314E27F0650B00574776 /* HomeTabNewMission2.png in Resources */,
 				F75E9FA927E9470200000DCD /* LaunchScreen.storyboard in Resources */,
@@ -675,6 +682,7 @@
 				2049243527F2F72000CF5A11 /* MapKitView.swift in Sources */,
 				0A95B92B27F3564300E131E6 /* HomeTabNewMissionContainer.swift in Sources */,
 				0A95B92927F3563100E131E6 /* HomeTabNowPopularContainer.swift in Sources */,
+				0A1C6ED42826976E00A86F35 /* SignUpCompleteViewController.swift in Sources */,
 				0AEEAF0228182DFB0075101A /* AppIntroViewController.swift in Sources */,
 				F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */,
 				0A1DBD6B2826787400784098 /* ProfileImageMenuViewController.swift in Sources */,
