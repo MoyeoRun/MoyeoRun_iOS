@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1DBD65282676B900784098 /* InsertUserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DBD64282676B900784098 /* InsertUserInfo.storyboard */; };
+		0A1DBD67282676EF00784098 /* InsertUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1DBD66282676EF00784098 /* InsertUserInfoViewController.swift */; };
+		0A1DBD692826785200784098 /* ProfileImageMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DBD682826785200784098 /* ProfileImageMenu.storyboard */; };
+		0A1DBD6B2826787400784098 /* ProfileImageMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1DBD6A2826787400784098 /* ProfileImageMenuViewController.swift */; };
 		0A26EDD4280AD19C0077C042 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A26EDD3280AD19C0077C042 /* MyPageViewController.swift */; };
 		0A26EDD7280AD1B10077C042 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A26EDD6280AD1B10077C042 /* MyPage.storyboard */; };
 		0A83ECCA28198C4E00656532 /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = 0A83ECC928198C4E00656532 /* Roboto */; };
@@ -55,6 +59,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A1DBD64282676B900784098 /* InsertUserInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = InsertUserInfo.storyboard; path = MoyeoRun/Scenes/LogIn/Views/InterfaceBuilders/InsertUserInfo.storyboard; sourceTree = SOURCE_ROOT; };
+		0A1DBD66282676EF00784098 /* InsertUserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InsertUserInfoViewController.swift; path = MoyeoRun/Scenes/LogIn/ViewControllers/InsertUserInfoViewController.swift; sourceTree = SOURCE_ROOT; };
+		0A1DBD682826785200784098 /* ProfileImageMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ProfileImageMenu.storyboard; path = MoyeoRun/Scenes/LogIn/Views/InterfaceBuilders/ProfileImageMenu.storyboard; sourceTree = SOURCE_ROOT; };
+		0A1DBD6A2826787400784098 /* ProfileImageMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileImageMenuViewController.swift; path = MoyeoRun/Scenes/LogIn/ViewControllers/ProfileImageMenuViewController.swift; sourceTree = SOURCE_ROOT; };
 		0A26EDD3280AD19C0077C042 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		0A26EDD6280AD1B10077C042 /* MyPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		0A83ECC928198C4E00656532 /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Roboto; sourceTree = "<group>"; };
@@ -265,6 +273,8 @@
 			children = (
 				0AEEAEFB28182D8D0075101A /* AppIntro.storyboard */,
 				0AEEAEFD28182D9A0075101A /* SocialLogIn.storyboard */,
+				0A1DBD64282676B900784098 /* InsertUserInfo.storyboard */,
+				0A1DBD682826785200784098 /* ProfileImageMenu.storyboard */,
 			);
 			path = InterfaceBuilders;
 			sourceTree = "<group>";
@@ -274,6 +284,8 @@
 			children = (
 				0AEEAF0128182DFB0075101A /* AppIntroViewController.swift */,
 				0AEEAF0328182E070075101A /* SocialLogInViewController.swift */,
+				0A1DBD66282676EF00784098 /* InsertUserInfoViewController.swift */,
+				0A1DBD6A2826787400784098 /* ProfileImageMenuViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -560,8 +572,10 @@
 				0A8DE82B27F04CC900077DC6 /* TabBar.storyboard in Resources */,
 				0AF2314427F0650000574776 /* HomeTabNowPopular1.png in Resources */,
 				0AF2314327F0650000574776 /* HomeTabNowPopular0.png in Resources */,
+				0A1DBD65282676B900784098 /* InsertUserInfo.storyboard in Resources */,
 				0A26EDD7280AD1B10077C042 /* MyPage.storyboard in Resources */,
 				0A8DE83C27F0518D00077DC6 /* 모여런 심볼.png in Resources */,
+				0A1DBD692826785200784098 /* ProfileImageMenu.storyboard in Resources */,
 				0AF2315027F0650B00574776 /* HomeTabNewMission1.png in Resources */,
 				F7CDF8EB27F5E9C1005F03A7 /* MakeRoom.storyboard in Resources */,
 				0AF2314E27F0650B00574776 /* HomeTabNewMission2.png in Resources */,
@@ -645,9 +659,11 @@
 				0A95B92927F3563100E131E6 /* HomeTabNowPopularContainer.swift in Sources */,
 				0AEEAF0228182DFB0075101A /* AppIntroViewController.swift in Sources */,
 				F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */,
+				0A1DBD6B2826787400784098 /* ProfileImageMenuViewController.swift in Sources */,
 				0A26EDD4280AD19C0077C042 /* MyPageViewController.swift in Sources */,
 				0A8DE84027F052C000077DC6 /* HomeTabViewController.swift in Sources */,
 				F75E9FA427E9470100000DCD /* MoyeoRun.xcdatamodeld in Sources */,
+				0A1DBD67282676EF00784098 /* InsertUserInfoViewController.swift in Sources */,
 				0AEEAF0428182E070075101A /* SocialLogInViewController.swift in Sources */,
 				0A8DE83327F04EB100077DC6 /* TabBarViewController.swift in Sources */,
 				0A95B92227F3543600E131E6 /* HomeTabNowPopularCell.swift in Sources */,
