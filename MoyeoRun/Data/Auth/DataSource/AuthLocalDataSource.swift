@@ -10,10 +10,13 @@ import Foundation
 protocol AuthLocalDataSourceable {
     init(store: KeychainStorable)
 
+    @discardableResult
     func storeToken(token: TokenResponse) -> Result<Void, Error>
 
+    @discardableResult
     func refreshAccessToken(accessToken: String) -> Result<Void, Error>
 
+    @discardableResult
     func clearToken() -> Result<Void, Error>
 }
 
@@ -22,7 +25,7 @@ enum AuthKey: String, KeychainKeyType {
     case refreshToken
 }
 
-final class AuthLocalDataSource: AuthLocalDataSourceable {
+class AuthLocalDataSource: AuthLocalDataSourceable {
     let store: KeychainStorable
 
     required init(store: KeychainStorable = KeychainStore()) {
