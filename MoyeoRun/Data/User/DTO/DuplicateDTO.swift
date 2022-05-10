@@ -8,7 +8,7 @@
 import Foundation
 
 struct DuplicateRequest: Codable {
-    let nickname: String
+    let nickName: String
 }
 
 struct DuplicateResponse: Codable {

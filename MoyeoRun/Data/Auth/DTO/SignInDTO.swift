@@ -13,7 +13,7 @@ struct SignInRequest: Codable {
 }
 
 struct SignInResponse: Codable {
-    let token: TokenResponse
-    let userId: Int
-    let newUser: Bool
+    let token: TokenResponse?
+    let userId: Int?
+    let isNewUser: Bool
 }
