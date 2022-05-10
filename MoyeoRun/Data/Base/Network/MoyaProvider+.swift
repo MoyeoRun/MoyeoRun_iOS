@@ -8,23 +8,32 @@
 import Foundation
 import Moya
 
-extension MoyaProvider {
-    func request<Data: Decodable>(
-        _ target: Target,
+extension MoyaProvider{
+    func request<Data: Codable>(
+        _ target : Target,
         completion: @escaping (Result<Data, Error>) -> Void
     ) {
         self.request(target) { result in
             switch result {
             case let .success(response):
                 do {
-                    let data = try JSONDecoder().decode(Data.self, from: response.data)
-                    completion(.success(data))
-                } catch let error {
-                    completion(.failure(error))
+                    let success = try JSONDecoder().decode(Success<Data>.self, from: response.data)
+                    completion(.success(success.data))
+                } catch {
+                    do {
+                        let failure = try JSONDecoder().decode(Failure.self, from: response.data)
+                        completion(.failure(ClientError.failureRequest(reason: failure.case)))
+                    } catch {
+                        completion(.failure(error))
+                    }
                 }
             case let .failure(error):
                 completion(.failure(error))
             }
         }
     }
+}
+
+enum ClientError: Error {
+    case failureRequest(reason: Failure.Case)
 }

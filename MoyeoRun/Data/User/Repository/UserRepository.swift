@@ -12,32 +12,32 @@ protocol UserRepositable {
 
     func checkNicknameDuplication(
         requset: DuplicateRequest,
-        completion: @escaping (Result<Response<DuplicateResponse>, Error>) -> Void
+        completion: @escaping (Result<DuplicateResponse, Error>) -> Void
     )
 
     func inquiryUser(
         requset: UserRequset,
-        completion: @escaping (Result<Response<UserResponse>, Error>) -> Void
+        completion: @escaping (Result<UserResponse, Error>) -> Void
     )
 }
 
-final class UserRepository: UserRepositable {
+class UserRepository {
     let remoteDataSource: UserRemoteDataSourceable
 
-    init(remoteDataSource: UserRemoteDataSourceable = UserRemoteDataSource()) {
+    init(remoteDataSource: UserRemoteDataSource = .init()) {
         self.remoteDataSource = remoteDataSource
     }
 
     func checkNicknameDuplication(
         requset: DuplicateRequest,
-        completion: @escaping (Result<Response<DuplicateResponse>, Error>) -> Void
+        completion: @escaping (Result<DuplicateResponse, Error>) -> Void
     ) {
         remoteDataSource.checkNicknameDuplication(requset: requset, completion: completion)
     }
 
     func inquiryUser(
         requset: UserRequset,
-        completion: @escaping (Result<Response<UserResponse>, Error>) -> Void
+        completion: @escaping (Result<UserResponse, Error>) -> Void
     ) {
         remoteDataSource.inquiryUser(requset: requset, completion: completion)
     }

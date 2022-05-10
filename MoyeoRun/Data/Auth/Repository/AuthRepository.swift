@@ -12,26 +12,26 @@ protocol AuthRepositable {
 
     func signIn(
         request: SignInRequest,
-        completion: @escaping (Result<Response<SignInResponse>, Error>) -> Void
+        completion: @escaping (Result<SignInResponse, Error>) -> Void
     )
 
     func signUp(
         request: SignUpRequest,
-        completion: @escaping (Result<Response<SignUpResponse>, Error>) -> Void
+        completion: @escaping (Result<SignUpResponse, Error>) -> Void
     )
 
     func refreshToken(
         request: RefreshRequest,
-        completion: @escaping (Result<Response<RefreshResponse>, Error>) -> Void
+        completion: @escaping (Result<RefreshResponse, Error>) -> Void
     )
 
     func logout(
         request: LogoutRequset,
-        completion: @escaping (Result<Response<LogoutResponse>, Error>) -> Void
+        completion: @escaping (Result<LogoutResponse, Error>) -> Void
     )
 }
 
-final class AuthRepository: AuthRepositable {
+class AuthRepository: AuthRepositable {
     let remoteDataSource: AuthRemoteDataSourceable
     let localDataSource: AuthLocalDataSourceable
 
@@ -45,13 +45,16 @@ final class AuthRepository: AuthRepositable {
 
     func signIn(
         request: SignInRequest,
-        completion: @escaping (Result<Response<SignInResponse>, Error>) -> Void
+        completion: @escaping (Result<SignInResponse, Error>) -> Void
     ) {
         remoteDataSource.signIn(requset: request) { remoteResult in
             switch remoteResult {
             case let .success(response):
-                let localResult = self.localDataSource.storeToken(token: response.data.token)
+                guard let token = response.token else {
+                    return completion(.success(response))
+                }
 
+                let localResult = self.localDataSource.storeToken(token: token)
                 guard case let .failure(error) = localResult else {
                     return completion(.success(response))
                 }
@@ -69,12 +72,12 @@ final class AuthRepository: AuthRepositable {
 
     func signUp(
         request: SignUpRequest,
-        completion: @escaping (Result<Response<SignUpResponse>, Error>) -> Void
+        completion: @escaping (Result<SignUpResponse, Error>) -> Void
     ) {
         remoteDataSource.signUp(requset: request) { remoteResult in
             switch remoteResult {
             case let .success(response):
-                let localResult = self.localDataSource.storeToken(token: response.data.token)
+                let localResult = self.localDataSource.storeToken(token: response.token)
 
                 guard case let .failure(error) = localResult else {
                     return completion(.success(response))
@@ -93,13 +96,13 @@ final class AuthRepository: AuthRepositable {
 
     func refreshToken(
         request: RefreshRequest,
-        completion: @escaping (Result<Response<RefreshResponse>, Error>) -> Void
+        completion: @escaping (Result<RefreshResponse, Error>) -> Void
     ) {
         remoteDataSource.refreshToken(requset: request) { remoteResult in
             switch remoteResult {
             case let .success(response):
                 let localResult = self.localDataSource.refreshAccessToken(
-                    accessToken: response.data.accessToken
+                    accessToken: response.accessToken
                 )
 
                 guard case let .failure(error) = localResult else {
@@ -119,7 +122,7 @@ final class AuthRepository: AuthRepositable {
 
     func logout(
         request: LogoutRequset,
-        completion: @escaping (Result<Response<LogoutResponse>, Error>) -> Void
+        completion: @escaping (Result<LogoutResponse, Error>) -> Void
     ) {
         remoteDataSource.logout(requset: request) { remoteResult in
             switch remoteResult {

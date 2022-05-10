@@ -13,12 +13,12 @@ protocol UserRemoteDataSourceable {
 
     func checkNicknameDuplication(
         requset: DuplicateRequest,
-        completion: @escaping (Result<Response<DuplicateResponse>, Error>) -> Void
+        completion: @escaping (Result<DuplicateResponse, Error>) -> Void
     )
 
     func inquiryUser(
         requset: UserRequset,
-        completion: @escaping (Result<Response<UserResponse>, Error>) -> Void
+        completion: @escaping (Result<UserResponse, Error>) -> Void
     )
 }
 
@@ -63,10 +63,6 @@ extension UserAPI: TargetType {
             return ["Authorization": "Bearer " + request.accessToken]
         }
     }
-
-    var validationType: ValidationType {
-        return .successCodes
-    }
 }
 
 final class UserRemoteDataSource: UserRemoteDataSourceable {
@@ -78,14 +74,14 @@ final class UserRemoteDataSource: UserRemoteDataSourceable {
 
     func checkNicknameDuplication(
         requset: DuplicateRequest,
-        completion: @escaping (Result<Response<DuplicateResponse>, Error>) -> Void
+        completion: @escaping (Result<DuplicateResponse, Error>) -> Void
     ) {
         provider.request(.duplicate(request: requset), completion: completion)
     }
 
     func inquiryUser(
         requset: UserRequset,
-        completion: @escaping (Result<Response<UserResponse>, Error>) -> Void
+        completion: @escaping (Result<UserResponse, Error>) -> Void
     ) {
         provider.request(.user(request: requset), completion: completion)
     }
