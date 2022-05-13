@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1C6EE3282E1CB000A86F35 /* SearchTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1C6EE2282E1CB000A86F35 /* SearchTab.storyboard */; };
+		0A1C6EE5282E1CC400A86F35 /* SearchTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1C6EE4282E1CC400A86F35 /* SearchTabViewController.swift */; };
 		0A26EDD4280AD19C0077C042 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A26EDD3280AD19C0077C042 /* MyPageViewController.swift */; };
 		0A26EDD7280AD1B10077C042 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A26EDD6280AD1B10077C042 /* MyPage.storyboard */; };
 		0A83ECCA28198C4E00656532 /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = 0A83ECC928198C4E00656532 /* Roboto */; };
@@ -55,6 +57,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A1C6EE2282E1CB000A86F35 /* SearchTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchTab.storyboard; sourceTree = "<group>"; };
+		0A1C6EE4282E1CC400A86F35 /* SearchTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabViewController.swift; sourceTree = "<group>"; };
 		0A26EDD3280AD19C0077C042 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		0A26EDD6280AD1B10077C042 /* MyPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		0A83ECC928198C4E00656532 /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Roboto; sourceTree = "<group>"; };
@@ -118,6 +122,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A1C6EDE282E1C5A00A86F35 /* SearchTab */ = {
+			isa = PBXGroup;
+			children = (
+				0A1C6EE0282E1C6F00A86F35 /* ViewControllers */,
+				0A1C6EDF282E1C6300A86F35 /* Views */,
+			);
+			path = SearchTab;
+			sourceTree = "<group>";
+		};
+		0A1C6EDF282E1C6300A86F35 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A1C6EE1282E1C7800A86F35 /* InterfaceBuilders */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A1C6EE0282E1C6F00A86F35 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A1C6EE4282E1CC400A86F35 /* SearchTabViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0A1C6EE1282E1C7800A86F35 /* InterfaceBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				0A1C6EE2282E1CB000A86F35 /* SearchTab.storyboard */,
+			);
+			path = InterfaceBuilders;
+			sourceTree = "<group>";
+		};
 		0A26EDD0280AD1800077C042 /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +351,7 @@
 		3AADB25227EF53ED00AFDE01 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0A1C6EDE282E1C5A00A86F35 /* SearchTab */,
 				0A26EDD0280AD1800077C042 /* MyPage */,
 				3AB61E0127F8960F00A30449 /* MoyeorunRoom */,
 				0A8DE82427F0489C00077DC6 /* TabBar */,
@@ -576,6 +614,7 @@
 				0A8DE83827F0517700077DC6 /* 참가자.png in Resources */,
 				F75E9FA127E9470100000DCD /* Main.storyboard in Resources */,
 				0AF2314C27F0650B00574776 /* HomeTabLastRecord1.png in Resources */,
+				0A1C6EE3282E1CB000A86F35 /* SearchTab.storyboard in Resources */,
 				0AF2314D27F0650B00574776 /* HomeTabLastRecord0.png in Resources */,
 				0A8DE83A27F0518500077DC6 /* 프로필 이미지.png in Resources */,
 				0A8DE83E27F0519300077DC6 /* 벚꽃.jpeg in Resources */,
@@ -636,6 +675,7 @@
 				3A84080927F21A0800800017 /* PopupViewController.swift in Sources */,
 				0A95B92D27F3565300E131E6 /* HomeTabLastRecordContainer.swift in Sources */,
 				F75E9F9E27E9470100000DCD /* ViewController.swift in Sources */,
+				0A1C6EE5282E1CC400A86F35 /* SearchTabViewController.swift in Sources */,
 				0A95B92627F3545000E131E6 /* HomeTabLastRecordCell.swift in Sources */,
 				0A95B92427F3544200E131E6 /* HomeTabNewMissionCell.swift in Sources */,
 				0A8DE83527F04F1700077DC6 /* Extensions.swift in Sources */,
