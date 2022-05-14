@@ -60,7 +60,11 @@ class Keychain: Keychainable {
             "This is not the main bundle or CFBundleIdentifier is not defined."
         )
 
-        self.service = Bundle.main.bundleIdentifier!
+        guard let identifier = Bundle.main.bundleIdentifier else {
+            fatalError("This is not the main bundle or CFBundleIdentifier is not defined.")
+        }
+
+        self.service = identifier
         self.item = item
     }
 }

@@ -8,9 +8,9 @@
 import Foundation
 import Moya
 
-extension MoyaProvider{
+extension MoyaProvider {
     func request<Data: Codable>(
-        _ target : Target,
+        _ target: Target,
         completion: @escaping (Result<Data, Error>) -> Void
     ) {
         self.request(target) { result in
