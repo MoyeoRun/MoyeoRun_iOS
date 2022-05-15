@@ -20,6 +20,6 @@ class HomeTabNowPopularCell: UICollectionViewCell {
         바람 부는 날
         5km 함께 뛰어요
         """
-        numberOfPartyLabel.setNumberOfPartyLabel(num: "3/5")
+        numberOfPartyLabel.setImageInLabelText(image: "참가자", text: "3/5")
     }
 }
