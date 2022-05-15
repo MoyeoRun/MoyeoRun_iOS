@@ -9,23 +9,25 @@ import UIKit
 
 class SelectPhotoController: UIViewController {
     @IBOutlet var imgView: UIImageView!
-    let photos = [#imageLiteral(resourceName: "Image-7"), #imageLiteral(resourceName: "Image-2"), #imageLiteral(resourceName: "Image-4"), #imageLiteral(resourceName: "Image-7"), #imageLiteral(resourceName: "Image-3"), #imageLiteral(resourceName: "Image-6"), #imageLiteral(resourceName: "Image-5"), #imageLiteral(resourceName: "Image"), #imageLiteral(resourceName: "Image-1")]
+    let photos = [
+        UIImage(named: "Image-1.png"), UIImage(named: "Image-2.png"), UIImage(named: "Image-3.png"),
+        UIImage(named: "Image-4.png"), UIImage(named: "Image-5.png"), UIImage(named: "Image-6.png"),
+        UIImage(named: "Image-7.png"), UIImage(named: "Image-8.png")
+    ]
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
 
-extension SelectPhotoController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
-    }
-
+extension SelectPhotoController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as?
-                PhotoCell else {
-                    return UICollectionViewCell()
-                }
-        cell.setData(with: photos[indexPath.row])
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath)
+            as? PhotoCell
+        else {
+            return UICollectionViewCell()
+        }
+        guard let img = photos[indexPath.row] else { return UICollectionViewCell() }
+        cell.setData(with: img)
         return cell
     }
 
@@ -34,9 +36,8 @@ extension SelectPhotoController: UICollectionViewDataSource, UICollectionViewDel
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        print(collectionView.frame.width)
-        let collectionViewCellWithd = collectionView.frame.width / 3 - 1
-        return CGSize(width: collectionViewCellWithd, height: collectionViewCellWithd)
+        let collectionViewCellWidth = collectionView.frame.width / 3 - 1
+        return CGSize(width: collectionViewCellWidth, height: collectionViewCellWidth)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -45,5 +46,11 @@ extension SelectPhotoController: UICollectionViewDataSource, UICollectionViewDel
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 1
+    }
+}
+
+extension SelectPhotoController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 9
     }
 }
