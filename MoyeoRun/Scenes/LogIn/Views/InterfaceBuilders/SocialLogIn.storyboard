@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Social Log In View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SocialLogIn" id="Y6W-OH-hqX" customClass="SocialLogInViewController" customModule="MoyeoRun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MoyeoRunSymbol" translatesAutoresizingMaskIntoConstraints="NO" id="Gkl-XG-q6T">
+                                <rect key="frame" x="68" y="234" width="278" height="278"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Gkl-XG-q6T" secondAttribute="height" id="aLP-W8-5Cl"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3Y-w7-DSi">
+                                <rect key="frame" x="24" y="796" width="366" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="WTS-l7-ccH"/>
+                                    <constraint firstAttribute="height" constant="56" id="eJz-eF-qAh"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Google 계정으로 로그인">
+                                    <fontDescription key="titleFontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onTapSignInWithGoogleButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="jpa-49-wwy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3S6-M0-uei">
+                                <rect key="frame" x="24" y="720" width="366" height="56"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="615-a5-5FM"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="Lh5-mL-5nV"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Apple 계정으로 로그인">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onTapSignInWithAppleButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HuZ-lW-PJO"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo - SIWA - Logo-only - White" translatesAutoresizingMaskIntoConstraints="NO" id="BvO-mF-K7e">
+                                <rect key="frame" x="24" y="720" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BvO-mF-K7e" secondAttribute="height" id="d3q-oC-tTi"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GoogleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="CL2-hI-pqD">
+                                <rect key="frame" x="41" y="813" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CL2-hI-pqD" secondAttribute="height" id="59I-hT-BEu"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BvO-mF-K7e" firstAttribute="bottom" secondItem="3S6-M0-uei" secondAttribute="bottom" id="5bN-O2-HR8"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Gkl-XG-q6T" secondAttribute="trailing" constant="68" id="GHP-8s-lmy"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="h3Y-w7-DSi" secondAttribute="bottom" constant="10" id="IKd-2z-IVf"/>
+                            <constraint firstItem="h3Y-w7-DSi" firstAttribute="top" secondItem="3S6-M0-uei" secondAttribute="bottom" constant="20" id="JGa-hH-A5v"/>
+                            <constraint firstItem="CL2-hI-pqD" firstAttribute="top" secondItem="h3Y-w7-DSi" secondAttribute="top" constant="17" id="JKy-cb-LhR"/>
+                            <constraint firstItem="CL2-hI-pqD" firstAttribute="leading" secondItem="h3Y-w7-DSi" secondAttribute="leading" constant="17" id="NVk-Tn-TxX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3S6-M0-uei" secondAttribute="trailing" constant="24" id="NZN-Uq-Y5H"/>
+                            <constraint firstItem="Gkl-XG-q6T" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="68" id="QyE-HA-QzU"/>
+                            <constraint firstItem="BvO-mF-K7e" firstAttribute="top" secondItem="3S6-M0-uei" secondAttribute="top" id="gB3-20-7XN"/>
+                            <constraint firstItem="Gkl-XG-q6T" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="190" id="iki-lr-4pd"/>
+                            <constraint firstItem="CL2-hI-pqD" firstAttribute="bottom" secondItem="h3Y-w7-DSi" secondAttribute="bottom" constant="-17" id="jLP-Ne-RPw"/>
+                            <constraint firstItem="h3Y-w7-DSi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="jRA-f8-vA8"/>
+                            <constraint firstItem="3S6-M0-uei" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="o3I-eE-iT9"/>
+                            <constraint firstItem="BvO-mF-K7e" firstAttribute="leading" secondItem="3S6-M0-uei" secondAttribute="leading" id="v2w-sK-mgq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="h3Y-w7-DSi" secondAttribute="trailing" constant="24" id="wd6-ay-jlZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="AppleSymbolImageView" destination="BvO-mF-K7e" id="ipm-CA-dyV"/>
+                        <outlet property="SignInWithGoogleButton" destination="h3Y-w7-DSi" id="pkt-Hd-m7I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-16" y="115"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="GoogleLogo" width="80" height="80"/>
+        <image name="Logo - SIWA - Logo-only - White" width="56" height="56"/>
+        <image name="MoyeoRunSymbol" width="238" height="258"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
