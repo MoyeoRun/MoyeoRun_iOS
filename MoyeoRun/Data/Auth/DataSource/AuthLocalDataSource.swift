@@ -11,10 +11,10 @@ protocol AuthLocalDataSourceable: AnyObject {
     init(store: KeychainStorable)
 
     @discardableResult
-    func storeToken(token: TokenResponse) -> Result<Void, Error>
+    func storeToken(token: TokenDTO) -> Result<Void, Error>
 
     @discardableResult
-    func refreshAccessToken(accessToken: String) -> Result<Void, Error>
+    func refreshToken(token: TokenDTO) -> Result<Void, Error>
 
     @discardableResult
     func clearToken() -> Result<Void, Error>
@@ -32,7 +32,7 @@ final class AuthLocalDataSource: AuthLocalDataSourceable {
         self.store = store
     }
 
-    func storeToken(token: TokenResponse) -> Result<Void, Error> {
+    func storeToken(token: TokenDTO) -> Result<Void, Error> {
         do {
             try store.create(value: token.accessToken, forKey: AuthKey.accessToken)
             try store.create(value: token.refreshToken, forKey: AuthKey.refreshToken)
@@ -42,9 +42,10 @@ final class AuthLocalDataSource: AuthLocalDataSourceable {
         }
     }
 
-    func refreshAccessToken(accessToken: String) -> Result<Void, Error> {
+    func refreshToken(token: TokenDTO) -> Result<Void, Error> {
         do {
-            try store.update(value: accessToken, forKey: AuthKey.accessToken)
+            try store.create(value: token.accessToken, forKey: AuthKey.accessToken)
+            try store.create(value: token.refreshToken, forKey: AuthKey.refreshToken)
             return .success(())
         } catch {
             return .failure(error)

@@ -9,14 +9,14 @@ import Foundation
 
 struct SignUpRequest: Codable {
     let idToken: String
-    let providerType: ProviderTypeRequest
+    let providerType: ProviderTypeDTO
     let nickName: String
     let name: String
-    let gender: GenderRequset
+    let gender: GenderDTO
     let image: String
 }
 
 struct SignUpResponse: Codable {
-    let token: TokenResponse
+    let token: TokenDTO
     let userId: Int
 }

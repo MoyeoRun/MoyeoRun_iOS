@@ -8,7 +8,7 @@
 import Foundation
 
 struct LogoutRequset: Codable {
-    let refreshToken: String
+    let accessToken: String
 }
 
 struct LogoutResponse: Codable {

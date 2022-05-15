@@ -91,9 +91,9 @@ extension AuthAPI: TargetType {
 
     var method: Moya.Method {
         switch self {
-        case .signIn, .signUp:
+        case .signIn, .signUp, .refresh:
             return .post
-        case .refresh, .logout:
+        case .logout:
             return .get
         }
     }
@@ -104,19 +104,19 @@ extension AuthAPI: TargetType {
             return .requestJSONEncodable(request)
         case let .signUp(request):
             return .requestJSONEncodable(request)
-        case .refresh, .logout:
+        case let .refresh(request):
+            return .requestJSONEncodable(request)
+        case .logout:
             return .requestPlain
         }
     }
 
     var headers: [String: String]? {
         switch self {
-        case .signIn, .signUp:
+        case .signIn, .signUp, .refresh:
             return nil
-        case let .refresh(request):
-            return ["Authorization": "Bearer " + request.refreshToken]
         case let .logout(request):
-            return ["Authorization": "Bearer " + request.refreshToken]
+            return ["Authorization": "Bearer " + request.accessToken]
         }
     }
 }

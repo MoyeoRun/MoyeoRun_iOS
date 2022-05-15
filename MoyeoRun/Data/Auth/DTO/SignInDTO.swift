@@ -9,11 +9,11 @@ import Foundation
 
 struct SignInRequest: Codable {
     let idToken: String
-    let providerType: ProviderTypeRequest
+    let providerType: ProviderTypeDTO
 }
 
 struct SignInResponse: Codable {
-    let token: TokenResponse?
+    let token: TokenDTO?
     let userId: Int?
     let isNewUser: Bool
 }

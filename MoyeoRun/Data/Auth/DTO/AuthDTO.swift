@@ -7,17 +7,17 @@
 
 import Foundation
 
-enum ProviderTypeRequest: String, Codable {
+enum ProviderTypeDTO: String, Codable {
     case google = "GOOGLE"
     case apple = "APPLE"
 }
 
-enum GenderRequset: String, Codable {
+enum GenderDTO: String, Codable {
     case male = "MALE"
     case female = "FEMAIL"
 }
 
-struct TokenResponse: Codable {
+struct TokenDTO: Codable {
     var accessToken: String
     let refreshToken: String
 }

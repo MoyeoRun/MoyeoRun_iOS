@@ -101,9 +101,7 @@ final class AuthRepository: AuthRepositable {
         remoteDataSource.refreshToken(requset: request) { remoteResult in
             switch remoteResult {
             case let .success(response):
-                let localResult = self.localDataSource.refreshAccessToken(
-                    accessToken: response.accessToken
-                )
+                let localResult = self.localDataSource.refreshToken(token: request)
 
                 guard case let .failure(error) = localResult else {
                     return completion(.success(response))
