@@ -16,6 +16,6 @@ class AppIntroViewController: UIViewController {
         let storyBoard = UIStoryboard(name: "SocialLogIn", bundle: nil)
         let viewController = storyBoard.instantiateViewController(withIdentifier: "SocialLogIn")
         viewController.modalPresentationStyle = .fullScreen
-        self.present(viewController, animated: false)
+        self.present(viewController, animated: true)
     }
 }
