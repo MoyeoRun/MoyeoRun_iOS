@@ -109,5 +109,10 @@ iOSInjectionProject/
 # End of https://www.toptal.com/developers/gitignore/api/swift,xcode,cocoapod
 
 # MoyeoRun_iOS Settings
+
+## Local Environment
 .DS_Store
 
+## Configuration
+Debug.xcconfig
+Release.xcconfig
