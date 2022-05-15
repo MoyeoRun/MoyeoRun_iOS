@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		0A26EDD4280AD19C0077C042 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A26EDD3280AD19C0077C042 /* MyPageViewController.swift */; };
 		0A26EDD7280AD1B10077C042 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A26EDD6280AD1B10077C042 /* MyPage.storyboard */; };
+		0A1C6ED22826975B00A86F35 /* SignUpComplete.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1C6ED12826975B00A86F35 /* SignUpComplete.storyboard */; };
+		0A1C6ED42826976E00A86F35 /* SignUpCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1C6ED32826976E00A86F35 /* SignUpCompleteViewController.swift */; };
+		0A1DBD65282676B900784098 /* InsertUserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DBD64282676B900784098 /* InsertUserInfo.storyboard */; };
+		0A1DBD67282676EF00784098 /* InsertUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1DBD66282676EF00784098 /* InsertUserInfoViewController.swift */; };
+		0A1DBD692826785200784098 /* ProfileImageMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DBD682826785200784098 /* ProfileImageMenu.storyboard */; };
+		0A1DBD6B2826787400784098 /* ProfileImageMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1DBD6A2826787400784098 /* ProfileImageMenuViewController.swift */; };
+		0A26EDD4280AD19C0077C042 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A26EDD3280AD19C0077C042 /* MyPageViewController.swift */; };
+		0A26EDD7280AD1B10077C042 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A26EDD6280AD1B10077C042 /* MyPage.storyboard */; };
+		0A83ECCA28198C4E00656532 /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = 0A83ECC928198C4E00656532 /* Roboto */; };
 		0A8DE82B27F04CC900077DC6 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE82A27F04CC900077DC6 /* TabBar.storyboard */; };
 		0A8DE83127F04DEC00077DC6 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE83027F04DEC00077DC6 /* HomeTab.storyboard */; };
 		0A8DE83327F04EB100077DC6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8DE83227F04EB100077DC6 /* TabBarViewController.swift */; };
@@ -24,6 +33,10 @@
 		0A95B92927F3563100E131E6 /* HomeTabNowPopularContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A95B92827F3563100E131E6 /* HomeTabNowPopularContainer.swift */; };
 		0A95B92B27F3564300E131E6 /* HomeTabNewMissionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A95B92A27F3564300E131E6 /* HomeTabNewMissionContainer.swift */; };
 		0A95B92D27F3565300E131E6 /* HomeTabLastRecordContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A95B92C27F3565300E131E6 /* HomeTabLastRecordContainer.swift */; };
+		0AEEAEFC28182D8D0075101A /* AppIntro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEAEFB28182D8D0075101A /* AppIntro.storyboard */; };
+		0AEEAEFE28182D9A0075101A /* SocialLogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEAEFD28182D9A0075101A /* SocialLogIn.storyboard */; };
+		0AEEAF0228182DFB0075101A /* AppIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEEAF0128182DFB0075101A /* AppIntroViewController.swift */; };
+		0AEEAF0428182E070075101A /* SocialLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEEAF0328182E070075101A /* SocialLogInViewController.swift */; };
 		0AF2314327F0650000574776 /* HomeTabNowPopular0.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314027F0650000574776 /* HomeTabNowPopular0.png */; };
 		0AF2314427F0650000574776 /* HomeTabNowPopular1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314127F0650000574776 /* HomeTabNowPopular1.png */; };
 		0AF2314527F0650000574776 /* HomeTabNowPopular2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314227F0650000574776 /* HomeTabNowPopular2.png */; };
@@ -35,7 +48,8 @@
 		0AF2315127F0650B00574776 /* HomeTabNewMission0.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314B27F0650A00574776 /* HomeTabNewMission0.png */; };
 		2040F3A127F469DA0034BA40 /* MapKitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2040F3A027F469DA0034BA40 /* MapKitView.xib */; };
 		2049243527F2F72000CF5A11 /* MapKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049243427F2F72000CF5A11 /* MapKitView.swift */; };
-		3A6E06F127FB3BD0007B0AFE /* MainPopupView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6E06F027FB3BD0007B0AFE /* MainPopupView.storyboard */; };
+		2040F3A127F469DA0034BA40 /* MapKitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2040F3A027F469DA0034BA40 /* MapKitView.xib */; };
+		2049243527F2F72000CF5A11 /* MapKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049243427F2F72000CF5A11 /* MapKitView.swift */; };
 		3A84080927F21A0800800017 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84080827F21A0800800017 /* PopupViewController.swift */; };
 		3A84080B27F21A1C00800017 /* MakeRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84080A27F21A1C00800017 /* MakeRoomController.swift */; };
 		3AB61E0827F8A0C500A30449 /* MoyeorunRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB61E0727F8A0C500A30449 /* MoyeorunRoom.storyboard */; };
@@ -56,6 +70,15 @@
 /* Begin PBXFileReference section */
 		0A26EDD3280AD19C0077C042 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		0A26EDD6280AD1B10077C042 /* MyPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
+		0A1C6ED12826975B00A86F35 /* SignUpComplete.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SignUpComplete.storyboard; path = MoyeoRun/Scenes/LogIn/Views/InterfaceBuilders/SignUpComplete.storyboard; sourceTree = SOURCE_ROOT; };
+		0A1C6ED32826976E00A86F35 /* SignUpCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpCompleteViewController.swift; path = MoyeoRun/Scenes/LogIn/ViewControllers/SignUpCompleteViewController.swift; sourceTree = SOURCE_ROOT; };
+		0A1DBD64282676B900784098 /* InsertUserInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = InsertUserInfo.storyboard; path = MoyeoRun/Scenes/LogIn/Views/InterfaceBuilders/InsertUserInfo.storyboard; sourceTree = SOURCE_ROOT; };
+		0A1DBD66282676EF00784098 /* InsertUserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InsertUserInfoViewController.swift; path = MoyeoRun/Scenes/LogIn/ViewControllers/InsertUserInfoViewController.swift; sourceTree = SOURCE_ROOT; };
+		0A1DBD682826785200784098 /* ProfileImageMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ProfileImageMenu.storyboard; path = MoyeoRun/Scenes/LogIn/Views/InterfaceBuilders/ProfileImageMenu.storyboard; sourceTree = SOURCE_ROOT; };
+		0A1DBD6A2826787400784098 /* ProfileImageMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileImageMenuViewController.swift; path = MoyeoRun/Scenes/LogIn/ViewControllers/ProfileImageMenuViewController.swift; sourceTree = SOURCE_ROOT; };
+		0A26EDD3280AD19C0077C042 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		0A26EDD6280AD1B10077C042 /* MyPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
+		0A83ECC928198C4E00656532 /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Roboto; sourceTree = "<group>"; };
 		0A8DE82A27F04CC900077DC6 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		0A8DE83027F04DEC00077DC6 /* HomeTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
 		0A8DE83227F04EB100077DC6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +94,10 @@
 		0A95B92827F3563100E131E6 /* HomeTabNowPopularContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabNowPopularContainer.swift; sourceTree = "<group>"; };
 		0A95B92A27F3564300E131E6 /* HomeTabNewMissionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabNewMissionContainer.swift; sourceTree = "<group>"; };
 		0A95B92C27F3565300E131E6 /* HomeTabLastRecordContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabLastRecordContainer.swift; sourceTree = "<group>"; };
+		0AEEAEFB28182D8D0075101A /* AppIntro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = AppIntro.storyboard; path = MoyeoRun/Scenes/LogIn/Views/InterfaceBuilders/AppIntro.storyboard; sourceTree = SOURCE_ROOT; };
+		0AEEAEFD28182D9A0075101A /* SocialLogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SocialLogIn.storyboard; path = MoyeoRun/Scenes/LogIn/Views/InterfaceBuilders/SocialLogIn.storyboard; sourceTree = SOURCE_ROOT; };
+		0AEEAF0128182DFB0075101A /* AppIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppIntroViewController.swift; path = MoyeoRun/Scenes/LogIn/ViewControllers/AppIntroViewController.swift; sourceTree = SOURCE_ROOT; };
+		0AEEAF0328182E070075101A /* SocialLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SocialLogInViewController.swift; path = MoyeoRun/Scenes/LogIn/ViewControllers/SocialLogInViewController.swift; sourceTree = SOURCE_ROOT; };
 		0AF2314027F0650000574776 /* HomeTabNowPopular0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNowPopular0.png; sourceTree = "<group>"; };
 		0AF2314127F0650000574776 /* HomeTabNowPopular1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNowPopular1.png; sourceTree = "<group>"; };
 		0AF2314227F0650000574776 /* HomeTabNowPopular2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNowPopular2.png; sourceTree = "<group>"; };
@@ -82,7 +109,8 @@
 		0AF2314B27F0650A00574776 /* HomeTabNewMission0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNewMission0.png; sourceTree = "<group>"; };
 		2040F3A027F469DA0034BA40 /* MapKitView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapKitView.xib; sourceTree = "<group>"; };
 		2049243427F2F72000CF5A11 /* MapKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitView.swift; sourceTree = "<group>"; };
-		3A6E06F027FB3BD0007B0AFE /* MainPopupView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainPopupView.storyboard; sourceTree = "<group>"; };
+		2040F3A027F469DA0034BA40 /* MapKitView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapKitView.xib; sourceTree = "<group>"; };
+		2049243427F2F72000CF5A11 /* MapKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitView.swift; sourceTree = "<group>"; };
 		3A84080827F21A0800800017 /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		3A84080A27F21A1C00800017 /* MakeRoomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeRoomController.swift; sourceTree = "<group>"; };
 		3AB61E0727F8A0C500A30449 /* MoyeorunRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoyeorunRoom.storyboard; sourceTree = "<group>"; };
@@ -147,6 +175,14 @@
 				0A26EDD6280AD1B10077C042 /* MyPage.storyboard */,
 			);
 			path = InterfaceBuilders;
+			sourceTree = "<group>";
+		};
+		0A83ECC828198C4400656532 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				0A83ECC928198C4E00656532 /* Roboto */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		0A8DE82427F0489C00077DC6 /* TabBar */ = {
@@ -250,6 +286,30 @@
 			path = HomeTabContainers;
 			sourceTree = "<group>";
 		};
+		0AEEAEF628182D1A0075101A /* InterfaceBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				0AEEAEFB28182D8D0075101A /* AppIntro.storyboard */,
+				0AEEAEFD28182D9A0075101A /* SocialLogIn.storyboard */,
+				0A1DBD64282676B900784098 /* InsertUserInfo.storyboard */,
+				0A1DBD682826785200784098 /* ProfileImageMenu.storyboard */,
+				0A1C6ED12826975B00A86F35 /* SignUpComplete.storyboard */,
+			);
+			path = InterfaceBuilders;
+			sourceTree = "<group>";
+		};
+		0AEEAEF828182D650075101A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0AEEAF0128182DFB0075101A /* AppIntroViewController.swift */,
+				0AEEAF0328182E070075101A /* SocialLogInViewController.swift */,
+				0A1DBD66282676EF00784098 /* InsertUserInfoViewController.swift */,
+				0A1DBD6A2826787400784098 /* ProfileImageMenuViewController.swift */,
+				0A1C6ED32826976E00A86F35 /* SignUpCompleteViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		0AF2313F27F064E200574776 /* HomeTab */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,12 +343,21 @@
 			path = MapKit;
 			sourceTree = "<group>";
 		};
-		3A4E3206281C29E00069123F /* Recovered References */ = {
+		2049243327F2F3D600CF5A11 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				3A6E06F027FB3BD0007B0AFE /* MainPopupView.storyboard */,
+				2089629927F7FBC6006FAC89 /* MapKit */,
 			);
-			name = "Recovered References";
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2089629927F7FBC6006FAC89 /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
+				2049243427F2F72000CF5A11 /* MapKitView.swift */,
+				2040F3A027F469DA0034BA40 /* MapKitView.xib */,
+			);
+			path = MapKit;
 			sourceTree = "<group>";
 		};
 		3AADB25227EF53ED00AFDE01 /* Scenes */ = {
@@ -334,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				3AADB25927EF557500AFDE01 /* Views */,
+				0AEEAEF828182D650075101A /* ViewControllers */,
 				3AADB25827EF556E00AFDE01 /* Models */,
 			);
 			path = Login;
@@ -342,6 +412,7 @@
 		3AADB25727EF554D00AFDE01 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				0A83ECC828198C4400656532 /* Font */,
 				2049243327F2F3D600CF5A11 /* Components */,
 				0A8DE83627F0514200077DC6 /* TestImages */,
 				0A8DE83427F04F1700077DC6 /* Extensions.swift */,
@@ -359,6 +430,7 @@
 		3AADB25927EF557500AFDE01 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0AEEAEF628182D1A0075101A /* InterfaceBuilders */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -437,7 +509,6 @@
 				F75E9F9727E9470100000DCD /* Products */,
 				AA20DD0103093E9F74BF396A /* Pods */,
 				DA3B74FF917A76472702F4FF /* Frameworks */,
-				3A4E3206281C29E00069123F /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -487,6 +558,7 @@
 				F75E9F9227E9470100000DCD /* Sources */,
 				F75E9F9327E9470100000DCD /* Frameworks */,
 				F75E9F9427E9470100000DCD /* Resources */,
+				072AE76CC21BBEF9CFBC0F99 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -536,19 +608,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				2040F3A127F469DA0034BA40 /* MapKitView.xib in Resources */,
+				0AEEAEFE28182D9A0075101A /* SocialLogIn.storyboard in Resources */,
 				0AF2315127F0650B00574776 /* HomeTabNewMission0.png in Resources */,
 				0A8DE82B27F04CC900077DC6 /* TabBar.storyboard in Resources */,
 				0AF2314427F0650000574776 /* HomeTabNowPopular1.png in Resources */,
 				0AF2314327F0650000574776 /* HomeTabNowPopular0.png in Resources */,
+				0A1DBD65282676B900784098 /* InsertUserInfo.storyboard in Resources */,
 				0A26EDD7280AD1B10077C042 /* MyPage.storyboard in Resources */,
 				0A8DE83C27F0518D00077DC6 /* 모여런 심볼.png in Resources */,
+				0A1DBD692826785200784098 /* ProfileImageMenu.storyboard in Resources */,
 				0AF2315027F0650B00574776 /* HomeTabNewMission1.png in Resources */,
+				0A1C6ED22826975B00A86F35 /* SignUpComplete.storyboard in Resources */,
 				F7CDF8EB27F5E9C1005F03A7 /* MakeRoom.storyboard in Resources */,
 				0AF2314E27F0650B00574776 /* HomeTabNewMission2.png in Resources */,
 				F75E9FA927E9470200000DCD /* LaunchScreen.storyboard in Resources */,
+				0A83ECCA28198C4E00656532 /* Roboto in Resources */,
 				3AB61E0827F8A0C500A30449 /* MoyeorunRoom.storyboard in Resources */,
 				0AF2314527F0650000574776 /* HomeTabNowPopular2.png in Resources */,
 				0A8DE83127F04DEC00077DC6 /* HomeTab.storyboard in Resources */,
+				0AEEAEFC28182D8D0075101A /* AppIntro.storyboard in Resources */,
 				F75E9FA627E9470200000DCD /* Assets.xcassets in Resources */,
 				0AF2314F27F0650B00574776 /* HomeTabNewMission3.png in Resources */,
 				0A8DE83827F0517700077DC6 /* 참가자.png in Resources */,
@@ -557,7 +635,6 @@
 				0AF2314D27F0650B00574776 /* HomeTabLastRecord0.png in Resources */,
 				0A8DE83A27F0518500077DC6 /* 프로필 이미지.png in Resources */,
 				0A8DE83E27F0519300077DC6 /* 벚꽃.jpeg in Resources */,
-				3A6E06F127FB3BD0007B0AFE /* MainPopupView.storyboard in Resources */,
 				3AC9467A281D293300DD1DE2 /* SelectPhoto.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -585,6 +662,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		072AE76CC21BBEF9CFBC0F99 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F7D1AA2527EC9E8100E34ACD /* SwiftLint Script */ = {
@@ -625,10 +719,15 @@
 				0A95B92B27F3564300E131E6 /* HomeTabNewMissionContainer.swift in Sources */,
 				3AC9467E281D2A5C00DD1DE2 /* PhotoCell.swift in Sources */,
 				0A95B92927F3563100E131E6 /* HomeTabNowPopularContainer.swift in Sources */,
+				0A1C6ED42826976E00A86F35 /* SignUpCompleteViewController.swift in Sources */,
+				0AEEAF0228182DFB0075101A /* AppIntroViewController.swift in Sources */,
 				F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */,
+				0A1DBD6B2826787400784098 /* ProfileImageMenuViewController.swift in Sources */,
 				0A26EDD4280AD19C0077C042 /* MyPageViewController.swift in Sources */,
 				0A8DE84027F052C000077DC6 /* HomeTabViewController.swift in Sources */,
 				F75E9FA427E9470100000DCD /* MoyeoRun.xcdatamodeld in Sources */,
+				0A1DBD67282676EF00784098 /* InsertUserInfoViewController.swift in Sources */,
+				0AEEAF0428182E070075101A /* SocialLogInViewController.swift in Sources */,
 				0A8DE83327F04EB100077DC6 /* TabBarViewController.swift in Sources */,
 				0A95B92227F3543600E131E6 /* HomeTabNowPopularCell.swift in Sources */,
 			);
@@ -782,6 +881,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MoyeoRun/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "사용자의 카메라에 접근합니다.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자의 위치 정보를 받으려고 합니다.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "마이크 사용";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사용자의 갤러리에 접근합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
@@ -811,6 +914,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MoyeoRun/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "사용자의 카메라에 접근합니다.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자의 위치 정보를 받으려고 합니다.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "마이크 사용";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사용자의 갤러리에 접근합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
