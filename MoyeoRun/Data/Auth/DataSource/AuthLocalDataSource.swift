@@ -44,8 +44,8 @@ final class AuthLocalDataSource: AuthLocalDataSourceable {
 
     func refreshToken(token: TokenDTO) -> Result<Void, Error> {
         do {
-            try store.create(value: token.accessToken, forKey: AuthKey.accessToken)
-            try store.create(value: token.refreshToken, forKey: AuthKey.refreshToken)
+            try store.update(value: token.accessToken, forKey: AuthKey.accessToken)
+            try store.update(value: token.refreshToken, forKey: AuthKey.refreshToken)
             return .success(())
         } catch {
             return .failure(error)
