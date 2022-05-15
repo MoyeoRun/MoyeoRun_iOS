@@ -26,21 +26,26 @@ class SearchTabViewController: UIViewController {
 
 extension SearchTabViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return 3
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RunningContentCell", for: indexPath) as? RunningContentCell else {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "RunningContentCell", for: indexPath
+        ) as? RunningContentCell else {
             return UICollectionViewCell()
         }
         cell.setUI()
-        
+
         return cell
     }
-    
-    
 }
 
 extension SearchTabViewController: UICollectionViewDelegateFlowLayout {
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cellWidth = collectionView.bounds.width
+        let cellHeight: CGFloat = 200
+
+        return CGSize(width: cellWidth, height: cellHeight)
+    }
 }

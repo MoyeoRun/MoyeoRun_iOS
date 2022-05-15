@@ -30,8 +30,8 @@ class SocialLogInViewController: UIViewController {
     }
 
     @IBAction func onTapSignInWithGoogleButton(_ sender: Any) {
-        let sb = UIStoryboard(name: "SearchTab", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "SearchTab")
+        let sb = UIStoryboard(name: "TabBar", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "TabBar")
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }

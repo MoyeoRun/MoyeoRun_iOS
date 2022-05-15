@@ -24,13 +24,12 @@ extension CALayer {
     }
 }
 
-/// label에 사람 모양에다 파티원 넣는 경우에 쓰는거. "참가자.png" 참고하면 이해가 빠름.
 extension UILabel {
-    func setImageInLabelText(image: String, text: String) {
+    func setImageInLabelText(image: String, imageCGRect: CGRect, text: String) {
         let attributedString = NSMutableAttributedString(string: "")
         let imageAttachment = NSTextAttachment()
         imageAttachment.image = UIImage(named: image.description + ".png")
-        imageAttachment.bounds = CGRect(x: 0, y: 0, width: 13, height: 13)
+        imageAttachment.bounds = imageCGRect
 
         attributedString.append(NSAttributedString(attachment: imageAttachment))
         attributedString.append(NSAttributedString(string: text))

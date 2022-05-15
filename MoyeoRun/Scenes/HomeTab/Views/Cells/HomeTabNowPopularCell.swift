@@ -13,6 +13,7 @@ class HomeTabNowPopularCell: UICollectionViewCell {
     @IBOutlet weak var numberOfPartyLabel: UILabel!
 
     func setUI(forIndex: Int) {
+        let cgRect = CGRect(x: 0, y: 0, width: 13, height: 13)
         imageView.layer.cornerRadius = 5
         imageView.image = UIImage(named: "HomeTabNowPopular\(forIndex).png")
         titleLabel.text =
@@ -20,6 +21,6 @@ class HomeTabNowPopularCell: UICollectionViewCell {
         바람 부는 날
         5km 함께 뛰어요
         """
-        numberOfPartyLabel.setImageInLabelText(image: "참가자", text: "3/5")
+        numberOfPartyLabel.setImageInLabelText(image: "참가자", imageCGRect: cgRect, text: " 3/5")
     }
 }
