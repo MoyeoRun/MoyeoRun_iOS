@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AuthRepositable {
+protocol AuthRepositable: AnyObject {
     init(remoteDataSource: AuthRemoteDataSourceable, localDataSource: AuthLocalDataSourceable)
 
     func signIn(
@@ -31,7 +31,7 @@ protocol AuthRepositable {
     )
 }
 
-class AuthRepository: AuthRepositable {
+final class AuthRepository: AuthRepositable {
     let remoteDataSource: AuthRemoteDataSourceable
     let localDataSource: AuthLocalDataSourceable
 

@@ -32,6 +32,42 @@ protocol AuthRemoteDataSourceable: AnyObject {
     )
 }
 
+final class AuthRemoteDataSource: AuthRemoteDataSourceable {
+    let provider: MoyaProvider<AuthAPI>
+
+    required init(provider: MoyaProvider<AuthAPI> = .init()) {
+        self.provider = provider
+    }
+
+    func signIn(
+        requset: SignInRequest,
+        completion: @escaping (Result<SignInResponse, Error>) -> Void
+    ) {
+        provider.request(.signIn(request: requset), completion: completion)
+    }
+
+    func signUp(
+        requset: SignUpRequest,
+        completion: @escaping (Result<SignUpResponse, Error>) -> Void
+    ) {
+        provider.request(.signUp(request: requset), completion: completion)
+    }
+
+    func refreshToken(
+        requset: RefreshRequest,
+        completion: @escaping (Result<RefreshResponse, Error>) -> Void
+    ) {
+        provider.request(.refresh(request: requset), completion: completion)
+    }
+
+    func logout(
+        requset: LogoutRequset,
+        completion: @escaping (Result<LogoutResponse, Error>) -> Void
+    ) {
+        provider.request(.logout(request: requset), completion: completion)
+    }
+}
+
 enum AuthAPI {
     case signIn(request: SignInRequest)
     case signUp(request: SignUpRequest)
@@ -82,41 +118,5 @@ extension AuthAPI: TargetType {
         case let .logout(request):
             return ["Authorization": "Bearer " + request.refreshToken]
         }
-    }
-}
-
-class AuthRemoteDataSource: AuthRemoteDataSourceable {
-    let provider: MoyaProvider<AuthAPI>
-
-    required init(provider: MoyaProvider<AuthAPI> = .init()) {
-        self.provider = provider
-    }
-
-    func signIn(
-        requset: SignInRequest,
-        completion: @escaping (Result<SignInResponse, Error>) -> Void
-    ) {
-        provider.request(.signIn(request: requset), completion: completion)
-    }
-
-    func signUp(
-        requset: SignUpRequest,
-        completion: @escaping (Result<SignUpResponse, Error>) -> Void
-    ) {
-        provider.request(.signUp(request: requset), completion: completion)
-    }
-
-    func refreshToken(
-        requset: RefreshRequest,
-        completion: @escaping (Result<RefreshResponse, Error>) -> Void
-    ) {
-        provider.request(.refresh(request: requset), completion: completion)
-    }
-
-    func logout(
-        requset: LogoutRequset,
-        completion: @escaping (Result<LogoutResponse, Error>) -> Void
-    ) {
-        provider.request(.logout(request: requset), completion: completion)
     }
 }

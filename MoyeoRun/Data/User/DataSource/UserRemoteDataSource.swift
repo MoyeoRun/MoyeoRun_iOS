@@ -8,7 +8,7 @@
 import Foundation
 import Moya
 
-protocol UserRemoteDataSourceable {
+protocol UserRemoteDataSourceable: AnyObject {
     init(provider: MoyaProvider<UserAPI>)
 
     func checkNicknameDuplication(
@@ -20,6 +20,28 @@ protocol UserRemoteDataSourceable {
         requset: UserRequset,
         completion: @escaping (Result<UserResponse, Error>) -> Void
     )
+}
+
+final class UserRemoteDataSource: UserRemoteDataSourceable {
+    let provider: MoyaProvider<UserAPI>
+
+    init(provider: MoyaProvider<UserAPI> = .init()) {
+        self.provider = provider
+    }
+
+    func checkNicknameDuplication(
+        requset: DuplicateRequest,
+        completion: @escaping (Result<DuplicateResponse, Error>) -> Void
+    ) {
+        provider.request(.duplicate(request: requset), completion: completion)
+    }
+
+    func inquiryUser(
+        requset: UserRequset,
+        completion: @escaping (Result<UserResponse, Error>) -> Void
+    ) {
+        provider.request(.user(request: requset), completion: completion)
+    }
 }
 
 enum UserAPI {
@@ -62,27 +84,5 @@ extension UserAPI: TargetType {
         case let .user(request):
             return ["Authorization": "Bearer " + request.accessToken]
         }
-    }
-}
-
-final class UserRemoteDataSource: UserRemoteDataSourceable {
-    let provider: MoyaProvider<UserAPI>
-
-    init(provider: MoyaProvider<UserAPI> = .init()) {
-        self.provider = provider
-    }
-
-    func checkNicknameDuplication(
-        requset: DuplicateRequest,
-        completion: @escaping (Result<DuplicateResponse, Error>) -> Void
-    ) {
-        provider.request(.duplicate(request: requset), completion: completion)
-    }
-
-    func inquiryUser(
-        requset: UserRequset,
-        completion: @escaping (Result<UserResponse, Error>) -> Void
-    ) {
-        provider.request(.user(request: requset), completion: completion)
     }
 }

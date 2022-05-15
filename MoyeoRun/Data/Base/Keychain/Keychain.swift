@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Keychainable {
+protocol Keychainable: AnyObject {
     var query: [String: Any] { get }
 
     init(service: String, item: KeychainItem)
@@ -43,7 +43,7 @@ enum KeychainError: Error, Equatable {
     case unhandledError(status: OSStatus)
 }
 
-class Keychain: Keychainable {
+final class Keychain: Keychainable {
     var query: [String: Any] {
         return [
             kSecClass as String: item.value,

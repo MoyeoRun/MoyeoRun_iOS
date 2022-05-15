@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol KeychainStorable {
+protocol KeychainStorable: AnyObject {
     init(keychain: Keychainable)
 
     func create<Value: Codable>(value: Value, forKey key: KeychainKeyType) throws
@@ -19,7 +19,7 @@ protocol KeychainStorable {
     func delete(forKey key: KeychainKeyType) throws
 }
 
-class KeychainStore: KeychainStorable {
+final class KeychainStore: KeychainStorable {
     private let keychain: Keychainable
 
     private let encoder = JSONEncoder()

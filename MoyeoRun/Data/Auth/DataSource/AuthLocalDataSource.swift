@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AuthLocalDataSourceable {
+protocol AuthLocalDataSourceable: AnyObject {
     init(store: KeychainStorable)
 
     @discardableResult
@@ -25,7 +25,7 @@ enum AuthKey: String, KeychainKeyType {
     case refreshToken
 }
 
-class AuthLocalDataSource: AuthLocalDataSourceable {
+final class AuthLocalDataSource: AuthLocalDataSourceable {
     let store: KeychainStorable
 
     required init(store: KeychainStorable = KeychainStore()) {

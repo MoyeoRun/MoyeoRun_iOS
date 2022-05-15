@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol UserRepositable {
+protocol UserRepositable: AnyObject {
     init(remoteDataSource: UserRemoteDataSourceable)
 
     func checkNicknameDuplication(
@@ -21,7 +21,7 @@ protocol UserRepositable {
     )
 }
 
-class UserRepository {
+final class UserRepository {
     let remoteDataSource: UserRemoteDataSourceable
 
     init(remoteDataSource: UserRemoteDataSource = .init()) {
