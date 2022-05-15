@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A26EDD4280AD19C0077C042 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A26EDD3280AD19C0077C042 /* MyPageViewController.swift */; };
+		0A26EDD7280AD1B10077C042 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A26EDD6280AD1B10077C042 /* MyPage.storyboard */; };
 		0A1C6ED22826975B00A86F35 /* SignUpComplete.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1C6ED12826975B00A86F35 /* SignUpComplete.storyboard */; };
 		0A1C6ED42826976E00A86F35 /* SignUpCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1C6ED32826976E00A86F35 /* SignUpCompleteViewController.swift */; };
 		0A1DBD65282676B900784098 /* InsertUserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DBD64282676B900784098 /* InsertUserInfo.storyboard */; };
@@ -44,12 +46,16 @@
 		0AF2314F27F0650B00574776 /* HomeTabNewMission3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314927F0650A00574776 /* HomeTabNewMission3.png */; };
 		0AF2315027F0650B00574776 /* HomeTabNewMission1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314A27F0650A00574776 /* HomeTabNewMission1.png */; };
 		0AF2315127F0650B00574776 /* HomeTabNewMission0.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314B27F0650A00574776 /* HomeTabNewMission0.png */; };
-		3A6E06F127FB3BD0007B0AFE /* MainPopupView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6E06F027FB3BD0007B0AFE /* MainPopupView.storyboard */; };
+		2040F3A127F469DA0034BA40 /* MapKitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2040F3A027F469DA0034BA40 /* MapKitView.xib */; };
+		2049243527F2F72000CF5A11 /* MapKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049243427F2F72000CF5A11 /* MapKitView.swift */; };
 		2040F3A127F469DA0034BA40 /* MapKitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2040F3A027F469DA0034BA40 /* MapKitView.xib */; };
 		2049243527F2F72000CF5A11 /* MapKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049243427F2F72000CF5A11 /* MapKitView.swift */; };
 		3A84080927F21A0800800017 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84080827F21A0800800017 /* PopupViewController.swift */; };
 		3A84080B27F21A1C00800017 /* MakeRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84080A27F21A1C00800017 /* MakeRoomController.swift */; };
 		3AB61E0827F8A0C500A30449 /* MoyeorunRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB61E0727F8A0C500A30449 /* MoyeorunRoom.storyboard */; };
+		3AC9467A281D293300DD1DE2 /* SelectPhoto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AC94679281D293300DD1DE2 /* SelectPhoto.storyboard */; };
+		3AC9467C281D299600DD1DE2 /* SelectPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9467B281D299600DD1DE2 /* SelectPhotoController.swift */; };
+		3AC9467E281D2A5C00DD1DE2 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9467D281D2A5C00DD1DE2 /* PhotoCell.swift */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E9F9927E9470100000DCD /* AppDelegate.swift */; };
 		F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E9F9B27E9470100000DCD /* SceneDelegate.swift */; };
@@ -62,6 +68,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A26EDD3280AD19C0077C042 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		0A26EDD6280AD1B10077C042 /* MyPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		0A1C6ED12826975B00A86F35 /* SignUpComplete.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SignUpComplete.storyboard; path = MoyeoRun/Scenes/LogIn/Views/InterfaceBuilders/SignUpComplete.storyboard; sourceTree = SOURCE_ROOT; };
 		0A1C6ED32826976E00A86F35 /* SignUpCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpCompleteViewController.swift; path = MoyeoRun/Scenes/LogIn/ViewControllers/SignUpCompleteViewController.swift; sourceTree = SOURCE_ROOT; };
 		0A1DBD64282676B900784098 /* InsertUserInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = InsertUserInfo.storyboard; path = MoyeoRun/Scenes/LogIn/Views/InterfaceBuilders/InsertUserInfo.storyboard; sourceTree = SOURCE_ROOT; };
@@ -99,12 +107,16 @@
 		0AF2314927F0650A00574776 /* HomeTabNewMission3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNewMission3.png; sourceTree = "<group>"; };
 		0AF2314A27F0650A00574776 /* HomeTabNewMission1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNewMission1.png; sourceTree = "<group>"; };
 		0AF2314B27F0650A00574776 /* HomeTabNewMission0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNewMission0.png; sourceTree = "<group>"; };
-		3A6E06F027FB3BD0007B0AFE /* MainPopupView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainPopupView.storyboard; sourceTree = "<group>"; };
+		2040F3A027F469DA0034BA40 /* MapKitView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapKitView.xib; sourceTree = "<group>"; };
+		2049243427F2F72000CF5A11 /* MapKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitView.swift; sourceTree = "<group>"; };
 		2040F3A027F469DA0034BA40 /* MapKitView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapKitView.xib; sourceTree = "<group>"; };
 		2049243427F2F72000CF5A11 /* MapKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitView.swift; sourceTree = "<group>"; };
 		3A84080827F21A0800800017 /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		3A84080A27F21A1C00800017 /* MakeRoomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeRoomController.swift; sourceTree = "<group>"; };
 		3AB61E0727F8A0C500A30449 /* MoyeorunRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoyeorunRoom.storyboard; sourceTree = "<group>"; };
+		3AC94679281D293300DD1DE2 /* SelectPhoto.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectPhoto.storyboard; sourceTree = "<group>"; };
+		3AC9467B281D299600DD1DE2 /* SelectPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPhotoController.swift; sourceTree = "<group>"; };
+		3AC9467D281D2A5C00DD1DE2 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.debug.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF6235AE0ADD0047158FA4F /* Pods-MoyeoRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.release.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.release.xcconfig"; sourceTree = "<group>"; };
@@ -314,12 +326,21 @@
 			path = HomeTab;
 			sourceTree = "<group>";
 		};
-		3A4E3206281C29E00069123F /* Recovered References */ = {
+		2049243327F2F3D600CF5A11 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				3A6E06F027FB3BD0007B0AFE /* MainPopupView.storyboard */,
+				2089629927F7FBC6006FAC89 /* MapKit */,
 			);
-			name = "Recovered References";
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2089629927F7FBC6006FAC89 /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
+				2049243427F2F72000CF5A11 /* MapKitView.swift */,
+				2040F3A027F469DA0034BA40 /* MapKitView.xib */,
+			);
+			path = MapKit;
 			sourceTree = "<group>";
 		};
 		2049243327F2F3D600CF5A11 /* Components */ = {
@@ -419,6 +440,8 @@
 			children = (
 				3A84080827F21A0800800017 /* PopupViewController.swift */,
 				F7CDF8E927F5E9C1005F03A7 /* InterfaceBuilders */,
+				3AC9467B281D299600DD1DE2 /* SelectPhotoController.swift */,
+				3AC9467D281D2A5C00DD1DE2 /* PhotoCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -518,6 +541,7 @@
 			isa = PBXGroup;
 			children = (
 				F7CDF8EA27F5E9C1005F03A7 /* MakeRoom.storyboard */,
+				3AC94679281D293300DD1DE2 /* SelectPhoto.storyboard */,
 			);
 			path = InterfaceBuilders;
 			sourceTree = "<group>";
@@ -611,6 +635,7 @@
 				0AF2314D27F0650B00574776 /* HomeTabLastRecord0.png in Resources */,
 				0A8DE83A27F0518500077DC6 /* 프로필 이미지.png in Resources */,
 				0A8DE83E27F0519300077DC6 /* 벚꽃.jpeg in Resources */,
+				3AC9467A281D293300DD1DE2 /* SelectPhoto.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,12 +710,14 @@
 				3A84080927F21A0800800017 /* PopupViewController.swift in Sources */,
 				0A95B92D27F3565300E131E6 /* HomeTabLastRecordContainer.swift in Sources */,
 				F75E9F9E27E9470100000DCD /* ViewController.swift in Sources */,
+				3AC9467C281D299600DD1DE2 /* SelectPhotoController.swift in Sources */,
 				0A95B92627F3545000E131E6 /* HomeTabLastRecordCell.swift in Sources */,
 				0A95B92427F3544200E131E6 /* HomeTabNewMissionCell.swift in Sources */,
 				0A8DE83527F04F1700077DC6 /* Extensions.swift in Sources */,
 				F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */,
 				2049243527F2F72000CF5A11 /* MapKitView.swift in Sources */,
 				0A95B92B27F3564300E131E6 /* HomeTabNewMissionContainer.swift in Sources */,
+				3AC9467E281D2A5C00DD1DE2 /* PhotoCell.swift in Sources */,
 				0A95B92927F3563100E131E6 /* HomeTabNowPopularContainer.swift in Sources */,
 				0A1C6ED42826976E00A86F35 /* SignUpCompleteViewController.swift in Sources */,
 				0AEEAF0228182DFB0075101A /* AppIntroViewController.swift in Sources */,
