@@ -44,6 +44,7 @@
 		0AF2314F27F0650B00574776 /* HomeTabNewMission3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314927F0650A00574776 /* HomeTabNewMission3.png */; };
 		0AF2315027F0650B00574776 /* HomeTabNewMission1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314A27F0650A00574776 /* HomeTabNewMission1.png */; };
 		0AF2315127F0650B00574776 /* HomeTabNewMission0.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2314B27F0650A00574776 /* HomeTabNewMission0.png */; };
+		3A6E06F127FB3BD0007B0AFE /* MainPopupView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6E06F027FB3BD0007B0AFE /* MainPopupView.storyboard */; };
 		2040F3A127F469DA0034BA40 /* MapKitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2040F3A027F469DA0034BA40 /* MapKitView.xib */; };
 		2049243527F2F72000CF5A11 /* MapKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049243427F2F72000CF5A11 /* MapKitView.swift */; };
 		3A84080927F21A0800800017 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84080827F21A0800800017 /* PopupViewController.swift */; };
@@ -98,6 +99,7 @@
 		0AF2314927F0650A00574776 /* HomeTabNewMission3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNewMission3.png; sourceTree = "<group>"; };
 		0AF2314A27F0650A00574776 /* HomeTabNewMission1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNewMission1.png; sourceTree = "<group>"; };
 		0AF2314B27F0650A00574776 /* HomeTabNewMission0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNewMission0.png; sourceTree = "<group>"; };
+		3A6E06F027FB3BD0007B0AFE /* MainPopupView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainPopupView.storyboard; sourceTree = "<group>"; };
 		2040F3A027F469DA0034BA40 /* MapKitView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapKitView.xib; sourceTree = "<group>"; };
 		2049243427F2F72000CF5A11 /* MapKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitView.swift; sourceTree = "<group>"; };
 		3A84080827F21A0800800017 /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
@@ -310,6 +312,14 @@
 				0AF2314227F0650000574776 /* HomeTabNowPopular2.png */,
 			);
 			path = HomeTab;
+			sourceTree = "<group>";
+		};
+		3A4E3206281C29E00069123F /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				3A6E06F027FB3BD0007B0AFE /* MainPopupView.storyboard */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		2049243327F2F3D600CF5A11 /* Components */ = {
