@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A75B2B42837363C00544AB5 /* RecordTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A75B2B32837363C00544AB5 /* RecordTab.storyboard */; };
+		0A75B2B62837364800544AB5 /* RecordTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A75B2B52837364800544AB5 /* RecordTabViewController.swift */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F74D1F9E2831620A0099B5F0 /* Configuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1F9B2831620A0099B5F0 /* Configuation.swift */; };
 		F74D1FC1283163030099B5F0 /* SignInDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FA6283163030099B5F0 /* SignInDTO.swift */; };
@@ -99,6 +101,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A75B2B32837363C00544AB5 /* RecordTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordTab.storyboard; sourceTree = "<group>"; };
+		0A75B2B52837364800544AB5 /* RecordTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTabViewController.swift; sourceTree = "<group>"; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.debug.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF6235AE0ADD0047158FA4F /* Pods-MoyeoRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.release.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.release.xcconfig"; sourceTree = "<group>"; };
@@ -208,6 +212,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A75B2AF283735F300544AB5 /* RecordTab */ = {
+			isa = PBXGroup;
+			children = (
+				0A75B2B12837361E00544AB5 /* Views */,
+				0A75B2B02837360D00544AB5 /* ViewControllers */,
+			);
+			path = RecordTab;
+			sourceTree = "<group>";
+		};
+		0A75B2B02837360D00544AB5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A75B2B52837364800544AB5 /* RecordTabViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0A75B2B12837361E00544AB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A75B2B22837362600544AB5 /* InterfaceBuilders */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A75B2B22837362600544AB5 /* InterfaceBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				0A75B2B32837363C00544AB5 /* RecordTab.storyboard */,
+			);
+			path = InterfaceBuilders;
+			sourceTree = "<group>";
+		};
 		3AADB25527EF543800AFDE01 /* LifeCycles */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,6 +402,7 @@
 				F74D1FEF2831630C0099B5F0 /* TabBar */,
 				F74D1FD82831630C0099B5F0 /* HomeTab */,
 				F74D1FFC2831630C0099B5F0 /* SearchTab */,
+				0A75B2AF283735F300544AB5 /* RecordTab */,
 				F74D20042831630C0099B5F0 /* Main */,
 				F74D1FE62831630C0099B5F0 /* MakeRoom */,
 				F74D1FD42831630C0099B5F0 /* MoyeorunRoom */,
@@ -892,6 +930,7 @@
 				F74D2068283163160099B5F0 /* 프로필 이미지.png in Resources */,
 				F74D2069283163160099B5F0 /* 벚꽃.jpeg in Resources */,
 				F74D2065283163160099B5F0 /* HomeTabLastRecord1.png in Resources */,
+				0A75B2B42837363C00544AB5 /* RecordTab.storyboard in Resources */,
 				F74D20232831630C0099B5F0 /* SelectPhoto.storyboard in Resources */,
 				F74D2066283163160099B5F0 /* 모여런 심볼.png in Resources */,
 			);
@@ -975,6 +1014,7 @@
 				F74D20322831630C0099B5F0 /* InsertUserInfoViewController.swift in Sources */,
 				F74D202B2831630C0099B5F0 /* RunningContentCell.swift in Sources */,
 				F74D20282831630C0099B5F0 /* MyPageViewController.swift in Sources */,
+				0A75B2B62837364800544AB5 /* RecordTabViewController.swift in Sources */,
 				F74D1FCD283163030099B5F0 /* Response.swift in Sources */,
 				F74D206B283163160099B5F0 /* MapKitView.swift in Sources */,
 				F74D20302831630C0099B5F0 /* SignUpCompleteViewController.swift in Sources */,

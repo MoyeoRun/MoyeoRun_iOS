@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--검색-->
+        <!--Search Tab View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="SearchTab" id="Y6W-OH-hqX" customClass="SearchTabViewController" customModule="MoyeoRun" customModuleProvider="target" sceneMemberID="viewController">
@@ -179,7 +179,7 @@
                             <constraint firstItem="gQB-wU-ntb" firstAttribute="top" secondItem="SW1-1p-qyz" secondAttribute="bottom" constant="8" id="qOy-Dl-S0U"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="검색" image="magnify" id="CvK-3F-ChD"/>
+                    <tabBarItem key="tabBarItem" title="" image="magnify" id="CvK-3F-ChD"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="searchBar" destination="gQB-wU-ntb" id="J4l-YU-YIa"/>
