@@ -4,8 +4,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,19 +18,79 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9my-pT-kpM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HS-Ja-U0z">
+                                        <rect key="frame" x="24" y="66" width="42" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="0b6-d2-gek"/>
+                                    <constraint firstItem="7HS-Ja-U0z" firstAttribute="top" secondItem="9my-pT-kpM" secondAttribute="top" constant="66" id="UJS-Zm-ulI"/>
+                                    <constraint firstItem="7HS-Ja-U0z" firstAttribute="leading" secondItem="9my-pT-kpM" secondAttribute="leading" constant="24" id="uRs-q4-DQT"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이번 주 운동 기록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNG-rD-2A4">
+                                <rect key="frame" x="24" y="262" width="122.5" height="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MuN-dv-lY1">
+                                <rect key="frame" x="0.0" y="296" width="414" height="517"/>
+                                <color key="backgroundColor" name="LightGray"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uXt-KX-epo">
+                                    <size key="itemSize" width="364" height="152"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="QIE-uX-HuO">
+                                        <rect key="frame" x="25" y="0.0" width="364" height="152"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="28b-4B-i7c">
+                                            <rect key="frame" x="0.0" y="0.0" width="364" height="152"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="364" height="152"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="LightGray"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9my-pT-kpM" secondAttribute="trailing" id="5Dh-75-cqI"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MuN-dv-lY1" secondAttribute="trailing" id="9TH-7A-0Tc"/>
+                            <constraint firstItem="9my-pT-kpM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="HAi-7U-lHL"/>
+                            <constraint firstItem="ZNG-rD-2A4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="YBD-GI-m3Z"/>
+                            <constraint firstItem="MuN-dv-lY1" firstAttribute="top" secondItem="ZNG-rD-2A4" secondAttribute="bottom" constant="12" id="cAY-TO-zYH"/>
+                            <constraint firstItem="9my-pT-kpM" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="czY-fi-lxF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="MuN-dv-lY1" secondAttribute="bottom" id="eJb-VA-vjT"/>
+                            <constraint firstItem="MuN-dv-lY1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="gu3-4f-sZu"/>
+                            <constraint firstItem="ZNG-rD-2A4" firstAttribute="top" secondItem="9my-pT-kpM" secondAttribute="bottom" constant="12" id="oa7-VT-FZo"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="record" id="yqf-Bf-uX2"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="49" y="84"/>
+            <point key="canvasLocation" x="47.826086956521742" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
         <image name="record" width="24" height="24"/>
+        <namedColor name="LightGray">
+            <color red="0.86699998378753662" green="0.86699998378753662" blue="0.86699998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
