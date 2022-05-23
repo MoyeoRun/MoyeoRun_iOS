@@ -14,11 +14,17 @@ extension CALayer {
             x: frame.width * 0.1, y: frame.height - width, width: frame.width * 0.8, height: width
         )
         border.backgroundColor = color.cgColor
+        border.name = "underLine"
+        // layer name 지어주기
         self.addSublayer(border)
     }
 
     func removeUnderLine() {
-        self.sublayers?.remove(at: 1)
+        self.sublayers?.forEach({ layer in
+            if layer.name == "underLine" {
+                layer.removeFromSuperlayer()
+            }
+        })
     }
 
     func addBorder(_ arrEdge: [UIRectEdge], color: UIColor, width: CGFloat) {

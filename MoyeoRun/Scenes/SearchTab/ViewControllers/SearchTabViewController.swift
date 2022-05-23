@@ -31,8 +31,9 @@ class SearchTabViewController: UIViewController {
 
         func setRecentRunningButton() {
             recentRunningButton.titleLabel?.textColor = .black
-            recentRunningButton.layer.addUnderLine(color: .black, width: 2)
-//            setUnderLine()
+            DispatchQueue.main.async {
+                self.recentRunningButton.layer.addUnderLine(color: .black, width: 2)
+            }
         }
     }
 
