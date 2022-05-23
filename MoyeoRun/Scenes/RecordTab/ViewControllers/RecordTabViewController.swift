@@ -17,3 +17,26 @@ class RecordTabViewController: UIViewController {
     func setUI() {
     }
 }
+
+extension RecordTabViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RunningRecordCell", for: indexPath) as? RunningRecordCell else {
+            return UICollectionViewCell()
+        }
+        cell.setUI()
+        return cell
+    }
+}
+
+extension RecordTabViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.bounds.width * 0.9
+        let height = 138.0
+
+        return CGSize(width: width, height: height)
+    }
+}

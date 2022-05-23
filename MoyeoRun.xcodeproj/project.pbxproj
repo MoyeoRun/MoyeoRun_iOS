@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A5FFF3D283BBDDD004D86E0 /* RunningRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FFF3C283BBDDD004D86E0 /* RunningRecordCell.swift */; };
 		0A75B2B42837363C00544AB5 /* RecordTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A75B2B32837363C00544AB5 /* RecordTab.storyboard */; };
 		0A75B2B62837364800544AB5 /* RecordTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A75B2B52837364800544AB5 /* RecordTabViewController.swift */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
@@ -101,6 +102,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A5FFF3C283BBDDD004D86E0 /* RunningRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningRecordCell.swift; sourceTree = "<group>"; };
 		0A75B2B32837363C00544AB5 /* RecordTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordTab.storyboard; sourceTree = "<group>"; };
 		0A75B2B52837364800544AB5 /* RecordTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTabViewController.swift; sourceTree = "<group>"; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +214,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A5FFF3B283BBDBA004D86E0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FFF3C283BBDDD004D86E0 /* RunningRecordCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		0A75B2AF283735F300544AB5 /* RecordTab */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +242,7 @@
 		0A75B2B12837361E00544AB5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0A5FFF3B283BBDBA004D86E0 /* Cells */,
 				0A75B2B22837362600544AB5 /* InterfaceBuilders */,
 			);
 			path = Views;
@@ -1040,6 +1051,7 @@
 				F74D20202831630C0099B5F0 /* SelectPhotoController.swift in Sources */,
 				F74D202E2831630C0099B5F0 /* SocialLogInViewController.swift in Sources */,
 				F74D202F2831630C0099B5F0 /* AppIntroViewController.swift in Sources */,
+				0A5FFF3D283BBDDD004D86E0 /* RunningRecordCell.swift in Sources */,
 				F74D1FC5283163030099B5F0 /* AuthDTO.swift in Sources */,
 				F74D20172831630C0099B5F0 /* HomeTabViewController.swift in Sources */,
 				F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */,
