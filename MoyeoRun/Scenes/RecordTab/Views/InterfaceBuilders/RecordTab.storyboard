@@ -210,13 +210,67 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="people2" translatesAutoresizingMaskIntoConstraints="NO" id="uWO-ot-UIk">
+                                                    <rect key="frame" x="119" y="100" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25" id="4rU-Nk-c9X"/>
+                                                        <constraint firstAttribute="height" constant="25" id="aPX-9h-Qxe"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sxe-pv-FZC">
+                                                    <rect key="frame" x="150" y="100" width="169" height="25"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="WTs-2m-rwz"/>
+                                                    </constraints>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="hsQ-D3-8Pe">
+                                                        <size key="itemSize" width="25" height="25"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProfileImageCell" id="v2P-tw-AUc" customClass="ProfileImageCell" customModule="MoyeoRun" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="26" height="25"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="veW-zA-9Y7">
+                                                                <rect key="frame" x="0.0" y="0.0" width="26" height="25"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="people4" translatesAutoresizingMaskIntoConstraints="NO" id="4IB-PT-l9h">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="26" height="25"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="4IB-PT-l9h" firstAttribute="leading" secondItem="veW-zA-9Y7" secondAttribute="leading" id="H3E-og-AQe"/>
+                                                                    <constraint firstItem="4IB-PT-l9h" firstAttribute="top" secondItem="veW-zA-9Y7" secondAttribute="top" id="IY6-A8-Ldm"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="4IB-PT-l9h" secondAttribute="bottom" id="eg3-je-RbC"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="4IB-PT-l9h" secondAttribute="trailing" id="nlk-YN-LCt"/>
+                                                                </constraints>
+                                                            </collectionViewCellContentView>
+                                                            <size key="customSize" width="26" height="25"/>
+                                                            <connections>
+                                                                <outlet property="profileImageView" destination="4IB-PT-l9h" id="zRr-SR-qK8"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="QIE-uX-HuO" id="iMd-BP-BfO"/>
+                                                        <outlet property="delegate" destination="QIE-uX-HuO" id="e7W-Ml-Erh"/>
+                                                    </connections>
+                                                </collectionView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
+                                                <constraint firstItem="8Ue-ss-CDJ" firstAttribute="trailing" secondItem="uWO-ot-UIk" secondAttribute="leading" constant="-9" id="4Vv-wN-Q5C"/>
                                                 <constraint firstItem="KrG-G9-Gaf" firstAttribute="leading" secondItem="8Ue-ss-CDJ" secondAttribute="trailing" constant="9" id="4gO-fL-Hf5"/>
                                                 <constraint firstItem="wqf-YN-f4W" firstAttribute="top" secondItem="KrG-G9-Gaf" secondAttribute="bottom" constant="8" id="4iJ-cX-9Tw"/>
+                                                <constraint firstAttribute="trailing" secondItem="sxe-pv-FZC" secondAttribute="trailing" constant="8" id="77X-9e-61i"/>
                                                 <constraint firstItem="8Ue-ss-CDJ" firstAttribute="leading" secondItem="28b-4B-i7c" secondAttribute="leading" constant="12" id="ItR-hc-U3b"/>
+                                                <constraint firstItem="sxe-pv-FZC" firstAttribute="leading" secondItem="uWO-ot-UIk" secondAttribute="trailing" constant="6" id="Kk5-EH-Efb"/>
+                                                <constraint firstItem="sxe-pv-FZC" firstAttribute="top" secondItem="fG2-mC-elW" secondAttribute="bottom" constant="4" id="LcY-1G-8YM"/>
                                                 <constraint firstItem="8Ue-ss-CDJ" firstAttribute="top" secondItem="28b-4B-i7c" secondAttribute="top" constant="12" id="Mlf-ff-c3X"/>
+                                                <constraint firstItem="uWO-ot-UIk" firstAttribute="top" secondItem="fG2-mC-elW" secondAttribute="bottom" constant="4" id="RWS-hE-JEW"/>
                                                 <constraint firstItem="KrG-G9-Gaf" firstAttribute="top" secondItem="UwH-W4-2LJ" secondAttribute="bottom" constant="4" id="bzm-89-Uou"/>
                                                 <constraint firstItem="UwH-W4-2LJ" firstAttribute="leading" secondItem="8Ue-ss-CDJ" secondAttribute="trailing" constant="9" id="h4a-Rt-lJU"/>
                                                 <constraint firstAttribute="bottom" secondItem="8Ue-ss-CDJ" secondAttribute="bottom" constant="12" id="jnb-xm-umV"/>
@@ -227,6 +281,7 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="327" height="135"/>
                                         <connections>
+                                            <outlet property="adminProfileImageView" destination="uWO-ot-UIk" id="HAD-N6-tUl"/>
                                             <outlet property="imageView" destination="8Ue-ss-CDJ" id="kqj-yl-3tt"/>
                                         </connections>
                                     </collectionViewCell>
@@ -256,12 +311,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47.826086956521742" y="83.705357142857139"/>
+            <point key="canvasLocation" x="-84.057971014492765" y="-25.446428571428569"/>
         </scene>
     </scenes>
     <resources>
         <image name="HomeTabNewMission1.png" width="167" height="187"/>
         <image name="calendar" width="24" height="24"/>
+        <image name="people2" width="512" height="512"/>
+        <image name="people4" width="512" height="512"/>
         <image name="record" width="24" height="24"/>
         <namedColor name="LightGray">
             <color red="0.86699998378753662" green="0.86699998378753662" blue="0.86699998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
