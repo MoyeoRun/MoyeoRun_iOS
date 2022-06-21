@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A67F3482835F9AF00AACCB8 /* SearchTabExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67F3472835F9AF00AACCB8 /* SearchTabExtension.swift */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F74D1F9E2831620A0099B5F0 /* Configuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1F9B2831620A0099B5F0 /* Configuation.swift */; };
 		F74D1FC1283163030099B5F0 /* SignInDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FA6283163030099B5F0 /* SignInDTO.swift */; };
@@ -99,6 +100,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A67F3472835F9AF00AACCB8 /* SearchTabExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabExtension.swift; sourceTree = "<group>"; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.debug.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF6235AE0ADD0047158FA4F /* Pods-MoyeoRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.release.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.release.xcconfig"; sourceTree = "<group>"; };
@@ -561,6 +563,7 @@
 			isa = PBXGroup;
 			children = (
 				F74D1FFE2831630C0099B5F0 /* SearchTabViewController.swift */,
+				0A67F3472835F9AF00AACCB8 /* SearchTabExtension.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -977,6 +980,7 @@
 				F74D20282831630C0099B5F0 /* MyPageViewController.swift in Sources */,
 				F74D1FCD283163030099B5F0 /* Response.swift in Sources */,
 				F74D206B283163160099B5F0 /* MapKitView.swift in Sources */,
+				0A67F3482835F9AF00AACCB8 /* SearchTabExtension.swift in Sources */,
 				F74D20302831630C0099B5F0 /* SignUpCompleteViewController.swift in Sources */,
 				F74D1FD1283163030099B5F0 /* Keychain.swift in Sources */,
 				F74D1FC8283163030099B5F0 /* AuthRepository.swift in Sources */,
