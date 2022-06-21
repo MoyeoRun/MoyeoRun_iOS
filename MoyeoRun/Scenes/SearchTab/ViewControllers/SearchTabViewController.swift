@@ -96,19 +96,19 @@ class SearchTabViewController: UIViewController {
     func setUnderLine() {
         switch self.selectedButton {
         case .recentRunningButton:
-            //recentRunningButton.titleLabel?.textColor =  .black
+            // recentRunningButton.titleLabel?.textColor =  .black
             recentRunningButton.setTitleColor(.black, for: .normal)
             recentRunningButton.layer.addUnderLine(color: .black, width: 2)
         case .paceButton:
-            //paceButton.titleLabel?.textColor =  .black
+            // paceButton.titleLabel?.textColor =  .black
             paceButton.setTitleColor(.black, for: .normal)
             paceButton.layer.addUnderLine(color: .black, width: 2)
         case .distanceButton:
-            //distanceButton.titleLabel?.textColor =  .black
+            // distanceButton.titleLabel?.textColor =  .black
             distanceButton.setTitleColor(.black, for: .normal)
             distanceButton.layer.addUnderLine(color: .black, width: 2)
         case .numOfPeopleButton:
-            //numOfPeopleButton.titleLabel?.textColor =  .black
+            // numOfPeopleButton.titleLabel?.textColor =  .black
             numOfPeopleButton.setTitleColor(.black, for: .normal)
             numOfPeopleButton.layer.addUnderLine(color: .black, width: 2)
         }

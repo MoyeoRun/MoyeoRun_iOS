@@ -24,7 +24,9 @@ extension RecordTabViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RunningRecordCell", for: indexPath) as? RunningRecordCell else {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "RunningRecordCell", for: indexPath
+        ) as? RunningRecordCell else {
             return UICollectionViewCell()
         }
         cell.setUI()
