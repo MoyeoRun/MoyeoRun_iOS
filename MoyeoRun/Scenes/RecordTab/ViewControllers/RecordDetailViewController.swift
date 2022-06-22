@@ -14,6 +14,10 @@ class RecordDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(false)
 
         DispatchQueue.main.async {
             self.setUI()
