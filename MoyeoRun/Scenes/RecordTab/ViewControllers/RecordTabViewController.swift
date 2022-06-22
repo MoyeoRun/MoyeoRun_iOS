@@ -41,4 +41,12 @@ extension RecordTabViewController: UICollectionViewDelegateFlowLayout {
 
         return CGSize(width: width, height: height)
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // MARK: 아이템 터치 처리
+        let storyboard = UIStoryboard(name: "RecordDetail", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "RecordDetail")
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: true)
+    }
 }
