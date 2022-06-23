@@ -10,11 +10,11 @@ import UIKit
 
 class RunningRecordCell: UICollectionViewCell {
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet var adminProfileImageView: UIImageView!
+    @IBOutlet var hostProfileImageView: UIImageView!
 
     func setUI() {
         imageView.layer.cornerRadius = 4
-        adminProfileImageView.layer.cornerRadius = adminProfileImageView.layer.bounds.width * 0.5
+        hostProfileImageView.layer.cornerRadius = hostProfileImageView.layer.bounds.width * 0.5
         self.layer.cornerRadius = 4
     }
 }

@@ -9,15 +9,16 @@ import UIKit
 
 class RecordDetailViewController: UIViewController {
     @IBOutlet var backgroundGrayView: UIView!
-    @IBOutlet var myProfileImageView: UIImageView!
-    @IBOutlet var myProfileNameLabel: UILabel!
+    @IBOutlet var hostProfileImageView: UIImageView!
+    @IBOutlet var hostProfileNameLabel: UILabel!
+    @IBOutlet var mapView: MapKitView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(false)
+        super.viewWillAppear(animated)
 
         DispatchQueue.main.async {
             self.setUI()
@@ -26,10 +27,15 @@ class RecordDetailViewController: UIViewController {
 
     func setUI() {
         backgroundGrayView.layer.cornerRadius = 4
-        myProfileImageView.clipsToBounds = true
-        myProfileImageView.layer.cornerRadius = myProfileImageView.bounds.height * 0.5
-        myProfileImageView.layer.borderWidth = 2.5
-        myProfileImageView.layer.borderColor = UIColor(named: "RunBlue")?.cgColor
+        hostProfileImageView.clipsToBounds = true
+        hostProfileImageView.layer.cornerRadius = hostProfileImageView.bounds.height * 0.5
+        hostProfileImageView.layer.borderWidth = 2.5
+        hostProfileImageView.layer.borderColor = UIColor(named: "RunBlue")?.cgColor
+        mapView.layer.cornerRadius = 4
+    }
+
+    @IBAction func onTapBackButton(_ sender: Any) {
+        self.dismiss(animated: true)
     }
 }
 
@@ -57,7 +63,7 @@ extension RecordDetailViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = UIScreen.main.bounds.width
         let cellWidth = screenWidth * 0.15
-        let cellHeight = cellWidth + 4 + myProfileNameLabel.bounds.height
+        let cellHeight = cellWidth + 4 + hostProfileNameLabel.bounds.height
 
         return CGSize(width: cellWidth, height: cellHeight)
     }

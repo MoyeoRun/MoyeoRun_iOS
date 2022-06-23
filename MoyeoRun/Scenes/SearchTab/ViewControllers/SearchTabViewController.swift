@@ -17,9 +17,14 @@ class SearchTabViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUI()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DispatchQueue.main.async {
+            self.setUI()
+        }
+    }
     func setUI() {
         setSearchBarUI()
         setRecentRunningButton()
@@ -31,9 +36,7 @@ class SearchTabViewController: UIViewController {
 
         func setRecentRunningButton() {
             recentRunningButton.titleLabel?.textColor = .black
-            DispatchQueue.main.async {
-                self.recentRunningButton.layer.addUnderLine(color: .black, width: 2)
-            }
+            self.recentRunningButton.layer.addUnderLine(color: .black, width: 2)
         }
     }
 

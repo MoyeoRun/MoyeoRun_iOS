@@ -140,6 +140,9 @@
                                 <state key="normal" image="arrow-left">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="onTapBackButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vfj-Ej-xdL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="팀원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Go9-4J-EJV">
                                 <rect key="frame" x="24" y="228" width="24.5" height="17"/>
@@ -281,6 +284,15 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="doT-MD-Qrg" customClass="MapKitView" customModule="MoyeoRun" customModuleProvider="target">
+                                <rect key="frame" x="24" y="447" width="366" height="403"/>
+                            </mapView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hostImg" translatesAutoresizingMaskIntoConstraints="NO" id="Ooe-HY-PZi">
+                                <rect key="frame" x="75.5" y="296.5" width="18.5" height="18.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ooe-HY-PZi" secondAttribute="height" id="Itu-QN-Nlz"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -295,6 +307,7 @@
                             <constraint firstItem="Xgb-S7-Ftf" firstAttribute="top" secondItem="yX2-l2-GHz" secondAttribute="bottom" constant="5" id="CjI-BQ-KZT"/>
                             <constraint firstItem="yX2-l2-GHz" firstAttribute="top" secondItem="83D-6f-uh5" secondAttribute="bottom" constant="12" id="DKs-mF-WKq"/>
                             <constraint firstItem="mAV-V6-E7g" firstAttribute="top" secondItem="Go9-4J-EJV" secondAttribute="bottom" constant="8" id="F9b-2b-C2P"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="doT-MD-Qrg" secondAttribute="trailing" constant="24" id="Gfm-Vc-G3g"/>
                             <constraint firstItem="2we-8A-dyB" firstAttribute="leading" secondItem="WnE-Tt-gZ0" secondAttribute="trailing" id="JMo-9r-hR5"/>
                             <constraint firstItem="lPZ-EC-s69" firstAttribute="top" secondItem="yX2-l2-GHz" secondAttribute="bottom" constant="5" id="Kmw-q1-1NR"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ded-Ss-tzF" secondAttribute="trailing" constant="24" id="LIt-dP-PRL"/>
@@ -302,6 +315,7 @@
                             <constraint firstItem="yX2-l2-GHz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="NE1-Fu-c0H"/>
                             <constraint firstItem="vh5-Qn-U8m" firstAttribute="top" secondItem="0kY-kX-CuN" secondAttribute="bottom" constant="16" id="OHu-4z-9al"/>
                             <constraint firstItem="Go9-4J-EJV" firstAttribute="top" secondItem="ded-Ss-tzF" secondAttribute="bottom" constant="12" id="Sd9-CQ-s5Y"/>
+                            <constraint firstItem="Ooe-HY-PZi" firstAttribute="height" secondItem="mAV-V6-E7g" secondAttribute="height" multiplier="0.3" id="TnG-jw-BlJ"/>
                             <constraint firstItem="vh5-Qn-U8m" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="VI2-RZ-UZ7"/>
                             <constraint firstItem="2we-8A-dyB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="VeO-ww-yE8"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8mX-Ga-CEe" secondAttribute="trailing" id="WJ6-qF-F1h"/>
@@ -309,11 +323,15 @@
                             <constraint firstItem="WnE-Tt-gZ0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="ZEl-FE-jRS"/>
                             <constraint firstItem="mAV-V6-E7g" firstAttribute="height" secondItem="Kim-cA-O6u" secondAttribute="height" id="aGl-WY-uyM"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="83D-6f-uh5" secondAttribute="trailing" constant="24" id="bqx-cz-2Lu"/>
+                            <constraint firstItem="doT-MD-Qrg" firstAttribute="top" secondItem="lPZ-EC-s69" secondAttribute="bottom" constant="12" id="cIe-yW-3c0"/>
                             <constraint firstItem="Xgb-S7-Ftf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="cOg-EI-b5e"/>
                             <constraint firstItem="Kim-cA-O6u" firstAttribute="leading" secondItem="mAV-V6-E7g" secondAttribute="trailing" constant="10" id="cUw-xK-XXV"/>
                             <constraint firstItem="lPZ-EC-s69" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="dCR-zO-KHp"/>
+                            <constraint firstItem="doT-MD-Qrg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="fSv-fc-SQr"/>
+                            <constraint firstItem="Ooe-HY-PZi" firstAttribute="bottom" secondItem="mAV-V6-E7g" secondAttribute="bottom" id="fko-NZ-3sE"/>
                             <constraint firstItem="8mX-Ga-CEe" firstAttribute="top" secondItem="mAV-V6-E7g" secondAttribute="top" id="gnK-9g-h78"/>
                             <constraint firstItem="Go9-4J-EJV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="gnQ-E3-OqR"/>
+                            <constraint firstItem="Ooe-HY-PZi" firstAttribute="trailing" secondItem="mAV-V6-E7g" secondAttribute="trailing" id="iZN-wu-iNh"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2we-8A-dyB" secondAttribute="trailing" constant="14" id="mT3-UZ-qyc"/>
                             <constraint firstItem="ded-Ss-tzF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="n3v-fL-2pi"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vh5-Qn-U8m" secondAttribute="trailing" constant="24" id="nvr-3c-Svv"/>
@@ -322,6 +340,7 @@
                             <constraint firstItem="ROf-zP-Eah" firstAttribute="top" secondItem="mAV-V6-E7g" secondAttribute="bottom" constant="4" id="plZ-TA-geF"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ml3-87-y3F" secondAttribute="trailing" constant="24" id="pxm-Bm-WqQ"/>
                             <constraint firstItem="Kim-cA-O6u" firstAttribute="centerY" secondItem="mAV-V6-E7g" secondAttribute="centerY" id="rDd-Ne-phs"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="doT-MD-Qrg" secondAttribute="bottom" constant="12" id="uLi-vT-dcl"/>
                             <constraint firstItem="ml3-87-y3F" firstAttribute="top" secondItem="vh5-Qn-U8m" secondAttribute="bottom" constant="8" id="usb-rb-87X"/>
                             <constraint firstItem="ROf-zP-Eah" firstAttribute="centerX" secondItem="mAV-V6-E7g" secondAttribute="centerX" id="vVO-10-K83"/>
                             <constraint firstItem="0kY-kX-CuN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="yLy-mo-Qgs"/>
@@ -329,8 +348,9 @@
                     </view>
                     <connections>
                         <outlet property="backgroundGrayView" destination="ded-Ss-tzF" id="VL1-lm-LvC"/>
-                        <outlet property="myProfileImageView" destination="mAV-V6-E7g" id="1dt-tc-xZz"/>
-                        <outlet property="myProfileNameLabel" destination="ROf-zP-Eah" id="CCH-Cj-6qj"/>
+                        <outlet property="hostProfileImageView" destination="mAV-V6-E7g" id="1dt-tc-xZz"/>
+                        <outlet property="hostProfileNameLabel" destination="ROf-zP-Eah" id="CCH-Cj-6qj"/>
+                        <outlet property="mapView" destination="doT-MD-Qrg" id="5bl-Tj-Bjy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -342,6 +362,7 @@
         <image name="arrow-left" width="30" height="30"/>
         <image name="clockImg" width="26" height="26"/>
         <image name="distanceImg" width="26" height="26"/>
+        <image name="hostImg" width="29" height="29"/>
         <image name="more-vertical" width="24" height="24"/>
         <image name="people2" width="512" height="512"/>
         <image name="share-2" width="22" height="22"/>
