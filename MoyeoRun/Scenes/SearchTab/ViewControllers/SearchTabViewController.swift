@@ -13,7 +13,7 @@ class SearchTabViewController: UIViewController {
     @IBOutlet weak var paceButton: UIButton!
     @IBOutlet weak var distanceButton: UIButton!
     @IBOutlet weak var numOfPeopleButton: UIButton!
-    var selectedButton: SelectedButton = .recentRunningButton
+    var selectedButton: SelectedButton = .distanceButton
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +22,11 @@ class SearchTabViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         DispatchQueue.main.async {
+            self.unSetAllButton()
             self.setUI()
         }
     }
+
     func setUI() {
         setSearchBarUI()
         setRecentRunningButton()
@@ -35,14 +37,29 @@ class SearchTabViewController: UIViewController {
         }
 
         func setRecentRunningButton() {
-            recentRunningButton.titleLabel?.textColor = .black
-            self.recentRunningButton.layer.addUnderLine(color: .black, width: 2)
+            switch self.selectedButton {
+            case .recentRunningButton:
+                self.recentRunningButton.layer.addUnderLine(color: .black, width: 2)
+                self.recentRunningButton.titleLabel?.textColor = .black
+
+            case .paceButton:
+                self.paceButton.layer.addUnderLine(color: .black, width: 2)
+                self.paceButton.titleLabel?.textColor = .black
+
+            case .distanceButton:
+                self.distanceButton.layer.addUnderLine(color: .black, width: 2)
+                self.distanceButton.titleLabel?.textColor = .black
+
+            case .numOfPeopleButton:
+                self.numOfPeopleButton.layer.addUnderLine(color: .black, width: 2)
+                self.numOfPeopleButton.titleLabel?.textColor = .black
+            }
         }
     }
 
     @IBAction func onTapRecentRunningButton(_ sender: Any) {
         if self.selectedButton != .recentRunningButton {
-            removeUnderLine()
+            unSetButton()
             self.selectedButton = .recentRunningButton
             setUnderLine()
         }
@@ -50,7 +67,7 @@ class SearchTabViewController: UIViewController {
 
     @IBAction func onTapPaceButton(_ sender: Any) {
         if self.selectedButton != .paceButton {
-            removeUnderLine()
+            unSetButton()
             self.selectedButton = .paceButton
             setUnderLine()
         }
@@ -58,7 +75,7 @@ class SearchTabViewController: UIViewController {
 
     @IBAction func onTapDistanceButton(_ sender: Any) {
         if self.selectedButton != .distanceButton {
-            removeUnderLine()
+            unSetButton()
             self.selectedButton = .distanceButton
             setUnderLine()
         }
@@ -66,20 +83,24 @@ class SearchTabViewController: UIViewController {
 
     @IBAction func onTapNumOfPeopleButton(_ sender: Any) {
         if self.selectedButton != .numOfPeopleButton {
-            removeUnderLine()
+            unSetButton()
             self.selectedButton = .numOfPeopleButton
             setUnderLine()
         }
     }
 
-    enum SelectedButton {
-        case recentRunningButton
-        case paceButton
-        case distanceButton
-        case numOfPeopleButton
+    private func unSetAllButton() {
+        recentRunningButton.titleLabel?.textColor =  .gray
+        recentRunningButton.layer.removeUnderLine()
+        paceButton.titleLabel?.textColor =  .gray
+        paceButton.layer.removeUnderLine()
+        distanceButton.titleLabel?.textColor =  .gray
+        distanceButton.layer.removeUnderLine()
+        numOfPeopleButton.titleLabel?.textColor =  .gray
+        numOfPeopleButton.layer.removeUnderLine()
     }
 
-    func removeUnderLine() {
+    private func unSetButton() {
         switch self.selectedButton {
         case .recentRunningButton:
             recentRunningButton.titleLabel?.textColor =  .gray
@@ -96,7 +117,7 @@ class SearchTabViewController: UIViewController {
         }
     }
 
-    func setUnderLine() {
+    private func setUnderLine() {
         switch self.selectedButton {
         case .recentRunningButton:
             // recentRunningButton.titleLabel?.textColor =  .black
@@ -142,4 +163,11 @@ extension SearchTabViewController: UICollectionViewDelegateFlowLayout {
 
         return CGSize(width: cellWidth, height: cellHeight)
     }
+}
+
+enum SelectedButton {
+    case recentRunningButton
+    case paceButton
+    case distanceButton
+    case numOfPeopleButton
 }
