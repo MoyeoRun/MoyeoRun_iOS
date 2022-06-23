@@ -10,11 +10,6 @@ import UIKit
 class RecordTabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setUI()
-    }
-
-    func setUI() {
     }
 }
 

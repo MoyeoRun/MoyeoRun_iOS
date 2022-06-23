@@ -11,40 +11,21 @@ import UIKit
 class RunningRecordCell: UICollectionViewCell {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var hostProfileImageView: UIImageView!
+    @IBOutlet var profileImageView1: UIImageView!
+    @IBOutlet var profileImageView2: UIImageView!
+    @IBOutlet var profileImageView3: UIImageView!
+    @IBOutlet var profileImageView4: UIImageView!
+    @IBOutlet var profileImageView5: UIImageView!
 
     func setUI() {
         imageView.layer.cornerRadius = 4
+        profileImageView1.layer.cornerRadius = profileImageView1.bounds.width * 0.5
+        profileImageView2.layer.cornerRadius = profileImageView2.bounds.width * 0.5
+        profileImageView3.layer.cornerRadius = profileImageView3.bounds.width * 0.5
+        profileImageView4.layer.cornerRadius = profileImageView4.bounds.width * 0.5
+        profileImageView5.layer.cornerRadius = profileImageView5.bounds.width * 0.5
+
         hostProfileImageView.layer.cornerRadius = hostProfileImageView.layer.bounds.width * 0.5
         self.layer.cornerRadius = 4
-    }
-}
-
-extension RunningRecordCell: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: "ProfileImageCell", for: indexPath
-        ) as? ProfileImageCell else {
-            return UICollectionViewCell()
-        }
-        cell.setUI()
-
-        return cell
-    }
-}
-
-extension RunningRecordCell: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 25, height: 25)
-    }
-}
-
-class ProfileImageCell: UICollectionViewCell {
-    @IBOutlet var profileImageView: UIImageView!
-    func setUI() {
-        profileImageView.layer.cornerRadius = profileImageView.bounds.width * 0.5
     }
 }
