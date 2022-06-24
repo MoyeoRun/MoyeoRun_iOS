@@ -11,6 +11,13 @@ class RecordTabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    @IBAction func onTapCalendarButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "RecordTab", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "CalendarView")
+        viewController.modalPresentationStyle = .overCurrentContext
+        self.present(viewController, animated: false)
+    }
 }
 
 extension RecordTabViewController: UICollectionViewDataSource {
