@@ -338,30 +338,99 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxR-1z-tB7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="kxB-Ft-D5Z" appends="YES" id="IeI-XS-UDI"/>
+                                </connections>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NWW-Lq-nYX" customClass="FSCalendar">
                                 <rect key="frame" x="41.5" y="229" width="331" height="448"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
+                                        <color key="value" name="DarkGray"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
+                                        <color key="value" name="RunBlue"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outlet property="dataSource" destination="c1M-qd-2ft" id="q1v-W3-I2c"/>
-                                    <outlet property="delegate" destination="c1M-qd-2ft" id="CEM-oF-x69"/>
+                                    <outlet property="dataSource" destination="c1M-qd-2ft" id="ELv-LZ-MHo"/>
+                                    <outlet property="delegate" destination="c1M-qd-2ft" id="Vn1-AN-b7r"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pte-YE-vCn">
+                                <rect key="frame" x="41.5" y="302.5" width="331" height="1"/>
+                                <color key="backgroundColor" name="BorderColor1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="c1B-dr-eLG"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20D-ND-ErR">
+                                <rect key="frame" x="323" y="254.5" width="13" height="22"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="chevron.backward" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="semibold"/>
+                                </state>
+                                <connections>
+                                    <action selector="moveToPreviousMonth:" destination="c1M-qd-2ft" eventType="touchUpInside" id="haR-Yw-gU4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYO-5Y-paJ">
+                                <rect key="frame" x="341" y="254.5" width="13" height="22"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="chevron.right" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="semibold"/>
+                                </state>
+                                <connections>
+                                    <action selector="moveToNextMonth:" destination="c1M-qd-2ft" eventType="touchUpInside" id="BZP-e1-1Sa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SRS-to-OxT"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hxR-1z-tB7" secondAttribute="trailing" id="2G9-tN-cWt"/>
                             <constraint firstItem="NWW-Lq-nYX" firstAttribute="centerX" secondItem="SRS-to-OxT" secondAttribute="centerX" id="4Dt-8G-XVW"/>
+                            <constraint firstItem="Pte-YE-vCn" firstAttribute="top" secondItem="NWW-Lq-nYX" secondAttribute="top" multiplier="1.32" id="5ke-Hz-XNS"/>
+                            <constraint firstItem="hxR-1z-tB7" firstAttribute="leading" secondItem="fij-SI-Yf2" secondAttribute="leading" id="AsO-Ll-2xN"/>
+                            <constraint firstItem="zYO-5Y-paJ" firstAttribute="centerY" secondItem="NWW-Lq-nYX" secondAttribute="top" multiplier="1.16" id="J0z-Z4-Prs"/>
                             <constraint firstItem="NWW-Lq-nYX" firstAttribute="centerY" secondItem="SRS-to-OxT" secondAttribute="centerY" id="Kix-dP-sOe"/>
+                            <constraint firstItem="hxR-1z-tB7" firstAttribute="top" secondItem="fij-SI-Yf2" secondAttribute="top" id="To1-wT-XUw"/>
                             <constraint firstItem="NWW-Lq-nYX" firstAttribute="height" secondItem="fij-SI-Yf2" secondAttribute="height" multiplier="0.5" id="XW4-vS-wpz"/>
+                            <constraint firstItem="20D-ND-ErR" firstAttribute="centerY" secondItem="NWW-Lq-nYX" secondAttribute="top" multiplier="1.16" id="cGu-6M-xtC"/>
+                            <constraint firstItem="Pte-YE-vCn" firstAttribute="trailing" secondItem="NWW-Lq-nYX" secondAttribute="trailing" id="f5j-rz-OVo"/>
+                            <constraint firstAttribute="bottom" secondItem="hxR-1z-tB7" secondAttribute="bottom" id="iqk-7p-kh8"/>
+                            <constraint firstItem="20D-ND-ErR" firstAttribute="trailing" secondItem="zYO-5Y-paJ" secondAttribute="leading" constant="-5" id="j9d-Bj-0Px"/>
                             <constraint firstItem="NWW-Lq-nYX" firstAttribute="width" secondItem="fij-SI-Yf2" secondAttribute="width" multiplier="0.8" id="jzu-zT-YrA"/>
+                            <constraint firstItem="zYO-5Y-paJ" firstAttribute="trailing" secondItem="NWW-Lq-nYX" secondAttribute="trailing" multiplier="0.95" id="xdz-ZM-AY2"/>
+                            <constraint firstItem="Pte-YE-vCn" firstAttribute="leading" secondItem="NWW-Lq-nYX" secondAttribute="leading" id="zsX-0T-l7U"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dhZ-0i-7DY"/>
                     <connections>
-                        <outlet property="backgroundView" destination="fij-SI-Yf2" id="xOf-0f-aEL"/>
-                        <outlet property="calendarView" destination="NWW-Lq-nYX" id="bcm-gv-2QK"/>
+                        <outlet property="backgroundView" destination="hxR-1z-tB7" id="YZy-BR-lC6"/>
+                        <outlet property="calendarView" destination="NWW-Lq-nYX" id="dT6-SL-6ml"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BjU-7Z-BAA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="kxB-Ft-D5Z">
+                    <connections>
+                        <action selector="onTapBackground:" destination="c1M-qd-2ft" id="szU-Kk-PH3"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="653.62318840579712" y="-25.446428571428569"/>
         </scene>
@@ -369,14 +438,25 @@
     <resources>
         <image name="HomeTabNewMission1.png" width="167" height="187"/>
         <image name="calendar" width="24" height="24"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="hostImg" width="29" height="29"/>
         <image name="people1" width="491" height="428"/>
         <image name="people2" width="512" height="512"/>
         <image name="people3" width="616" height="832"/>
         <image name="people4" width="512" height="512"/>
         <image name="record" width="24" height="24"/>
+        <namedColor name="BorderColor1">
+            <color red="0.83099997043609619" green="0.83099997043609619" blue="0.83099997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DarkGray">
+            <color red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="LightGray">
             <color red="0.86699998378753662" green="0.86699998378753662" blue="0.86699998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="RunBlue">
+            <color red="0.066666666666666666" green="0.38431372549019605" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -48,7 +48,7 @@ extension RecordTabViewController: UICollectionViewDelegateFlowLayout {
         // MARK: 아이템 터치 처리
         let storyboard = UIStoryboard(name: "RecordDetail", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "RecordDetail")
-        viewController.modalPresentationStyle = .fullScreen
+        viewController.modalPresentationStyle = .overCurrentContext
         self.present(viewController, animated: true)
     }
 }

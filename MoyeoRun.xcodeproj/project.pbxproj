@@ -14,6 +14,7 @@
 		0A75B2B42837363C00544AB5 /* RecordTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A75B2B32837363C00544AB5 /* RecordTab.storyboard */; };
 		0A75B2B62837364800544AB5 /* RecordTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A75B2B52837364800544AB5 /* RecordTabViewController.swift */; };
 		0AA674E528657EB7006A7E72 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA674E428657EB7006A7E72 /* CalendarViewController.swift */; };
+		0AA674E72866BECD006A7E72 /* RecordTabExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA674E62866BECD006A7E72 /* RecordTabExtension.swift */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F74D1F9E2831620A0099B5F0 /* Configuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1F9B2831620A0099B5F0 /* Configuation.swift */; };
 		F74D1FC1283163030099B5F0 /* SignInDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FA6283163030099B5F0 /* SignInDTO.swift */; };
@@ -113,6 +114,7 @@
 		0A75B2B32837363C00544AB5 /* RecordTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordTab.storyboard; sourceTree = "<group>"; };
 		0A75B2B52837364800544AB5 /* RecordTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTabViewController.swift; sourceTree = "<group>"; };
 		0AA674E428657EB7006A7E72 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		0AA674E62866BECD006A7E72 /* RecordTabExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTabExtension.swift; sourceTree = "<group>"; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.debug.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF6235AE0ADD0047158FA4F /* Pods-MoyeoRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.release.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.release.xcconfig"; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 		0A75B2AF283735F300544AB5 /* RecordTab */ = {
 			isa = PBXGroup;
 			children = (
+				0AA674E62866BECD006A7E72 /* RecordTabExtension.swift */,
 				0A75B2B12837361E00544AB5 /* Views */,
 				0A75B2B02837360D00544AB5 /* ViewControllers */,
 			);
@@ -1051,6 +1054,7 @@
 				F74D201D2831630C0099B5F0 /* HomeTabNowPopularCell.swift in Sources */,
 				F74D20252831630C0099B5F0 /* Extensions.swift in Sources */,
 				F74D1F9E2831620A0099B5F0 /* Configuation.swift in Sources */,
+				0AA674E72866BECD006A7E72 /* RecordTabExtension.swift in Sources */,
 				F74D1FC3283163030099B5F0 /* LogoutDTO.swift in Sources */,
 				F74D1FC2283163030099B5F0 /* RefreshDTO.swift in Sources */,
 				F74D1FCF283163030099B5F0 /* TargetType+.swift in Sources */,
