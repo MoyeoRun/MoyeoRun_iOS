@@ -10,7 +10,10 @@ import FSCalendar
 
 class CalendarViewController: UIViewController {
     @IBOutlet var backgroundView: UIView!
+    @IBOutlet var cancelButton: UIButton!
+    @IBOutlet var completeButton: UIButton!
     @IBOutlet var calendarView: FSCalendar!
+    @IBOutlet var calendarBackgroundView: UIView!
     let calendar = Calendar.current
     let gregorian = Calendar(identifier: .gregorian)
     lazy var currentPage = calendarView.currentPage
@@ -28,6 +31,10 @@ class CalendarViewController: UIViewController {
 
         DispatchQueue.main.async {
             self.setUI()
+            self.cancelButton.layer.borderWidth = 1
+            self.cancelButton.layer.borderColor = DefinedColor.borderColor1?.cgColor
+            self.cancelButton.layer.cornerRadius = 4
+            self.completeButton.layer.cornerRadius = 4
         }
     }
 
@@ -36,7 +43,7 @@ class CalendarViewController: UIViewController {
     }
 
     private func setCalendar() {
-        calendarView.layer.cornerRadius = 12
+        calendarBackgroundView.layer.cornerRadius = 12
         calendarView.locale = Locale(identifier: "ko_KR")
 
         // MARK: Custom Header
@@ -45,7 +52,7 @@ class CalendarViewController: UIViewController {
         calendarView.placeholderType = .none
 
         calendarView.headerHeight = Screen.height * 0.08
-        calendarView.weekdayHeight = Screen.height * 0.08
+        calendarView.weekdayHeight = Screen.height * 0.04
         calendarView.appearance.headerTitleOffset = .init(x: -Screen.width * 0.15, y: 0)
 
         calendarView.today = nil
@@ -132,7 +139,7 @@ extension CalendarViewController {
     }
 }
 
-extension CalendarViewController:FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance {
+extension CalendarViewController: FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance {
     func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
         self.calendarView.frame.size.height = bounds.height
     }
@@ -211,7 +218,7 @@ class CalendarCell: FSCalendarCell {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        commonInit()
+        self.commonInit()
     }
 
     private func commonInit() {
@@ -242,12 +249,12 @@ class CalendarCell: FSCalendarCell {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        self.selectionLayer?.frame = self.contentView.bounds
-        self.roundedLayer?.frame = self.contentView.bounds
-        self.todayLayer?.frame = self.contentView.bounds
+        self.selectionLayer?.frame = self.titleLabel.bounds
+        self.roundedLayer?.frame = self.titleLabel.bounds
+        self.todayLayer?.frame = self.titleLabel.bounds
 
-        let contentHeight = self.contentView.frame.height
-        let contentWidth = self.contentView.frame.width
+        let contentHeight = self.titleLabel.frame.height
+        let contentWidth = self.titleLabel.frame.width
 
         let selectionLayerBounds = selectionLayer?.bounds ?? .zero
         let selectionLayerWidth = selectionLayer?.bounds.width ?? .zero
@@ -308,7 +315,7 @@ class CalendarCell: FSCalendarCell {
             self.selectionLayer?.isHidden = true
             self.roundedLayer?.isHidden = true
             self.todayLayer?.isHidden = true
-            
+
             let diameter: CGFloat = min(roundedLayerHeight, roundedLayerWidth)
             let rect = CGRect(x: contentWidth / 2 - diameter / 2, y: contentHeight / 2 - diameter / 2, width: diameter, height: diameter)
                 .insetBy(dx: 2.5, dy: 2.5)
