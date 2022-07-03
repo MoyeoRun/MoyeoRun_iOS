@@ -17,98 +17,101 @@ class SearchTabViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUI()
+        DispatchQueue.main.async {
+            self.setUI()
+        }
     }
 
     func setUI() {
         setSearchBarUI()
         setRecentRunningButton()
         func setSearchBarUI() {
-            searchBar.layer.borderWidth = 1
-            searchBar.layer.borderColor = UIColor.black.cgColor
-            searchBar.layer.cornerRadius = 4
+            self.searchBar.layer.borderWidth = 1
+            self.searchBar.layer.borderColor = UIColor.black.cgColor
+            self.searchBar.layer.cornerRadius = 4
         }
 
         func setRecentRunningButton() {
-            recentRunningButton.titleLabel?.textColor = .black
-            DispatchQueue.main.async {
-                self.recentRunningButton.layer.addUnderLine(color: .black, width: 2)
-            }
+            self.recentRunningButton.setTitleColor(.black, for: .normal)
+            self.recentRunningButton.layer.addUnderLine(color: .black, width: 2)
         }
     }
 
     @IBAction func onTapRecentRunningButton(_ sender: Any) {
-        if self.selectedButton != .recentRunningButton {
-            removeUnderLine()
-            self.selectedButton = .recentRunningButton
-            setUnderLine()
+        DispatchQueue.main.async {
+            if self.selectedButton != .recentRunningButton {
+                self.unSetUIDeselectedButton()
+                self.selectedButton = .recentRunningButton
+                self.setUISelectedButton()
+            }
         }
     }
 
     @IBAction func onTapPaceButton(_ sender: Any) {
-        if self.selectedButton != .paceButton {
-            removeUnderLine()
-            self.selectedButton = .paceButton
-            setUnderLine()
+        DispatchQueue.main.async {
+            if self.selectedButton != .paceButton {
+                self.unSetUIDeselectedButton()
+                self.selectedButton = .paceButton
+                self.setUISelectedButton()
+            }
         }
     }
 
     @IBAction func onTapDistanceButton(_ sender: Any) {
-        if self.selectedButton != .distanceButton {
-            removeUnderLine()
-            self.selectedButton = .distanceButton
-            setUnderLine()
+        DispatchQueue.main.async {
+            if self.selectedButton != .distanceButton {
+                self.unSetUIDeselectedButton()
+                self.selectedButton = .distanceButton
+                self.setUISelectedButton()
+            }
         }
     }
 
     @IBAction func onTapNumOfPeopleButton(_ sender: Any) {
-        if self.selectedButton != .numOfPeopleButton {
-            removeUnderLine()
-            self.selectedButton = .numOfPeopleButton
-            setUnderLine()
+        DispatchQueue.main.async { [self] in
+            if self.selectedButton != .numOfPeopleButton {
+                self.unSetUIDeselectedButton()
+                self.selectedButton = .numOfPeopleButton
+                setUISelectedButton()
+            }
         }
     }
 
-    enum SelectedButton {
-        case recentRunningButton
-        case paceButton
-        case distanceButton
-        case numOfPeopleButton
-    }
-
-    func removeUnderLine() {
+    func unSetUIDeselectedButton() {
         switch self.selectedButton {
         case .recentRunningButton:
-            recentRunningButton.titleLabel?.textColor =  .gray
+            recentRunningButton.setTitleColor(.gray, for: .normal)
             recentRunningButton.layer.removeUnderLine()
+
         case .paceButton:
-            paceButton.titleLabel?.textColor =  .gray
+            paceButton.setTitleColor(.gray, for: .normal)
             paceButton.layer.removeUnderLine()
+
         case .distanceButton:
-            distanceButton.titleLabel?.textColor =  .gray
+            distanceButton.setTitleColor(.gray, for: .normal)
             distanceButton.layer.removeUnderLine()
+
         case .numOfPeopleButton:
-            numOfPeopleButton.titleLabel?.textColor =  .gray
+            numOfPeopleButton.setTitleColor(.gray, for: .normal)
             numOfPeopleButton.layer.removeUnderLine()
         }
     }
 
-    func setUnderLine() {
+    func setUISelectedButton() {
         switch self.selectedButton {
         case .recentRunningButton:
-            //recentRunningButton.titleLabel?.textColor =  .black
             recentRunningButton.setTitleColor(.black, for: .normal)
             recentRunningButton.layer.addUnderLine(color: .black, width: 2)
+
         case .paceButton:
-            //paceButton.titleLabel?.textColor =  .black
             paceButton.setTitleColor(.black, for: .normal)
             paceButton.layer.addUnderLine(color: .black, width: 2)
+
         case .distanceButton:
-            //distanceButton.titleLabel?.textColor =  .black
             distanceButton.setTitleColor(.black, for: .normal)
             distanceButton.layer.addUnderLine(color: .black, width: 2)
+
         case .numOfPeopleButton:
-            //numOfPeopleButton.titleLabel?.textColor =  .black
             numOfPeopleButton.setTitleColor(.black, for: .normal)
             numOfPeopleButton.layer.addUnderLine(color: .black, width: 2)
         }
@@ -139,4 +142,11 @@ extension SearchTabViewController: UICollectionViewDelegateFlowLayout {
 
         return CGSize(width: cellWidth, height: cellHeight)
     }
+}
+
+enum SelectedButton {
+    case recentRunningButton
+    case paceButton
+    case distanceButton
+    case numOfPeopleButton
 }

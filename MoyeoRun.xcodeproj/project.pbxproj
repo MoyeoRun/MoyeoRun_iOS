@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A54156F28629D540050AF60 /* RecordDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A54156E28629D540050AF60 /* RecordDetail.storyboard */; };
+		0A54157128629D780050AF60 /* RecordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A54157028629D780050AF60 /* RecordDetailViewController.swift */; };
+		0A5FFF3D283BBDDD004D86E0 /* RunningRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FFF3C283BBDDD004D86E0 /* RunningRecordCell.swift */; };
 		0A67F3482835F9AF00AACCB8 /* SearchTabExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67F3472835F9AF00AACCB8 /* SearchTabExtension.swift */; };
+		0A75B2B42837363C00544AB5 /* RecordTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A75B2B32837363C00544AB5 /* RecordTab.storyboard */; };
+		0A75B2B62837364800544AB5 /* RecordTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A75B2B52837364800544AB5 /* RecordTabViewController.swift */; };
+		0AA674E528657EB7006A7E72 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA674E428657EB7006A7E72 /* CalendarViewController.swift */; };
+		0AA674E72866BECD006A7E72 /* RecordTabExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA674E62866BECD006A7E72 /* RecordTabExtension.swift */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F74D1F9E2831620A0099B5F0 /* Configuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1F9B2831620A0099B5F0 /* Configuation.swift */; };
 		F74D1FC1283163030099B5F0 /* SignInDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FA6283163030099B5F0 /* SignInDTO.swift */; };
@@ -100,7 +107,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A54156E28629D540050AF60 /* RecordDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordDetail.storyboard; sourceTree = "<group>"; };
+		0A54157028629D780050AF60 /* RecordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailViewController.swift; sourceTree = "<group>"; };
+		0A5FFF3C283BBDDD004D86E0 /* RunningRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningRecordCell.swift; sourceTree = "<group>"; };
 		0A67F3472835F9AF00AACCB8 /* SearchTabExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabExtension.swift; sourceTree = "<group>"; };
+		0A75B2B32837363C00544AB5 /* RecordTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordTab.storyboard; sourceTree = "<group>"; };
+		0A75B2B52837364800544AB5 /* RecordTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTabViewController.swift; sourceTree = "<group>"; };
+		0AA674E428657EB7006A7E72 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		0AA674E62866BECD006A7E72 /* RecordTabExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTabExtension.swift; sourceTree = "<group>"; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.debug.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF6235AE0ADD0047158FA4F /* Pods-MoyeoRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.release.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.release.xcconfig"; sourceTree = "<group>"; };
@@ -210,6 +224,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A5FFF3B283BBDBA004D86E0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FFF3C283BBDDD004D86E0 /* RunningRecordCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0A75B2AF283735F300544AB5 /* RecordTab */ = {
+			isa = PBXGroup;
+			children = (
+				0AA674E62866BECD006A7E72 /* RecordTabExtension.swift */,
+				0A75B2B12837361E00544AB5 /* Views */,
+				0A75B2B02837360D00544AB5 /* ViewControllers */,
+			);
+			path = RecordTab;
+			sourceTree = "<group>";
+		};
+		0A75B2B02837360D00544AB5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A75B2B52837364800544AB5 /* RecordTabViewController.swift */,
+				0A54157028629D780050AF60 /* RecordDetailViewController.swift */,
+				0AA674E428657EB7006A7E72 /* CalendarViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0A75B2B12837361E00544AB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FFF3B283BBDBA004D86E0 /* Cells */,
+				0A75B2B22837362600544AB5 /* InterfaceBuilders */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A75B2B22837362600544AB5 /* InterfaceBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				0A75B2B32837363C00544AB5 /* RecordTab.storyboard */,
+				0A54156E28629D540050AF60 /* RecordDetail.storyboard */,
+			);
+			path = InterfaceBuilders;
+			sourceTree = "<group>";
+		};
 		3AADB25527EF543800AFDE01 /* LifeCycles */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +427,7 @@
 				F74D1FEF2831630C0099B5F0 /* TabBar */,
 				F74D1FD82831630C0099B5F0 /* HomeTab */,
 				F74D1FFC2831630C0099B5F0 /* SearchTab */,
+				0A75B2AF283735F300544AB5 /* RecordTab */,
 				F74D20042831630C0099B5F0 /* Main */,
 				F74D1FE62831630C0099B5F0 /* MakeRoom */,
 				F74D1FD42831630C0099B5F0 /* MoyeorunRoom */,
@@ -894,7 +955,9 @@
 				F74D201E2831630C0099B5F0 /* HomeTab.storyboard in Resources */,
 				F74D2068283163160099B5F0 /* 프로필 이미지.png in Resources */,
 				F74D2069283163160099B5F0 /* 벚꽃.jpeg in Resources */,
+				0A54156F28629D540050AF60 /* RecordDetail.storyboard in Resources */,
 				F74D2065283163160099B5F0 /* HomeTabLastRecord1.png in Resources */,
+				0A75B2B42837363C00544AB5 /* RecordTab.storyboard in Resources */,
 				F74D20232831630C0099B5F0 /* SelectPhoto.storyboard in Resources */,
 				F74D2066283163160099B5F0 /* 모여런 심볼.png in Resources */,
 			);
@@ -978,6 +1041,7 @@
 				F74D20322831630C0099B5F0 /* InsertUserInfoViewController.swift in Sources */,
 				F74D202B2831630C0099B5F0 /* RunningContentCell.swift in Sources */,
 				F74D20282831630C0099B5F0 /* MyPageViewController.swift in Sources */,
+				0A75B2B62837364800544AB5 /* RecordTabViewController.swift in Sources */,
 				F74D1FCD283163030099B5F0 /* Response.swift in Sources */,
 				F74D206B283163160099B5F0 /* MapKitView.swift in Sources */,
 				0A67F3482835F9AF00AACCB8 /* SearchTabExtension.swift in Sources */,
@@ -990,11 +1054,14 @@
 				F74D201D2831630C0099B5F0 /* HomeTabNowPopularCell.swift in Sources */,
 				F74D20252831630C0099B5F0 /* Extensions.swift in Sources */,
 				F74D1F9E2831620A0099B5F0 /* Configuation.swift in Sources */,
+				0AA674E72866BECD006A7E72 /* RecordTabExtension.swift in Sources */,
 				F74D1FC3283163030099B5F0 /* LogoutDTO.swift in Sources */,
 				F74D1FC2283163030099B5F0 /* RefreshDTO.swift in Sources */,
 				F74D1FCF283163030099B5F0 /* TargetType+.swift in Sources */,
 				F74D1FCE283163030099B5F0 /* MoyaProvider+.swift in Sources */,
+				0A54157128629D780050AF60 /* RecordDetailViewController.swift in Sources */,
 				F74D20312831630C0099B5F0 /* ProfileImageMenuViewController.swift in Sources */,
+				0AA674E528657EB7006A7E72 /* CalendarViewController.swift in Sources */,
 				F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */,
 				F74D20212831630C0099B5F0 /* PhotoCell.swift in Sources */,
 				F74D201B2831630C0099B5F0 /* HomeTabNewMissionCell.swift in Sources */,
@@ -1004,6 +1071,7 @@
 				F74D20202831630C0099B5F0 /* SelectPhotoController.swift in Sources */,
 				F74D202E2831630C0099B5F0 /* SocialLogInViewController.swift in Sources */,
 				F74D202F2831630C0099B5F0 /* AppIntroViewController.swift in Sources */,
+				0A5FFF3D283BBDDD004D86E0 /* RunningRecordCell.swift in Sources */,
 				F74D1FC5283163030099B5F0 /* AuthDTO.swift in Sources */,
 				F74D20172831630C0099B5F0 /* HomeTabViewController.swift in Sources */,
 				F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */,
