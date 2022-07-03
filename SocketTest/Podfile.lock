@@ -1,0 +1,30 @@
+PODS:
+  - Alamofire (5.6.1)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - SocketRocket (0.6.0)
+  - StompClientLib (1.4.1):
+    - SocketRocket
+
+DEPENDENCIES:
+  - Moya (~> 15.0)
+  - StompClientLib
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Moya
+    - SocketRocket
+    - StompClientLib
+
+SPEC CHECKSUMS:
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
+  StompClientLib: ac40390e9660c574675f1c933bec81c8e2811a4f
+
+PODFILE CHECKSUM: 2cbf8b8e8ff259061f0f359b662793b003aff699
+
+COCOAPODS: 1.11.3
