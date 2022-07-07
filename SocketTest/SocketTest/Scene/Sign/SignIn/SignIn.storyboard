@@ -24,7 +24,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="continue"/>
                                 <connections>
-                                    <action selector="inputText:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="ahk-UM-ZWc"/>
+                                    <action selector="inputText:" destination="Y6W-OH-hqX" eventType="editingChanged" id="Fdb-u4-Vyf"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hsK-14-Ff8">
@@ -35,7 +35,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="continue" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartDashesType="no" textContentType="password"/>
                                 <connections>
-                                    <action selector="inputText:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="25D-IY-woe"/>
+                                    <action selector="inputText:" destination="Y6W-OH-hqX" eventType="editingChanged" id="hWF-3B-rbF"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x3z-e6-5ce">
@@ -46,7 +46,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                 <connections>
-                                    <action selector="inputText:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="Iji-KR-0uw"/>
+                                    <action selector="inputText:" destination="Y6W-OH-hqX" eventType="editingChanged" id="sHU-tV-txo"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아이디" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AF4-cc-GPB">
@@ -84,7 +84,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="완료"/>
                                 <connections>
-                                    <action selector="clickComplete:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yGY-oS-ACr"/>
+                                    <action selector="clickComplete:" destination="Y6W-OH-hqX" eventType="touchDown" id="8Q9-A7-5iM"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회원가입" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUP-3T-Ml0">

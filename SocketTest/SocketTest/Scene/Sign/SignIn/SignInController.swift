@@ -35,28 +35,24 @@ class SignInController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func popController() {
+        self.navigationController?.popViewController(animated: true)
+    }
 
     @IBAction func clickComplete(_ sender: Any) {
-        let request: SignInRequest = SignInRequest(userId: idText, password: pwdText, email: emailText)
+        let request: SignInRequest = SignInRequest(name: idText, password: pwdText, email: emailText)
         let repository: SignInRepository = SignInRepository()
         
         repository.inquirySignIn(request: request) { result in
             switch result {
-            case .success(let response):
-                print(response)
-            case . failure(let error):
-                print(error)
+            case .success(_):
+                GlobalFunc.showToast(view: self.view, message: "회원가입에 성공하였습니다.")
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+                    self.popController()
+                }
+            case . failure(_):
+                GlobalFunc.showToast(view: self.view, message: "회원가입에 실패하였습니다.")
             }
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

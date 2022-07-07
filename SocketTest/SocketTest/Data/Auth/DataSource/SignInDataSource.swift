@@ -20,7 +20,7 @@ protocol SignInDataSourceable: AnyObject {
 final class SignInDataSource: SignInDataSourceable {
     let provider: MoyaProvider<SignInAPI>
     
-    init(provider: MoyaProvider<SignInAPI> = .init()) {
+    init(provider: MoyaProvider<SignInAPI> = .init(plugins: [NetworkLoggerPlugin()])) {
         self.provider = provider
     }
     
@@ -39,7 +39,10 @@ extension SignInAPI: TargetType {
     }
     
     var task: Task {
-        return .requestPlain
+        switch self {
+        case let .signIn(request):
+            return .requestJSONEncodable(request)
+        }
     }
     
     var headers: [String : String]? {
