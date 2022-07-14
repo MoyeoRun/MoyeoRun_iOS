@@ -35,12 +35,20 @@
 		3A6559F6283522F100FA2485 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6559F5283522F100FA2485 /* SceneDelegate.swift */; };
 		3A6559FD283522F400FA2485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A6559FC283522F400FA2485 /* Assets.xcassets */; };
 		3A655A00283522F400FA2485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6559FE283522F400FA2485 /* LaunchScreen.storyboard */; };
+		3A769EF9287C50A900A5137D /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A769EF8287C50A900A5137D /* RoomTableViewCell.swift */; };
+		3A769EFB287C5D0700A5137D /* Room.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A769EFA287C5D0700A5137D /* Room.storyboard */; };
+		3A769EFD287C609200A5137D /* RoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A769EFC287C609200A5137D /* RoomController.swift */; };
+		3A769EFF287C619600A5137D /* SearchRoomDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A769EFE287C619600A5137D /* SearchRoomDTO.swift */; };
 		3A7E854F2871C7AF00B960FC /* MoyaProvider+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7E854E2871C7AF00B960FC /* MoyaProvider+.swift */; };
+		3A8C4E9B287F1299006035CF /* JoinRoomDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8C4E9A287F1298006035CF /* JoinRoomDTO.swift */; };
+		3A8C4EA2287F5C7F006035CF /* ReadyRoomDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8C4EA1287F5C7F006035CF /* ReadyRoomDTO.swift */; };
 		3AAF61342837855B00C7B580 /* ChatDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF61332837855B00C7B580 /* ChatDTO.swift */; };
 		3AAF61362837860400C7B580 /* ChatRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF61352837860400C7B580 /* ChatRemoteDataSource.swift */; };
 		3AAF613828378AC600C7B580 /* RoomDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF613728378AC600C7B580 /* RoomDTO.swift */; };
+		3AAFE9FA28784D22005529D8 /* RoomDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAFE9F928784D22005529D8 /* RoomDataSource.swift */; };
+		3AAFE9FD28784D45005529D8 /* RoomRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAFE9FC28784D45005529D8 /* RoomRepository.swift */; };
 		3AD306A7283A158A00A8BB84 /* CreateRoomDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD306A6283A158A00A8BB84 /* CreateRoomDTO.swift */; };
-		3AD306A9283A175200A8BB84 /* SearchRoomDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD306A8283A175200A8BB84 /* SearchRoomDTO.swift */; };
+		3AD306A9283A175200A8BB84 /* SearchRoomListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD306A8283A175200A8BB84 /* SearchRoomListDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,12 +82,20 @@
 		3A6559FC283522F400FA2485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A6559FF283522F400FA2485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A655A01283522F400FA2485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A769EF8287C50A900A5137D /* RoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
+		3A769EFA287C5D0700A5137D /* Room.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Room.storyboard; sourceTree = "<group>"; };
+		3A769EFC287C609200A5137D /* RoomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomController.swift; sourceTree = "<group>"; };
+		3A769EFE287C619600A5137D /* SearchRoomDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRoomDTO.swift; sourceTree = "<group>"; };
 		3A7E854E2871C7AF00B960FC /* MoyaProvider+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+.swift"; sourceTree = "<group>"; };
+		3A8C4E9A287F1298006035CF /* JoinRoomDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRoomDTO.swift; sourceTree = "<group>"; };
+		3A8C4EA1287F5C7F006035CF /* ReadyRoomDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyRoomDTO.swift; sourceTree = "<group>"; };
 		3AAF61332837855B00C7B580 /* ChatDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDTO.swift; sourceTree = "<group>"; };
 		3AAF61352837860400C7B580 /* ChatRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRemoteDataSource.swift; sourceTree = "<group>"; };
 		3AAF613728378AC600C7B580 /* RoomDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDTO.swift; sourceTree = "<group>"; };
+		3AAFE9F928784D22005529D8 /* RoomDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDataSource.swift; sourceTree = "<group>"; };
+		3AAFE9FC28784D45005529D8 /* RoomRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRepository.swift; sourceTree = "<group>"; };
 		3AD306A6283A158A00A8BB84 /* CreateRoomDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomDTO.swift; sourceTree = "<group>"; };
-		3AD306A8283A175200A8BB84 /* SearchRoomDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRoomDTO.swift; sourceTree = "<group>"; };
+		3AD306A8283A175200A8BB84 /* SearchRoomListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRoomListDTO.swift; sourceTree = "<group>"; };
 		42A57DE52F80320BA0DF78F8 /* Pods-SocketTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocketTest.release.xcconfig"; path = "Target Support Files/Pods-SocketTest/Pods-SocketTest.release.xcconfig"; sourceTree = "<group>"; };
 		C4E792DFC3B725A77BBC847E /* Pods_SocketTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocketTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -141,9 +157,11 @@
 		3A2C0DE72877029B003D8A69 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3AAFE9FE28785507005529D8 /* Room */,
 				3A2C0DE8287702A7003D8A69 /* Home.storyboard */,
 				3A0C3E912877102D00DDF329 /* HomeController.swift */,
 				3A0C3EA0287724B200DDF329 /* MakeRoomController.swift */,
+				3A769EF8287C50A900A5137D /* RoomTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -151,7 +169,6 @@
 		3A2C0DEC287708A3003D8A69 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				3A2E246A28375ADC005B3CBD /* StompManager.swift */,
 				3A2C0DED287708B8003D8A69 /* GlobalFunc.swift */,
 			);
 			path = Util;
@@ -272,6 +289,7 @@
 		3A6559F2283522F100FA2485 /* SocketTest */ = {
 			isa = PBXGroup;
 			children = (
+				3A8C4E9C287F5416006035CF /* Stomp */,
 				3A2C0DEC287708A3003D8A69 /* Util */,
 				3A2C0DEF28770DD6003D8A69 /* Scene */,
 				3AAF612E2837852B00C7B580 /* Data */,
@@ -282,6 +300,14 @@
 				3A655A01283522F400FA2485 /* Info.plist */,
 			);
 			path = SocketTest;
+			sourceTree = "<group>";
+		};
+		3A8C4E9C287F5416006035CF /* Stomp */ = {
+			isa = PBXGroup;
+			children = (
+				3A2E246A28375ADC005B3CBD /* StompManager.swift */,
+			);
+			path = Stomp;
 			sourceTree = "<group>";
 		};
 		3AAF612E2837852B00C7B580 /* Data */ = {
@@ -330,9 +356,36 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		3AAFE9F728784D05005529D8 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				3AAFE9FC28784D45005529D8 /* RoomRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		3AAFE9F828784D0B005529D8 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				3AAFE9F928784D22005529D8 /* RoomDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		3AAFE9FE28785507005529D8 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				3A769EFA287C5D0700A5137D /* Room.storyboard */,
+				3A769EFC287C609200A5137D /* RoomController.swift */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
 		3AD306A4283A157700A8BB84 /* Room */ = {
 			isa = PBXGroup;
 			children = (
+				3AAFE9F728784D05005529D8 /* Repository */,
+				3AAFE9F828784D0B005529D8 /* DataSource */,
 				3AD306A5283A157D00A8BB84 /* DTO */,
 			);
 			path = Room;
@@ -342,7 +395,10 @@
 			isa = PBXGroup;
 			children = (
 				3AD306A6283A158A00A8BB84 /* CreateRoomDTO.swift */,
-				3AD306A8283A175200A8BB84 /* SearchRoomDTO.swift */,
+				3AD306A8283A175200A8BB84 /* SearchRoomListDTO.swift */,
+				3A769EFE287C619600A5137D /* SearchRoomDTO.swift */,
+				3A8C4E9A287F1298006035CF /* JoinRoomDTO.swift */,
+				3A8C4EA1287F5C7F006035CF /* ReadyRoomDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -428,6 +484,7 @@
 				3A655A00283522F400FA2485 /* LaunchScreen.storyboard in Resources */,
 				3A54AB73286F15B80096F76E /* SignIn.storyboard in Resources */,
 				3A54AB75286F22DD0096F76E /* SignUp.storyboard in Resources */,
+				3A769EFB287C5D0700A5137D /* Room.storyboard in Resources */,
 				3A6559FD283522F400FA2485 /* Assets.xcassets in Resources */,
 				3A54AB70286F10330096F76E /* Sign.storyboard in Resources */,
 			);
@@ -490,24 +547,31 @@
 				3A54AB83286F2A8D0096F76E /* TargetType+.swift in Sources */,
 				3AAF613828378AC600C7B580 /* RoomDTO.swift in Sources */,
 				3A0C3EA1287724B200DDF329 /* MakeRoomController.swift in Sources */,
+				3A769EFF287C619600A5137D /* SearchRoomDTO.swift in Sources */,
 				3A0C3E9B28771B7F00DDF329 /* UserDTO.swift in Sources */,
 				3A54AB8A286F318F0096F76E /* SignInController.swift in Sources */,
+				3A769EFD287C609200A5137D /* RoomController.swift in Sources */,
 				3AAF61342837855B00C7B580 /* ChatDTO.swift in Sources */,
 				3A54AB81286F2A6F0096F76E /* Response.swift in Sources */,
 				3A54AB88286F2B6C0096F76E /* SignInRepository.swift in Sources */,
 				3A7E854F2871C7AF00B960FC /* MoyaProvider+.swift in Sources */,
+				3AAFE9FD28784D45005529D8 /* RoomRepository.swift in Sources */,
 				3A2C0DE428770184003D8A69 /* SignUpRepository.swift in Sources */,
+				3A769EF9287C50A900A5137D /* RoomTableViewCell.swift in Sources */,
 				3A0C3E9D28771CA000DDF329 /* UserDataSource.swift in Sources */,
 				3A2C0DEE287708B8003D8A69 /* GlobalFunc.swift in Sources */,
 				3A2C0DE02876FF00003D8A69 /* SignUpController.swift in Sources */,
 				3A0C3E952877123900DDF329 /* KeyChain.swift in Sources */,
 				3AAF61362837860400C7B580 /* ChatRemoteDataSource.swift in Sources */,
-				3AD306A9283A175200A8BB84 /* SearchRoomDTO.swift in Sources */,
+				3AD306A9283A175200A8BB84 /* SearchRoomListDTO.swift in Sources */,
+				3A8C4EA2287F5C7F006035CF /* ReadyRoomDTO.swift in Sources */,
+				3AAFE9FA28784D22005529D8 /* RoomDataSource.swift in Sources */,
 				3A2C0DE22877013F003D8A69 /* SignUpDTO.swift in Sources */,
 				3AD306A7283A158A00A8BB84 /* CreateRoomDTO.swift in Sources */,
 				3A2E246B28375ADC005B3CBD /* StompManager.swift in Sources */,
 				3A54AB78286F25610096F76E /* SignInDTO.swift in Sources */,
 				3A2C0DE62877018F003D8A69 /* SignUpDataSource.swift in Sources */,
+				3A8C4E9B287F1299006035CF /* JoinRoomDTO.swift in Sources */,
 				3A2C0DDE2876FC6D003D8A69 /* SignController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

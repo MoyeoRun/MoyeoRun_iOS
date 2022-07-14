@@ -10,7 +10,7 @@ import Moya
 
 protocol UserDataSourceable: AnyObject {
     init(provider: MoyaProvider<UserAPI>)
-
+    
     func inquiryUser(
         request: UserRequest,
         completion: @escaping (Result<UserResponse, Error>) -> Void
@@ -19,11 +19,11 @@ protocol UserDataSourceable: AnyObject {
 
 final class UserDataSource: UserDataSourceable {
     let provider: MoyaProvider<UserAPI>
-
+    
     init(provider: MoyaProvider<UserAPI> = .init()) {
         self.provider = provider
     }
-
+    
     func inquiryUser(
         request: UserRequest,
         completion: @escaping (Result<UserResponse, Error>) -> Void
@@ -43,21 +43,21 @@ extension UserAPI: TargetType {
             return "/api/member/info"
         }
     }
-
+    
     var method: Moya.Method {
         switch self {
         case .user:
             return .get
         }
     }
-
+    
     var task: Task {
         switch self {
         case .user:
             return .requestPlain
         }
     }
-
+    
     var headers: [String: String]? {
         switch self {
         case let .user(request):

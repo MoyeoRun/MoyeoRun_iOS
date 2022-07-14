@@ -9,21 +9,32 @@ import UIKit
 
 class MakeRoomController: UIViewController {
 
+    @IBOutlet var nameTextField: UITextField!
+    
+    var nameText: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func inputName(_ sender: Any) {
+        nameText = nameTextField.text!
     }
-    */
-
+    
+    @IBAction func clickComplete(_ sender: Any) {
+        let request: CreateRoomRequest = CreateRoomRequest(accessToken: UserDefaults.standard.string(forKey: "accessToken")!, name: nameText)
+        let repository: RoomRepository = RoomRepository()
+        
+        repository.inquiryCreateRoom(request: request) { result in
+            switch result {
+            case .success(let response):
+                print(response)
+                self.presentingViewController?.dismiss(animated: true, completion: nil)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }

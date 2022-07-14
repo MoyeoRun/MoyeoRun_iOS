@@ -16,6 +16,19 @@ class SignController: UIViewController {
     }
     
 
+    @IBAction func clickSignIn(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "SignIn", bundle: nil)
+                let viewController = storyboard.instantiateViewController(withIdentifier: "signIn")
+                viewController.modalPresentationStyle = .overFullScreen
+                self.present(viewController, animated: true)
+    }
+    
+    @IBAction func clickSignUp(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
+                let viewController = storyboard.instantiateViewController(withIdentifier: "signUp")
+                viewController.modalPresentationStyle = .overFullScreen
+                self.present(viewController, animated: true)
+    }
     /*
     // MARK: - Navigation
 

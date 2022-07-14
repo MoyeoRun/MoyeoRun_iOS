@@ -7,6 +7,12 @@
 
 import Foundation
 
+struct User: Codable {
+    let memberId: Int
+    let name: String
+    let email: String
+}
+
 struct UserRequest: Codable {
     let accessToken: String
 }

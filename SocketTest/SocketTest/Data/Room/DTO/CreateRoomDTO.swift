@@ -8,11 +8,12 @@
 import Foundation
 
 struct CreateRoomRequest: Codable {
+    let accessToken: String
     var name: String
 }
 
 
 
-struct CrateRoomResponse: Codable {
-    var id: Int
+struct CreateRoomResponse: Codable {
+    var message: String
 }

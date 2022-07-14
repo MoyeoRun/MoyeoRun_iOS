@@ -45,31 +45,37 @@ class SignUpController: UIViewController {
         
     }
     
-    func pushController() {
-        let storyboard = UIStoryboard(name: "Home", bundle: Bundle.main)
-        let pushVC = storyboard.instantiateViewController(withIdentifier: "homeId")
-        
-        let dismissCompletion = { () -> Void in
-            let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as! SceneDelegate
-            sceneDelegate.window?.rootViewController = pushVC
-        }
-        self.view.window?.rootViewController?.dismiss(animated: true, completion: dismissCompletion)
-    }
-    
-    @IBAction func clickComplete(_ sender: Any) {
+    func requestLogin() -> Bool {
         let request: SignUpRequest = SignUpRequest(email: emailText, password: pwdText)
         let repository: SignUpRepository = SignUpRepository()
+        
+        var isSuccess: Bool = true
         
         repository.inquirySignUp(request: request) { result in
             switch result {
             case .success(let response):
                 UserDefaults.standard.set(response.accessToken, forKey: "accessToken")
                 self.getUserData()
-                self.pushController()
             case .failure(_):
+                isSuccess = false
                 GlobalFunc.showToast(view: self.view, message: "로그인에 실패하였습니다.")
             }
         }
+        return isSuccess
     }
-
+    
+    func presentController () {
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                let viewController = storyboard.instantiateViewController(withIdentifier: "home")
+                viewController.modalPresentationStyle = .overFullScreen
+                self.present(viewController, animated: true)
+    }
+    
+    @IBAction func clickComplete(_ sender: Any) {
+        if requestLogin() {
+            presentController()
+        } else {
+            print("로그인 실패")
+        }
+    }
 }
