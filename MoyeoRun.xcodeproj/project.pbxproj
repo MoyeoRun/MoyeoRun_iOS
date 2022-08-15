@@ -14,6 +14,8 @@
 		0A75B2B42837363C00544AB5 /* RecordTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A75B2B32837363C00544AB5 /* RecordTab.storyboard */; };
 		0A75B2B62837364800544AB5 /* RecordTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A75B2B52837364800544AB5 /* RecordTabViewController.swift */; };
 		0AA674E72866BECD006A7E72 /* RecordTabExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA674E62866BECD006A7E72 /* RecordTabExtension.swift */; };
+		0AE2236D28AA1ACF0016F72E /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE2236C28AA1ACF0016F72E /* DatePickerViewController.swift */; };
+		0AE2236F28AA1AF20016F72E /* DatePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AE2236E28AA1AF20016F72E /* DatePicker.storyboard */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F74D1F9E2831620A0099B5F0 /* Configuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1F9B2831620A0099B5F0 /* Configuation.swift */; };
 		F74D1FC1283163030099B5F0 /* SignInDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FA6283163030099B5F0 /* SignInDTO.swift */; };
@@ -113,6 +115,8 @@
 		0A75B2B32837363C00544AB5 /* RecordTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordTab.storyboard; sourceTree = "<group>"; };
 		0A75B2B52837364800544AB5 /* RecordTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTabViewController.swift; sourceTree = "<group>"; };
 		0AA674E62866BECD006A7E72 /* RecordTabExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTabExtension.swift; sourceTree = "<group>"; };
+		0AE2236C28AA1ACF0016F72E /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		0AE2236E28AA1AF20016F72E /* DatePicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DatePicker.storyboard; sourceTree = "<group>"; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.debug.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF6235AE0ADD0047158FA4F /* Pods-MoyeoRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.release.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.release.xcconfig"; sourceTree = "<group>"; };
@@ -245,6 +249,7 @@
 			children = (
 				0A75B2B52837364800544AB5 /* RecordTabViewController.swift */,
 				0A54157028629D780050AF60 /* RecordDetailViewController.swift */,
+				0AE2236C28AA1ACF0016F72E /* DatePickerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 			children = (
 				0A75B2B32837363C00544AB5 /* RecordTab.storyboard */,
 				0A54156E28629D540050AF60 /* RecordDetail.storyboard */,
+				0AE2236E28AA1AF20016F72E /* DatePicker.storyboard */,
 			);
 			path = InterfaceBuilders;
 			sourceTree = "<group>";
@@ -946,6 +952,7 @@
 				F74D2063283163160099B5F0 /* HomeTabNowPopular1.png in Resources */,
 				F74D2073283163160099B5F0 /* Roboto-Italic.ttf in Resources */,
 				F74D20352831630C0099B5F0 /* SignUpComplete.storyboard in Resources */,
+				0AE2236F28AA1AF20016F72E /* DatePicker.storyboard in Resources */,
 				F74D20292831630C0099B5F0 /* MyPage.storyboard in Resources */,
 				F74D2067283163160099B5F0 /* 참가자.png in Resources */,
 				F74D20342831630C0099B5F0 /* ProfileImageMenu.storyboard in Resources */,
@@ -1056,6 +1063,7 @@
 				F74D1FC2283163030099B5F0 /* RefreshDTO.swift in Sources */,
 				F74D1FCF283163030099B5F0 /* TargetType+.swift in Sources */,
 				F74D1FCE283163030099B5F0 /* MoyaProvider+.swift in Sources */,
+				0AE2236D28AA1ACF0016F72E /* DatePickerViewController.swift in Sources */,
 				0A54157128629D780050AF60 /* RecordDetailViewController.swift in Sources */,
 				F74D20312831630C0099B5F0 /* ProfileImageMenuViewController.swift in Sources */,
 				F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */,
