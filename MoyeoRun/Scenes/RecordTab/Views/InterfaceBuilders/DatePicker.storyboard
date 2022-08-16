@@ -34,18 +34,30 @@
                                             <constraint firstAttribute="height" constant="1" id="0Ua-eK-NQm"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T5a-02-3yc" customClass="UIDatePicker">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAZ-0a-2OY">
                                         <rect key="frame" x="0.0" y="74.5" width="331" height="200.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <action selector="dateChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="i46-lK-lq2"/>
-                                        </connections>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T5a-02-3yc" customClass="UIPickerView">
+                                                <rect key="frame" x="10" y="0.0" width="311" height="200.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="dateChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="i46-lK-lq2"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="T5a-02-3yc" firstAttribute="leading" secondItem="nAZ-0a-2OY" secondAttribute="leading" constant="10" id="Dmr-yC-4kr"/>
+                                            <constraint firstAttribute="trailing" secondItem="T5a-02-3yc" secondAttribute="trailing" constant="10" id="Vhz-ZE-24F"/>
+                                            <constraint firstItem="T5a-02-3yc" firstAttribute="top" secondItem="nAZ-0a-2OY" secondAttribute="top" id="eJX-Td-vzi"/>
+                                            <constraint firstAttribute="bottom" secondItem="T5a-02-3yc" secondAttribute="bottom" id="qJZ-Lm-XeU"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="imz-vi-kYD">
                                         <rect key="frame" x="0.0" y="275" width="331" height="92"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2w-k2-waN">
-                                                <rect key="frame" x="24.5" y="14" width="132.5" height="64"/>
+                                                <rect key="frame" x="24.5" y="18.5" width="132.5" height="55"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="취소"/>
@@ -62,7 +74,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4V-sR-nLO">
-                                                <rect key="frame" x="174" y="14" width="132.5" height="64"/>
+                                                <rect key="frame" x="174" y="18.5" width="132.5" height="55"/>
                                                 <color key="backgroundColor" name="RunBlue"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
@@ -82,11 +94,11 @@
                                             <constraint firstItem="L2w-k2-waN" firstAttribute="centerX" secondItem="imz-vi-kYD" secondAttribute="centerX" multiplier="0.55" id="0kA-98-RT1"/>
                                             <constraint firstItem="L2w-k2-waN" firstAttribute="centerY" secondItem="imz-vi-kYD" secondAttribute="centerY" id="b8H-TL-Qhn"/>
                                             <constraint firstItem="y4V-sR-nLO" firstAttribute="width" secondItem="imz-vi-kYD" secondAttribute="width" multiplier="0.4" id="bPd-dx-eTI"/>
-                                            <constraint firstItem="y4V-sR-nLO" firstAttribute="height" secondItem="imz-vi-kYD" secondAttribute="height" multiplier="0.7" id="cmo-eJ-V0G"/>
+                                            <constraint firstItem="y4V-sR-nLO" firstAttribute="height" secondItem="imz-vi-kYD" secondAttribute="height" multiplier="0.6" id="cmo-eJ-V0G"/>
                                             <constraint firstItem="y4V-sR-nLO" firstAttribute="centerX" secondItem="imz-vi-kYD" secondAttribute="centerX" multiplier="1.45" id="dib-2I-440"/>
                                             <constraint firstItem="L2w-k2-waN" firstAttribute="width" secondItem="imz-vi-kYD" secondAttribute="width" multiplier="0.4" id="nHY-4c-Ndp"/>
                                             <constraint firstItem="y4V-sR-nLO" firstAttribute="centerY" secondItem="imz-vi-kYD" secondAttribute="centerY" id="rDX-61-Ck7"/>
-                                            <constraint firstItem="L2w-k2-waN" firstAttribute="height" secondItem="imz-vi-kYD" secondAttribute="height" multiplier="0.7" id="tfr-UZ-AE5"/>
+                                            <constraint firstItem="L2w-k2-waN" firstAttribute="height" secondItem="imz-vi-kYD" secondAttribute="height" multiplier="0.6" id="tfr-UZ-AE5"/>
                                         </constraints>
                                     </view>
                                 </subviews>
