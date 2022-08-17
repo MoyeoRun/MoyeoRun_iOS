@@ -29,9 +29,6 @@ class DatePickerViewController: UIViewController {
         datePicker.tintColor = .gray
     }
 
-    @IBAction func dateChanged(_ sender: UIDatePicker) {
-        print(sender.date)
-    }
     @IBAction func onTapBackground(_ sender: Any) {
         self.dismiss(animated: false)
     }
@@ -39,6 +36,9 @@ class DatePickerViewController: UIViewController {
         self.dismiss(animated: false)
     }
     @IBAction func onTapCompleteButton(_ sender: Any) {
+        let selectedYearRow = datePicker.selectedRow(inComponent: 0)
+        let selectedMonthRow = datePicker.selectedRow(inComponent: 2)
+        
         self.dismiss(animated: false)
     }
 }
