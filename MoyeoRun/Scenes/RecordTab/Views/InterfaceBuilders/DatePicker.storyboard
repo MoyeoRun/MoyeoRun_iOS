@@ -72,6 +72,9 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onTapCancelButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ddx-r6-g98"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4V-sR-nLO">
                                                 <rect key="frame" x="174" y="18.5" width="132.5" height="55"/>
@@ -87,6 +90,9 @@
                                                         <real key="value" value="0.0"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onTapCompleteButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Lg8-br-JVe"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -112,11 +118,15 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="vQT-ol-1Xc" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="E4R-S4-iWE"/>
                             <constraint firstItem="vQT-ol-1Xc" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.8" id="T2o-3W-MgK"/>
                             <constraint firstItem="vQT-ol-1Xc" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="dQU-mG-Qhe"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="UWb-nf-jNs" appends="YES" id="awN-el-WSx"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="T5a-02-3yc" id="Tdl-l1-Xex"/>
@@ -124,6 +134,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="UWb-nf-jNs">
+                    <connections>
+                        <action selector="onTapBackground:" destination="Y6W-OH-hqX" id="cUG-bB-Kk4"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="49" y="106"/>
         </scene>

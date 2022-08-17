@@ -32,6 +32,18 @@ class DatePickerViewController: UIViewController {
     @IBAction func dateChanged(_ sender: UIDatePicker) {
         print(sender.date)
     }
+    @IBAction func onTapBackground(_ sender: Any) {
+        self.dismiss(animated: false)
+    }
+    
+    @IBAction func onTapCancelButton(_ sender: Any) {
+        self.dismiss(animated: false)
+    }
+    
+    @IBAction func onTapCompleteButton(_ sender: Any) {
+        self.dismiss(animated: false)
+    }
+    
 }
 
 extension DatePickerViewController: UIPickerViewDataSource, UIPickerViewDelegate {
