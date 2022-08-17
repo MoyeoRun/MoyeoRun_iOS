@@ -38,7 +38,7 @@
                                         <rect key="frame" x="0.0" y="74.5" width="331" height="200.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T5a-02-3yc" customClass="UIPickerView">
-                                                <rect key="frame" x="10" y="0.0" width="311" height="200.5"/>
+                                                <rect key="frame" x="24.5" y="0.0" width="282" height="200.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
                                                     <action selector="dateChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="i46-lK-lq2"/>
@@ -47,8 +47,6 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="T5a-02-3yc" firstAttribute="leading" secondItem="nAZ-0a-2OY" secondAttribute="leading" constant="10" id="Dmr-yC-4kr"/>
-                                            <constraint firstAttribute="trailing" secondItem="T5a-02-3yc" secondAttribute="trailing" constant="10" id="Vhz-ZE-24F"/>
                                             <constraint firstItem="T5a-02-3yc" firstAttribute="top" secondItem="nAZ-0a-2OY" secondAttribute="top" id="eJX-Td-vzi"/>
                                             <constraint firstAttribute="bottom" secondItem="T5a-02-3yc" secondAttribute="bottom" id="qJZ-Lm-XeU"/>
                                         </constraints>
@@ -112,7 +110,9 @@
                                 <constraints>
                                     <constraint firstItem="imz-vi-kYD" firstAttribute="height" secondItem="vQT-ol-1Xc" secondAttribute="height" multiplier="0.25" id="5hu-pl-nvo"/>
                                     <constraint firstAttribute="width" secondItem="vQT-ol-1Xc" secondAttribute="height" multiplier="297:329" id="chb-OF-cku"/>
+                                    <constraint firstItem="T5a-02-3yc" firstAttribute="leading" secondItem="L2w-k2-waN" secondAttribute="leading" id="dGR-Md-9DP"/>
                                     <constraint firstItem="XBr-rx-mtt" firstAttribute="height" secondItem="vQT-ol-1Xc" secondAttribute="height" multiplier="0.2" id="o6w-5u-cTL"/>
+                                    <constraint firstItem="T5a-02-3yc" firstAttribute="trailing" secondItem="y4V-sR-nLO" secondAttribute="trailing" id="voZ-fM-s4v"/>
                                 </constraints>
                             </stackView>
                         </subviews>

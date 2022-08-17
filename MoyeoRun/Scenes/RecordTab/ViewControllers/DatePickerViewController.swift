@@ -35,15 +35,12 @@ class DatePickerViewController: UIViewController {
     @IBAction func onTapBackground(_ sender: Any) {
         self.dismiss(animated: false)
     }
-    
     @IBAction func onTapCancelButton(_ sender: Any) {
         self.dismiss(animated: false)
     }
-    
     @IBAction func onTapCompleteButton(_ sender: Any) {
         self.dismiss(animated: false)
     }
-    
 }
 
 extension DatePickerViewController: UIPickerViewDataSource, UIPickerViewDelegate {
@@ -61,18 +58,21 @@ extension DatePickerViewController: UIPickerViewDataSource, UIPickerViewDelegate
         }
     }
 
-    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        switch component {
-        case 0: return NSAttributedString(string: yearArray[row])
-        case 1:
-            let attribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12)]
-            let attrString = NSAttributedString(string: "년",attributes: attribute)
-            
-            return attrString
-        case 2: return NSAttributedString(string: monthArray[row])
-        case 3: return NSAttributedString(string: "월")
-        default:
-            return nil
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var pickerLabel: UILabel? = (view as? UILabel)
+        if pickerLabel == nil {
+            pickerLabel = UILabel()
+            pickerLabel?.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
+            pickerLabel?.textAlignment = .center
+            pickerLabel?.textColor = .black
         }
+        switch component {
+        case 0: pickerLabel?.text = yearArray[row]
+        case 1: pickerLabel?.text = "년"
+        case 2: pickerLabel?.text = monthArray[row]
+        case 3: pickerLabel?.text = "월"
+        default: break
+        }
+        return pickerLabel!
     }
 }
