@@ -78,10 +78,6 @@
 		F74D2063283163160099B5F0 /* HomeTabNowPopular1.png in Resources */ = {isa = PBXBuildFile; fileRef = F74D2043283163160099B5F0 /* HomeTabNowPopular1.png */; };
 		F74D2064283163160099B5F0 /* HomeTabLastRecord0.png in Resources */ = {isa = PBXBuildFile; fileRef = F74D2044283163160099B5F0 /* HomeTabLastRecord0.png */; };
 		F74D2065283163160099B5F0 /* HomeTabLastRecord1.png in Resources */ = {isa = PBXBuildFile; fileRef = F74D2045283163160099B5F0 /* HomeTabLastRecord1.png */; };
-		F74D2066283163160099B5F0 /* 모여런 심볼.png in Resources */ = {isa = PBXBuildFile; fileRef = F74D2046283163160099B5F0 /* 모여런 심볼.png */; };
-		F74D2067283163160099B5F0 /* 참가자.png in Resources */ = {isa = PBXBuildFile; fileRef = F74D2047283163160099B5F0 /* 참가자.png */; };
-		F74D2068283163160099B5F0 /* 프로필 이미지.png in Resources */ = {isa = PBXBuildFile; fileRef = F74D2048283163160099B5F0 /* 프로필 이미지.png */; };
-		F74D2069283163160099B5F0 /* 벚꽃.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F74D2049283163160099B5F0 /* 벚꽃.jpeg */; };
 		F74D206A283163160099B5F0 /* MapKitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F74D204C283163160099B5F0 /* MapKitView.xib */; };
 		F74D206B283163160099B5F0 /* MapKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D204D283163160099B5F0 /* MapKitView.swift */; };
 		F74D206C283163160099B5F0 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F74D2050283163160099B5F0 /* Roboto-Medium.ttf */; };
@@ -182,10 +178,6 @@
 		F74D2043283163160099B5F0 /* HomeTabNowPopular1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNowPopular1.png; sourceTree = "<group>"; };
 		F74D2044283163160099B5F0 /* HomeTabLastRecord0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabLastRecord0.png; sourceTree = "<group>"; };
 		F74D2045283163160099B5F0 /* HomeTabLastRecord1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabLastRecord1.png; sourceTree = "<group>"; };
-		F74D2046283163160099B5F0 /* 모여런 심볼.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "모여런 심볼.png"; sourceTree = "<group>"; };
-		F74D2047283163160099B5F0 /* 참가자.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "참가자.png"; sourceTree = "<group>"; };
-		F74D2048283163160099B5F0 /* 프로필 이미지.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "프로필 이미지.png"; sourceTree = "<group>"; };
-		F74D2049283163160099B5F0 /* 벚꽃.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "벚꽃.jpeg"; sourceTree = "<group>"; };
 		F74D204C283163160099B5F0 /* MapKitView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapKitView.xib; sourceTree = "<group>"; };
 		F74D204D283163160099B5F0 /* MapKitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitView.swift; sourceTree = "<group>"; };
 		F74D2050283163160099B5F0 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
@@ -749,10 +741,6 @@
 			isa = PBXGroup;
 			children = (
 				F74D203C283163160099B5F0 /* HomeTab */,
-				F74D2046283163160099B5F0 /* 모여런 심볼.png */,
-				F74D2047283163160099B5F0 /* 참가자.png */,
-				F74D2048283163160099B5F0 /* 프로필 이미지.png */,
-				F74D2049283163160099B5F0 /* 벚꽃.jpeg */,
 			);
 			path = TestImages;
 			sourceTree = "<group>";
@@ -950,16 +938,12 @@
 				F74D2073283163160099B5F0 /* Roboto-Italic.ttf in Resources */,
 				F74D20352831630C0099B5F0 /* SignUpComplete.storyboard in Resources */,
 				F74D20292831630C0099B5F0 /* MyPage.storyboard in Resources */,
-				F74D2067283163160099B5F0 /* 참가자.png in Resources */,
 				F74D20342831630C0099B5F0 /* ProfileImageMenu.storyboard in Resources */,
 				F74D201E2831630C0099B5F0 /* HomeTab.storyboard in Resources */,
-				F74D2068283163160099B5F0 /* 프로필 이미지.png in Resources */,
-				F74D2069283163160099B5F0 /* 벚꽃.jpeg in Resources */,
 				0A54156F28629D540050AF60 /* RecordDetail.storyboard in Resources */,
 				F74D2065283163160099B5F0 /* HomeTabLastRecord1.png in Resources */,
 				0A75B2B42837363C00544AB5 /* RecordTab.storyboard in Resources */,
 				F74D20232831630C0099B5F0 /* SelectPhoto.storyboard in Resources */,
-				F74D2066283163160099B5F0 /* 모여런 심볼.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
