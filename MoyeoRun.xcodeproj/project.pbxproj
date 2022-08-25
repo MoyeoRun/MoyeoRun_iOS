@@ -15,6 +15,19 @@
 		0A75B2B62837364800544AB5 /* RecordTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A75B2B52837364800544AB5 /* RecordTabViewController.swift */; };
 		0AA674E528657EB7006A7E72 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA674E428657EB7006A7E72 /* CalendarViewController.swift */; };
 		0AA674E72866BECD006A7E72 /* RecordTabExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA674E62866BECD006A7E72 /* RecordTabExtension.swift */; };
+		3A27051028B7761800BBDA1D /* Room.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A27050F28B7761800BBDA1D /* Room.xib */; };
+		3A27051328B77CD000BBDA1D /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A27051228B77CD000BBDA1D /* UIView+.swift */; };
+		3A27051528B77E7E00BBDA1D /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A27051428B77E7E00BBDA1D /* RoomView.swift */; };
+		3A27051928B7825100BBDA1D /* CurrentRoomListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A27051828B7825100BBDA1D /* CurrentRoomListDTO.swift */; };
+		3A27051B28B7920500BBDA1D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A27051A28B7920500BBDA1D /* HomeViewController.swift */; };
+		3A27051F28B7976800BBDA1D /* HomeTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A27051D28B7976800BBDA1D /* HomeTopCell.swift */; };
+		3A27052028B7976800BBDA1D /* HomeTopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A27051E28B7976800BBDA1D /* HomeTopCell.xib */; };
+		3A27052328B7978800BBDA1D /* CurrentJoinRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A27052128B7978800BBDA1D /* CurrentJoinRoomCell.swift */; };
+		3A27052428B7978800BBDA1D /* CurrentJoinRoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A27052228B7978800BBDA1D /* CurrentJoinRoomCell.xib */; };
+		3A27052728B7979A00BBDA1D /* CurrentRoomListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A27052528B7979A00BBDA1D /* CurrentRoomListCell.swift */; };
+		3A27052828B7979A00BBDA1D /* CurrentRoomListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A27052628B7979A00BBDA1D /* CurrentRoomListCell.xib */; };
+		3A27052B28B7986100BBDA1D /* RoomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A27052928B7986100BBDA1D /* RoomHeader.swift */; };
+		3A27052C28B7986100BBDA1D /* RoomHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A27052A28B7986100BBDA1D /* RoomHeader.xib */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F74D1F9E2831620A0099B5F0 /* Configuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1F9B2831620A0099B5F0 /* Configuation.swift */; };
 		F74D1FC1283163030099B5F0 /* SignInDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FA6283163030099B5F0 /* SignInDTO.swift */; };
@@ -36,13 +49,6 @@
 		F74D1FD1283163030099B5F0 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FBF283163030099B5F0 /* Keychain.swift */; };
 		F74D1FD2283163030099B5F0 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FC0283163030099B5F0 /* KeychainStore.swift */; };
 		F74D20162831630C0099B5F0 /* MoyeoRunRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D1FD72831630C0099B5F0 /* MoyeoRunRoom.storyboard */; };
-		F74D20172831630C0099B5F0 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FDA2831630C0099B5F0 /* HomeTabViewController.swift */; };
-		F74D20182831630C0099B5F0 /* HomeTabNowPopularContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FDC2831630C0099B5F0 /* HomeTabNowPopularContainer.swift */; };
-		F74D20192831630C0099B5F0 /* HomeTabNewMissionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FDD2831630C0099B5F0 /* HomeTabNewMissionContainer.swift */; };
-		F74D201A2831630C0099B5F0 /* HomeTabLastRecordContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FDE2831630C0099B5F0 /* HomeTabLastRecordContainer.swift */; };
-		F74D201B2831630C0099B5F0 /* HomeTabNewMissionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FE12831630C0099B5F0 /* HomeTabNewMissionCell.swift */; };
-		F74D201C2831630C0099B5F0 /* HomeTabLastRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FE22831630C0099B5F0 /* HomeTabLastRecordCell.swift */; };
-		F74D201D2831630C0099B5F0 /* HomeTabNowPopularCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FE32831630C0099B5F0 /* HomeTabNowPopularCell.swift */; };
 		F74D201E2831630C0099B5F0 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D1FE52831630C0099B5F0 /* HomeTab.storyboard */; };
 		F74D201F2831630C0099B5F0 /* MakeRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FE72831630C0099B5F0 /* MakeRoomController.swift */; };
 		F74D20202831630C0099B5F0 /* SelectPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FE92831630C0099B5F0 /* SelectPhotoController.swift */; };
@@ -115,6 +121,19 @@
 		0A75B2B52837364800544AB5 /* RecordTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTabViewController.swift; sourceTree = "<group>"; };
 		0AA674E428657EB7006A7E72 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		0AA674E62866BECD006A7E72 /* RecordTabExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTabExtension.swift; sourceTree = "<group>"; };
+		3A27050F28B7761800BBDA1D /* Room.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Room.xib; sourceTree = "<group>"; };
+		3A27051228B77CD000BBDA1D /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		3A27051428B77E7E00BBDA1D /* RoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
+		3A27051828B7825100BBDA1D /* CurrentRoomListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRoomListDTO.swift; sourceTree = "<group>"; };
+		3A27051A28B7920500BBDA1D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3A27051D28B7976800BBDA1D /* HomeTopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopCell.swift; sourceTree = "<group>"; };
+		3A27051E28B7976800BBDA1D /* HomeTopCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTopCell.xib; sourceTree = "<group>"; };
+		3A27052128B7978800BBDA1D /* CurrentJoinRoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentJoinRoomCell.swift; sourceTree = "<group>"; };
+		3A27052228B7978800BBDA1D /* CurrentJoinRoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentJoinRoomCell.xib; sourceTree = "<group>"; };
+		3A27052528B7979A00BBDA1D /* CurrentRoomListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRoomListCell.swift; sourceTree = "<group>"; };
+		3A27052628B7979A00BBDA1D /* CurrentRoomListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentRoomListCell.xib; sourceTree = "<group>"; };
+		3A27052928B7986100BBDA1D /* RoomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomHeader.swift; sourceTree = "<group>"; };
+		3A27052A28B7986100BBDA1D /* RoomHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomHeader.xib; sourceTree = "<group>"; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.debug.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF6235AE0ADD0047158FA4F /* Pods-MoyeoRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.release.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,13 +159,6 @@
 		F74D1FBF283163030099B5F0 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		F74D1FC0283163030099B5F0 /* KeychainStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		F74D1FD72831630C0099B5F0 /* MoyeoRunRoom.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MoyeoRunRoom.storyboard; sourceTree = "<group>"; };
-		F74D1FDA2831630C0099B5F0 /* HomeTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
-		F74D1FDC2831630C0099B5F0 /* HomeTabNowPopularContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabNowPopularContainer.swift; sourceTree = "<group>"; };
-		F74D1FDD2831630C0099B5F0 /* HomeTabNewMissionContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabNewMissionContainer.swift; sourceTree = "<group>"; };
-		F74D1FDE2831630C0099B5F0 /* HomeTabLastRecordContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabLastRecordContainer.swift; sourceTree = "<group>"; };
-		F74D1FE12831630C0099B5F0 /* HomeTabNewMissionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabNewMissionCell.swift; sourceTree = "<group>"; };
-		F74D1FE22831630C0099B5F0 /* HomeTabLastRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabLastRecordCell.swift; sourceTree = "<group>"; };
-		F74D1FE32831630C0099B5F0 /* HomeTabNowPopularCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabNowPopularCell.swift; sourceTree = "<group>"; };
 		F74D1FE52831630C0099B5F0 /* HomeTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
 		F74D1FE72831630C0099B5F0 /* MakeRoomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeRoomController.swift; sourceTree = "<group>"; };
 		F74D1FE92831630C0099B5F0 /* SelectPhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPhotoController.swift; sourceTree = "<group>"; };
@@ -270,6 +282,45 @@
 			path = InterfaceBuilders;
 			sourceTree = "<group>";
 		};
+		3A27051128B77C4C00BBDA1D /* Designable */ = {
+			isa = PBXGroup;
+			children = (
+				3A27051228B77CD000BBDA1D /* UIView+.swift */,
+			);
+			path = Designable;
+			sourceTree = "<group>";
+		};
+		3A27051628B7823100BBDA1D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3A27051728B7823600BBDA1D /* DTO */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		3A27051728B7823600BBDA1D /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				3A27051828B7825100BBDA1D /* CurrentRoomListDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		3A27051C28B7975400BBDA1D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3A27051D28B7976800BBDA1D /* HomeTopCell.swift */,
+				3A27051E28B7976800BBDA1D /* HomeTopCell.xib */,
+				3A27052128B7978800BBDA1D /* CurrentJoinRoomCell.swift */,
+				3A27052228B7978800BBDA1D /* CurrentJoinRoomCell.xib */,
+				3A27052528B7979A00BBDA1D /* CurrentRoomListCell.swift */,
+				3A27052628B7979A00BBDA1D /* CurrentRoomListCell.xib */,
+				3A27052928B7986100BBDA1D /* RoomHeader.swift */,
+				3A27052A28B7986100BBDA1D /* RoomHeader.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		3AADB25527EF543800AFDE01 /* LifeCycles */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +361,7 @@
 		F74D1FA3283163030099B5F0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				3A27051628B7823100BBDA1D /* Main */,
 				F74D1FA4283163030099B5F0 /* Auth */,
 				F74D1FB0283163030099B5F0 /* User */,
 				F74D1FB8283163030099B5F0 /* Base */,
@@ -472,45 +524,26 @@
 		F74D1FD92831630C0099B5F0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F74D1FDA2831630C0099B5F0 /* HomeTabViewController.swift */,
-				F74D1FDB2831630C0099B5F0 /* HomeTabContainers */,
+				3A27051A28B7920500BBDA1D /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		F74D1FDB2831630C0099B5F0 /* HomeTabContainers */ = {
-			isa = PBXGroup;
-			children = (
-				F74D1FDC2831630C0099B5F0 /* HomeTabNowPopularContainer.swift */,
-				F74D1FDD2831630C0099B5F0 /* HomeTabNewMissionContainer.swift */,
-				F74D1FDE2831630C0099B5F0 /* HomeTabLastRecordContainer.swift */,
-			);
-			path = HomeTabContainers;
 			sourceTree = "<group>";
 		};
 		F74D1FDF2831630C0099B5F0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F74D1FE02831630C0099B5F0 /* Cells */,
+				3A27051C28B7975400BBDA1D /* Cells */,
+				3A27051428B77E7E00BBDA1D /* RoomView.swift */,
 				F74D1FE42831630C0099B5F0 /* InterfaceBuilders */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		F74D1FE02831630C0099B5F0 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				F74D1FE12831630C0099B5F0 /* HomeTabNewMissionCell.swift */,
-				F74D1FE22831630C0099B5F0 /* HomeTabLastRecordCell.swift */,
-				F74D1FE32831630C0099B5F0 /* HomeTabNowPopularCell.swift */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		F74D1FE42831630C0099B5F0 /* InterfaceBuilders */ = {
 			isa = PBXGroup;
 			children = (
 				F74D1FE52831630C0099B5F0 /* HomeTab.storyboard */,
+				3A27050F28B7761800BBDA1D /* Room.xib */,
 			);
 			path = InterfaceBuilders;
 			sourceTree = "<group>";
@@ -722,6 +755,7 @@
 		F74D2038283163160099B5F0 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				3A27051128B77C4C00BBDA1D /* Designable */,
 				F74D2039283163160099B5F0 /* MoyeoRun */,
 				F74D204A283163160099B5F0 /* Components */,
 				F74D204E283163160099B5F0 /* Font */,
@@ -933,26 +967,31 @@
 				F74D2077283163160099B5F0 /* Roboto-Thin.ttf in Resources */,
 				F75E9FA927E9470200000DCD /* LaunchScreen.storyboard in Resources */,
 				F74D20332831630C0099B5F0 /* SocialLogIn.storyboard in Resources */,
+				3A27051028B7761800BBDA1D /* Room.xib in Resources */,
 				F74D206E283163160099B5F0 /* Roboto-Regular.ttf in Resources */,
 				F74D206C283163160099B5F0 /* Roboto-Medium.ttf in Resources */,
 				F74D2062283163160099B5F0 /* HomeTabNewMission1.png in Resources */,
 				F74D2061283163160099B5F0 /* HomeTabNewMission0.png in Resources */,
 				F74D2074283163160099B5F0 /* LICENSE.txt in Resources */,
 				F74D2071283163160099B5F0 /* Roboto-BoldItalic.ttf in Resources */,
+				3A27052828B7979A00BBDA1D /* CurrentRoomListCell.xib in Resources */,
 				F74D205D283163160099B5F0 /* HomeTabNewMission3.png in Resources */,
 				F74D206A283163160099B5F0 /* MapKitView.xib in Resources */,
 				F75E9FA627E9470200000DCD /* Assets.xcassets in Resources */,
 				F74D2072283163160099B5F0 /* Roboto-LightItalic.ttf in Resources */,
 				F74D202C2831630C0099B5F0 /* SearchTab.storyboard in Resources */,
+				3A27052C28B7986100BBDA1D /* RoomHeader.xib in Resources */,
 				F75E9FA127E9470100000DCD /* Main.storyboard in Resources */,
 				F74D20372831630C0099B5F0 /* AppIntro.storyboard in Resources */,
 				F74D2063283163160099B5F0 /* HomeTabNowPopular1.png in Resources */,
 				F74D2073283163160099B5F0 /* Roboto-Italic.ttf in Resources */,
 				F74D20352831630C0099B5F0 /* SignUpComplete.storyboard in Resources */,
+				3A27052028B7976800BBDA1D /* HomeTopCell.xib in Resources */,
 				F74D20292831630C0099B5F0 /* MyPage.storyboard in Resources */,
 				F74D2067283163160099B5F0 /* 참가자.png in Resources */,
 				F74D20342831630C0099B5F0 /* ProfileImageMenu.storyboard in Resources */,
 				F74D201E2831630C0099B5F0 /* HomeTab.storyboard in Resources */,
+				3A27052428B7978800BBDA1D /* CurrentJoinRoomCell.xib in Resources */,
 				F74D2068283163160099B5F0 /* 프로필 이미지.png in Resources */,
 				F74D2069283163160099B5F0 /* 벚꽃.jpeg in Resources */,
 				0A54156F28629D540050AF60 /* RecordDetail.storyboard in Resources */,
@@ -1030,9 +1069,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F74D20182831630C0099B5F0 /* HomeTabNowPopularContainer.swift in Sources */,
 				F74D1FC7283163030099B5F0 /* AuthLocalDataSource.swift in Sources */,
-				F74D201A2831630C0099B5F0 /* HomeTabLastRecordContainer.swift in Sources */,
 				F74D1FC6283163030099B5F0 /* AuthRemoteDataSource.swift in Sources */,
 				F74D202A2831630C0099B5F0 /* SearchTabViewController.swift in Sources */,
 				F74D1FC4283163030099B5F0 /* SignUpDTO.swift in Sources */,
@@ -1051,34 +1088,37 @@
 				F74D1FCA283163030099B5F0 /* UserDTO.swift in Sources */,
 				F75E9F9E27E9470100000DCD /* ViewController.swift in Sources */,
 				F74D1FC1283163030099B5F0 /* SignInDTO.swift in Sources */,
-				F74D201D2831630C0099B5F0 /* HomeTabNowPopularCell.swift in Sources */,
 				F74D20252831630C0099B5F0 /* Extensions.swift in Sources */,
 				F74D1F9E2831620A0099B5F0 /* Configuation.swift in Sources */,
+				3A27051528B77E7E00BBDA1D /* RoomView.swift in Sources */,
 				0AA674E72866BECD006A7E72 /* RecordTabExtension.swift in Sources */,
 				F74D1FC3283163030099B5F0 /* LogoutDTO.swift in Sources */,
 				F74D1FC2283163030099B5F0 /* RefreshDTO.swift in Sources */,
+				3A27052B28B7986100BBDA1D /* RoomHeader.swift in Sources */,
 				F74D1FCF283163030099B5F0 /* TargetType+.swift in Sources */,
 				F74D1FCE283163030099B5F0 /* MoyaProvider+.swift in Sources */,
 				0A54157128629D780050AF60 /* RecordDetailViewController.swift in Sources */,
+				3A27052328B7978800BBDA1D /* CurrentJoinRoomCell.swift in Sources */,
 				F74D20312831630C0099B5F0 /* ProfileImageMenuViewController.swift in Sources */,
 				0AA674E528657EB7006A7E72 /* CalendarViewController.swift in Sources */,
 				F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */,
 				F74D20212831630C0099B5F0 /* PhotoCell.swift in Sources */,
-				F74D201B2831630C0099B5F0 /* HomeTabNewMissionCell.swift in Sources */,
 				F74D20222831630C0099B5F0 /* PopupViewController.swift in Sources */,
+				3A27051328B77CD000BBDA1D /* UIView+.swift in Sources */,
 				F74D1FD0283163030099B5F0 /* KeychainKeyType.swift in Sources */,
-				F74D201C2831630C0099B5F0 /* HomeTabLastRecordCell.swift in Sources */,
+				3A27052728B7979A00BBDA1D /* CurrentRoomListCell.swift in Sources */,
+				3A27051B28B7920500BBDA1D /* HomeViewController.swift in Sources */,
 				F74D20202831630C0099B5F0 /* SelectPhotoController.swift in Sources */,
 				F74D202E2831630C0099B5F0 /* SocialLogInViewController.swift in Sources */,
+				3A27051928B7825100BBDA1D /* CurrentRoomListDTO.swift in Sources */,
 				F74D202F2831630C0099B5F0 /* AppIntroViewController.swift in Sources */,
 				0A5FFF3D283BBDDD004D86E0 /* RunningRecordCell.swift in Sources */,
 				F74D1FC5283163030099B5F0 /* AuthDTO.swift in Sources */,
-				F74D20172831630C0099B5F0 /* HomeTabViewController.swift in Sources */,
 				F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */,
 				F74D20262831630C0099B5F0 /* TabBarViewController.swift in Sources */,
-				F74D20192831630C0099B5F0 /* HomeTabNewMissionContainer.swift in Sources */,
 				F75E9FA427E9470100000DCD /* MoyeoRun.xcdatamodeld in Sources */,
 				F74D1FCC283163030099B5F0 /* UserRepository.swift in Sources */,
+				3A27051F28B7976800BBDA1D /* HomeTopCell.swift in Sources */,
 				F74D201F2831630C0099B5F0 /* MakeRoomController.swift in Sources */,
 				F74D1FC9283163030099B5F0 /* DuplicateDTO.swift in Sources */,
 			);

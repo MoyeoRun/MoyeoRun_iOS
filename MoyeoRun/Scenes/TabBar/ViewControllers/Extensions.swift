@@ -50,32 +50,32 @@ extension UITabBar {
 }
 
 /// 버튼 cornerradius를 우측 메뉴에서 조정할 수 있게해줌.
-@IBDesignable extension UIButton {
-    @IBInspectable var borderWidth: CGFloat {
-        get {
-            return layer.borderWidth
-        }
-        set {
-            layer.borderWidth = newValue
-        }
-    }
-
-    @IBInspectable var cornerRadius: CGFloat {
-        get {
-            return layer.cornerRadius
-        }
-        set {
-            layer.cornerRadius = newValue
-        }
-    }
-
-    @IBInspectable var borderColor: UIColor? {
-        get {
-            guard let color = layer.borderColor else { return nil }
-            return UIColor(cgColor: color)
-        }
-        set {
-            layer.borderColor = newValue?.cgColor
-        }
-    }
-}
+//@IBDesignable extension UIButton {
+//    @IBInspectable var borderWidth: CGFloat {
+//        get {
+//            return layer.borderWidth
+//        }
+//        set {
+//            layer.borderWidth = newValue
+//        }
+//    }
+//
+//    @IBInspectable var cornerRadius: CGFloat {
+//        get {
+//            return layer.cornerRadius
+//        }
+//        set {
+//            layer.cornerRadius = newValue
+//        }
+//    }
+//
+//    @IBInspectable var borderColor: UIColor? {
+//        get {
+//            guard let color = layer.borderColor else { return nil }
+//            return UIColor(cgColor: color)
+//        }
+//        set {
+//            layer.borderColor = newValue?.cgColor
+//        }
+//    }
+//}
