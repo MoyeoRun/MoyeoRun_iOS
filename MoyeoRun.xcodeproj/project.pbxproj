@@ -15,6 +15,7 @@
 		0A75B2B62837364800544AB5 /* RecordTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A75B2B52837364800544AB5 /* RecordTabViewController.swift */; };
 		0AA674E528657EB7006A7E72 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA674E428657EB7006A7E72 /* CalendarViewController.swift */; };
 		0AA674E72866BECD006A7E72 /* RecordTabExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA674E62866BECD006A7E72 /* RecordTabExtension.swift */; };
+		416E8FEC28B6370500BBA05E /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E8FEB28B6370500BBA05E /* Interceptor.swift */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F74D1F9E2831620A0099B5F0 /* Configuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1F9B2831620A0099B5F0 /* Configuation.swift */; };
 		F74D1FC1283163030099B5F0 /* SignInDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FA6283163030099B5F0 /* SignInDTO.swift */; };
@@ -115,12 +116,13 @@
 		0A75B2B52837364800544AB5 /* RecordTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTabViewController.swift; sourceTree = "<group>"; };
 		0AA674E428657EB7006A7E72 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		0AA674E62866BECD006A7E72 /* RecordTabExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTabExtension.swift; sourceTree = "<group>"; };
+		416E8FEB28B6370500BBA05E /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
+		416E8FED28B6391900BBA05E /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configuration/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
+		416E8FEE28B6391900BBA05E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configuration/Release.xcconfig; sourceTree = SOURCE_ROOT; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.debug.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF6235AE0ADD0047158FA4F /* Pods-MoyeoRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.release.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.release.xcconfig"; sourceTree = "<group>"; };
 		F74D1F9B2831620A0099B5F0 /* Configuation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuation.swift; sourceTree = "<group>"; };
-		F74D1FA1283162190099B5F0 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
-		F74D1FA2283162190099B5F0 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		F74D1FA6283163030099B5F0 /* SignInDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInDTO.swift; sourceTree = "<group>"; };
 		F74D1FA7283163030099B5F0 /* RefreshDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshDTO.swift; sourceTree = "<group>"; };
 		F74D1FA8283163030099B5F0 /* LogoutDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutDTO.swift; sourceTree = "<group>"; };
@@ -300,8 +302,8 @@
 			isa = PBXGroup;
 			children = (
 				F74D1F9B2831620A0099B5F0 /* Configuation.swift */,
-				F74D1FA2283162190099B5F0 /* Debug.xcconfig */,
-				F74D1FA1283162190099B5F0 /* Release.xcconfig */,
+				416E8FED28B6391900BBA05E /* Debug.xcconfig */,
+				416E8FEE28B6391900BBA05E /* Release.xcconfig */,
 			);
 			name = Configuration;
 			path = MoyeoRun/Configuration;
@@ -406,6 +408,7 @@
 				F74D1FBA283163030099B5F0 /* Response.swift */,
 				F74D1FBB283163030099B5F0 /* MoyaProvider+.swift */,
 				F74D1FBC283163030099B5F0 /* TargetType+.swift */,
+				416E8FEB28B6370500BBA05E /* Interceptor.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -1041,6 +1044,7 @@
 				F74D20322831630C0099B5F0 /* InsertUserInfoViewController.swift in Sources */,
 				F74D202B2831630C0099B5F0 /* RunningContentCell.swift in Sources */,
 				F74D20282831630C0099B5F0 /* MyPageViewController.swift in Sources */,
+				416E8FEC28B6370500BBA05E /* Interceptor.swift in Sources */,
 				0A75B2B62837364800544AB5 /* RecordTabViewController.swift in Sources */,
 				F74D1FCD283163030099B5F0 /* Response.swift in Sources */,
 				F74D206B283163160099B5F0 /* MapKitView.swift in Sources */,
@@ -1108,7 +1112,7 @@
 /* Begin XCBuildConfiguration section */
 		F75E9FAB27E9470200000DCD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F74D1FA2283162190099B5F0 /* Debug.xcconfig */;
+			baseConfigurationReference = 416E8FED28B6391900BBA05E /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1170,7 +1174,7 @@
 		};
 		F75E9FAC27E9470200000DCD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F74D1FA1283162190099B5F0 /* Release.xcconfig */;
+			baseConfigurationReference = 416E8FEE28B6391900BBA05E /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1226,7 +1230,7 @@
 		};
 		F75E9FAE27E9470200000DCD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F74D1FA2283162190099B5F0 /* Debug.xcconfig */;
+			baseConfigurationReference = 416E8FED28B6391900BBA05E /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1256,7 +1260,7 @@
 		};
 		F75E9FAF27E9470200000DCD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F74D1FA1283162190099B5F0 /* Release.xcconfig */;
+			baseConfigurationReference = 416E8FED28B6391900BBA05E /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
