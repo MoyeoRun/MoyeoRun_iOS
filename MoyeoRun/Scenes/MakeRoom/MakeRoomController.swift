@@ -8,97 +8,76 @@
 import UIKit
 
 class MakeRoomController: UIViewController {
-    @IBOutlet var nameTextView: UITextView!
-    @IBOutlet var descriptionTextView: UITextView!
-    @IBOutlet var peopleButton: UIButton!
-    @IBOutlet var startTimeButton: UIButton!
-    @IBOutlet var distanceButton: UIButton!
-    @IBOutlet var limitTimeButton: UIButton!
-    @IBOutlet var setNameLength: UILabel!
-    @IBOutlet var setDescriptionLength: UILabel!
+    @IBOutlet weak var nameTextView: UITextView!
+    @IBOutlet weak var peopleButton: UIButton!
+    @IBOutlet weak var distanceButton: UIButton!
+    @IBOutlet weak var paceButton: UIButton!
+    @IBOutlet weak var limitTimeButton: UIButton!
+    @IBOutlet weak var startTimeButton: UIButton!
+    @IBOutlet weak var setNameLength: UILabel!
+    @IBOutlet weak var timeInfoView: UIView!
     var namePlaceHolder = ""
-    var descriptionPlaceHolder = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameTextView.delegate = self
         namePlaceHolder = nameTextView.text
-        descriptionTextView.delegate = self
-        descriptionPlaceHolder = descriptionTextView.text
-        setColorButton(temp: [peopleButton, startTimeButton, distanceButton, limitTimeButton])
-        setBorder(temp: [
-            nameTextView,
-            descriptionTextView,
-            peopleButton,
-            startTimeButton,
-            distanceButton,
-            limitTimeButton
-        ])
-    }
-
-    func setColorButton(temp: [UIButton]) {
-        for value in temp {
-            value.setTitleColor(.lightGray, for: .normal)
-        }
-    }
-
-    func setBorder(temp: [AnyObject]) {
-        for value in temp {
-            value.layer.borderWidth = 1.0
-            value.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.7).cgColor
-        }
     }
 
     @IBAction func showPopup(_ sender: UIButton) {
         let storyBoard = UIStoryboard(name: "MakeRoom", bundle: nil)
         guard
-            let popupViewController = storyBoard.instantiateViewController(
+            let viewController = storyBoard.instantiateViewController(
                 withIdentifier: "PopupViewController"
             ) as? PopupViewController
         else {
             return
         }
-        popupViewController.dataDelegate = self
+        viewController.dataDelegate = self
         if sender == peopleButton {
-            popupViewController.index = 0
-        } else if sender == startTimeButton {
-            popupViewController.index = 1
+            viewController.index = 0
         } else if sender == distanceButton {
-            popupViewController.index = 2
+            viewController.index = 1
         } else {
-            popupViewController.index = 3
+            viewController.index = 2
         }
-        popupViewController.modalPresentationStyle = .overCurrentContext
-        present(popupViewController, animated: true, completion: nil)
+        viewController.modalPresentationStyle = .overCurrentContext
+        present(viewController, animated: true, completion: nil)
+    }
+
+    @IBAction func showStartTimePopup(_ sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "MakeRoom", bundle: nil)
+        guard
+            let viewController = storyBoard.instantiateViewController(
+                withIdentifier: "StartTimePopUpViewController"
+            ) as? StartTimePopUpViewController
+        else {
+            return
+        }
+        viewController.dataDelegate = self
+        viewController.modalPresentationStyle = .overCurrentContext
+        present(viewController, animated: true, completion: nil)
+    }
+
+    @IBAction func touchInfo(_ sender: UIButton) {
+        timeInfoView.isHidden.toggle()
     }
 }
 
 extension MakeRoomController: SendDataDelegate {
-    func sendStartTime(startTime: String) {
-        self.startTimeButton.setTitle(startTime, for: .normal)
-    }
-
-    func sendDistance(distance: Int) {
-        self.distanceButton.setTitle("\(distance)KM", for: .normal)
-    }
-
     func sendPeopleNum(peopleNum: Int) {
         self.peopleButton.setTitle("\(peopleNum)명", for: .normal)
     }
 
-    func sendLimitTime(limitTime: Int) {
-        if limitTime == 1 {
-            let temp = "\(limitTime) * 10)분"
-            self.limitTimeButton.setTitle(temp, for: .normal)
-        } else if limitTime >= 60 {
-            let hour = limitTime / 60
-            let minute = limitTime % 60
-            let temp = "\(hour)시간 \(minute)분"
-            self.limitTimeButton.setTitle(temp, for: .normal)
-        } else {
-            let temp = "\(limitTime)분"
-            self.limitTimeButton.setTitle(temp, for: .normal)
-        }
+    func sendDistance(distance: Int) {
+        self.distanceButton.setTitle("\(distance)km", for: .normal)
+    }
+
+    func sendPace(pace: String) {
+        self.paceButton.setTitle("\(pace)", for: .normal)
+    }
+
+    func sendStartTime(startTime: String) {
+        self.startTimeButton.setTitle(startTime, for: .normal)
     }
 }
 
@@ -112,11 +91,7 @@ extension MakeRoomController: UITextViewDelegate {
 
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            if textView == nameTextView {
-                textView.text = namePlaceHolder
-            } else {
-                textView.text = descriptionPlaceHolder
-            }
+            textView.text = namePlaceHolder
             textView.textColor = .lightGray
         }
     }
@@ -125,11 +100,7 @@ extension MakeRoomController: UITextViewDelegate {
         let currentText = textView.text ?? ""
         guard let stringRange = Range(range, in: currentText) else { return false }
         let changedText = currentText.replacingCharacters(in: stringRange, with: text)
-        if textView == nameTextView {
-            setNameLength.text = String(textView.text.count)
-        } else {
-            setDescriptionLength.text = String(textView.text.count)
-        }
+        setNameLength.text = String(textView.text.count)
         return changedText.count <= 40
     }
 }

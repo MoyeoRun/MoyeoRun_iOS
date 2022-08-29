@@ -28,6 +28,7 @@ class RoomView: UIView {
         pace.text = data.pace
         limitUserCount.text = "\(data.limitUserCount)"
         currentUserCount.text = "\(data.currentUserCount)"
+        thumbnailImage.addGestureRecognizer(tapGesture)
     }
 
     override init(frame: CGRect) {

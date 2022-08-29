@@ -15,6 +15,7 @@
 		0A75B2B62837364800544AB5 /* RecordTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A75B2B52837364800544AB5 /* RecordTabViewController.swift */; };
 		0AA674E528657EB7006A7E72 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA674E428657EB7006A7E72 /* CalendarViewController.swift */; };
 		0AA674E72866BECD006A7E72 /* RecordTabExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA674E62866BECD006A7E72 /* RecordTabExtension.swift */; };
+		3A0F803128BD0A230071A621 /* StartTimePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F803028BD0A230071A621 /* StartTimePopUpViewController.swift */; };
 		3A27051028B7761800BBDA1D /* Room.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A27050F28B7761800BBDA1D /* Room.xib */; };
 		3A27051328B77CD000BBDA1D /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A27051228B77CD000BBDA1D /* UIView+.swift */; };
 		3A27051528B77E7E00BBDA1D /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A27051428B77E7E00BBDA1D /* RoomView.swift */; };
@@ -64,7 +65,6 @@
 		F74D202A2831630C0099B5F0 /* SearchTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FFE2831630C0099B5F0 /* SearchTabViewController.swift */; };
 		F74D202B2831630C0099B5F0 /* RunningContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D20012831630C0099B5F0 /* RunningContentCell.swift */; };
 		F74D202C2831630C0099B5F0 /* SearchTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20032831630C0099B5F0 /* SearchTab.storyboard */; };
-		F74D202D2831630C0099B5F0 /* MainPopupView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20072831630C0099B5F0 /* MainPopupView.storyboard */; };
 		F74D202E2831630C0099B5F0 /* SocialLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D200A2831630C0099B5F0 /* SocialLogInViewController.swift */; };
 		F74D202F2831630C0099B5F0 /* AppIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D200B2831630C0099B5F0 /* AppIntroViewController.swift */; };
 		F74D20302831630C0099B5F0 /* SignUpCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D200C2831630C0099B5F0 /* SignUpCompleteViewController.swift */; };
@@ -121,6 +121,7 @@
 		0A75B2B52837364800544AB5 /* RecordTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTabViewController.swift; sourceTree = "<group>"; };
 		0AA674E428657EB7006A7E72 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		0AA674E62866BECD006A7E72 /* RecordTabExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTabExtension.swift; sourceTree = "<group>"; };
+		3A0F803028BD0A230071A621 /* StartTimePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimePopUpViewController.swift; sourceTree = "<group>"; };
 		3A27050F28B7761800BBDA1D /* Room.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Room.xib; sourceTree = "<group>"; };
 		3A27051228B77CD000BBDA1D /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		3A27051428B77E7E00BBDA1D /* RoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
@@ -174,7 +175,6 @@
 		F74D1FFE2831630C0099B5F0 /* SearchTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTabViewController.swift; sourceTree = "<group>"; };
 		F74D20012831630C0099B5F0 /* RunningContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningContentCell.swift; sourceTree = "<group>"; };
 		F74D20032831630C0099B5F0 /* SearchTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchTab.storyboard; sourceTree = "<group>"; };
-		F74D20072831630C0099B5F0 /* MainPopupView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainPopupView.storyboard; sourceTree = "<group>"; };
 		F74D200A2831630C0099B5F0 /* SocialLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialLogInViewController.swift; sourceTree = "<group>"; };
 		F74D200B2831630C0099B5F0 /* AppIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIntroViewController.swift; sourceTree = "<group>"; };
 		F74D200C2831630C0099B5F0 /* SignUpCompleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpCompleteViewController.swift; sourceTree = "<group>"; };
@@ -480,7 +480,6 @@
 				F74D1FD82831630C0099B5F0 /* HomeTab */,
 				F74D1FFC2831630C0099B5F0 /* SearchTab */,
 				0A75B2AF283735F300544AB5 /* RecordTab */,
-				F74D20042831630C0099B5F0 /* Main */,
 				F74D1FE62831630C0099B5F0 /* MakeRoom */,
 				F74D1FD42831630C0099B5F0 /* MoyeorunRoom */,
 				F74D1FF62831630C0099B5F0 /* MyPage */,
@@ -560,6 +559,7 @@
 		F74D1FE82831630C0099B5F0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3A0F803028BD0A230071A621 /* StartTimePopUpViewController.swift */,
 				F74D1FE92831630C0099B5F0 /* SelectPhotoController.swift */,
 				F74D1FEA2831630C0099B5F0 /* PhotoCell.swift */,
 				F74D1FEB2831630C0099B5F0 /* PopupViewController.swift */,
@@ -683,30 +683,6 @@
 			isa = PBXGroup;
 			children = (
 				F74D20032831630C0099B5F0 /* SearchTab.storyboard */,
-			);
-			path = InterfaceBuilders;
-			sourceTree = "<group>";
-		};
-		F74D20042831630C0099B5F0 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				F74D20052831630C0099B5F0 /* Views */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		F74D20052831630C0099B5F0 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				F74D20062831630C0099B5F0 /* InterfaceBuilders */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		F74D20062831630C0099B5F0 /* InterfaceBuilders */ = {
-			isa = PBXGroup;
-			children = (
-				F74D20072831630C0099B5F0 /* MainPopupView.storyboard */,
 			);
 			path = InterfaceBuilders;
 			sourceTree = "<group>";
@@ -959,7 +935,6 @@
 				F74D2060283163160099B5F0 /* HomeTabNowPopular0.png in Resources */,
 				F74D2075283163160099B5F0 /* Roboto-BlackItalic.ttf in Resources */,
 				F74D206D283163160099B5F0 /* Roboto-Light.ttf in Resources */,
-				F74D202D2831630C0099B5F0 /* MainPopupView.storyboard in Resources */,
 				F74D20362831630C0099B5F0 /* InsertUserInfo.storyboard in Resources */,
 				F74D2070283163160099B5F0 /* Roboto-ThinItalic.ttf in Resources */,
 				F74D2076283163160099B5F0 /* Roboto-Bold.ttf in Resources */,
@@ -1104,6 +1079,7 @@
 				F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */,
 				F74D20212831630C0099B5F0 /* PhotoCell.swift in Sources */,
 				F74D20222831630C0099B5F0 /* PopupViewController.swift in Sources */,
+				3A0F803128BD0A230071A621 /* StartTimePopUpViewController.swift in Sources */,
 				3A27051328B77CD000BBDA1D /* UIView+.swift in Sources */,
 				F74D1FD0283163030099B5F0 /* KeychainKeyType.swift in Sources */,
 				3A27052728B7979A00BBDA1D /* CurrentRoomListCell.swift in Sources */,

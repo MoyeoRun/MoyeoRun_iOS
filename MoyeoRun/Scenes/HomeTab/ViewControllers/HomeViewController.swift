@@ -73,6 +73,12 @@ class HomeTabViewController: UIViewController {
             }
         }
     }
+    
+    @objc func touchMakeRoomButton(sender: UIButton) {
+        let storyboard = UIStoryboard(name: "MakeRoom", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "makeRoomController")
+        present(viewController,animated: true)
+    }
 
     private func registerNib() {
         let nibName1 = UINib(nibName: "HomeTopCell", bundle: nil)
@@ -117,6 +123,7 @@ extension HomeTabViewController: UICollectionViewDelegate, UICollectionViewDataS
             guard let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: HomeTopCell.cellId, for: indexPath) as? HomeTopCell
             else { return UICollectionViewCell() }
+            cell.makeRoomButton.addTarget(self, action: #selector(self.touchMakeRoomButton), for: .touchUpInside)
             return cell
         } else if indexPath.section == 1 {
             guard let cell = collectionView.dequeueReusableCell(
