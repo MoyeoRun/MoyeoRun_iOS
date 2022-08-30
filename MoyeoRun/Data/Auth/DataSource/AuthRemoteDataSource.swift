@@ -35,7 +35,7 @@ protocol AuthRemoteDataSourceable: AnyObject {
 final class AuthRemoteDataSource: AuthRemoteDataSourceable {
     let provider: MoyaProvider<AuthAPI>
 
-    required init(provider: MoyaProvider<AuthAPI> = .init()) {
+    required init(provider: MoyaProvider<AuthAPI> = .init(session: .init(interceptor: Interceptor()))) {
         self.provider = provider
     }
 
@@ -106,17 +106,15 @@ extension AuthAPI: TargetType {
             return .requestJSONEncodable(request)
         case let .refresh(request):
             return .requestJSONEncodable(request)
-        case .logout:
-            return .requestPlain
+        case let .logout(request):
+            return .requestJSONEncodable(request)
         }
     }
 
     var headers: [String: String]? {
         switch self {
-        case .signIn, .signUp, .refresh:
+        case .signIn, .signUp, .refresh, .logout:
             return nil
-        case let .logout(request):
-            return ["Authorization": "Bearer " + request.accessToken]
         }
     }
 }
