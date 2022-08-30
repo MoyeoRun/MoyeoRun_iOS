@@ -11,14 +11,12 @@ class CurrentRoomListCell: UICollectionViewCell {
 
     static let cellId = "currentRoomListCellId"
     @IBOutlet weak var roomView: RoomView!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    
+
     func setData(with data: CurrentRoomListResponse) {
         roomView.setData(with: data)
     }
-
 }

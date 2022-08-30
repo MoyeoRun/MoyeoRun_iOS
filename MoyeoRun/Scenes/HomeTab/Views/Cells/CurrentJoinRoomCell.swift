@@ -8,11 +8,9 @@
 import UIKit
 
 class CurrentJoinRoomCell: UICollectionViewCell {
-
     static let cellId = "currentJoinRoomCellId"
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
 }

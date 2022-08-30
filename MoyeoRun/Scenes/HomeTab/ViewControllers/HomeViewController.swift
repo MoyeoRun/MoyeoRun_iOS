@@ -16,18 +16,46 @@ class HomeTabViewController: UIViewController {
     }
 
     let roomList: [CurrentRoomListResponse] = [
-        CurrentRoomListResponse(roomId: 0, name: "바람 부는 날 함께 뛰어요", thumbnailImage: "Image-1",
-                                startTime: "10분전", distance: 5, limitTime: "30분", pace: "3'33''", limitUserCount: 4,
-                                description: "", currentUserCount: 3),
-        CurrentRoomListResponse(roomId: 1, name: "바람 부는 날 함께 뛰어요", thumbnailImage: "Image-2",
-                                startTime: "10분전", distance: 5, limitTime: "30분", pace: "3'33''", limitUserCount: 4,
-                                description: "", currentUserCount: 3),
-        CurrentRoomListResponse(roomId: 2, name: "바람 부는 날 함께 뛰어요", thumbnailImage: "Image-3",
-                                startTime: "10분전", distance: 5, limitTime: "30분", pace: "3'33''", limitUserCount: 4,
-                                description: "", currentUserCount: 3),
-        CurrentRoomListResponse(roomId: 3, name: "바람 부는 날 함께 뛰어요", thumbnailImage: "Image-4",
-                                startTime: "10분전", distance: 5, limitTime: "30분", pace: "3'33''", limitUserCount: 4,
-                                description: "", currentUserCount: 3)
+        CurrentRoomListResponse(
+            roomId: 0,
+            name: "바람 부는 날 함께 뛰어요",
+            thumbnailImage: "Image-1",
+            startTime: "10분전",
+            distance: 5,
+            limitTime: "30분",
+            pace: "3'33''",
+            limitUserCount: 4,
+            currentUserCount: 3),
+        CurrentRoomListResponse(
+            roomId: 1,
+            name: "바람 부는 날 함께 뛰어요",
+            thumbnailImage: "Image-2",
+            startTime: "10분전",
+            distance: 5,
+            limitTime: "30분",
+            pace: "3'33''",
+            limitUserCount: 4,
+            currentUserCount: 3),
+        CurrentRoomListResponse(
+            roomId: 2,
+            name: "바람 부는 날 함께 뛰어요",
+            thumbnailImage: "Image-3",
+            startTime: "10분전",
+            distance: 5,
+            limitTime: "30분",
+            pace: "3'33''",
+            limitUserCount: 4,
+            currentUserCount: 3),
+        CurrentRoomListResponse(
+            roomId: 3,
+            name: "바람 부는 날 함께 뛰어요",
+            thumbnailImage: "Image-4",
+            startTime: "10분전",
+            distance: 5,
+            limitTime: "30분",
+            pace: "3'33''",
+            limitUserCount: 4,
+            currentUserCount: 3)
     ]
 
     override func viewDidLoad() {
@@ -36,7 +64,7 @@ class HomeTabViewController: UIViewController {
     }
 
     func createLayout() -> UICollectionViewCompositionalLayout {
-        return UICollectionViewCompositionalLayout { (sectionNumber, env) -> NSCollectionLayoutSection? in
+        return UICollectionViewCompositionalLayout { sectionNumber, _ -> NSCollectionLayoutSection? in
             if sectionNumber == 0 {
                 let item = NSCollectionLayoutItem(layoutSize: .init(
                     widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
@@ -63,8 +91,11 @@ class HomeTabViewController: UIViewController {
                     subitems: [item])
                 let section = NSCollectionLayoutSection(group: group)
                 let header = NSCollectionLayoutBoundarySupplementaryItem(
-                    layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(38)),
-                    elementKind: RoomHeader.headerId, alignment: .topLeading)
+                    layoutSize: .init(
+                        widthDimension: .fractionalWidth(1),
+                        heightDimension: .absolute(38)),
+                    elementKind: RoomHeader.headerId,
+                    alignment: .topLeading)
                 section.boundarySupplementaryItems = [
                     header
                 ]
@@ -73,11 +104,11 @@ class HomeTabViewController: UIViewController {
             }
         }
     }
-    
+
     @objc func touchMakeRoomButton(sender: UIButton) {
         let storyboard = UIStoryboard(name: "MakeRoom", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "makeRoomController")
-        present(viewController,animated: true)
+        present(viewController, animated: true)
     }
 
     private func registerNib() {
@@ -88,7 +119,10 @@ class HomeTabViewController: UIViewController {
         roomCollectionView.register(nibName1, forCellWithReuseIdentifier: HomeTopCell.cellId)
         roomCollectionView.register(nibName2, forCellWithReuseIdentifier: CurrentJoinRoomCell.cellId)
         roomCollectionView.register(nibname3, forCellWithReuseIdentifier: CurrentRoomListCell.cellId)
-        roomCollectionView.register(nibname4, forSupplementaryViewOfKind: RoomHeader.headerId, withReuseIdentifier: "headerId")
+        roomCollectionView.register(
+            nibname4,
+            forSupplementaryViewOfKind: RoomHeader.headerId,
+            withReuseIdentifier: "headerId")
     }
 }
 

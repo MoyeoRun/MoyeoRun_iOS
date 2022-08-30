@@ -17,7 +17,7 @@ class RoomView: UIView {
     @IBOutlet weak var pace: UILabel!
     @IBOutlet weak var limitUserCount: UILabel!
     @IBOutlet weak var currentUserCount: UILabel!
-    var tapGesture: UITapGestureRecognizer!
+    var tapGesture: UITapGestureRecognizer?
 
     func setData(with data: CurrentRoomListResponse) {
         name.text = data.name
@@ -28,7 +28,7 @@ class RoomView: UIView {
         pace.text = data.pace
         limitUserCount.text = "\(data.limitUserCount)"
         currentUserCount.text = "\(data.currentUserCount)"
-        thumbnailImage.addGestureRecognizer(tapGesture)
+        thumbnailImage.addGestureRecognizer(tapGesture ?? UITapGestureRecognizer())
     }
 
     override init(frame: CGRect) {

@@ -32,23 +32,46 @@ class PopupViewController: UIViewController {
 
     let label: UILabel = {
         let label = UILabel()
+        label.font = UIFont(name: "Apple SD Gothic Neo-Semibold", size: 20)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
+    let label2: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Apple SD Gothic Neo-Semibold", size: 20)
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setPickerLabel()
+    }
+
+    func setPickerLabel() {
         if index == 0 {
             navigationTitle.title = "제한인원"
             label.text = "명"
             myView.addSubview(label)
+            label.leadingAnchor.constraint(equalTo: myView.centerXAnchor, constant: 30).isActive = true
+            label.centerYAnchor.constraint(equalTo: myView.centerYAnchor).isActive = true
         } else if index == 1 {
             navigationTitle.title = "목표거리"
             label.text = "km"
             myView.addSubview(label)
+            label.leadingAnchor.constraint(equalTo: myView.centerXAnchor, constant: 30).isActive = true
+            label.centerYAnchor.constraint(equalTo: myView.centerYAnchor).isActive = true
         } else {
             navigationTitle.title = "페이스"
-            label.text = "'"
+            label.text = "‘"
+            label2.text = "“"
             myView.addSubview(label)
+            myView.addSubview(label2)
+            label.leadingAnchor.constraint(equalTo: myView.centerXAnchor, constant: -20).isActive = true
+            label.centerYAnchor.constraint(equalTo: myView.centerYAnchor).isActive = true
+            label2.leadingAnchor.constraint(equalTo: myView.centerXAnchor, constant: 50).isActive = true
+            label2.centerYAnchor.constraint(equalTo: myView.centerYAnchor).isActive = true
         }
     }
 

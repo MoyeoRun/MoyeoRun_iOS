@@ -22,6 +22,5 @@ struct CurrentRoomListResponse: Codable {
     let limitTime: String
     let pace: String
     let limitUserCount: Int
-    let description: String
     let currentUserCount: Int
 }

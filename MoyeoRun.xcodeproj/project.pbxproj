@@ -282,6 +282,25 @@
 			path = InterfaceBuilders;
 			sourceTree = "<group>";
 		};
+		3A19508728BDC28800EB627D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F74D1FE92831630C0099B5F0 /* SelectPhotoController.swift */,
+				3A0F803028BD0A230071A621 /* StartTimePopUpViewController.swift */,
+				F74D1FEB2831630C0099B5F0 /* PopupViewController.swift */,
+				F74D1FE72831630C0099B5F0 /* MakeRoomController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3A19508828BDC2AB00EB627D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F74D1FEA2831630C0099B5F0 /* PhotoCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		3A27051128B77C4C00BBDA1D /* Designable */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,14 +328,11 @@
 		3A27051C28B7975400BBDA1D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				3A27051428B77E7E00BBDA1D /* RoomView.swift */,
 				3A27051D28B7976800BBDA1D /* HomeTopCell.swift */,
-				3A27051E28B7976800BBDA1D /* HomeTopCell.xib */,
 				3A27052128B7978800BBDA1D /* CurrentJoinRoomCell.swift */,
-				3A27052228B7978800BBDA1D /* CurrentJoinRoomCell.xib */,
 				3A27052528B7979A00BBDA1D /* CurrentRoomListCell.swift */,
-				3A27052628B7979A00BBDA1D /* CurrentRoomListCell.xib */,
 				3A27052928B7986100BBDA1D /* RoomHeader.swift */,
-				3A27052A28B7986100BBDA1D /* RoomHeader.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -532,7 +548,6 @@
 			isa = PBXGroup;
 			children = (
 				3A27051C28B7975400BBDA1D /* Cells */,
-				3A27051428B77E7E00BBDA1D /* RoomView.swift */,
 				F74D1FE42831630C0099B5F0 /* InterfaceBuilders */,
 			);
 			path = Views;
@@ -543,6 +558,10 @@
 			children = (
 				F74D1FE52831630C0099B5F0 /* HomeTab.storyboard */,
 				3A27050F28B7761800BBDA1D /* Room.xib */,
+				3A27051E28B7976800BBDA1D /* HomeTopCell.xib */,
+				3A27052228B7978800BBDA1D /* CurrentJoinRoomCell.xib */,
+				3A27052628B7979A00BBDA1D /* CurrentRoomListCell.xib */,
+				3A27052A28B7986100BBDA1D /* RoomHeader.xib */,
 			);
 			path = InterfaceBuilders;
 			sourceTree = "<group>";
@@ -550,7 +569,7 @@
 		F74D1FE62831630C0099B5F0 /* MakeRoom */ = {
 			isa = PBXGroup;
 			children = (
-				F74D1FE72831630C0099B5F0 /* MakeRoomController.swift */,
+				3A19508728BDC28800EB627D /* ViewControllers */,
 				F74D1FE82831630C0099B5F0 /* Views */,
 			);
 			path = MakeRoom;
@@ -559,10 +578,7 @@
 		F74D1FE82831630C0099B5F0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3A0F803028BD0A230071A621 /* StartTimePopUpViewController.swift */,
-				F74D1FE92831630C0099B5F0 /* SelectPhotoController.swift */,
-				F74D1FEA2831630C0099B5F0 /* PhotoCell.swift */,
-				F74D1FEB2831630C0099B5F0 /* PopupViewController.swift */,
+				3A19508828BDC2AB00EB627D /* Cells */,
 				F74D1FEC2831630C0099B5F0 /* InterfaceBuilders */,
 			);
 			path = Views;
