@@ -10,8 +10,7 @@ import Foundation
 enum Configuration: String {
     case baseURL = "BASE_URL"
     case clientId = "CLIENT_ID"
-    case reversedClientId = "REVERSED_CLIENT_ID"
-    case androidClientId = "ANDROID_CLIENT_ID"
+    case serverClientId = "SERVER_CLIENT_ID"
 
     var toString: String {
         guard let string = self.value as? String else {

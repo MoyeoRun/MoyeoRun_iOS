@@ -8,8 +8,8 @@
 	<string>${CLIENT_ID}</string>
 	<key>REVERSED_CLIENT_ID</key>
 	<string>${REVERSED_CLIENT_ID}</string>
-	<key>ANDROID_CLIENT_ID</key>
-	<string>${ANDROID_CLIENT_ID}</string>
+	<key>SERVER_CLIENT_ID</key>
+	<string>${SERVER_CLIENT_ID}</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>

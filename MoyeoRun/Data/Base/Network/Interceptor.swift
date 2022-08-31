@@ -51,13 +51,13 @@ class Interceptor: RequestInterceptor {
             return reconnectNetwork(throwed: error, completion: completion)
         }
 
-        return refreshToken(completion: completion)
+        return refreshToken(throwed: error, completion: completion)
     }
 
-    private func refreshToken(completion: @escaping (RetryResult) -> Void) {
+    private func refreshToken(throwed error: Error, completion: @escaping (RetryResult) -> Void) {
         let result = repository.getAccessToken()
 
-        if case let .failure(error) = result {
+        if case .failure = result {
             return completion(.doNotRetryWithError(error))
         }
 

@@ -18,9 +18,11 @@ class SignUpViewController: UIViewController {
 
     var selectedGender: Int = 0
 
+    private let credential: SignInRequest
     private let repository: AuthRepositable
 
     init?(coder: NSCoder, credential: SignInRequest, repository: AuthRepositable) {
+        self.credential = credential
         self.repository = repository
 
         super.init(coder: coder)
@@ -80,10 +82,26 @@ class SignUpViewController: UIViewController {
     }
 
     @IBAction func onTapNextButton(_ sender: Any) {
-        let storyBoard = UIStoryboard(name: "SignUpComplete", bundle: nil)
-        let viewController = storyBoard.instantiateViewController(withIdentifier: "SignUpComplete")
-        viewController.modalPresentationStyle = .fullScreen
-        self.present(viewController, animated: true)
+        guard
+            let nickname = nickNameTextField.text,
+            let name = nameTextField.text,
+            selectedGender != 0,
+            let gender: GenderDTO = selectedGender == 1 ? .male : .female
+            // TODO: Image mulipartData, API 구현 완료되는 대로 작업 시작
+        else {
+            return
+        }
+
+        let request = SignUpRequest(
+            idToken: credential.idToken,
+            providerType: credential.providerType,
+            nickName: nickname,
+            name: name,
+            gender: gender,
+            image: "test"
+        )
+
+        signUp(with: request)
     }
 
     @IBAction func onTapGenderMaleButton(_ sender: Any) {
@@ -139,6 +157,24 @@ class SignUpViewController: UIViewController {
             genderFemaleButton.tintColor = UIColor(named: "BorderColor1")
             genderFemaleButton.backgroundColor = .white
             genderFemaleButton.borderColor = UIColor(named: "BorderColor1")
+        }
+    }
+
+    private func signUp(with request: SignUpRequest) {
+        repository.signUp(request: request) { [weak self] result in
+            switch result {
+            case .success:
+                let storyBoard = UIStoryboard(name: "SignUpComplete", bundle: nil)
+                let viewController = storyBoard.instantiateViewController(withIdentifier: "SignUpComplete")
+                viewController.modalPresentationStyle = .fullScreen
+
+                DispatchQueue.main.async {
+                    self?.present(viewController, animated: true)
+                }
+            // TODO: Error Handling
+            case .failure:
+                debugPrint("Failed to sign up")
+            }
         }
     }
 }

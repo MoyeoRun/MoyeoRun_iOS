@@ -27,9 +27,10 @@ final class NetworkService: NetworkServiceable {
     }
 
     private func performRequest<Data: Codable>(_ request: DataRequest, completion: @escaping (Response<Data>) -> Void) {
-        request.validate().responseDecodable(of: Response<Data>.self) { response in
+        request.responseDecodable(of: Response<Data>.self) { response in
             guard case let .success(data) = response.result else {
                 assert(true, "Failed to decoding response: \(response.result)")
+
                 return completion(.failure(.init(case: .unknownError)))
             }
 

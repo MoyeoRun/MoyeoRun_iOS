@@ -46,7 +46,7 @@ class SignInViewController: UIViewController {
     @IBAction func onTapSignInWithGoogleButton(_ sender: Any) {
         let signInConfig = GIDConfiguration(
             clientID: Configuration.clientId.toString,
-            serverClientID: Configuration.androidClientId.toString
+            serverClientID: Configuration.serverClientId.toString
         )
 
         GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { [weak self] user, error in

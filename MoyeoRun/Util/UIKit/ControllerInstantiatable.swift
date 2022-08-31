@@ -27,7 +27,7 @@ extension UIViewController: ControllerInstantiatable {
         creator: ((NSCoder) -> ViewController?)? = nil
     ) -> ViewController where ViewController: UIViewController {
         let identifier = String(describing: ViewController.self)
-        let controller = container?.rawValue ?? "View" + "Controller"
+        let controller = (container?.rawValue ?? "View") + "Controller"
         let name = identifier.replacingOccurrences(
             of: controller,
             with: "Storyboard",
