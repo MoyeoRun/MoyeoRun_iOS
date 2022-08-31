@@ -1,12 +1,13 @@
 //
-//  InsertUserInfoViewController.swift
+//  SignUpViewController.swift
 //  MoyeoRun
 //
 //  Created by 김상현 on 2022/05/07.
 //
+
 import UIKit
 
-class InsertUserInfoViewController: UIViewController {
+class SignUpViewController: UIViewController {
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var cameraSymbolButton: UIButton!
@@ -14,7 +15,20 @@ class InsertUserInfoViewController: UIViewController {
     @IBOutlet weak var nickNameTextField: UITextField!
     @IBOutlet weak var genderMaleButton: UIButton!
     @IBOutlet weak var genderFemaleButton: UIButton!
+
     var selectedGender: Int = 0
+
+    private let repository: AuthRepositable
+
+    init?(coder: NSCoder, credential: SignInRequest, repository: AuthRepositable) {
+        self.repository = repository
+
+        super.init(coder: coder)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

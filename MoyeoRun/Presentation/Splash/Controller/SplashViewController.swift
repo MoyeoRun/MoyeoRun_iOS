@@ -10,7 +10,7 @@ import UIKit
 class SplashViewController: UIViewController {
     private let repository: AuthRepositable
 
-    init?(coder: NSCoder, repository: AuthRepositable = AuthRepository()) {
+    init?(coder: NSCoder, repository: AuthRepositable) {
         self.repository = repository
 
         super.init(coder: coder)
@@ -23,19 +23,26 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        repository.getAccessToken { result in
-            let initialViewController: UIViewController
+        commonInit()
+    }
 
-            switch result {
-            case .success:
-                let viewController: MainTabBarController = .instantiate(container: .tabBar)
-                initialViewController = viewController
-            case .failure:
-                let viewController: AuthViewController = .instantiate(container: .none)
-                initialViewController = viewController
+    private func commonInit() {
+        let result = repository.getAccessToken()
+        let nextViewController: UIViewController
+
+        switch result {
+        case .success:
+            let viewController: MainTabBarController = .instantiate(container: .tabBar)
+            nextViewController = viewController
+        case .failure:
+            let viewController: SignInViewController = .instantiate { coder in
+                SignInViewController(coder: coder, repository: AuthRepository())
             }
+            nextViewController = viewController
+        }
 
-            self.present(initialViewController, animated: true)
+        DispatchQueue.main.async {
+            self.present(nextViewController, animated: true)
         }
     }
 }

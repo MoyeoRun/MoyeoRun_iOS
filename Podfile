@@ -11,5 +11,6 @@ target 'MoyeoRun' do
 
   # Pods for MoyeoRun
   pod 'Alamofire'
+  pod 'GoogleSignIn'
   pod 'SwiftLint'
 end

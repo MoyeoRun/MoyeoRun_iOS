@@ -64,15 +64,15 @@
 		F74D202B2831630C0099B5F0 /* RunningContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D20012831630C0099B5F0 /* RunningContentCell.swift */; };
 		F74D202C2831630C0099B5F0 /* SearchTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20032831630C0099B5F0 /* SearchTab.storyboard */; };
 		F74D202D2831630C0099B5F0 /* MainPopupView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20072831630C0099B5F0 /* MainPopupView.storyboard */; };
-		F74D202E2831630C0099B5F0 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D200A2831630C0099B5F0 /* AuthViewController.swift */; };
+		F74D202E2831630C0099B5F0 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D200A2831630C0099B5F0 /* SignInViewController.swift */; };
 		F74D202F2831630C0099B5F0 /* AppIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D200B2831630C0099B5F0 /* AppIntroViewController.swift */; };
 		F74D20302831630C0099B5F0 /* SignUpCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D200C2831630C0099B5F0 /* SignUpCompleteViewController.swift */; };
 		F74D20312831630C0099B5F0 /* ProfileImageMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D200D2831630C0099B5F0 /* ProfileImageMenuViewController.swift */; };
-		F74D20322831630C0099B5F0 /* InsertUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D200E2831630C0099B5F0 /* InsertUserInfoViewController.swift */; };
-		F74D20332831630C0099B5F0 /* AuthStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20112831630C0099B5F0 /* AuthStoryboard.storyboard */; };
+		F74D20322831630C0099B5F0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D200E2831630C0099B5F0 /* SignUpViewController.swift */; };
+		F74D20332831630C0099B5F0 /* SignInStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20112831630C0099B5F0 /* SignInStoryboard.storyboard */; };
 		F74D20342831630C0099B5F0 /* ProfileImageMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20122831630C0099B5F0 /* ProfileImageMenu.storyboard */; };
 		F74D20352831630C0099B5F0 /* SignUpComplete.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20132831630C0099B5F0 /* SignUpComplete.storyboard */; };
-		F74D20362831630C0099B5F0 /* InsertUserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20142831630C0099B5F0 /* InsertUserInfo.storyboard */; };
+		F74D20362831630C0099B5F0 /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20142831630C0099B5F0 /* SignUpStoryboard.storyboard */; };
 		F74D20372831630C0099B5F0 /* AppIntro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20152831630C0099B5F0 /* AppIntro.storyboard */; };
 		F74D205D283163160099B5F0 /* HomeTabNewMission3.png in Resources */ = {isa = PBXBuildFile; fileRef = F74D203D283163160099B5F0 /* HomeTabNewMission3.png */; };
 		F74D205E283163160099B5F0 /* HomeTabNewMission2.png in Resources */ = {isa = PBXBuildFile; fileRef = F74D203E283163160099B5F0 /* HomeTabNewMission2.png */; };
@@ -125,8 +125,10 @@
 		411A626A28BFA70A00E585E3 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		411A626C28BFA71700E585E3 /* SplashStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashStoryboard.storyboard; sourceTree = "<group>"; };
 		416E8FEB28B6370500BBA05E /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
-		416E8FED28B6391900BBA05E /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configuration/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
-		416E8FEE28B6391900BBA05E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configuration/Release.xcconfig; sourceTree = SOURCE_ROOT; };
+		416E8FED28B6391900BBA05E /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = MoyeoRun/Configuration/Debug/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
+		416E8FEE28B6391900BBA05E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = MoyeoRun/Configuration/Release/Release.xcconfig; sourceTree = SOURCE_ROOT; };
+		4185722B28BFC6E1004203D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "MoyeoRun/Configuration/Debug/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		4185722E28BFC81E004203D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.debug.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF6235AE0ADD0047158FA4F /* Pods-MoyeoRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.release.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.release.xcconfig"; sourceTree = "<group>"; };
@@ -173,15 +175,15 @@
 		F74D20012831630C0099B5F0 /* RunningContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningContentCell.swift; sourceTree = "<group>"; };
 		F74D20032831630C0099B5F0 /* SearchTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchTab.storyboard; sourceTree = "<group>"; };
 		F74D20072831630C0099B5F0 /* MainPopupView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainPopupView.storyboard; sourceTree = "<group>"; };
-		F74D200A2831630C0099B5F0 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		F74D200A2831630C0099B5F0 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		F74D200B2831630C0099B5F0 /* AppIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIntroViewController.swift; sourceTree = "<group>"; };
 		F74D200C2831630C0099B5F0 /* SignUpCompleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpCompleteViewController.swift; sourceTree = "<group>"; };
 		F74D200D2831630C0099B5F0 /* ProfileImageMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageMenuViewController.swift; sourceTree = "<group>"; };
-		F74D200E2831630C0099B5F0 /* InsertUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertUserInfoViewController.swift; sourceTree = "<group>"; };
-		F74D20112831630C0099B5F0 /* AuthStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AuthStoryboard.storyboard; sourceTree = "<group>"; };
+		F74D200E2831630C0099B5F0 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		F74D20112831630C0099B5F0 /* SignInStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignInStoryboard.storyboard; sourceTree = "<group>"; };
 		F74D20122831630C0099B5F0 /* ProfileImageMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileImageMenu.storyboard; sourceTree = "<group>"; };
 		F74D20132831630C0099B5F0 /* SignUpComplete.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUpComplete.storyboard; sourceTree = "<group>"; };
-		F74D20142831630C0099B5F0 /* InsertUserInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InsertUserInfo.storyboard; sourceTree = "<group>"; };
+		F74D20142831630C0099B5F0 /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUpStoryboard.storyboard; sourceTree = "<group>"; };
 		F74D20152831630C0099B5F0 /* AppIntro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AppIntro.storyboard; sourceTree = "<group>"; };
 		F74D203D283163160099B5F0 /* HomeTabNewMission3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNewMission3.png; sourceTree = "<group>"; };
 		F74D203E283163160099B5F0 /* HomeTabNewMission2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNewMission2.png; sourceTree = "<group>"; };
@@ -301,7 +303,8 @@
 			isa = PBXGroup;
 			children = (
 				411A626928BFA41E00E585E3 /* Splash */,
-				411A627128BFAA9900E585E3 /* Auth */,
+				411A627128BFAA9900E585E3 /* SignIn */,
+				4185722F28BFCDA3004203D5 /* SignUp */,
 				411A627028BFAA8A00E585E3 /* Main */,
 			);
 			path = Presentation;
@@ -341,19 +344,19 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		411A627128BFAA9900E585E3 /* Auth */ = {
+		411A627128BFAA9900E585E3 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
 				411A627228BFAAB400E585E3 /* View */,
 				411A627328BFAAB800E585E3 /* Controller */,
 			);
-			path = Auth;
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 		411A627228BFAAB400E585E3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F74D20112831630C0099B5F0 /* AuthStoryboard.storyboard */,
+				F74D20112831630C0099B5F0 /* SignInStoryboard.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -361,7 +364,7 @@
 		411A627328BFAAB800E585E3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F74D200A2831630C0099B5F0 /* AuthViewController.swift */,
+				F74D200A2831630C0099B5F0 /* SignInViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -380,6 +383,49 @@
 				F74D1FF52831630C0099B5F0 /* MainStoryboard.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4185722C28BFC792004203D5 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				416E8FED28B6391900BBA05E /* Debug.xcconfig */,
+				4185722B28BFC6E1004203D5 /* GoogleService-Info.plist */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		4185722D28BFC79C004203D5 /* Release */ = {
+			isa = PBXGroup;
+			children = (
+				416E8FEE28B6391900BBA05E /* Release.xcconfig */,
+				4185722E28BFC81E004203D5 /* GoogleService-Info.plist */,
+			);
+			path = Release;
+			sourceTree = "<group>";
+		};
+		4185722F28BFCDA3004203D5 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				4185723028BFCDD4004203D5 /* View */,
+				4185723128BFCDD9004203D5 /* Controller */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		4185723028BFCDD4004203D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F74D20142831630C0099B5F0 /* SignUpStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4185723128BFCDD9004203D5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F74D200E2831630C0099B5F0 /* SignUpViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		AA20DD0103093E9F74BF396A /* Pods */ = {
@@ -403,8 +449,8 @@
 			isa = PBXGroup;
 			children = (
 				F74D1F9B2831620A0099B5F0 /* Configuation.swift */,
-				416E8FED28B6391900BBA05E /* Debug.xcconfig */,
-				416E8FEE28B6391900BBA05E /* Release.xcconfig */,
+				4185722C28BFC792004203D5 /* Debug */,
+				4185722D28BFC79C004203D5 /* Release */,
 			);
 			name = Configuration;
 			path = MoyeoRun/Configuration;
@@ -796,7 +842,6 @@
 				F74D200B2831630C0099B5F0 /* AppIntroViewController.swift */,
 				F74D200C2831630C0099B5F0 /* SignUpCompleteViewController.swift */,
 				F74D200D2831630C0099B5F0 /* ProfileImageMenuViewController.swift */,
-				F74D200E2831630C0099B5F0 /* InsertUserInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -814,7 +859,6 @@
 			children = (
 				F74D20122831630C0099B5F0 /* ProfileImageMenu.storyboard */,
 				F74D20132831630C0099B5F0 /* SignUpComplete.storyboard */,
-				F74D20142831630C0099B5F0 /* InsertUserInfo.storyboard */,
 				F74D20152831630C0099B5F0 /* AppIntro.storyboard */,
 			);
 			path = InterfaceBuilders;
@@ -1029,14 +1073,14 @@
 				F74D2075283163160099B5F0 /* Roboto-BlackItalic.ttf in Resources */,
 				F74D206D283163160099B5F0 /* Roboto-Light.ttf in Resources */,
 				F74D202D2831630C0099B5F0 /* MainPopupView.storyboard in Resources */,
-				F74D20362831630C0099B5F0 /* InsertUserInfo.storyboard in Resources */,
+				F74D20362831630C0099B5F0 /* SignUpStoryboard.storyboard in Resources */,
 				F74D2070283163160099B5F0 /* Roboto-ThinItalic.ttf in Resources */,
 				F74D2076283163160099B5F0 /* Roboto-Bold.ttf in Resources */,
 				F74D205E283163160099B5F0 /* HomeTabNewMission2.png in Resources */,
 				F74D2077283163160099B5F0 /* Roboto-Thin.ttf in Resources */,
 				411A626D28BFA71700E585E3 /* SplashStoryboard.storyboard in Resources */,
 				F75E9FA927E9470200000DCD /* LaunchScreen.storyboard in Resources */,
-				F74D20332831630C0099B5F0 /* AuthStoryboard.storyboard in Resources */,
+				F74D20332831630C0099B5F0 /* SignInStoryboard.storyboard in Resources */,
 				F74D206E283163160099B5F0 /* Roboto-Regular.ttf in Resources */,
 				F74D206C283163160099B5F0 /* Roboto-Medium.ttf in Resources */,
 				F74D2062283163160099B5F0 /* HomeTabNewMission1.png in Resources */,
@@ -1142,7 +1186,7 @@
 				F74D1FC4283163030099B5F0 /* SignUpDTO.swift in Sources */,
 				F74D1FCB283163030099B5F0 /* UserRemoteDataSource.swift in Sources */,
 				F74D1FD2283163030099B5F0 /* KeychainStore.swift in Sources */,
-				F74D20322831630C0099B5F0 /* InsertUserInfoViewController.swift in Sources */,
+				F74D20322831630C0099B5F0 /* SignUpViewController.swift in Sources */,
 				F74D202B2831630C0099B5F0 /* RunningContentCell.swift in Sources */,
 				F74D20282831630C0099B5F0 /* MyPageViewController.swift in Sources */,
 				416E8FEC28B6370500BBA05E /* Interceptor.swift in Sources */,
@@ -1175,7 +1219,7 @@
 				F74D1FD0283163030099B5F0 /* KeychainKeyType.swift in Sources */,
 				F74D201C2831630C0099B5F0 /* HomeTabLastRecordCell.swift in Sources */,
 				F74D20202831630C0099B5F0 /* SelectPhotoController.swift in Sources */,
-				F74D202E2831630C0099B5F0 /* AuthViewController.swift in Sources */,
+				F74D202E2831630C0099B5F0 /* SignInViewController.swift in Sources */,
 				F74D202F2831630C0099B5F0 /* AppIntroViewController.swift in Sources */,
 				0A5FFF3D283BBDDD004D86E0 /* RunningRecordCell.swift in Sources */,
 				F74D1FC5283163030099B5F0 /* AuthDTO.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="W9t-2w-LOa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Insert User Info View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="4TK-ks-5NJ">
             <objects>
-                <viewController storyboardIdentifier="InsertUserInfo" id="W9t-2w-LOa" customClass="InsertUserInfoViewController" customModule="MoyeoRun" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="W9t-2w-LOa" customClass="SignUpViewController" customModule="MoyeoRun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hqS-7Q-9lK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -256,8 +256,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Female" width="32" height="31"/>
-        <image name="Male" width="20" height="33"/>
+        <image name="Female" width="20.5" height="20"/>
+        <image name="Male" width="12.5" height="20"/>
         <image name="camera.circle.fill" catalog="system" width="128" height="121"/>
         <image name="people1" width="491" height="428"/>
         <image name="xmark" catalog="system" width="128" height="113"/>

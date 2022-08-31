@@ -25,10 +25,7 @@ protocol AuthRemoteDataSourceable: AnyObject {
         completion: @escaping (Response<RefreshResponse>) -> Void
     )
 
-    func logout(
-        request: LogoutRequset,
-        completion: @escaping (Response<LogoutResponse>) -> Void
-    )
+    func logout(completion: @escaping (Response<LogoutResponse>) -> Void)
 }
 
 final class AuthRemoteDataSource: AuthRemoteDataSourceable {
@@ -59,11 +56,8 @@ final class AuthRemoteDataSource: AuthRemoteDataSourceable {
         service.request(router: AuthRouter.refresh(request: request), completion: completion)
     }
 
-    func logout(
-        request: LogoutRequset,
-        completion: @escaping (Response<LogoutResponse>) -> Void
-    ) {
-        service.request(router: AuthRouter.logout(request: request), completion: completion)
+    func logout(completion: @escaping (Response<LogoutResponse>) -> Void) {
+        service.request(router: AuthRouter.logout, completion: completion)
     }
 }
 
@@ -71,7 +65,7 @@ enum AuthRouter: Routable {
     case signIn(request: SignInRequest)
     case signUp(request: SignUpRequest)
     case refresh(request: RefreshRequest)
-    case logout(request: LogoutRequset)
+    case logout
 
     var method: HTTPMethod {
         switch self {
@@ -103,8 +97,8 @@ enum AuthRouter: Routable {
             return request.toParameters
         case let .refresh(request):
             return request.toParameters
-        case let .logout(request):
-            return request.toParameters
+        case .logout:
+            return Parameters()
         }
     }
 }

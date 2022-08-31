@@ -18,7 +18,7 @@ protocol Routable: URLRequestConvertible {
 
 extension Routable {
     var baseURL: URL {
-        return Configuration.baseURL
+        return Configuration.baseURL.toURL
     }
 
     var encoding: ParameterEncoding? {

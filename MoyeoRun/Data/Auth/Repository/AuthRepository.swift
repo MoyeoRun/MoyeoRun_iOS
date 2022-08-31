@@ -20,9 +20,7 @@ protocol AuthRepositable: AnyObject {
         completion: @escaping (Result<SignUpResponse, Error>) -> Void
     )
 
-    func getAccessToken(
-        completion: @escaping (Result<String, Error>) -> Void
-    )
+    func getAccessToken() -> Result<String, Error>
 
     func refreshToken(
         completion: @escaping (Result<RefreshResponse, Error>) -> Void
@@ -85,8 +83,8 @@ final class AuthRepository: AuthRepositable {
         }
     }
 
-    func getAccessToken(completion: @escaping (Result<String, Error>) -> Void) {
-        return completion(localDataSource.getAccessToken())
+    func getAccessToken() -> Result<String, Error> {
+        return localDataSource.getAccessToken()
     }
 
     func refreshToken(
@@ -125,15 +123,7 @@ final class AuthRepository: AuthRepositable {
     func logout(
         completion: @escaping (Result<LogoutResponse, Error>) -> Void
     ) {
-        let result = localDataSource.getAccessToken()
-
-        guard case let .success(accessToken) = result else {
-            return completion(.failure(KeychainError.notFound))
-        }
-
-        let request = LogoutRequset(accessToken: accessToken)
-
-        remoteDataSource.logout(request: request) { [weak self] remoteResult in
+        remoteDataSource.logout { [weak self] remoteResult in
             switch remoteResult {
             case let .success(success):
                 let localResult = self?.localDataSource.clearToken()

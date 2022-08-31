@@ -8,12 +8,17 @@
 import Alamofire
 
 class Interceptor: RequestInterceptor {
+    private let manager: NetworkReachabilityManager?
     private let repository: AuthRepositable
 
     private let retryLimit = 3
     private let retryDelay: TimeInterval = 5
 
-    init(repository: AuthRepositable = AuthRepository()) {
+    init(
+        manager: NetworkReachabilityManager? = NetworkReachabilityManager(),
+        repository: AuthRepositable = AuthRepository()
+    ) {
+        self.manager = manager
         self.repository = repository
     }
 
@@ -23,11 +28,10 @@ class Interceptor: RequestInterceptor {
         completion: @escaping (Result<URLRequest, Error>) -> Void
     ) {
         var urlRequest = urlRequest
+        let result = repository.getAccessToken()
 
-        repository.getAccessToken { result in
-            if case let .success(accessToken) = result {
-                urlRequest.headers.add(.authorization(bearerToken: accessToken))
-            }
+        if case let .success(accessToken) = result {
+            urlRequest.headers.add(.authorization(bearerToken: accessToken))
         }
 
         return completion(.success(urlRequest))
@@ -43,27 +47,41 @@ class Interceptor: RequestInterceptor {
             return completion(.doNotRetryWithError(error))
         }
 
-        if request.response?.statusCode == 401 {
-            AuthRepository().refreshToken { result in
-                switch result {
-                case .success:
-                    completion(.doNotRetry)
-                case .failure:
-                    AuthRepository().logout { _ in }
-                }
-            }
-        } else {
-            NetworkReachabilityManager()?.startListening { [weak self] status in
-                guard let retryDelay = self?.retryDelay else {
-                    return completion(.doNotRetryWithError(error))
-                }
+        guard request.response?.statusCode == 401 else {
+            return reconnectNetwork(throwed: error, completion: completion)
+        }
 
-                switch status {
-                case .reachable:
-                    completion(.retry)
-                case .notReachable, .unknown:
-                    completion(.retryWithDelay(retryDelay))
-                }
+        return refreshToken(completion: completion)
+    }
+
+    private func refreshToken(completion: @escaping (RetryResult) -> Void) {
+        let result = repository.getAccessToken()
+
+        if case let .failure(error) = result {
+            return completion(.doNotRetryWithError(error))
+        }
+
+        repository.refreshToken { [weak self] result in
+            switch result {
+            case .success:
+                completion(.doNotRetry)
+            case .failure:
+                self?.repository.logout { _ in }
+            }
+        }
+    }
+
+    private func reconnectNetwork(throwed error: Error, completion: @escaping (RetryResult) -> Void) {
+        manager?.startListening { [weak self] status in
+            guard let retryDelay = self?.retryDelay else {
+                return completion(.doNotRetryWithError(error))
+            }
+
+            switch status {
+            case .reachable:
+                return completion(.retry)
+            case .notReachable, .unknown:
+                return completion(.retryWithDelay(retryDelay))
             }
         }
     }
