@@ -1,13 +1,13 @@
 //
-//  SocialLogInViewController.swift
+//  AuthViewController.swift
 //  MoyeoRun
 //
-//  Created by 김상현 on 2022/04/26.
+//  Created by Jeongho Moon on 2022/08/31.
 //
 
 import UIKit
 
-class SocialLogInViewController: UIViewController {
+class AuthViewController: UIViewController {
     @IBOutlet weak var signInWithGoogleButton: UIButton!
     @IBOutlet weak var appleSymbolImageView: UIImageView!
 

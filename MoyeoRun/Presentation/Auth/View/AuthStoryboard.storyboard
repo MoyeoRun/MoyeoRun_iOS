@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Social Log In View Controller-->
+        <!--Auth View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="SocialLogIn" id="Y6W-OH-hqX" customClass="SocialLogInViewController" customModule="MoyeoRun" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="AuthViewController" customModule="MoyeoRun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +46,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="onTapSignInWithGoogleButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="jpa-49-wwy"/>
+                                    <action selector="onTapSignInWithGoogleButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="JIU-Ok-djY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3S6-M0-uei">
@@ -67,7 +67,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="onTapSignInWithAppleButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HuZ-lW-PJO"/>
+                                    <action selector="onTapSignInWithAppleButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hnK-q4-hDB"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo - SIWA - Logo-only - White" translatesAutoresizingMaskIntoConstraints="NO" id="BvO-mF-K7e">
@@ -105,7 +105,8 @@
                     </view>
                     <connections>
                         <outlet property="AppleSymbolImageView" destination="BvO-mF-K7e" id="ipm-CA-dyV"/>
-                        <outlet property="SignInWithGoogleButton" destination="h3Y-w7-DSi" id="pkt-Hd-m7I"/>
+                        <outlet property="appleSymbolImageView" destination="BvO-mF-K7e" id="l3X-eo-SHL"/>
+                        <outlet property="signInWithGoogleButton" destination="h3Y-w7-DSi" id="Ozv-NR-Vf4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

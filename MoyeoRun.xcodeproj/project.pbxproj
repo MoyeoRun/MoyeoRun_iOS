@@ -16,6 +16,9 @@
 		0AA674E528657EB7006A7E72 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA674E428657EB7006A7E72 /* CalendarViewController.swift */; };
 		0AA674E72866BECD006A7E72 /* RecordTabExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA674E62866BECD006A7E72 /* RecordTabExtension.swift */; };
 		411A626328BF938700E585E3 /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411A626228BF938700E585E3 /* Encodable+.swift */; };
+		411A626628BFA28C00E585E3 /* ControllerInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411A626528BFA28C00E585E3 /* ControllerInstantiatable.swift */; };
+		411A626B28BFA70A00E585E3 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411A626A28BFA70A00E585E3 /* SplashViewController.swift */; };
+		411A626D28BFA71700E585E3 /* SplashStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 411A626C28BFA71700E585E3 /* SplashStoryboard.storyboard */; };
 		416E8FEC28B6370500BBA05E /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E8FEB28B6370500BBA05E /* Interceptor.swift */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F74D1F9E2831620A0099B5F0 /* Configuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1F9B2831620A0099B5F0 /* Configuation.swift */; };
@@ -53,20 +56,20 @@
 		F74D20232831630C0099B5F0 /* SelectPhoto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D1FED2831630C0099B5F0 /* SelectPhoto.storyboard */; };
 		F74D20242831630C0099B5F0 /* MakeRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D1FEE2831630C0099B5F0 /* MakeRoom.storyboard */; };
 		F74D20252831630C0099B5F0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FF12831630C0099B5F0 /* Extensions.swift */; };
-		F74D20262831630C0099B5F0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FF22831630C0099B5F0 /* TabBarViewController.swift */; };
-		F74D20272831630C0099B5F0 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D1FF52831630C0099B5F0 /* TabBar.storyboard */; };
+		F74D20262831630C0099B5F0 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FF22831630C0099B5F0 /* MainTabBarController.swift */; };
+		F74D20272831630C0099B5F0 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D1FF52831630C0099B5F0 /* MainStoryboard.storyboard */; };
 		F74D20282831630C0099B5F0 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FF82831630C0099B5F0 /* MyPageViewController.swift */; };
 		F74D20292831630C0099B5F0 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D1FFB2831630C0099B5F0 /* MyPage.storyboard */; };
 		F74D202A2831630C0099B5F0 /* SearchTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FFE2831630C0099B5F0 /* SearchTabViewController.swift */; };
 		F74D202B2831630C0099B5F0 /* RunningContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D20012831630C0099B5F0 /* RunningContentCell.swift */; };
 		F74D202C2831630C0099B5F0 /* SearchTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20032831630C0099B5F0 /* SearchTab.storyboard */; };
 		F74D202D2831630C0099B5F0 /* MainPopupView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20072831630C0099B5F0 /* MainPopupView.storyboard */; };
-		F74D202E2831630C0099B5F0 /* SocialLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D200A2831630C0099B5F0 /* SocialLogInViewController.swift */; };
+		F74D202E2831630C0099B5F0 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D200A2831630C0099B5F0 /* AuthViewController.swift */; };
 		F74D202F2831630C0099B5F0 /* AppIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D200B2831630C0099B5F0 /* AppIntroViewController.swift */; };
 		F74D20302831630C0099B5F0 /* SignUpCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D200C2831630C0099B5F0 /* SignUpCompleteViewController.swift */; };
 		F74D20312831630C0099B5F0 /* ProfileImageMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D200D2831630C0099B5F0 /* ProfileImageMenuViewController.swift */; };
 		F74D20322831630C0099B5F0 /* InsertUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D200E2831630C0099B5F0 /* InsertUserInfoViewController.swift */; };
-		F74D20332831630C0099B5F0 /* SocialLogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20112831630C0099B5F0 /* SocialLogIn.storyboard */; };
+		F74D20332831630C0099B5F0 /* AuthStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20112831630C0099B5F0 /* AuthStoryboard.storyboard */; };
 		F74D20342831630C0099B5F0 /* ProfileImageMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20122831630C0099B5F0 /* ProfileImageMenu.storyboard */; };
 		F74D20352831630C0099B5F0 /* SignUpComplete.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20132831630C0099B5F0 /* SignUpComplete.storyboard */; };
 		F74D20362831630C0099B5F0 /* InsertUserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20142831630C0099B5F0 /* InsertUserInfo.storyboard */; };
@@ -118,6 +121,9 @@
 		0AA674E428657EB7006A7E72 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		0AA674E62866BECD006A7E72 /* RecordTabExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTabExtension.swift; sourceTree = "<group>"; };
 		411A626228BF938700E585E3 /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
+		411A626528BFA28C00E585E3 /* ControllerInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerInstantiatable.swift; sourceTree = "<group>"; };
+		411A626A28BFA70A00E585E3 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		411A626C28BFA71700E585E3 /* SplashStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashStoryboard.storyboard; sourceTree = "<group>"; };
 		416E8FEB28B6370500BBA05E /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
 		416E8FED28B6391900BBA05E /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configuration/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
 		416E8FEE28B6391900BBA05E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configuration/Release.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -159,20 +165,20 @@
 		F74D1FED2831630C0099B5F0 /* SelectPhoto.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelectPhoto.storyboard; sourceTree = "<group>"; };
 		F74D1FEE2831630C0099B5F0 /* MakeRoom.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MakeRoom.storyboard; sourceTree = "<group>"; };
 		F74D1FF12831630C0099B5F0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		F74D1FF22831630C0099B5F0 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		F74D1FF52831630C0099B5F0 /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		F74D1FF22831630C0099B5F0 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		F74D1FF52831630C0099B5F0 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F74D1FF82831630C0099B5F0 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		F74D1FFB2831630C0099B5F0 /* MyPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		F74D1FFE2831630C0099B5F0 /* SearchTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTabViewController.swift; sourceTree = "<group>"; };
 		F74D20012831630C0099B5F0 /* RunningContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningContentCell.swift; sourceTree = "<group>"; };
 		F74D20032831630C0099B5F0 /* SearchTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchTab.storyboard; sourceTree = "<group>"; };
 		F74D20072831630C0099B5F0 /* MainPopupView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainPopupView.storyboard; sourceTree = "<group>"; };
-		F74D200A2831630C0099B5F0 /* SocialLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialLogInViewController.swift; sourceTree = "<group>"; };
+		F74D200A2831630C0099B5F0 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		F74D200B2831630C0099B5F0 /* AppIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIntroViewController.swift; sourceTree = "<group>"; };
 		F74D200C2831630C0099B5F0 /* SignUpCompleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpCompleteViewController.swift; sourceTree = "<group>"; };
 		F74D200D2831630C0099B5F0 /* ProfileImageMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageMenuViewController.swift; sourceTree = "<group>"; };
 		F74D200E2831630C0099B5F0 /* InsertUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertUserInfoViewController.swift; sourceTree = "<group>"; };
-		F74D20112831630C0099B5F0 /* SocialLogIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SocialLogIn.storyboard; sourceTree = "<group>"; };
+		F74D20112831630C0099B5F0 /* AuthStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AuthStoryboard.storyboard; sourceTree = "<group>"; };
 		F74D20122831630C0099B5F0 /* ProfileImageMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileImageMenu.storyboard; sourceTree = "<group>"; };
 		F74D20132831630C0099B5F0 /* SignUpComplete.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUpComplete.storyboard; sourceTree = "<group>"; };
 		F74D20142831630C0099B5F0 /* InsertUserInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InsertUserInfo.storyboard; sourceTree = "<group>"; };
@@ -281,6 +287,99 @@
 				F75E9F9B27E9470100000DCD /* SceneDelegate.swift */,
 			);
 			path = LifeCycles;
+			sourceTree = "<group>";
+		};
+		411A626428BFA26700E585E3 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				411A626528BFA28C00E585E3 /* ControllerInstantiatable.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		411A626828BFA3FE00E585E3 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				411A626928BFA41E00E585E3 /* Splash */,
+				411A627128BFAA9900E585E3 /* Auth */,
+				411A627028BFAA8A00E585E3 /* Main */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		411A626928BFA41E00E585E3 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				411A626E28BFAA6F00E585E3 /* View */,
+				411A626F28BFAA7700E585E3 /* Controller */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		411A626E28BFAA6F00E585E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				411A626C28BFA71700E585E3 /* SplashStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		411A626F28BFAA7700E585E3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				411A626A28BFA70A00E585E3 /* SplashViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		411A627028BFAA8A00E585E3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				411A627528BFAADF00E585E3 /* View */,
+				411A627428BFAADA00E585E3 /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		411A627128BFAA9900E585E3 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				411A627228BFAAB400E585E3 /* View */,
+				411A627328BFAAB800E585E3 /* Controller */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		411A627228BFAAB400E585E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F74D20112831630C0099B5F0 /* AuthStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		411A627328BFAAB800E585E3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F74D200A2831630C0099B5F0 /* AuthViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		411A627428BFAADA00E585E3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F74D1FF22831630C0099B5F0 /* MainTabBarController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		411A627528BFAADF00E585E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F74D1FF52831630C0099B5F0 /* MainStoryboard.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		AA20DD0103093E9F74BF396A /* Pods */ = {
@@ -563,7 +662,6 @@
 			isa = PBXGroup;
 			children = (
 				F74D1FF12831630C0099B5F0 /* Extensions.swift */,
-				F74D1FF22831630C0099B5F0 /* TabBarViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -579,7 +677,6 @@
 		F74D1FF42831630C0099B5F0 /* InterfaceBuilders */ = {
 			isa = PBXGroup;
 			children = (
-				F74D1FF52831630C0099B5F0 /* TabBar.storyboard */,
 			);
 			path = InterfaceBuilders;
 			sourceTree = "<group>";
@@ -696,7 +793,6 @@
 		F74D20092831630C0099B5F0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F74D200A2831630C0099B5F0 /* SocialLogInViewController.swift */,
 				F74D200B2831630C0099B5F0 /* AppIntroViewController.swift */,
 				F74D200C2831630C0099B5F0 /* SignUpCompleteViewController.swift */,
 				F74D200D2831630C0099B5F0 /* ProfileImageMenuViewController.swift */,
@@ -716,7 +812,6 @@
 		F74D20102831630C0099B5F0 /* InterfaceBuilders */ = {
 			isa = PBXGroup;
 			children = (
-				F74D20112831630C0099B5F0 /* SocialLogIn.storyboard */,
 				F74D20122831630C0099B5F0 /* ProfileImageMenu.storyboard */,
 				F74D20132831630C0099B5F0 /* SignUpComplete.storyboard */,
 				F74D20142831630C0099B5F0 /* InsertUserInfo.storyboard */,
@@ -728,6 +823,7 @@
 		F74D2038283163160099B5F0 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				411A626428BFA26700E585E3 /* UIKit */,
 				F74D2039283163160099B5F0 /* MoyeoRun */,
 				F74D204A283163160099B5F0 /* Components */,
 				F74D204E283163160099B5F0 /* Font */,
@@ -848,6 +944,7 @@
 			children = (
 				3AADB25527EF543800AFDE01 /* LifeCycles */,
 				F74D1FA3283163030099B5F0 /* Data */,
+				411A626828BFA3FE00E585E3 /* Presentation */,
 				F74D1FD32831630C0099B5F0 /* Scenes */,
 				F75E9F9D27E9470100000DCD /* ViewController.swift */,
 				F75E9F9F27E9470100000DCD /* Main.storyboard */,
@@ -925,7 +1022,7 @@
 				F74D20162831630C0099B5F0 /* MoyeoRunRoom.storyboard in Resources */,
 				F74D2078283163160099B5F0 /* Roboto-Black.ttf in Resources */,
 				F74D205F283163160099B5F0 /* HomeTabNowPopular2.png in Resources */,
-				F74D20272831630C0099B5F0 /* TabBar.storyboard in Resources */,
+				F74D20272831630C0099B5F0 /* MainStoryboard.storyboard in Resources */,
 				F74D20242831630C0099B5F0 /* MakeRoom.storyboard in Resources */,
 				F74D2064283163160099B5F0 /* HomeTabLastRecord0.png in Resources */,
 				F74D2060283163160099B5F0 /* HomeTabNowPopular0.png in Resources */,
@@ -937,8 +1034,9 @@
 				F74D2076283163160099B5F0 /* Roboto-Bold.ttf in Resources */,
 				F74D205E283163160099B5F0 /* HomeTabNewMission2.png in Resources */,
 				F74D2077283163160099B5F0 /* Roboto-Thin.ttf in Resources */,
+				411A626D28BFA71700E585E3 /* SplashStoryboard.storyboard in Resources */,
 				F75E9FA927E9470200000DCD /* LaunchScreen.storyboard in Resources */,
-				F74D20332831630C0099B5F0 /* SocialLogIn.storyboard in Resources */,
+				F74D20332831630C0099B5F0 /* AuthStoryboard.storyboard in Resources */,
 				F74D206E283163160099B5F0 /* Roboto-Regular.ttf in Resources */,
 				F74D206C283163160099B5F0 /* Roboto-Medium.ttf in Resources */,
 				F74D2062283163160099B5F0 /* HomeTabNewMission1.png in Resources */,
@@ -1066,6 +1164,7 @@
 				F74D1FC2283163030099B5F0 /* RefreshDTO.swift in Sources */,
 				F74D1FCF283163030099B5F0 /* Routable.swift in Sources */,
 				F74D1FCE283163030099B5F0 /* NetworkService.swift in Sources */,
+				411A626628BFA28C00E585E3 /* ControllerInstantiatable.swift in Sources */,
 				0A54157128629D780050AF60 /* RecordDetailViewController.swift in Sources */,
 				F74D20312831630C0099B5F0 /* ProfileImageMenuViewController.swift in Sources */,
 				0AA674E528657EB7006A7E72 /* CalendarViewController.swift in Sources */,
@@ -1076,19 +1175,20 @@
 				F74D1FD0283163030099B5F0 /* KeychainKeyType.swift in Sources */,
 				F74D201C2831630C0099B5F0 /* HomeTabLastRecordCell.swift in Sources */,
 				F74D20202831630C0099B5F0 /* SelectPhotoController.swift in Sources */,
-				F74D202E2831630C0099B5F0 /* SocialLogInViewController.swift in Sources */,
+				F74D202E2831630C0099B5F0 /* AuthViewController.swift in Sources */,
 				F74D202F2831630C0099B5F0 /* AppIntroViewController.swift in Sources */,
 				0A5FFF3D283BBDDD004D86E0 /* RunningRecordCell.swift in Sources */,
 				F74D1FC5283163030099B5F0 /* AuthDTO.swift in Sources */,
 				F74D20172831630C0099B5F0 /* HomeTabViewController.swift in Sources */,
 				F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */,
-				F74D20262831630C0099B5F0 /* TabBarViewController.swift in Sources */,
+				F74D20262831630C0099B5F0 /* MainTabBarController.swift in Sources */,
 				F74D20192831630C0099B5F0 /* HomeTabNewMissionContainer.swift in Sources */,
 				F75E9FA427E9470100000DCD /* MoyeoRun.xcdatamodeld in Sources */,
 				F74D1FCC283163030099B5F0 /* UserRepository.swift in Sources */,
 				411A626328BF938700E585E3 /* Encodable+.swift in Sources */,
 				F74D201F2831630C0099B5F0 /* MakeRoomController.swift in Sources */,
 				F74D1FC9283163030099B5F0 /* DuplicateDTO.swift in Sources */,
+				411A626B28BFA70A00E585E3 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1245,7 +1345,6 @@
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자의 위치 정보를 받으려고 합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1275,7 +1374,6 @@
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자의 위치 정보를 받으려고 합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

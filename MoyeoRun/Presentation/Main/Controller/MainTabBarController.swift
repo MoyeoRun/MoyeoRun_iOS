@@ -1,14 +1,14 @@
 //
-//  TabBarViewControllers.swift
+//  MainTabBarController.swift
 //  MoyeoRun
 //
-//  Created by 김상현 on 2022/03/27.
+//  Created by Jeongho Moon on 2022/08/31.
 //
 
 
 import UIKit
 
-class TabBarViewController: UITabBarController {
+class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
