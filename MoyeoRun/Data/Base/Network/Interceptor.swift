@@ -8,7 +8,7 @@
 import Alamofire
 
 class Interceptor: RequestInterceptor {
-    let repository: AuthRepositable
+    private let repository: AuthRepositable
 
     private let retryLimit = 3
     private let retryDelay: TimeInterval = 5
@@ -30,7 +30,7 @@ class Interceptor: RequestInterceptor {
             }
         }
 
-        completion(.success(urlRequest))
+        return completion(.success(urlRequest))
     }
 
     func retry(

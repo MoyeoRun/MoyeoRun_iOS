@@ -1,10 +1,6 @@
 PODS:
   - Alamofire (5.6.1)
   - FSCalendar (2.8.4)
-  - Moya (15.0.0):
-    - Moya/Core (= 15.0.0)
-  - Moya/Core (15.0.0):
-    - Alamofire (~> 5.0)
   - PryntTrimmerView (4.0.2)
   - SteviaLayout (4.7.3)
   - SwiftLint (0.47.1)
@@ -13,8 +9,8 @@ PODS:
     - SteviaLayout (= 4.7.3)
 
 DEPENDENCIES:
+  - Alamofire
   - FSCalendar
-  - Moya (~> 15.0)
   - SwiftLint
   - YPImagePicker
 
@@ -22,7 +18,6 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - FSCalendar
-    - Moya
     - PryntTrimmerView
     - SteviaLayout
     - SwiftLint
@@ -31,12 +26,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
-  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
   SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
   SwiftLint: f80f1be7fa96d30e0aa68e58d45d4ea1ccaac519
   YPImagePicker: f36043210c10b0783034eb1947d6e06e31c461e4
 
-PODFILE CHECKSUM: a04c29dea3befba24f38c94a8f0c5c49395e1c19
+PODFILE CHECKSUM: 5852fc3f8b341fe67963ec6b0915c19d64939723
 
 COCOAPODS: 1.11.3
