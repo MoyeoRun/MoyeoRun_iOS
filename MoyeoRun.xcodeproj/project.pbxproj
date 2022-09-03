@@ -29,6 +29,9 @@
 		3A27052828B7979A00BBDA1D /* CurrentRoomListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A27052628B7979A00BBDA1D /* CurrentRoomListCell.xib */; };
 		3A27052B28B7986100BBDA1D /* RoomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A27052928B7986100BBDA1D /* RoomHeader.swift */; };
 		3A27052C28B7986100BBDA1D /* RoomHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A27052A28B7986100BBDA1D /* RoomHeader.xib */; };
+		3AAEE3DD28C3C85400B28582 /* RoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEE3DC28C3C85400B28582 /* RoomController.swift */; };
+		3AAEE3DF28C3CDCF00B28582 /* BeforeRoom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AAEE3DE28C3CDCF00B28582 /* BeforeRoom.xib */; };
+		3AAEE3E128C3CDD800B28582 /* AfterRoom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AAEE3E028C3CDD800B28582 /* AfterRoom.xib */; };
 		416E8FEC28B6370500BBA05E /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E8FEB28B6370500BBA05E /* Interceptor.swift */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F74D1F9E2831620A0099B5F0 /* Configuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1F9B2831620A0099B5F0 /* Configuation.swift */; };
@@ -50,7 +53,7 @@
 		F74D1FD0283163030099B5F0 /* KeychainKeyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FBE283163030099B5F0 /* KeychainKeyType.swift */; };
 		F74D1FD1283163030099B5F0 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FBF283163030099B5F0 /* Keychain.swift */; };
 		F74D1FD2283163030099B5F0 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FC0283163030099B5F0 /* KeychainStore.swift */; };
-		F74D20162831630C0099B5F0 /* MoyeoRunRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D1FD72831630C0099B5F0 /* MoyeoRunRoom.storyboard */; };
+		F74D20162831630C0099B5F0 /* Room.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D1FD72831630C0099B5F0 /* Room.storyboard */; };
 		F74D201E2831630C0099B5F0 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D1FE52831630C0099B5F0 /* HomeTab.storyboard */; };
 		F74D201F2831630C0099B5F0 /* MakeRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FE72831630C0099B5F0 /* MakeRoomController.swift */; };
 		F74D20202831630C0099B5F0 /* SelectPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FE92831630C0099B5F0 /* SelectPhotoController.swift */; };
@@ -136,6 +139,9 @@
 		3A27052628B7979A00BBDA1D /* CurrentRoomListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentRoomListCell.xib; sourceTree = "<group>"; };
 		3A27052928B7986100BBDA1D /* RoomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomHeader.swift; sourceTree = "<group>"; };
 		3A27052A28B7986100BBDA1D /* RoomHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomHeader.xib; sourceTree = "<group>"; };
+		3AAEE3DC28C3C85400B28582 /* RoomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomController.swift; sourceTree = "<group>"; };
+		3AAEE3DE28C3CDCF00B28582 /* BeforeRoom.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeforeRoom.xib; sourceTree = "<group>"; };
+		3AAEE3E028C3CDD800B28582 /* AfterRoom.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AfterRoom.xib; sourceTree = "<group>"; };
 		416E8FEB28B6370500BBA05E /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
 		416E8FED28B6391900BBA05E /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configuration/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
 		416E8FEE28B6391900BBA05E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configuration/Release.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -161,7 +167,7 @@
 		F74D1FBE283163030099B5F0 /* KeychainKeyType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainKeyType.swift; sourceTree = "<group>"; };
 		F74D1FBF283163030099B5F0 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		F74D1FC0283163030099B5F0 /* KeychainStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
-		F74D1FD72831630C0099B5F0 /* MoyeoRunRoom.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MoyeoRunRoom.storyboard; sourceTree = "<group>"; };
+		F74D1FD72831630C0099B5F0 /* Room.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Room.storyboard; sourceTree = "<group>"; };
 		F74D1FE52831630C0099B5F0 /* HomeTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
 		F74D1FE72831630C0099B5F0 /* MakeRoomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeRoomController.swift; sourceTree = "<group>"; };
 		F74D1FE92831630C0099B5F0 /* SelectPhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPhotoController.swift; sourceTree = "<group>"; };
@@ -509,6 +515,7 @@
 		F74D1FD42831630C0099B5F0 /* MoyeorunRoom */ = {
 			isa = PBXGroup;
 			children = (
+				3AAEE3DC28C3C85400B28582 /* RoomController.swift */,
 				F74D1FD52831630C0099B5F0 /* Views */,
 			);
 			path = MoyeorunRoom;
@@ -525,7 +532,9 @@
 		F74D1FD62831630C0099B5F0 /* InterfaceBuilders */ = {
 			isa = PBXGroup;
 			children = (
-				F74D1FD72831630C0099B5F0 /* MoyeoRunRoom.storyboard */,
+				F74D1FD72831630C0099B5F0 /* Room.storyboard */,
+				3AAEE3DE28C3CDCF00B28582 /* BeforeRoom.xib */,
+				3AAEE3E028C3CDD800B28582 /* AfterRoom.xib */,
 			);
 			path = InterfaceBuilders;
 			sourceTree = "<group>";
@@ -945,7 +954,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F74D206F283163160099B5F0 /* Roboto-MediumItalic.ttf in Resources */,
-				F74D20162831630C0099B5F0 /* MoyeoRunRoom.storyboard in Resources */,
+				F74D20162831630C0099B5F0 /* Room.storyboard in Resources */,
 				F74D2078283163160099B5F0 /* Roboto-Black.ttf in Resources */,
 				F74D205F283163160099B5F0 /* HomeTabNowPopular2.png in Resources */,
 				F74D20272831630C0099B5F0 /* TabBar.storyboard in Resources */,
@@ -958,6 +967,7 @@
 				F74D2070283163160099B5F0 /* Roboto-ThinItalic.ttf in Resources */,
 				F74D2076283163160099B5F0 /* Roboto-Bold.ttf in Resources */,
 				F74D205E283163160099B5F0 /* HomeTabNewMission2.png in Resources */,
+				3AAEE3E128C3CDD800B28582 /* AfterRoom.xib in Resources */,
 				F74D2077283163160099B5F0 /* Roboto-Thin.ttf in Resources */,
 				F75E9FA927E9470200000DCD /* LaunchScreen.storyboard in Resources */,
 				F74D20332831630C0099B5F0 /* SocialLogIn.storyboard in Resources */,
@@ -967,6 +977,7 @@
 				F74D2062283163160099B5F0 /* HomeTabNewMission1.png in Resources */,
 				F74D2061283163160099B5F0 /* HomeTabNewMission0.png in Resources */,
 				F74D2074283163160099B5F0 /* LICENSE.txt in Resources */,
+				3AAEE3DF28C3CDCF00B28582 /* BeforeRoom.xib in Resources */,
 				F74D2071283163160099B5F0 /* Roboto-BoldItalic.ttf in Resources */,
 				3A27052828B7979A00BBDA1D /* CurrentRoomListCell.xib in Resources */,
 				F74D205D283163160099B5F0 /* HomeTabNewMission3.png in Resources */,
@@ -1110,6 +1121,7 @@
 				F74D202F2831630C0099B5F0 /* AppIntroViewController.swift in Sources */,
 				0A5FFF3D283BBDDD004D86E0 /* RunningRecordCell.swift in Sources */,
 				F74D1FC5283163030099B5F0 /* AuthDTO.swift in Sources */,
+				3AAEE3DD28C3C85400B28582 /* RoomController.swift in Sources */,
 				F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */,
 				F74D20262831630C0099B5F0 /* TabBarViewController.swift in Sources */,
 				F75E9FA427E9470100000DCD /* MoyeoRun.xcdatamodeld in Sources */,
