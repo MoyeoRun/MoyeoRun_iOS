@@ -20,6 +20,9 @@
 		411A626B28BFA70A00E585E3 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411A626A28BFA70A00E585E3 /* SplashViewController.swift */; };
 		411A626D28BFA71700E585E3 /* SplashStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 411A626C28BFA71700E585E3 /* SplashStoryboard.storyboard */; };
 		416E8FEC28B6370500BBA05E /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E8FEB28B6370500BBA05E /* Interceptor.swift */; };
+		4185723428C3AFAA004203D5 /* GenderSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4185723328C3AFAA004203D5 /* GenderSelectorView.swift */; };
+		4185723628C3B247004203D5 /* GenderSelectorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4185723528C3B247004203D5 /* GenderSelectorView.xib */; };
+		41DBF54E28C3DA6700566346 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DBF54D28C3DA6700566346 /* XibView.swift */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F74D1F9E2831620A0099B5F0 /* Configuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1F9B2831620A0099B5F0 /* Configuation.swift */; };
 		F74D1FC1283163030099B5F0 /* SignInDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FA6283163030099B5F0 /* SignInDTO.swift */; };
@@ -129,6 +132,9 @@
 		416E8FEE28B6391900BBA05E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = MoyeoRun/Configuration/Release/Release.xcconfig; sourceTree = SOURCE_ROOT; };
 		4185722B28BFC6E1004203D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "MoyeoRun/Configuration/Debug/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		4185722E28BFC81E004203D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4185723328C3AFAA004203D5 /* GenderSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSelectorView.swift; sourceTree = "<group>"; };
+		4185723528C3B247004203D5 /* GenderSelectorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenderSelectorView.xib; sourceTree = "<group>"; };
+		41DBF54D28C3DA6700566346 /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.debug.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF6235AE0ADD0047158FA4F /* Pods-MoyeoRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.release.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.release.xcconfig"; sourceTree = "<group>"; };
@@ -295,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				411A626528BFA28C00E585E3 /* ControllerInstantiatable.swift */,
+				41DBF54D28C3DA6700566346 /* XibView.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -415,6 +422,7 @@
 		4185723028BFCDD4004203D5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4185723228C3AF95004203D5 /* ProfileInputView */,
 				F74D20142831630C0099B5F0 /* SignUpStoryboard.storyboard */,
 			);
 			path = View;
@@ -426,6 +434,15 @@
 				F74D200E2831630C0099B5F0 /* SignUpViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		4185723228C3AF95004203D5 /* ProfileInputView */ = {
+			isa = PBXGroup;
+			children = (
+				4185723328C3AFAA004203D5 /* GenderSelectorView.swift */,
+				4185723528C3B247004203D5 /* GenderSelectorView.xib */,
+			);
+			path = ProfileInputView;
 			sourceTree = "<group>";
 		};
 		AA20DD0103093E9F74BF396A /* Pods */ = {
@@ -1078,6 +1095,7 @@
 				F74D2076283163160099B5F0 /* Roboto-Bold.ttf in Resources */,
 				F74D205E283163160099B5F0 /* HomeTabNewMission2.png in Resources */,
 				F74D2077283163160099B5F0 /* Roboto-Thin.ttf in Resources */,
+				4185723628C3B247004203D5 /* GenderSelectorView.xib in Resources */,
 				411A626D28BFA71700E585E3 /* SplashStoryboard.storyboard in Resources */,
 				F75E9FA927E9470200000DCD /* LaunchScreen.storyboard in Resources */,
 				F74D20332831630C0099B5F0 /* SignInStoryboard.storyboard in Resources */,
@@ -1197,6 +1215,7 @@
 				F74D20302831630C0099B5F0 /* SignUpCompleteViewController.swift in Sources */,
 				F74D1FD1283163030099B5F0 /* Keychain.swift in Sources */,
 				F74D1FC8283163030099B5F0 /* AuthRepository.swift in Sources */,
+				41DBF54E28C3DA6700566346 /* XibView.swift in Sources */,
 				F74D1FCA283163030099B5F0 /* UserDTO.swift in Sources */,
 				F75E9F9E27E9470100000DCD /* ViewController.swift in Sources */,
 				F74D1FC1283163030099B5F0 /* SignInDTO.swift in Sources */,
@@ -1223,6 +1242,7 @@
 				F74D202F2831630C0099B5F0 /* AppIntroViewController.swift in Sources */,
 				0A5FFF3D283BBDDD004D86E0 /* RunningRecordCell.swift in Sources */,
 				F74D1FC5283163030099B5F0 /* AuthDTO.swift in Sources */,
+				4185723428C3AFAA004203D5 /* GenderSelectorView.swift in Sources */,
 				F74D20172831630C0099B5F0 /* HomeTabViewController.swift in Sources */,
 				F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */,
 				F74D20262831630C0099B5F0 /* MainTabBarController.swift in Sources */,

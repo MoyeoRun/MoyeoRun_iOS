@@ -27,6 +27,7 @@ class SplashViewController: UIViewController {
     }
 
     private func commonInit() {
+        AuthLocalDataSource().clearToken()
         let result = repository.getAccessToken()
         let nextViewController: UIViewController
 

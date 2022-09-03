@@ -13,10 +13,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var cameraSymbolButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var nickNameTextField: UITextField!
-    @IBOutlet weak var genderMaleButton: UIButton!
-    @IBOutlet weak var genderFemaleButton: UIButton!
-
-    var selectedGender: Int = 0
+    @IBOutlet weak var genderSelectorView: GenderSelectorView!
 
     private let credential: SignInRequest
     private let repository: AuthRepositable
@@ -85,8 +82,7 @@ class SignUpViewController: UIViewController {
         guard
             let nickname = nickNameTextField.text,
             let name = nameTextField.text,
-            selectedGender != 0,
-            let gender: GenderDTO = selectedGender == 1 ? .male : .female
+            let gender = genderSelectorView.gender
             // TODO: Image mulipartData, API 구현 완료되는 대로 작업 시작
         else {
             return
@@ -102,62 +98,6 @@ class SignUpViewController: UIViewController {
         )
 
         signUp(with: request)
-    }
-
-    @IBAction func onTapGenderMaleButton(_ sender: Any) {
-        switch selectedGender {
-        case 0: selectedGender = 1
-        case 1: selectedGender = 0
-        case 2: selectedGender = 1
-        default: break
-        }
-        setGenderButtonColor()
-    }
-
-    @IBAction func onTapGenderFemaleButton(_ sender: Any) {
-        switch selectedGender {
-        case 0: selectedGender = 2
-        case 1: selectedGender = 2
-        case 2: selectedGender = 0
-        default: break
-        }
-        setGenderButtonColor()
-    }
-
-    func setGenderButtonColor() {
-        switch selectedGender {
-        case 0: unsetBothButtonColor()
-        case 1: setMaleButtonColor()
-            unsetFemaleButtonColor()
-        case 2: setFemaleButtonColor()
-            unsetMaleButtonColor()
-        default: break
-        }
-
-        func setMaleButtonColor() {
-            genderMaleButton.tintColor = .white
-            genderMaleButton.backgroundColor = UIColor(named: "RunBlue")
-            genderMaleButton.borderColor = UIColor(named: "RunBlue")
-        }
-        func setFemaleButtonColor() {
-            genderFemaleButton.tintColor = .white
-            genderFemaleButton.backgroundColor = UIColor(named: "RunBlue")
-            genderFemaleButton.borderColor = UIColor(named: "RunBlue")
-        }
-        func unsetBothButtonColor() {
-            unsetMaleButtonColor()
-            unsetFemaleButtonColor()
-        }
-        func unsetMaleButtonColor() {
-            genderMaleButton.tintColor = UIColor(named: "BorderColor1")
-            genderMaleButton.backgroundColor = .white
-            genderMaleButton.borderColor = UIColor(named: "BorderColor1")
-        }
-        func unsetFemaleButtonColor() {
-            genderFemaleButton.tintColor = UIColor(named: "BorderColor1")
-            genderFemaleButton.backgroundColor = .white
-            genderFemaleButton.borderColor = UIColor(named: "BorderColor1")
-        }
     }
 
     private func signUp(with request: SignUpRequest) {

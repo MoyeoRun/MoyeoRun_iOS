@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "Male.png",
+      "filename" : "ic_male_selected.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Male2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Male3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
@@ -19,8 +17,5 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "template-rendering-intent" : "template"
   }
 }

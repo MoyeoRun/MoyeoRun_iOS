@@ -95,78 +95,37 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5oZ-Lf-fqd">
-                                <rect key="frame" x="24" y="488" width="366" height="81"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5oZ-Lf-fqd" userLabel="Gender View">
+                                <rect key="frame" x="24" y="488" width="366" height="75"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="성별" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHW-26-qnu">
-                                        <rect key="frame" x="0.0" y="0.0" width="28" height="25"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="Kl2-ab-axE"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHW-26-qnu" userLabel="Gender Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="28" height="19"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="성별">
+                                                <attributes>
+                                                    <font key="NSFont" size="16" name="AppleSDGothicNeo-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="19" maximumLineHeight="19" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="aU3-U9-vA9">
-                                        <rect key="frame" x="0.0" y="33" width="366" height="48"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4u4-so-tnz">
-                                                <rect key="frame" x="0.0" y="0.0" width="178.5" height="48"/>
-                                                <color key="tintColor" name="BorderColor1"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="Male" title="">
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="ultraLight"/>
-                                                </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" name="BorderColor1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="4"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="onTapGenderMaleButton:" destination="W9t-2w-LOa" eventType="touchUpInside" id="VWL-Hl-b3r"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZC7-H6-ihz">
-                                                <rect key="frame" x="187.5" y="0.0" width="178.5" height="48"/>
-                                                <color key="tintColor" name="BorderColor1"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="Female" title=""/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" name="BorderColor1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="4"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="onTapGenderFemaleButton:" destination="W9t-2w-LOa" eventType="touchUpInside" id="qde-ey-jSZ"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkl-AV-rsZ" customClass="GenderSelectorView" customModule="MoyeoRun" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="27" width="366" height="48"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="4u4-so-tnz" firstAttribute="width" secondItem="ZC7-H6-ihz" secondAttribute="width" id="BaC-re-NTj"/>
-                                            <constraint firstAttribute="height" constant="48" id="VF8-Z4-V6b"/>
+                                            <constraint firstAttribute="height" constant="48" id="IqU-sE-iPn"/>
                                         </constraints>
-                                    </stackView>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="aU3-U9-vA9" secondAttribute="bottom" id="9CA-sj-phJ"/>
-                                    <constraint firstItem="aU3-U9-vA9" firstAttribute="top" secondItem="sHW-26-qnu" secondAttribute="bottom" constant="8" id="DQl-XX-r54"/>
                                     <constraint firstItem="sHW-26-qnu" firstAttribute="top" secondItem="5oZ-Lf-fqd" secondAttribute="top" id="LPC-A0-N68"/>
-                                    <constraint firstAttribute="trailing" secondItem="aU3-U9-vA9" secondAttribute="trailing" id="TA2-FF-I1S"/>
+                                    <constraint firstAttribute="trailing" secondItem="qkl-AV-rsZ" secondAttribute="trailing" id="WVB-tO-gD3"/>
+                                    <constraint firstItem="qkl-AV-rsZ" firstAttribute="leading" secondItem="5oZ-Lf-fqd" secondAttribute="leading" id="btq-wa-sbX"/>
                                     <constraint firstItem="sHW-26-qnu" firstAttribute="leading" secondItem="5oZ-Lf-fqd" secondAttribute="leading" id="gWf-Aj-AfW"/>
-                                    <constraint firstItem="aU3-U9-vA9" firstAttribute="leading" secondItem="5oZ-Lf-fqd" secondAttribute="leading" id="k72-LF-DH8"/>
+                                    <constraint firstItem="qkl-AV-rsZ" firstAttribute="top" secondItem="sHW-26-qnu" secondAttribute="bottom" constant="8" id="o0J-Hw-Bx5"/>
+                                    <constraint firstAttribute="bottom" secondItem="qkl-AV-rsZ" secondAttribute="bottom" id="vhI-lj-KQo"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ch2-Eh-WvJ">
@@ -242,8 +201,7 @@
                     </view>
                     <connections>
                         <outlet property="cameraSymbolButton" destination="XQI-d8-jEW" id="TmC-sM-qkE"/>
-                        <outlet property="genderFemaleButton" destination="ZC7-H6-ihz" id="NKX-Fe-Zd9"/>
-                        <outlet property="genderMaleButton" destination="4u4-so-tnz" id="bNb-6A-eWZ"/>
+                        <outlet property="genderSelectorView" destination="qkl-AV-rsZ" id="fQi-4a-1Dr"/>
                         <outlet property="nameTextField" destination="5TW-Dd-GYC" id="UZO-hB-avC"/>
                         <outlet property="navigationBar" destination="wua-YD-HGl" id="PpF-am-rbO"/>
                         <outlet property="nickNameTextField" destination="wij-4f-u8s" id="gel-8u-Wif"/>
@@ -256,14 +214,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Female" width="20.5" height="20"/>
-        <image name="Male" width="12.5" height="20"/>
         <image name="camera.circle.fill" catalog="system" width="128" height="121"/>
         <image name="people1" width="491" height="428"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
-        <namedColor name="BorderColor1">
-            <color red="0.83099997043609619" green="0.83099997043609619" blue="0.83099997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="buttonColor">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
