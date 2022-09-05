@@ -384,17 +384,6 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
-		411A626828BFA3FE00E585E3 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				411A626928BFA41E00E585E3 /* Splash */,
-				411A627128BFAA9900E585E3 /* SignIn */,
-				4185722F28BFCDA3004203D5 /* SignUp */,
-				411A627028BFAA8A00E585E3 /* Main */,
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
 		411A626928BFA41E00E585E3 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
@@ -689,6 +678,10 @@
 		F74D1FD32831630C0099B5F0 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				411A626928BFA41E00E585E3 /* Splash */,
+				411A627128BFAA9900E585E3 /* SignIn */,
+				4185722F28BFCDA3004203D5 /* SignUp */,
+				411A627028BFAA8A00E585E3 /* Main */,
 				F74D20082831630C0099B5F0 /* LogIn */,
 				F74D1FEF2831630C0099B5F0 /* TabBar */,
 				F74D1FD82831630C0099B5F0 /* HomeTab */,
@@ -1046,7 +1039,6 @@
 			children = (
 				3AADB25527EF543800AFDE01 /* LifeCycles */,
 				F74D1FA3283163030099B5F0 /* Data */,
-				411A626828BFA3FE00E585E3 /* Presentation */,
 				F74D1FD32831630C0099B5F0 /* Scenes */,
 				F75E9F9D27E9470100000DCD /* ViewController.swift */,
 				F75E9F9F27E9470100000DCD /* Main.storyboard */,

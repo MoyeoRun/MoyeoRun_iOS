@@ -39,7 +39,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="159" height="48"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="ic_female_normal"/>
+                            <state key="normal" image="female.normal"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                     <real key="value" value="4"/>
@@ -59,7 +59,7 @@
                             <rect key="frame" x="168" y="0.0" width="159" height="48"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title="" image="ic_male_normal"/>
+                            <state key="normal" title="" image="male.normal"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                     <real key="value" value="4"/>
@@ -94,8 +94,8 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_female_normal" width="13" height="20"/>
-        <image name="ic_male_normal" width="21" height="20"/>
+        <image name="female.normal" width="13" height="20"/>
+        <image name="male.normal" width="21" height="20"/>
         <namedColor name="BorderColor1">
             <color red="0.83137254901960789" green="0.83137254901960789" blue="0.83137254901960789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

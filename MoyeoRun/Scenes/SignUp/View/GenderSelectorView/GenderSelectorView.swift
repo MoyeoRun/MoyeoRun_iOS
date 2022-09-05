@@ -34,16 +34,16 @@ enum GenderSelectorState {
         case .selected:
             switch gender {
             case .male:
-                return UIImage(named: "ic_male_selected")
+                return UIImage(named: "male.selected")
             case .female:
-                return UIImage(named: "ic_female_selected")
+                return UIImage(named: "female.selected")
             }
         case .unselected:
             switch gender {
             case .male:
-                return UIImage(named: "ic_male_normal")
+                return UIImage(named: "male.normal")
             case .female:
-                return UIImage(named: "ic_female_normal")
+                return UIImage(named: "female.normal")
             }
         }
     }

@@ -44,7 +44,7 @@ enum NicknameInputState {
         case .normal, .invalid:
             return nil
         case .valid:
-            return UIImage(named: "ic_check")
+            return UIImage(named: "feedback.check")
         }
     }
 }
