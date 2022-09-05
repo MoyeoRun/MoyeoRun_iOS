@@ -27,22 +27,23 @@ class SplashViewController: UIViewController {
     }
 
     private func commonInit() {
-        let result = repository.getAccessToken()
-        let nextViewController: UIViewController
+        repository.refreshToken { [weak self] result in
+            let nextViewController: UIViewController
 
-        switch result {
-        case .success:
-            let viewController: MainTabBarController = .instantiate(container: .tabBar)
-            nextViewController = viewController
-        case .failure:
-            let viewController: SignInViewController = .instantiate { coder in
-                SignInViewController(coder: coder, repository: AuthRepository())
+            switch result {
+            case .success:
+                let viewController: MainTabBarController = .instantiate(container: .tabBar)
+                nextViewController = viewController
+            case .failure:
+                let viewController: SignInViewController = .instantiate { coder in
+                    SignInViewController(coder: coder, repository: AuthRepository())
+                }
+                nextViewController = viewController
             }
-            nextViewController = viewController
-        }
 
-        DispatchQueue.main.async {
-            self.present(nextViewController, animated: true)
+            DispatchQueue.main.async {
+                self?.present(nextViewController, animated: true)
+            }
         }
     }
 }
