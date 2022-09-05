@@ -795,7 +795,6 @@
 			isa = PBXGroup;
 			children = (
 				F74D1FF02831630C0099B5F0 /* ViewControllers */,
-				F74D1FF32831630C0099B5F0 /* Views */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -806,21 +805,6 @@
 				F74D1FF12831630C0099B5F0 /* Extensions.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		F74D1FF32831630C0099B5F0 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				F74D1FF42831630C0099B5F0 /* InterfaceBuilders */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		F74D1FF42831630C0099B5F0 /* InterfaceBuilders */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = InterfaceBuilders;
 			sourceTree = "<group>";
 		};
 		F74D1FF62831630C0099B5F0 /* MyPage */ = {

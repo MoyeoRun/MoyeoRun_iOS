@@ -49,9 +49,15 @@ enum GenderSelectorState {
     }
 }
 
+@objc protocol GenderSelectorDelegate: AnyObject {
+    func genderSelectorViewGenderChanged(_ genderSelectorView: GenderSelectorView)
+}
+
 class GenderSelectorView: XibView {
     @IBOutlet weak var maleButton: UIButton!
     @IBOutlet weak var femaleButton: UIButton!
+
+    @IBOutlet weak var delegate: GenderSelectorDelegate?
 
     var gender: GenderDTO? {
         didSet {
@@ -81,6 +87,8 @@ class GenderSelectorView: XibView {
             updateButton(.male, for: .unselected)
             updateButton(.female, for: .selected)
         }
+
+        delegate?.genderSelectorViewGenderChanged(self)
     }
 
     private func updateButton(_ gender: GenderDTO, for state: GenderSelectorState) {

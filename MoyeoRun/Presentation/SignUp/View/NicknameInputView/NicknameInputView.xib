@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -35,6 +34,7 @@
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pnG-Vq-qZr" userLabel="Nickname Text Field" customClass="NicknameTextField" customModule="MoyeoRun" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="27" width="327" height="48"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="Eav-Jx-7Gn"/>
                     </constraints>
@@ -89,7 +89,6 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="pnG-Vq-qZr" firstAttribute="top" secondItem="xaF-4o-fxk" secondAttribute="bottom" constant="8" id="8T6-Ts-fE9"/>
                 <constraint firstAttribute="bottom" secondItem="pnG-Vq-qZr" secondAttribute="bottom" id="L69-yX-lc7"/>
@@ -119,8 +118,5 @@
         <namedColor name="Label Color">
             <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

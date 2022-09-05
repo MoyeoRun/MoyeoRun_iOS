@@ -2,7 +2,7 @@
 //  SignUpViewController.swift
 //  MoyeoRun
 //
-//  Created by 김상현 on 2022/05/07.
+//  Created by Jeongho Moon on 2022/08/31.
 //
 
 import UIKit
@@ -13,6 +13,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var cameraSymbolButton: UIButton!
     @IBOutlet weak var nicknameInputView: NicknameInputView!
     @IBOutlet weak var genderSelectorView: GenderSelectorView!
+    @IBOutlet weak var nextButton: UIButton!
 
     private let credential: SignInRequest
     private let authRepository: AuthRepositable
@@ -63,11 +64,10 @@ class SignUpViewController: UIViewController {
         self.dismiss(animated: false)
     }
 
-    @IBAction func onTapNextButton(_ sender: Any) {
+    @IBAction func signUpNext(_ sender: UIButton) {
         guard
             // TODO: Image mulipartData, API 구현 완료되는 대로 작업 시작
             let nickname = nicknameInputView.nickname,
-            nicknameInputView.state == .valid,
             let name = nicknameInputView.nickname,
             let gender = genderSelectorView.gender
         else {
@@ -103,16 +103,30 @@ class SignUpViewController: UIViewController {
             }
         }
     }
+
+    private func checkValidation() {
+        guard
+            nicknameInputView.state == .valid,
+            genderSelectorView.gender != nil
+        else {
+            nextButton.isEnabled = false
+            nextButton.backgroundColor = UIColor(named: "Disabled Color")
+            return
+        }
+
+        nextButton.isEnabled = true
+        nextButton.backgroundColor = UIColor(named: "RunBlue")
+    }
 }
 
 extension SignUpViewController: NicknameInputViewDelegate {
     func nicknameInputViewEditingChanged(_ nicknameInputView: NicknameInputView) {
         guard let nickname = nicknameInputView.nickname, !nickname.isEmpty else {
-            return nicknameInputView.state = .normal
+            return updateNicknameInputState(.normal)
         }
 
         let request = DuplicateRequest(nickName: nickname)
-        userRepository.checkNicknameDuplication(request: request) { result in
+        userRepository.checkNicknameDuplication(request: request) { [weak self] result in
             let state: NicknameInputState
 
             switch result {
@@ -122,7 +136,18 @@ extension SignUpViewController: NicknameInputViewDelegate {
                 state = .invalid
             }
 
-            nicknameInputView.state = state
+            self?.updateNicknameInputState(state)
         }
+    }
+
+    private func updateNicknameInputState(_ state: NicknameInputState) {
+        nicknameInputView.state = state
+        checkValidation()
+    }
+}
+
+extension SignUpViewController: GenderSelectorDelegate {
+    func genderSelectorViewGenderChanged(_ genderSelectorView: GenderSelectorView) {
+        checkValidation()
     }
 }

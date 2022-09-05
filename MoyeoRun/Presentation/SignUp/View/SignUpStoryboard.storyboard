@@ -68,10 +68,13 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="IqU-sE-iPn"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="W9t-2w-LOa" id="mRV-8L-oL3"/>
+                                </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ch2-Eh-WvJ">
-                                <rect key="frame" x="24" y="796" width="366" height="56"/>
-                                <color key="backgroundColor" name="buttonColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ch2-Eh-WvJ" userLabel="Next Button">
+                                <rect key="frame" x="24" y="782" width="366" height="56"/>
+                                <color key="backgroundColor" name="Disabled Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="s7v-y5-ugz"/>
                                 </constraints>
@@ -86,7 +89,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="onTapNextButton:" destination="W9t-2w-LOa" eventType="touchUpInside" id="Ol4-2p-gLk"/>
+                                    <action selector="signUpNext:" destination="W9t-2w-LOa" eventType="touchUpInside" id="CWW-7c-0vf"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wua-YD-HGl">
@@ -122,7 +125,7 @@
                             <constraint firstItem="7um-hG-cfq" firstAttribute="trailing" secondItem="3xW-PR-sdI" secondAttribute="trailing" constant="24" id="IY9-GO-QOg"/>
                             <constraint firstItem="Qaq-h6-35t" firstAttribute="centerX" secondItem="7um-hG-cfq" secondAttribute="centerX" id="JMZ-wo-EtF"/>
                             <constraint firstItem="wua-YD-HGl" firstAttribute="top" secondItem="7um-hG-cfq" secondAttribute="top" id="Sae-8N-lak"/>
-                            <constraint firstItem="7um-hG-cfq" firstAttribute="bottom" secondItem="ch2-Eh-WvJ" secondAttribute="bottom" constant="10" id="Ujt-65-q7c"/>
+                            <constraint firstItem="7um-hG-cfq" firstAttribute="bottom" secondItem="ch2-Eh-WvJ" secondAttribute="bottom" constant="24" id="Ujt-65-q7c"/>
                             <constraint firstItem="7um-hG-cfq" firstAttribute="trailing" secondItem="wua-YD-HGl" secondAttribute="trailing" id="XcZ-Em-w8V"/>
                             <constraint firstItem="3xW-PR-sdI" firstAttribute="leading" secondItem="7um-hG-cfq" secondAttribute="leading" constant="24" id="Y1t-xI-fPP"/>
                             <constraint firstItem="ch2-Eh-WvJ" firstAttribute="leading" secondItem="7um-hG-cfq" secondAttribute="leading" constant="24" id="Ydw-Pn-S77"/>
@@ -136,6 +139,7 @@
                         <outlet property="cameraSymbolButton" destination="XQI-d8-jEW" id="TmC-sM-qkE"/>
                         <outlet property="genderSelectorView" destination="qkl-AV-rsZ" id="fQi-4a-1Dr"/>
                         <outlet property="navigationBar" destination="wua-YD-HGl" id="PpF-am-rbO"/>
+                        <outlet property="nextButton" destination="ch2-Eh-WvJ" id="agK-5Q-Pn3"/>
                         <outlet property="nicknameInputView" destination="3xW-PR-sdI" id="O9O-Pm-wGf"/>
                         <outlet property="profileImageView" destination="fuk-5I-oFD" id="blN-dk-Y20"/>
                     </connections>
@@ -149,8 +153,8 @@
         <image name="camera.circle.fill" catalog="system" width="128" height="121"/>
         <image name="people1" width="491" height="428"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
-        <namedColor name="buttonColor">
-            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Disabled Color">
+            <color red="0.7686274509803922" green="0.7686274509803922" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
