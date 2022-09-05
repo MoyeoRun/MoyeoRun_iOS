@@ -11,16 +11,17 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var cameraSymbolButton: UIButton!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var nickNameTextField: UITextField!
+    @IBOutlet weak var nicknameInputView: NicknameInputView!
     @IBOutlet weak var genderSelectorView: GenderSelectorView!
 
     private let credential: SignInRequest
-    private let repository: AuthRepositable
+    private let authRepository: AuthRepositable
+    private let userRepository: UserRepositable
 
-    init?(coder: NSCoder, credential: SignInRequest, repository: AuthRepositable) {
+    init?(coder: NSCoder, credential: SignInRequest, authRepository: AuthRepositable, userRepository: UserRepositable) {
         self.credential = credential
-        self.repository = repository
+        self.authRepository = authRepository
+        self.userRepository = userRepository
 
         super.init(coder: coder)
     }
@@ -37,22 +38,6 @@ class SignUpViewController: UIViewController {
     func setUI() {
         setProfileImageView()
         setCameraSymbolButton()
-        setNameTextFieldBorderColor()
-        setNickNameTextFieldBorderColor()
-
-        func setNameTextFieldBorderColor() {
-            nameTextField.borderStyle = .none
-            nameTextField.layer.borderWidth = 1
-            nameTextField.layer.cornerRadius = 4
-            nameTextField.layer.borderColor = UIColor(named: "BorderColor1")?.cgColor
-        }
-
-        func setNickNameTextFieldBorderColor() {
-            nickNameTextField.borderStyle = .none
-            nickNameTextField.layer.borderWidth = 1
-            nickNameTextField.layer.cornerRadius = 4
-            nickNameTextField.layer.borderColor = UIColor(named: "BorderColor1")?.cgColor
-        }
 
         func setProfileImageView() {
             self.profileImageView.layer.cornerRadius = self.profileImageView.bounds.size.width * 0.5
@@ -80,10 +65,11 @@ class SignUpViewController: UIViewController {
 
     @IBAction func onTapNextButton(_ sender: Any) {
         guard
-            let nickname = nickNameTextField.text,
-            let name = nameTextField.text,
-            let gender = genderSelectorView.gender
             // TODO: Image mulipartData, API 구현 완료되는 대로 작업 시작
+            let nickname = nicknameInputView.nickname,
+            nicknameInputView.state == .valid,
+            let name = nicknameInputView.nickname,
+            let gender = genderSelectorView.gender
         else {
             return
         }
@@ -101,7 +87,7 @@ class SignUpViewController: UIViewController {
     }
 
     private func signUp(with request: SignUpRequest) {
-        repository.signUp(request: request) { [weak self] result in
+        authRepository.signUp(request: request) { [weak self] result in
             switch result {
             case .success:
                 let storyBoard = UIStoryboard(name: "SignUpComplete", bundle: nil)
@@ -115,6 +101,28 @@ class SignUpViewController: UIViewController {
             case .failure:
                 debugPrint("Failed to sign up")
             }
+        }
+    }
+}
+
+extension SignUpViewController: NicknameInputViewDelegate {
+    func nicknameInputViewEditingChanged(_ nicknameInputView: NicknameInputView) {
+        guard let nickname = nicknameInputView.nickname, !nickname.isEmpty else {
+            return nicknameInputView.state = .normal
+        }
+
+        let request = DuplicateRequest(nickName: nickname)
+        userRepository.checkNicknameDuplication(request: request) { result in
+            let state: NicknameInputState
+
+            switch result {
+            case let .success(response):
+                state = response.isDuplicate ? .invalid : .valid
+            case .failure:
+                state = .invalid
+            }
+
+            nicknameInputView.state = state
         }
     }
 }

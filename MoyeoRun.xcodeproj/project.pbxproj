@@ -48,6 +48,11 @@
 		41DBF5F628C3E80800566346 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FB7283163030099B5F0 /* UserRepository.swift */; };
 		41DBF5F728C3E81700566346 /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20142831630C0099B5F0 /* SignUpStoryboard.storyboard */; };
 		41DBF5F828C3E82300566346 /* SignInStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20112831630C0099B5F0 /* SignInStoryboard.storyboard */; };
+		41DBF5FF28C3EF4E00566346 /* NicknameInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DBF5FE28C3EF4E00566346 /* NicknameInputView.swift */; };
+		41DBF60128C3EF5500566346 /* NicknameInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41DBF60028C3EF5500566346 /* NicknameInputView.xib */; };
+		41DBF60328C522D000566346 /* InsettedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DBF60228C522D000566346 /* InsettedTextField.swift */; };
+		41DBF60628C64D9200566346 /* Debouncable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DBF60528C64D9200566346 /* Debouncable.swift */; };
+		41DBF60828C6598100566346 /* NicknameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DBF60728C6598100566346 /* NicknameTextField.swift */; };
 		5460829649D08B2590F3491A /* Pods_MoyeoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */; };
 		F74D1F9E2831620A0099B5F0 /* Configuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1F9B2831620A0099B5F0 /* Configuation.swift */; };
 		F74D1FC1283163030099B5F0 /* SignInDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FA6283163030099B5F0 /* SignInDTO.swift */; };
@@ -156,6 +161,11 @@
 		4185723528C3B247004203D5 /* GenderSelectorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenderSelectorView.xib; sourceTree = "<group>"; };
 		41DBF54D28C3DA6700566346 /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		41DBF57828C3E2E000566346 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		41DBF5FE28C3EF4E00566346 /* NicknameInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameInputView.swift; sourceTree = "<group>"; };
+		41DBF60028C3EF5500566346 /* NicknameInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NicknameInputView.xib; sourceTree = "<group>"; };
+		41DBF60228C522D000566346 /* InsettedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsettedTextField.swift; sourceTree = "<group>"; };
+		41DBF60528C64D9200566346 /* Debouncable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncable.swift; sourceTree = "<group>"; };
+		41DBF60728C6598100566346 /* NicknameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameTextField.swift; sourceTree = "<group>"; };
 		4CCBF5585C20B63EE1C8123D /* Pods_MoyeoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyeoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.debug.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF6235AE0ADD0047158FA4F /* Pods-MoyeoRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyeoRun.release.xcconfig"; path = "Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.release.xcconfig"; sourceTree = "<group>"; };
@@ -368,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				411A626528BFA28C00E585E3 /* ControllerInstantiatable.swift */,
+				41DBF60228C522D000566346 /* InsettedTextField.swift */,
 				41DBF54D28C3DA6700566346 /* XibView.swift */,
 			);
 			path = UIKit;
@@ -489,7 +500,8 @@
 		4185723028BFCDD4004203D5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4185723228C3AF95004203D5 /* ProfileInputView */,
+				41DBF5F928C3EEB100566346 /* NicknameInputView */,
+				4185723228C3AF95004203D5 /* GenderSelectorView */,
 				F74D20142831630C0099B5F0 /* SignUpStoryboard.storyboard */,
 			);
 			path = View;
@@ -503,13 +515,31 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		4185723228C3AF95004203D5 /* ProfileInputView */ = {
+		4185723228C3AF95004203D5 /* GenderSelectorView */ = {
 			isa = PBXGroup;
 			children = (
 				4185723328C3AFAA004203D5 /* GenderSelectorView.swift */,
 				4185723528C3B247004203D5 /* GenderSelectorView.xib */,
 			);
-			path = ProfileInputView;
+			path = GenderSelectorView;
+			sourceTree = "<group>";
+		};
+		41DBF5F928C3EEB100566346 /* NicknameInputView */ = {
+			isa = PBXGroup;
+			children = (
+				41DBF60728C6598100566346 /* NicknameTextField.swift */,
+				41DBF5FE28C3EF4E00566346 /* NicknameInputView.swift */,
+				41DBF60028C3EF5500566346 /* NicknameInputView.xib */,
+			);
+			path = NicknameInputView;
+			sourceTree = "<group>";
+		};
+		41DBF60428C64D8000566346 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				41DBF60528C64D9200566346 /* Debouncable.swift */,
+			);
+			path = GCD;
 			sourceTree = "<group>";
 		};
 		AA20DD0103093E9F74BF396A /* Pods */ = {
@@ -909,6 +939,7 @@
 		F74D2038283163160099B5F0 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				41DBF60428C64D8000566346 /* GCD */,
 				411A626428BFA26700E585E3 /* UIKit */,
 				3A27051128B77C4C00BBDA1D /* Designable */,
 				F74D2039283163160099B5F0 /* MoyeoRun */,
@@ -1108,6 +1139,7 @@
 				41DBF5F828C3E82300566346 /* SignInStoryboard.storyboard in Resources */,
 				41DBF5F728C3E81700566346 /* SignUpStoryboard.storyboard in Resources */,
 				F74D206F283163160099B5F0 /* Roboto-MediumItalic.ttf in Resources */,
+				41DBF60128C3EF5500566346 /* NicknameInputView.xib in Resources */,
 				F74D20162831630C0099B5F0 /* MoyeoRunRoom.storyboard in Resources */,
 				F74D2078283163160099B5F0 /* Roboto-Black.ttf in Resources */,
 				F74D205F283163160099B5F0 /* HomeTabNowPopular2.png in Resources */,
@@ -1238,6 +1270,7 @@
 				F74D1FC7283163030099B5F0 /* AuthLocalDataSource.swift in Sources */,
 				F74D1FC6283163030099B5F0 /* AuthRemoteDataSource.swift in Sources */,
 				F74D202A2831630C0099B5F0 /* SearchTabViewController.swift in Sources */,
+				41DBF60628C64D9200566346 /* Debouncable.swift in Sources */,
 				F74D1FC4283163030099B5F0 /* SignUpDTO.swift in Sources */,
 				F74D1FCB283163030099B5F0 /* UserRemoteDataSource.swift in Sources */,
 				F74D1FD2283163030099B5F0 /* KeychainStore.swift in Sources */,
@@ -1271,6 +1304,7 @@
 				0AA674E528657EB7006A7E72 /* CalendarViewController.swift in Sources */,
 				F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */,
 				F74D20212831630C0099B5F0 /* PhotoCell.swift in Sources */,
+				41DBF60328C522D000566346 /* InsettedTextField.swift in Sources */,
 				F74D20222831630C0099B5F0 /* PopupViewController.swift in Sources */,
 				3A0F803128BD0A230071A621 /* StartTimePopUpViewController.swift in Sources */,
 				3A27051328B77CD000BBDA1D /* UIView+.swift in Sources */,
@@ -1279,12 +1313,14 @@
 				3A27051B28B7920500BBDA1D /* HomeViewController.swift in Sources */,
 				F74D20202831630C0099B5F0 /* SelectPhotoController.swift in Sources */,
 				4185723428C3AFAA004203D5 /* GenderSelectorView.swift in Sources */,
+				41DBF60828C6598100566346 /* NicknameTextField.swift in Sources */,
 				411A626328BF938700E585E3 /* Encodable+.swift in Sources */,
 				3A27051928B7825100BBDA1D /* CurrentRoomListDTO.swift in Sources */,
 				3A27051F28B7976800BBDA1D /* HomeTopCell.swift in Sources */,
 				F74D201F2831630C0099B5F0 /* MakeRoomController.swift in Sources */,
 				F74D1FC9283163030099B5F0 /* DuplicateDTO.swift in Sources */,
 				411A626B28BFA70A00E585E3 /* SplashViewController.swift in Sources */,
+				41DBF5FF28C3EF4E00566346 /* NicknameInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

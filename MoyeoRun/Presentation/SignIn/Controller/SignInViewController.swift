@@ -74,7 +74,12 @@ class SignInViewController: UIViewController {
                 nextViewController = viewController
             case .failure:
                 let viewController: SignUpViewController = .instantiate { coder in
-                    SignUpViewController(coder: coder, credential: request, repository: AuthRepository())
+                    SignUpViewController(
+                        coder: coder,
+                        credential: request,
+                        authRepository: AuthRepository(),
+                        userRepository: UserRepository()
+                    )
                 }
                 nextViewController = viewController
             }

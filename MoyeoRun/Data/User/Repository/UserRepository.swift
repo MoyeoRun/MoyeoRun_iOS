@@ -21,10 +21,10 @@ protocol UserRepositable: AnyObject {
     )
 }
 
-final class UserRepository {
+final class UserRepository: UserRepositable {
     let remoteDataSource: UserRemoteDataSourceable
 
-    init(remoteDataSource: UserRemoteDataSource = .init()) {
+    init(remoteDataSource: UserRemoteDataSourceable = UserRemoteDataSource()) {
         self.remoteDataSource = remoteDataSource
     }
 
