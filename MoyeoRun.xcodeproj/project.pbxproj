@@ -31,7 +31,7 @@
 		411A626328BF938700E585E3 /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411A626228BF938700E585E3 /* Encodable+.swift */; };
 		411A626628BFA28C00E585E3 /* ControllerInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411A626528BFA28C00E585E3 /* ControllerInstantiatable.swift */; };
 		411A626B28BFA70A00E585E3 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411A626A28BFA70A00E585E3 /* SplashViewController.swift */; };
-		411A626D28BFA71700E585E3 /* SplashStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 411A626C28BFA71700E585E3 /* SplashStoryboard.storyboard */; };
+		411A626D28BFA71700E585E3 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 411A626C28BFA71700E585E3 /* Splash.storyboard */; };
 		416E8FEC28B6370500BBA05E /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E8FEB28B6370500BBA05E /* Interceptor.swift */; };
 		4185723428C3AFAA004203D5 /* GenderSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4185723328C3AFAA004203D5 /* GenderSelectorView.swift */; };
 		4185723628C3B247004203D5 /* GenderSelectorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4185723528C3B247004203D5 /* GenderSelectorView.xib */; };
@@ -46,8 +46,8 @@
 		41DBF5F428C3E7EA00566346 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FF22831630C0099B5F0 /* MainTabBarController.swift */; };
 		41DBF5F528C3E7FA00566346 /* MoyeoRun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F75E9FA227E9470100000DCD /* MoyeoRun.xcdatamodeld */; };
 		41DBF5F628C3E80800566346 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FB7283163030099B5F0 /* UserRepository.swift */; };
-		41DBF5F728C3E81700566346 /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20142831630C0099B5F0 /* SignUpStoryboard.storyboard */; };
-		41DBF5F828C3E82300566346 /* SignInStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20112831630C0099B5F0 /* SignInStoryboard.storyboard */; };
+		41DBF5F728C3E81700566346 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20142831630C0099B5F0 /* SignUp.storyboard */; };
+		41DBF5F828C3E82300566346 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D20112831630C0099B5F0 /* SignIn.storyboard */; };
 		41DBF5FF28C3EF4E00566346 /* NicknameInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DBF5FE28C3EF4E00566346 /* NicknameInputView.swift */; };
 		41DBF60128C3EF5500566346 /* NicknameInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41DBF60028C3EF5500566346 /* NicknameInputView.xib */; };
 		41DBF60328C522D000566346 /* InsettedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DBF60228C522D000566346 /* InsettedTextField.swift */; };
@@ -78,7 +78,7 @@
 		F74D20232831630C0099B5F0 /* SelectPhoto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D1FED2831630C0099B5F0 /* SelectPhoto.storyboard */; };
 		F74D20242831630C0099B5F0 /* MakeRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D1FEE2831630C0099B5F0 /* MakeRoom.storyboard */; };
 		F74D20252831630C0099B5F0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FF12831630C0099B5F0 /* Extensions.swift */; };
-		F74D20272831630C0099B5F0 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D1FF52831630C0099B5F0 /* MainStoryboard.storyboard */; };
+		F74D20272831630C0099B5F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D1FF52831630C0099B5F0 /* Main.storyboard */; };
 		F74D20282831630C0099B5F0 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FF82831630C0099B5F0 /* MyPageViewController.swift */; };
 		F74D20292831630C0099B5F0 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D1FFB2831630C0099B5F0 /* MyPage.storyboard */; };
 		F74D202A2831630C0099B5F0 /* SearchTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FFE2831630C0099B5F0 /* SearchTabViewController.swift */; };
@@ -151,7 +151,7 @@
 		411A626228BF938700E585E3 /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
 		411A626528BFA28C00E585E3 /* ControllerInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerInstantiatable.swift; sourceTree = "<group>"; };
 		411A626A28BFA70A00E585E3 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		411A626C28BFA71700E585E3 /* SplashStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashStoryboard.storyboard; sourceTree = "<group>"; };
+		411A626C28BFA71700E585E3 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		416E8FEB28B6370500BBA05E /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
 		416E8FED28B6391900BBA05E /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = MoyeoRun/Configuration/Debug/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
 		416E8FEE28B6391900BBA05E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = MoyeoRun/Configuration/Release/Release.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -198,7 +198,7 @@
 		F74D1FEE2831630C0099B5F0 /* MakeRoom.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MakeRoom.storyboard; sourceTree = "<group>"; };
 		F74D1FF12831630C0099B5F0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F74D1FF22831630C0099B5F0 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		F74D1FF52831630C0099B5F0 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		F74D1FF52831630C0099B5F0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F74D1FF82831630C0099B5F0 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		F74D1FFB2831630C0099B5F0 /* MyPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		F74D1FFE2831630C0099B5F0 /* SearchTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTabViewController.swift; sourceTree = "<group>"; };
@@ -208,10 +208,10 @@
 		F74D200C2831630C0099B5F0 /* SignUpCompleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpCompleteViewController.swift; sourceTree = "<group>"; };
 		F74D200D2831630C0099B5F0 /* ProfileImageMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageMenuViewController.swift; sourceTree = "<group>"; };
 		F74D200E2831630C0099B5F0 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		F74D20112831630C0099B5F0 /* SignInStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignInStoryboard.storyboard; sourceTree = "<group>"; };
+		F74D20112831630C0099B5F0 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		F74D20122831630C0099B5F0 /* ProfileImageMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileImageMenu.storyboard; sourceTree = "<group>"; };
 		F74D20132831630C0099B5F0 /* SignUpComplete.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUpComplete.storyboard; sourceTree = "<group>"; };
-		F74D20142831630C0099B5F0 /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUpStoryboard.storyboard; sourceTree = "<group>"; };
+		F74D20142831630C0099B5F0 /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		F74D20152831630C0099B5F0 /* AppIntro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AppIntro.storyboard; sourceTree = "<group>"; };
 		F74D203D283163160099B5F0 /* HomeTabNewMission3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNewMission3.png; sourceTree = "<group>"; };
 		F74D203E283163160099B5F0 /* HomeTabNewMission2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabNewMission2.png; sourceTree = "<group>"; };
@@ -396,7 +396,7 @@
 		411A626E28BFAA6F00E585E3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				411A626C28BFA71700E585E3 /* SplashStoryboard.storyboard */,
+				411A626C28BFA71700E585E3 /* Splash.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -430,7 +430,7 @@
 		411A627228BFAAB400E585E3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F74D20112831630C0099B5F0 /* SignInStoryboard.storyboard */,
+				F74D20112831630C0099B5F0 /* SignIn.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -454,7 +454,7 @@
 		411A627528BFAADF00E585E3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F74D1FF52831630C0099B5F0 /* MainStoryboard.storyboard */,
+				F74D1FF52831630C0099B5F0 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -491,7 +491,7 @@
 			children = (
 				41DBF5F928C3EEB100566346 /* NicknameInputView */,
 				4185723228C3AF95004203D5 /* GenderSelectorView */,
-				F74D20142831630C0099B5F0 /* SignUpStoryboard.storyboard */,
+				F74D20142831630C0099B5F0 /* SignUp.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1112,14 +1112,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41DBF5F828C3E82300566346 /* SignInStoryboard.storyboard in Resources */,
-				41DBF5F728C3E81700566346 /* SignUpStoryboard.storyboard in Resources */,
+				41DBF5F828C3E82300566346 /* SignIn.storyboard in Resources */,
+				41DBF5F728C3E81700566346 /* SignUp.storyboard in Resources */,
 				F74D206F283163160099B5F0 /* Roboto-MediumItalic.ttf in Resources */,
 				41DBF60128C3EF5500566346 /* NicknameInputView.xib in Resources */,
 				F74D20162831630C0099B5F0 /* MoyeoRunRoom.storyboard in Resources */,
 				F74D2078283163160099B5F0 /* Roboto-Black.ttf in Resources */,
 				F74D205F283163160099B5F0 /* HomeTabNowPopular2.png in Resources */,
-				F74D20272831630C0099B5F0 /* MainStoryboard.storyboard in Resources */,
+				F74D20272831630C0099B5F0 /* Main.storyboard in Resources */,
 				F74D20242831630C0099B5F0 /* MakeRoom.storyboard in Resources */,
 				F74D2064283163160099B5F0 /* HomeTabLastRecord0.png in Resources */,
 				F74D2060283163160099B5F0 /* HomeTabNowPopular0.png in Resources */,
@@ -1130,7 +1130,7 @@
 				F74D205E283163160099B5F0 /* HomeTabNewMission2.png in Resources */,
 				F74D2077283163160099B5F0 /* Roboto-Thin.ttf in Resources */,
 				4185723628C3B247004203D5 /* GenderSelectorView.xib in Resources */,
-				411A626D28BFA71700E585E3 /* SplashStoryboard.storyboard in Resources */,
+				411A626D28BFA71700E585E3 /* Splash.storyboard in Resources */,
 				F75E9FA927E9470200000DCD /* LaunchScreen.storyboard in Resources */,
 				3A27051028B7761800BBDA1D /* Room.xib in Resources */,
 				F74D206E283163160099B5F0 /* Roboto-Regular.ttf in Resources */,

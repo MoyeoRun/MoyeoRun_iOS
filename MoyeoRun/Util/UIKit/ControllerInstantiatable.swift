@@ -28,11 +28,7 @@ extension UIViewController: ControllerInstantiatable {
     ) -> ViewController where ViewController: UIViewController {
         let identifier = String(describing: ViewController.self)
         let controller = (container?.rawValue ?? "View") + "Controller"
-        let name = identifier.replacingOccurrences(
-            of: controller,
-            with: "Storyboard",
-            options: [.backwards]
-        )
+        let name = identifier.replacingOccurrences(of: controller, with: "", options: [.backwards])
         let storyboard = UIStoryboard(name: name, bundle: .main)
 
         return storyboard.instantiateViewController(

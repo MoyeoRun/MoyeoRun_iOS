@@ -66,7 +66,7 @@ class SignUpViewController: UIViewController {
 
     @IBAction func signUpNext(_ sender: UIButton) {
         guard
-            // TODO: Image mulipartData, API 구현 완료되는 대로 작업 시작
+            // TODO: Image, Name API 구현 완료되는 대로 작업 시작
             let nickname = nicknameInputView.nickname,
             let name = nicknameInputView.nickname,
             let gender = genderSelectorView.gender
@@ -98,8 +98,8 @@ class SignUpViewController: UIViewController {
                     self?.present(viewController, animated: true)
                 }
             // TODO: Error Handling
-            case .failure:
-                debugPrint("Failed to sign up")
+            case let .failure(error):
+                debugPrint("Failed to sign up", error)
             }
         }
     }
