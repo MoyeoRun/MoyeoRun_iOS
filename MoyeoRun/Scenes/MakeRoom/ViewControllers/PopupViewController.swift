@@ -10,7 +10,7 @@ import UIKit
 protocol SendDataDelegate: AnyObject {
     func sendPeopleNum(peopleNum: Int)
     func sendDistance(distance: Int)
-    func sendPace(pace: String)
+    func sendPace(pace: Int)
     func sendStartTime(startTime: Date)
 }
 
@@ -48,17 +48,6 @@ class PopupViewController: UIViewController {
         super.viewDidLoad()
         setPickerLabel()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        if index == 0 {
-            customPicker.selectRow(0, inComponent: 0, animated: true)
-        } else if index == 1 {
-            customPicker.selectRow(0, inComponent: 0, animated: true)
-        } else {
-            customPicker.selectRow(0, inComponent: 0, animated: true)
-            customPicker.selectRow(0, inComponent: 1, animated: true)
-        }
-    }
 
     func setPickerLabel() {
         if index == 0 {
@@ -67,7 +56,6 @@ class PopupViewController: UIViewController {
             myView.addSubview(label)
             label.leadingAnchor.constraint(equalTo: myView.centerXAnchor, constant: 30).isActive = true
             label.centerYAnchor.constraint(equalTo: myView.centerYAnchor).isActive = true
-            customPicker.selectRow(0, inComponent: 0, animated: true)
         } else if index == 1 {
             navigationTitle.title = "목표거리"
             label.text = "km"
@@ -97,8 +85,11 @@ class PopupViewController: UIViewController {
         } else if index == 1 {
             self.dataDelegate?.sendDistance(distance: selectedKM)
         } else {
-            print(selectedPaceBack)
-            self.dataDelegate?.sendPace(pace: "\(selectedPaceFront)’\(selectedPaceBack)”")
+            if selectedPaceBack == "30" {
+                self.dataDelegate?.sendPace(pace: selectedPaceFront * 60 + 30)
+            } else {
+                self.dataDelegate?.sendPace(pace: selectedPaceFront * 60)
+            }
         }
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }

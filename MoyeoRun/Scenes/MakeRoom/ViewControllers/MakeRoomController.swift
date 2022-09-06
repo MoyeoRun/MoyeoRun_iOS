@@ -17,11 +17,11 @@ class MakeRoomController: UIViewController {
     @IBOutlet weak var setNameLength: UILabel!
     @IBOutlet weak var timeInfoView: UIView!
     @IBOutlet weak var completeButton: UIButton!
-    
+
     var name: String?
     var userCount: Int?
     var distance: Int?
-    var pace: String?
+    var pace: Int?
     var limitTiime: Int?
     var startTime: Date?
     private var repository: RoomRepositable?
@@ -115,18 +115,13 @@ class MakeRoomController: UIViewController {
     private func calculateLimitTime() {
         guard
             let tempPace = pace,
-            let tempDistance = distance
-        else {
-            return
-        }
-        guard let findIdx = tempPace.firstIndex(of: "’") else { return }
-        guard let minutePace = Int(tempPace[...findIdx]) else { return }
-        guard let secondPace = Int(tempPace[findIdx ..< tempPace.endIndex]) else { return }
-        let calculatedPace = minutePace * 60 + secondPace
-        limitTiime = ((tempDistance * calculatedPace) + (tempDistance * 10)) / 60
-
-        guard let caculatedLimitTime = limitTiime else { return }
-        limitTimeButton.setTitle("\(caculatedLimitTime)", for: .normal)
+            let tempDistacne = distance
+        else { return }
+        limitTiime = (tempDistacne * tempPace) + (tempDistacne * 10)
+        guard let tempLimitTime = limitTiime else { return }
+        let minuteLimit = tempLimitTime / 60
+        let secondLimit = tempLimitTime % 60 == 0 ? "00" : String(tempLimitTime % 60)
+        limitTimeButton.setTitle("\(minuteLimit)분 \(secondLimit)초", for: .normal)
     }
 
     private func makeRoom(with request: MakeRoomRequest) {
@@ -169,10 +164,12 @@ extension MakeRoomController: SendDataDelegate {
         isAllInput()
     }
 
-    func sendPace(pace: String) {
+    func sendPace(pace: Int) {
         self.pace = pace
         if let temp = self.pace {
-            paceButton.setTitle("\(temp)", for: .normal)
+            let minutePace = temp / 60
+            let secondPace = temp % 60 == 0 ? "00":"30"
+            paceButton.setTitle("\(minutePace)’ \(secondPace)”", for: .normal)
             paceButton.setTitleColor(UIColor(hexString: "#333333"), for: .normal)
         }
         calculateLimitTime()
