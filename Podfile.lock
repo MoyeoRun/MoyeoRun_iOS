@@ -13,6 +13,7 @@ PODS:
     - SteviaLayout (= 4.7.3)
 
 DEPENDENCIES:
+  - Alamofire
   - FSCalendar
   - Moya (~> 15.0)
   - SwiftLint
@@ -37,6 +38,6 @@ SPEC CHECKSUMS:
   SwiftLint: f80f1be7fa96d30e0aa68e58d45d4ea1ccaac519
   YPImagePicker: f36043210c10b0783034eb1947d6e06e31c461e4
 
-PODFILE CHECKSUM: a04c29dea3befba24f38c94a8f0c5c49395e1c19
+PODFILE CHECKSUM: d458da9a1312e85c965c939f95e7f97d055668ca
 
 COCOAPODS: 1.11.3

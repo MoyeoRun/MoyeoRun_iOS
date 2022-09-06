@@ -14,7 +14,7 @@ enum ProviderTypeDTO: String, Codable {
 
 enum GenderDTO: String, Codable {
     case male = "MALE"
-    case female = "FEMAIL"
+    case female = "FEMALE"
 }
 
 struct TokenDTO: Codable {

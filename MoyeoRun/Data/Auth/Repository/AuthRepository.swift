@@ -20,9 +20,7 @@ protocol AuthRepositable: AnyObject {
         completion: @escaping (Result<SignUpResponse, Error>) -> Void
     )
 
-    func getAccessToken(
-        completion: @escaping (Result<String, Error>) -> Void
-    )
+    func getAccessToken() -> Result<String, Error>
 
     func refreshToken(
         completion: @escaping (Result<RefreshResponse, Error>) -> Void
@@ -49,25 +47,18 @@ final class AuthRepository: AuthRepositable {
         request: SignInRequest,
         completion: @escaping (Result<SignInResponse, Error>) -> Void
     ) {
-        remoteDataSource.signIn(requset: request) { [weak self] remoteResult in
+        remoteDataSource.signIn(request: request) { [weak self] remoteResult in
             switch remoteResult {
-            case let .success(response):
-                guard let token = response.token else {
-                    return completion(.success(response))
-                }
+            case let .success(success):
+                let localResult = self?.localDataSource.storeToken(token: success.data.token)
 
-                let localResult = self?.localDataSource.storeToken(token: token)
-                guard case let .failure(error) = localResult else {
-                    return completion(.success(response))
-                }
-                return completion(.failure(error))
-            case let .failure(error):
-                let localResult = self?.localDataSource.clearToken()
-
-                guard case let .failure(error) = localResult else {
+                if case let .failure(error) = localResult {
                     return completion(.failure(error))
                 }
-                return completion(.failure(error))
+
+                return completion(.success(success.data))
+            case let .failure(failure):
+                return completion(.failure(NetworkError.responseFailure(case: failure.case)))
             }
         }
     }
@@ -76,30 +67,24 @@ final class AuthRepository: AuthRepositable {
         request: SignUpRequest,
         completion: @escaping (Result<SignUpResponse, Error>) -> Void
     ) {
-        remoteDataSource.signUp(requset: request) { [weak self] remoteResult in
+        remoteDataSource.signUp(request: request) { [weak self] remoteResult in
             switch remoteResult {
-            case let .success(response):
-                let localResult = self?.localDataSource.storeToken(token: response.token)
+            case let .success(success):
+                let localResult = self?.localDataSource.storeToken(token: success.data.token)
 
-                guard case let .failure(error) = localResult else {
-                    return completion(.success(response))
-                }
-
-                return completion(.failure(error))
-            case let .failure(error):
-                let localResult = self?.localDataSource.clearToken()
-
-                guard case let .failure(error) = localResult else {
+                if case let .failure(error) = localResult {
                     return completion(.failure(error))
                 }
 
-                return completion(.failure(error))
+                return completion(.success(success.data))
+            case let .failure(failure):
+                return completion(.failure(NetworkError.responseFailure(case: failure.case)))
             }
         }
     }
 
-    func getAccessToken(completion: @escaping (Result<String, Error>) -> Void) {
-        return completion(localDataSource.getAccessToken())
+    func getAccessToken() -> Result<String, Error> {
+        return localDataSource.getAccessToken()
     }
 
     func refreshToken(
@@ -113,24 +98,24 @@ final class AuthRepository: AuthRepositable {
 
         let request = RefreshRequest(refreshToken: refreshToken)
 
-        remoteDataSource.refreshToken(requset: request) { [weak self] remoteResult in
+        remoteDataSource.refreshToken(request: request) { [weak self] remoteResult in
             switch remoteResult {
-            case let .success(response):
-                let localResult = self?.localDataSource.refreshAccessToken(accessToken: response.accessToken)
+            case let .success(success):
+                let localResult = self?.localDataSource.refreshAccessToken(accessToken: success.data.accessToken)
 
-                guard case let .failure(error) = localResult else {
-                    return completion(.success(response))
-                }
-
-                return completion(.failure(error))
-            case let .failure(error):
-                let localResult = self?.localDataSource.clearToken()
-
-                guard case let .failure(error) = localResult else {
+                if case let .failure(error) = localResult {
                     return completion(.failure(error))
                 }
 
-                return completion(.failure(error))
+                return completion(.success(success.data))
+            case let .failure(failure):
+                let localResult = self?.localDataSource.clearToken()
+
+                if case let .failure(error) = localResult {
+                    return completion(.failure(error))
+                }
+
+                return completion(.failure(NetworkError.responseFailure(case: failure.case)))
             }
         }
     }
@@ -138,32 +123,24 @@ final class AuthRepository: AuthRepositable {
     func logout(
         completion: @escaping (Result<LogoutResponse, Error>) -> Void
     ) {
-        let result = localDataSource.getAccessToken()
-
-        guard case let .success(accessToken) = result else {
-            return completion(.failure(KeychainError.notFound))
-        }
-
-        let request = LogoutRequset(accessToken: accessToken)
-
-        remoteDataSource.logout(requset: request) { [weak self] remoteResult in
+        remoteDataSource.logout { [weak self] remoteResult in
             switch remoteResult {
-            case let .success(response):
+            case let .success(success):
                 let localResult = self?.localDataSource.clearToken()
 
-                guard case let .failure(error) = localResult else {
-                    return completion(.success(response))
-                }
-
-                return completion(.failure(error))
-            case let .failure(error):
-                let localResult = self?.localDataSource.clearToken()
-
-                guard case let .failure(error) = localResult else {
+                if case let .failure(error) = localResult {
                     return completion(.failure(error))
                 }
 
-                return completion(.failure(error))
+                return completion(.success(success.data))
+            case let .failure(failure):
+                let localResult = self?.localDataSource.clearToken()
+
+                if case let .failure(error) = localResult {
+                    return completion(.failure(error))
+                }
+
+                return completion(.failure(NetworkError.responseFailure(case: failure.case)))
             }
         }
     }

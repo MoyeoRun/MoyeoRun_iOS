@@ -422,13 +422,16 @@
                                                     <action selector="showStartTimePopup:" destination="OAA-wN-XlX" eventType="touchUpInside" id="aRH-ve-fbI"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsV-Cz-vtU">
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsV-Cz-vtU">
                                                 <rect key="frame" x="0.0" y="1114" width="390" height="80"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="v6t-eK-t8A"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="방 만들기" cornerStyle="fixed"/>
+                                                <connections>
+                                                    <action selector="touchCompleteButton:" destination="OAA-wN-XlX" eventType="touchUpInside" id="Kga-wn-Fby"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwV-hN-bEL">
                                                 <rect key="frame" x="95" y="874" width="13" height="13"/>
@@ -563,6 +566,7 @@ km당 10초씩 추가시간이 더해집니다</string>
                     </view>
                     <size key="freeformSize" width="390" height="1280"/>
                     <connections>
+                        <outlet property="completeButton" destination="rsV-Cz-vtU" id="8GD-tF-2Yg"/>
                         <outlet property="distanceButton" destination="1qF-w0-faX" id="xwa-Za-nHe"/>
                         <outlet property="limitTimeButton" destination="rs0-z1-VMM" id="xqw-wa-dOD"/>
                         <outlet property="nameTextView" destination="n6Q-QG-G0f" id="Xhd-R9-9C1"/>

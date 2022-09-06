@@ -29,6 +29,12 @@
 		3A27052828B7979A00BBDA1D /* CurrentRoomListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A27052628B7979A00BBDA1D /* CurrentRoomListCell.xib */; };
 		3A27052B28B7986100BBDA1D /* RoomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A27052928B7986100BBDA1D /* RoomHeader.swift */; };
 		3A27052C28B7986100BBDA1D /* RoomHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A27052A28B7986100BBDA1D /* RoomHeader.xib */; };
+		3AA8430528C718E20036F189 /* MakeRoomDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA8430428C718E20036F189 /* MakeRoomDTO.swift */; };
+		3AA8430728C71BFD0036F189 /* RoomRemoteDataSourceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA8430628C71BFD0036F189 /* RoomRemoteDataSourceable.swift */; };
+		3AA8430928C71E830036F189 /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA8430828C71E830036F189 /* Encodable+.swift */; };
+		3AA8430B28C71EBB0036F189 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA8430A28C71EBB0036F189 /* NetworkService.swift */; };
+		3AA8430D28C71EFB0036F189 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA8430C28C71EFB0036F189 /* Routable.swift */; };
+		3AA8430F28C7210E0036F189 /* RoomRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA8430E28C7210E0036F189 /* RoomRepository.swift */; };
 		3AAEE3DD28C3C85400B28582 /* RoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEE3DC28C3C85400B28582 /* RoomController.swift */; };
 		3AAEE3DF28C3CDCF00B28582 /* BeforeRoom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AAEE3DE28C3CDCF00B28582 /* BeforeRoom.xib */; };
 		3AAEE3E128C3CDD800B28582 /* AfterRoom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AAEE3E028C3CDD800B28582 /* AfterRoom.xib */; };
@@ -48,8 +54,6 @@
 		F74D1FCB283163030099B5F0 /* UserRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FB5283163030099B5F0 /* UserRemoteDataSource.swift */; };
 		F74D1FCC283163030099B5F0 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FB7283163030099B5F0 /* UserRepository.swift */; };
 		F74D1FCD283163030099B5F0 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FBA283163030099B5F0 /* Response.swift */; };
-		F74D1FCE283163030099B5F0 /* MoyaProvider+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FBB283163030099B5F0 /* MoyaProvider+.swift */; };
-		F74D1FCF283163030099B5F0 /* TargetType+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FBC283163030099B5F0 /* TargetType+.swift */; };
 		F74D1FD0283163030099B5F0 /* KeychainKeyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FBE283163030099B5F0 /* KeychainKeyType.swift */; };
 		F74D1FD1283163030099B5F0 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FBF283163030099B5F0 /* Keychain.swift */; };
 		F74D1FD2283163030099B5F0 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FC0283163030099B5F0 /* KeychainStore.swift */; };
@@ -139,6 +143,12 @@
 		3A27052628B7979A00BBDA1D /* CurrentRoomListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentRoomListCell.xib; sourceTree = "<group>"; };
 		3A27052928B7986100BBDA1D /* RoomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomHeader.swift; sourceTree = "<group>"; };
 		3A27052A28B7986100BBDA1D /* RoomHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomHeader.xib; sourceTree = "<group>"; };
+		3AA8430428C718E20036F189 /* MakeRoomDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeRoomDTO.swift; sourceTree = "<group>"; };
+		3AA8430628C71BFD0036F189 /* RoomRemoteDataSourceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRemoteDataSourceable.swift; sourceTree = "<group>"; };
+		3AA8430828C71E830036F189 /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
+		3AA8430A28C71EBB0036F189 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		3AA8430C28C71EFB0036F189 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		3AA8430E28C7210E0036F189 /* RoomRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRepository.swift; sourceTree = "<group>"; };
 		3AAEE3DC28C3C85400B28582 /* RoomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomController.swift; sourceTree = "<group>"; };
 		3AAEE3DE28C3CDCF00B28582 /* BeforeRoom.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeforeRoom.xib; sourceTree = "<group>"; };
 		3AAEE3E028C3CDD800B28582 /* AfterRoom.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AfterRoom.xib; sourceTree = "<group>"; };
@@ -162,8 +172,6 @@
 		F74D1FB5283163030099B5F0 /* UserRemoteDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRemoteDataSource.swift; sourceTree = "<group>"; };
 		F74D1FB7283163030099B5F0 /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		F74D1FBA283163030099B5F0 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		F74D1FBB283163030099B5F0 /* MoyaProvider+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+.swift"; sourceTree = "<group>"; };
-		F74D1FBC283163030099B5F0 /* TargetType+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TargetType+.swift"; sourceTree = "<group>"; };
 		F74D1FBE283163030099B5F0 /* KeychainKeyType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainKeyType.swift; sourceTree = "<group>"; };
 		F74D1FBF283163030099B5F0 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		F74D1FC0283163030099B5F0 /* KeychainStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
@@ -345,6 +353,40 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		3AA8430028C718A30036F189 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				3AA8430328C718C30036F189 /* Repository */,
+				3AA8430228C718BA0036F189 /* DataSource */,
+				3AA8430128C718B50036F189 /* DTO */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		3AA8430128C718B50036F189 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				3AA8430428C718E20036F189 /* MakeRoomDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		3AA8430228C718BA0036F189 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				3AA8430628C71BFD0036F189 /* RoomRemoteDataSourceable.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		3AA8430328C718C30036F189 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				3AA8430E28C7210E0036F189 /* RoomRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		3AADB25527EF543800AFDE01 /* LifeCycles */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,6 +427,7 @@
 		F74D1FA3283163030099B5F0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				3AA8430028C718A30036F189 /* Room */,
 				3A27051628B7823100BBDA1D /* Main */,
 				F74D1FA4283163030099B5F0 /* Auth */,
 				F74D1FB0283163030099B5F0 /* User */,
@@ -480,9 +523,10 @@
 			isa = PBXGroup;
 			children = (
 				F74D1FBA283163030099B5F0 /* Response.swift */,
-				F74D1FBB283163030099B5F0 /* MoyaProvider+.swift */,
-				F74D1FBC283163030099B5F0 /* TargetType+.swift */,
 				416E8FEB28B6370500BBA05E /* Interceptor.swift */,
+				3AA8430828C71E830036F189 /* Encodable+.swift */,
+				3AA8430A28C71EBB0036F189 /* NetworkService.swift */,
+				3AA8430C28C71EFB0036F189 /* Routable.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -1080,6 +1124,7 @@
 				F74D1FC4283163030099B5F0 /* SignUpDTO.swift in Sources */,
 				F74D1FCB283163030099B5F0 /* UserRemoteDataSource.swift in Sources */,
 				F74D1FD2283163030099B5F0 /* KeychainStore.swift in Sources */,
+				3AA8430528C718E20036F189 /* MakeRoomDTO.swift in Sources */,
 				F74D20322831630C0099B5F0 /* InsertUserInfoViewController.swift in Sources */,
 				F74D202B2831630C0099B5F0 /* RunningContentCell.swift in Sources */,
 				F74D20282831630C0099B5F0 /* MyPageViewController.swift in Sources */,
@@ -1089,8 +1134,12 @@
 				F74D206B283163160099B5F0 /* MapKitView.swift in Sources */,
 				0A67F3482835F9AF00AACCB8 /* SearchTabExtension.swift in Sources */,
 				F74D20302831630C0099B5F0 /* SignUpCompleteViewController.swift in Sources */,
+				3AA8430728C71BFD0036F189 /* RoomRemoteDataSourceable.swift in Sources */,
 				F74D1FD1283163030099B5F0 /* Keychain.swift in Sources */,
 				F74D1FC8283163030099B5F0 /* AuthRepository.swift in Sources */,
+				3AA8430F28C7210E0036F189 /* RoomRepository.swift in Sources */,
+				3AA8430D28C71EFB0036F189 /* Routable.swift in Sources */,
+				3AA8430928C71E830036F189 /* Encodable+.swift in Sources */,
 				F74D1FCA283163030099B5F0 /* UserDTO.swift in Sources */,
 				F75E9F9E27E9470100000DCD /* ViewController.swift in Sources */,
 				F74D1FC1283163030099B5F0 /* SignInDTO.swift in Sources */,
@@ -1101,8 +1150,6 @@
 				F74D1FC3283163030099B5F0 /* LogoutDTO.swift in Sources */,
 				F74D1FC2283163030099B5F0 /* RefreshDTO.swift in Sources */,
 				3A27052B28B7986100BBDA1D /* RoomHeader.swift in Sources */,
-				F74D1FCF283163030099B5F0 /* TargetType+.swift in Sources */,
-				F74D1FCE283163030099B5F0 /* MoyaProvider+.swift in Sources */,
 				0A54157128629D780050AF60 /* RecordDetailViewController.swift in Sources */,
 				3A27052328B7978800BBDA1D /* CurrentJoinRoomCell.swift in Sources */,
 				F74D20312831630C0099B5F0 /* ProfileImageMenuViewController.swift in Sources */,
@@ -1110,6 +1157,7 @@
 				F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */,
 				F74D20212831630C0099B5F0 /* PhotoCell.swift in Sources */,
 				F74D20222831630C0099B5F0 /* PopupViewController.swift in Sources */,
+				3AA8430B28C71EBB0036F189 /* NetworkService.swift in Sources */,
 				3A0F803128BD0A230071A621 /* StartTimePopUpViewController.swift in Sources */,
 				3A27051328B77CD000BBDA1D /* UIView+.swift in Sources */,
 				F74D1FD0283163030099B5F0 /* KeychainKeyType.swift in Sources */,

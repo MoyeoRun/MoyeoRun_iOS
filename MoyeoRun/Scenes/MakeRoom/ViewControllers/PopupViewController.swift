@@ -11,7 +11,7 @@ protocol SendDataDelegate: AnyObject {
     func sendPeopleNum(peopleNum: Int)
     func sendDistance(distance: Int)
     func sendPace(pace: String)
-    func sendStartTime(startTime: String)
+    func sendStartTime(startTime: Date)
 }
 
 class PopupViewController: UIViewController {
@@ -25,10 +25,10 @@ class PopupViewController: UIViewController {
     let availableKM = [Int](1...10)
     let availablePaceFront = [Int](1...10)
     let availablePaceBack: [String] = ["00", "30"]
-    var selectedPeopleNum = 0
-    var selectedKM = 0
-    var selectedPaceFront = 0
-    var selectedPaceBack = ""
+    var selectedPeopleNum = 4
+    var selectedKM = 1
+    var selectedPaceFront = 1
+    var selectedPaceBack = "00"
 
     let label: UILabel = {
         let label = UILabel()
@@ -48,6 +48,17 @@ class PopupViewController: UIViewController {
         super.viewDidLoad()
         setPickerLabel()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if index == 0 {
+            customPicker.selectRow(0, inComponent: 0, animated: true)
+        } else if index == 1 {
+            customPicker.selectRow(0, inComponent: 0, animated: true)
+        } else {
+            customPicker.selectRow(0, inComponent: 0, animated: true)
+            customPicker.selectRow(0, inComponent: 1, animated: true)
+        }
+    }
 
     func setPickerLabel() {
         if index == 0 {
@@ -56,6 +67,7 @@ class PopupViewController: UIViewController {
             myView.addSubview(label)
             label.leadingAnchor.constraint(equalTo: myView.centerXAnchor, constant: 30).isActive = true
             label.centerYAnchor.constraint(equalTo: myView.centerYAnchor).isActive = true
+            customPicker.selectRow(0, inComponent: 0, animated: true)
         } else if index == 1 {
             navigationTitle.title = "목표거리"
             label.text = "km"
@@ -85,7 +97,8 @@ class PopupViewController: UIViewController {
         } else if index == 1 {
             self.dataDelegate?.sendDistance(distance: selectedKM)
         } else {
-            self.dataDelegate?.sendPace(pace: "4/44")
+            print(selectedPaceBack)
+            self.dataDelegate?.sendPace(pace: "\(selectedPaceFront)’\(selectedPaceBack)”")
         }
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }

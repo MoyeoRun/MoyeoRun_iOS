@@ -16,11 +16,29 @@ class MakeRoomController: UIViewController {
     @IBOutlet weak var startTimeButton: UIButton!
     @IBOutlet weak var setNameLength: UILabel!
     @IBOutlet weak var timeInfoView: UIView!
-    var namePlaceHolder = ""
+    @IBOutlet weak var completeButton: UIButton!
+    
+    var name: String?
+    var userCount: Int?
+    var distance: Int?
+    var pace: String?
+    var limitTiime: Int?
+    var startTime: Date?
+    private var repository: RoomRepositable?
+
+    init(repository: RoomRepositable) {
+        self.repository = repository
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        namePlaceHolder = nameTextView.text
+        name = nameTextView.text
+        print(Date())
     }
 
     @IBAction func showPopup(_ sender: UIButton) {
@@ -61,23 +79,113 @@ class MakeRoomController: UIViewController {
     @IBAction func touchInfo(_ sender: UIButton) {
         timeInfoView.isHidden.toggle()
     }
+
+    @IBAction func touchCompleteButton(_ sender: UIButton) {
+//        print("hi")
+//        guard
+//            let startTime = startTimeButton.titleLabel?.text,
+//            let pace = paceButton.titleLabel?.text,
+//            let distance = distanceButton.titleLabel?.text,
+//            let limitTime = limitTimeButton.titleLabel?.text,
+//            let limitUserCount = peopleButton.titleLabel?.text
+//        else {
+//            return
+//        }
+//
+//        let request = MakeRoomRequest(
+//            idToken: <#T##String#>,
+//            name: nameTextView.text,
+//            thumbnailImage: "IMAGE1",
+//            startTime: startTime,
+//            targetPace: pace,
+//            targetDistance: Int(distance),
+//            limitTime: Int(limitTime) ?? 0,
+//            limitUserCount: Int(limitUserCount) ?? 0
+//        )
+//
+//        makeRoom(with: request)
+    }
+
+    private func isAllInput() {
+        if name != nil && userCount != nil && distance != nil && pace != nil && startTime != nil {
+            completeButton.isEnabled = true
+        }
+    }
+
+    private func calculateLimitTime() {
+        guard
+            let tempPace = pace,
+            let tempDistance = distance
+        else {
+            return
+        }
+        guard let findIdx = tempPace.firstIndex(of: "’") else { return }
+        guard let minutePace = Int(tempPace[...findIdx]) else { return }
+        guard let secondPace = Int(tempPace[findIdx ..< tempPace.endIndex]) else { return }
+        let calculatedPace = minutePace * 60 + secondPace
+        limitTiime = ((tempDistance * calculatedPace) + (tempDistance * 10)) / 60
+
+        guard let caculatedLimitTime = limitTiime else { return }
+        limitTimeButton.setTitle("\(caculatedLimitTime)", for: .normal)
+    }
+
+    private func makeRoom(with request: MakeRoomRequest) {
+        repository?.inquiryMakeRoom(request: request) { [weak self] result in
+            switch result {
+            case .success:
+                let storyBoard = UIStoryboard(name: "Room", bundle: nil)
+                let viewController = storyBoard.instantiateViewController(withIdentifier: "SignUpComplete")
+                viewController.modalPresentationStyle = .fullScreen
+
+                DispatchQueue.main.async {
+                    self?.present(viewController, animated: true)
+                }
+            case .failure:
+                debugPrint("Failed to make Room")
+            }
+        }
+    }
 }
 
 extension MakeRoomController: SendDataDelegate {
     func sendPeopleNum(peopleNum: Int) {
-        self.peopleButton.setTitle("\(peopleNum)명", for: .normal)
+        self.userCount = peopleNum
+        if let temp = self.userCount {
+            self.peopleButton.setTitle("\(temp)명", for: .normal)
+            self.peopleButton.setTitleColor(UIColor(hexString: "#333333"), for: .normal)
+        } else {
+            return
+        }
+        self.isAllInput()
     }
 
     func sendDistance(distance: Int) {
-        self.distanceButton.setTitle("\(distance)km", for: .normal)
+        self.distance = distance
+        if let temp = self.distance {
+            self.distanceButton.setTitle("\(temp)km", for: .normal)
+            self.distanceButton.setTitleColor(UIColor(hexString: "#333333"), for: .normal)
+        }
+        calculateLimitTime()
+        isAllInput()
     }
 
     func sendPace(pace: String) {
-        self.paceButton.setTitle("\(pace)", for: .normal)
+        self.pace = pace
+        if let temp = self.pace {
+            paceButton.setTitle("\(temp)", for: .normal)
+            paceButton.setTitleColor(UIColor(hexString: "#333333"), for: .normal)
+        }
+        calculateLimitTime()
+        isAllInput()
     }
 
-    func sendStartTime(startTime: String) {
-        self.startTimeButton.setTitle(startTime, for: .normal)
+    func sendStartTime(startTime: Date) {
+        self.startTime = startTime
+        if let temp = self.startTime {
+            startTimeButton.setTitle("\(temp)", for: .normal)
+            startTimeButton.setTitleColor(UIColor(hexString: "#333333"), for: .normal)
+        }
+        isAllInput()
     }
 }
 
@@ -91,7 +199,7 @@ extension MakeRoomController: UITextViewDelegate {
 
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            textView.text = namePlaceHolder
+            textView.text = name
             textView.textColor = .lightGray
         }
     }

@@ -12,4 +12,5 @@ target 'MoyeoRun' do
   # Pods for MoyeoRun
   pod 'SwiftLint'
   pod 'Moya', '~> 15.0'
+  pod 'Alamofire'
 end
