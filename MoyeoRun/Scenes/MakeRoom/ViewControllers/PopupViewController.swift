@@ -11,7 +11,7 @@ protocol SendDataDelegate: AnyObject {
     func sendPeopleNum(peopleNum: Int)
     func sendDistance(distance: Int)
     func sendPace(pace: Int)
-    func sendStartTime(startTime: Date)
+    func sendStartTime(startTime: String)
 }
 
 class PopupViewController: UIViewController {

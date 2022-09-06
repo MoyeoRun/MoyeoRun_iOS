@@ -666,6 +666,9 @@ km당 10초씩 추가시간이 더해집니다</string>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="516-9X-I47">
                                         <rect key="frame" x="0.0" y="164" width="336" height="85"/>
                                         <locale key="locale" localeIdentifier="ko_KR"/>
+                                        <connections>
+                                            <action selector="changePicker:" destination="6mU-LJ-RI3" eventType="valueChanged" id="tWw-8h-44M"/>
+                                        </connections>
                                     </datePicker>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Yfr-61-ugT">
                                         <rect key="frame" x="0.0" y="90" width="336" height="50"/>
@@ -697,7 +700,7 @@ km당 10초씩 추가시간이 더해집니다</string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hTE-xt-reE">
                                                 <rect key="frame" x="168" y="0.0" width="168" height="50"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVe-mW-DC7">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVe-mW-DC7">
                                                         <rect key="frame" x="63" y="0.0" width="42" height="29"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="24"/>
                                                         <color key="textColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -768,6 +771,15 @@ km당 10초씩 추가시간이 더해집니다</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gVo-fF-0ov"/>
+                    <connections>
+                        <outlet property="timePicker" destination="516-9X-I47" id="PDc-f5-gVn"/>
+                        <outlet property="todayDateLabel" destination="98Z-XV-u6m" id="Dpa-K7-yTC"/>
+                        <outlet property="todayLabel" destination="VHJ-4X-ibc" id="0EK-Ed-DSc"/>
+                        <outlet property="todayView" destination="S6Q-QA-bP7" id="zRc-oy-HMs"/>
+                        <outlet property="tomorrowDateLabel" destination="hMj-ur-JZj" id="sxL-MG-eu2"/>
+                        <outlet property="tomorrowLabel" destination="RVe-mW-DC7" id="JhZ-dE-ePv"/>
+                        <outlet property="tomorrowView" destination="hTE-xt-reE" id="X1H-P5-c8P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BTG-2w-ogb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

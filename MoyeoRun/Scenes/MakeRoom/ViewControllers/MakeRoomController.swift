@@ -23,7 +23,7 @@ class MakeRoomController: UIViewController {
     var distance: Int?
     var pace: Int?
     var limitTiime: Int?
-    var startTime: Date?
+    var startTime: String?
     private var repository: RoomRepositable?
 
     init(repository: RoomRepositable) {
@@ -106,22 +106,24 @@ class MakeRoomController: UIViewController {
 //        makeRoom(with: request)
     }
 
-    private func isAllInput() {
+    func isAllInput() {
         if name != nil && userCount != nil && distance != nil && pace != nil && startTime != nil {
             completeButton.isEnabled = true
         }
     }
 
-    private func calculateLimitTime() {
+    func calculateLimitTime() {
         guard
             let tempPace = pace,
             let tempDistacne = distance
-        else { return }
-        limitTiime = (tempDistacne * tempPace) + (tempDistacne * 10)
-        guard let tempLimitTime = limitTiime else { return }
-        let minuteLimit = tempLimitTime / 60
-        let secondLimit = tempLimitTime % 60 == 0 ? "00" : String(tempLimitTime % 60)
-        limitTimeButton.setTitle("\(minuteLimit)분 \(secondLimit)초", for: .normal)
+        else {
+            return
+        }
+        let tempLimitTime = tempDistacne * (tempPace + 10)
+        let (minuteLimit, secondLimit) = (tempLimitTime / 60, tempLimitTime % 60)
+        let secondLimitString = String(secondLimit).paddingLeft(toLength: 2, withPad: "0", startingAt: 0)
+        limitTimeButton.setTitle("\(minuteLimit)분 \(secondLimitString)초", for: .normal)
+        self.limitTiime = tempLimitTime
     }
 
     private func makeRoom(with request: MakeRoomRequest) {
@@ -142,70 +144,8 @@ class MakeRoomController: UIViewController {
     }
 }
 
-extension MakeRoomController: SendDataDelegate {
-    func sendPeopleNum(peopleNum: Int) {
-        self.userCount = peopleNum
-        if let temp = self.userCount {
-            self.peopleButton.setTitle("\(temp)명", for: .normal)
-            self.peopleButton.setTitleColor(UIColor(hexString: "#333333"), for: .normal)
-        } else {
-            return
-        }
-        self.isAllInput()
-    }
-
-    func sendDistance(distance: Int) {
-        self.distance = distance
-        if let temp = self.distance {
-            self.distanceButton.setTitle("\(temp)km", for: .normal)
-            self.distanceButton.setTitleColor(UIColor(hexString: "#333333"), for: .normal)
-        }
-        calculateLimitTime()
-        isAllInput()
-    }
-
-    func sendPace(pace: Int) {
-        self.pace = pace
-        if let temp = self.pace {
-            let minutePace = temp / 60
-            let secondPace = temp % 60 == 0 ? "00":"30"
-            paceButton.setTitle("\(minutePace)’ \(secondPace)”", for: .normal)
-            paceButton.setTitleColor(UIColor(hexString: "#333333"), for: .normal)
-        }
-        calculateLimitTime()
-        isAllInput()
-    }
-
-    func sendStartTime(startTime: Date) {
-        self.startTime = startTime
-        if let temp = self.startTime {
-            startTimeButton.setTitle("\(temp)", for: .normal)
-            startTimeButton.setTitleColor(UIColor(hexString: "#333333"), for: .normal)
-        }
-        isAllInput()
-    }
-}
-
-extension MakeRoomController: UITextViewDelegate {
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.text.isEmpty {
-            textView.text = nil
-            textView.textColor = .black
-        }
-    }
-
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            textView.text = name
-            textView.textColor = .lightGray
-        }
-    }
-
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        let currentText = textView.text ?? ""
-        guard let stringRange = Range(range, in: currentText) else { return false }
-        let changedText = currentText.replacingCharacters(in: stringRange, with: text)
-        setNameLength.text = String(textView.text.count)
-        return changedText.count <= 40
+extension String {
+    func paddingLeft(toLength: Int, withPad: String, startingAt: Int) -> String {
+        return String(String(self.reversed()).padding(toLength: toLength, withPad: "0", startingAt: 0).reversed())
     }
 }

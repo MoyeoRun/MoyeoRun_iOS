@@ -8,24 +8,88 @@
 import UIKit
 
 class StartTimePopUpViewController: UIViewController {
+    @IBOutlet weak var timePicker: UIDatePicker!
+    @IBOutlet weak var todayLabel: UILabel!
+    @IBOutlet weak var tomorrowLabel: UILabel!
+    @IBOutlet weak var todayDateLabel: UILabel!
+    @IBOutlet weak var tomorrowDateLabel: UILabel!
+    @IBOutlet weak var todayView: UIView!
+    @IBOutlet weak var tomorrowView: UIView!
     weak var dataDelegate: SendDataDelegate?
+    let todayDate = Date()
+    var isToday = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setLabel()
+        addEvent()
     }
 
-    @IBAction func cancelPopUp(_ sender: Any) {
+    func setLabel() {
+        guard let tomorrowDate = Calendar.current.date(byAdding: .day, value: 1, to: todayDate) else { return }
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM월 dd일"
+        formatter.locale = Locale(identifier: "ko_KR")
+        todayDateLabel.text = formatter.string(from: todayDate)
+        tomorrowDateLabel.text = formatter.string(from: tomorrowDate)
+    }
+
+    func addEvent() {
+        let tap1 = UITapGestureRecognizer(target: self, action: #selector(self.clickedTodayView(_:)))
+        let tap2 = UITapGestureRecognizer(target: self, action: #selector(self.clickedTomorrowView(_:)))
+        todayView.addGestureRecognizer(tap1)
+        tomorrowView.addGestureRecognizer(tap2)
+    }
+
+    @objc func clickedTodayView(_ sender: UITapGestureRecognizer) {
+        isToday = true
+        todayLabel.textColor = UIColor(hexString: "#1162FF")
+        todayDateLabel.textColor = UIColor(hexString: "#1162FF")
+        tomorrowLabel.textColor = UIColor(hexString: "#C4C4C4")
+        tomorrowDateLabel.textColor = UIColor(hexString: "#C4C4C4")
+    }
+
+    @objc func clickedTomorrowView(_ sender: UITapGestureRecognizer) {
+        isToday = false
+        tomorrowLabel.textColor = UIColor(hexString: "#1162FF")
+        tomorrowDateLabel.textColor = UIColor(hexString: "#1162FF")
+        todayLabel.textColor = UIColor(hexString: "#C4C4C4")
+        todayDateLabel.textColor = UIColor(hexString: "#C4C4C4")
+    }
+
+    @IBAction func changePicker(_ sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "a hh : mm"
+        formatter.locale = Locale(identifier: "ko_KR")
+        print(formatter.string(from: timePicker.date))
+    }
+
+    @IBAction func cancelPopUp(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
 
-    @IBAction func selected(_ sender: Any) {
+    @IBAction func selected(_ sender: UIButton) {
+        let formatter = DateFormatter()
+        if isToday {
+            formatter.dateFormat = "오늘 a hh : mm"
+        } else {
+            formatter.dateFormat = "내일 a hh : mm"
+        }
+        formatter.locale = Locale(identifier: "ko_KR")
+        self.dataDelegate?.sendStartTime(startTime: formatter.string(from: timePicker.date))
         self.presentingViewController?.dismiss(animated: true, completion: nil)
-//        let formatter = DateFormatter()
-//        formatter.dateStyle = .medium
-//        formatter.timeStyle = .none
-//        formatter.dateFormat = "a hh:mm"
-//        formatter.locale = Locale(identifier: "ko_KR")
-//        let temp = formatter.string(from: startTimePicker.date)
-//        self.dataDelegate?.sendStartTime(startTime: temp)
+    }
+}
+
+extension String {
+    func toDate() -> Date? { //"yyyy-MM-dd HH:mm:ss"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.timeZone = TimeZone(identifier: "UTC")
+        if let date = dateFormatter.date(from: self) {
+            return date
+        } else {
+            return nil
+        }
     }
 }
