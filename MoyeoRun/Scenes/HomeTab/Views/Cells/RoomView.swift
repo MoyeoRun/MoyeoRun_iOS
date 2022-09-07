@@ -54,7 +54,6 @@ class RoomView: UIView {
     }
 
     @objc func touchToPickView() {
-        print("hi")
     }
 
     func xibSetup() {

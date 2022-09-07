@@ -7,7 +7,18 @@
 
 import UIKit
 
+struct MyRoom {
+    var image: String = "IMAGE2"
+    var name: String?
+    var userCount: Int?
+    var distance: Int?
+    var pace: Int?
+    var limitTiime: Int?
+    var startTime: String?
+}
+
 class MakeRoomController: UIViewController {
+    @IBOutlet weak var roomImageView: UIImageView!
     @IBOutlet weak var nameTextView: UITextView!
     @IBOutlet weak var peopleButton: UIButton!
     @IBOutlet weak var distanceButton: UIButton!
@@ -17,13 +28,7 @@ class MakeRoomController: UIViewController {
     @IBOutlet weak var setNameLength: UILabel!
     @IBOutlet weak var timeInfoView: UIView!
     @IBOutlet weak var completeButton: UIButton!
-
-    var name: String?
-    var userCount: Int?
-    var distance: Int?
-    var pace: Int?
-    var limitTiime: Int?
-    var startTime: String?
+    var myRoom = MyRoom()
     private var repository: RoomRepositable?
 
     init(repository: RoomRepositable) {
@@ -37,8 +42,7 @@ class MakeRoomController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        name = nameTextView.text
-        print(Date())
+        myRoom.name = nameTextView.text
     }
 
     @IBAction func showPopup(_ sender: UIButton) {
@@ -76,46 +80,59 @@ class MakeRoomController: UIViewController {
         present(viewController, animated: true, completion: nil)
     }
 
+    @IBAction func showImageController(_ sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "SelectPhoto", bundle: nil)
+        guard
+            let viewController = storyBoard.instantiateViewController(
+                withIdentifier: "selectPhotoController"
+            ) as? SelectPhotoController
+        else {
+            return
+        }
+        viewController.dataDelegate = self
+        viewController.modalPresentationStyle = .overFullScreen
+        present(viewController, animated: true, completion: nil)
+    }
     @IBAction func touchInfo(_ sender: UIButton) {
         timeInfoView.isHidden.toggle()
     }
 
     @IBAction func touchCompleteButton(_ sender: UIButton) {
-//        print("hi")
-//        guard
-//            let startTime = startTimeButton.titleLabel?.text,
-//            let pace = paceButton.titleLabel?.text,
-//            let distance = distanceButton.titleLabel?.text,
-//            let limitTime = limitTimeButton.titleLabel?.text,
-//            let limitUserCount = peopleButton.titleLabel?.text
-//        else {
-//            return
-//        }
-//
-//        let request = MakeRoomRequest(
-//            idToken: <#T##String#>,
-//            name: nameTextView.text,
-//            thumbnailImage: "IMAGE1",
-//            startTime: startTime,
-//            targetPace: pace,
-//            targetDistance: Int(distance),
-//            limitTime: Int(limitTime) ?? 0,
-//            limitUserCount: Int(limitUserCount) ?? 0
-//        )
-//
-//        makeRoom(with: request)
+        guard
+            let name = myRoom.name,
+            let limitUserCount = myRoom.userCount,
+            let startTime = myRoom.startTime,
+            let pace = myRoom.pace,
+            let distance = myRoom.distance,
+            let limitTime = myRoom.limitTiime
+        else {
+            return
+        }
+
+        let request = MakeRoomRequest(
+            name: name,
+            thumbnailImage: myRoom.image,
+            startTime: startTime,
+            targetPace: pace,
+            targetDistance: distance,
+            limitTime: limitTime,
+            limitUserCount: limitUserCount
+        )
+
+        makeRoom(with: request)
     }
 
     func isAllInput() {
-        if name != nil && userCount != nil && distance != nil && pace != nil && startTime != nil {
+        if myRoom.name != nil && myRoom.userCount != nil && myRoom.distance != nil &&
+            myRoom.pace != nil && myRoom.startTime != nil {
             completeButton.isEnabled = true
         }
     }
 
     func calculateLimitTime() {
         guard
-            let tempPace = pace,
-            let tempDistacne = distance
+            let tempPace = myRoom.pace,
+            let tempDistacne = myRoom.distance
         else {
             return
         }
@@ -123,7 +140,7 @@ class MakeRoomController: UIViewController {
         let (minuteLimit, secondLimit) = (tempLimitTime / 60, tempLimitTime % 60)
         let secondLimitString = String(secondLimit).paddingLeft(toLength: 2, withPad: "0", startingAt: 0)
         limitTimeButton.setTitle("\(minuteLimit)분 \(secondLimitString)초", for: .normal)
-        self.limitTiime = tempLimitTime
+        myRoom.limitTiime = tempLimitTime
     }
 
     private func makeRoom(with request: MakeRoomRequest) {

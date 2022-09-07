@@ -8,7 +8,6 @@
 import Foundation
 
 struct MakeRoomRequest: Codable {
-    let idToken: String
     let name: String
     let thumbnailImage: String
     let startTime: Date

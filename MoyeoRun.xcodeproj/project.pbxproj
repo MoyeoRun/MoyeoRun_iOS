@@ -29,6 +29,7 @@
 		3A27052828B7979A00BBDA1D /* CurrentRoomListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A27052628B7979A00BBDA1D /* CurrentRoomListCell.xib */; };
 		3A27052B28B7986100BBDA1D /* RoomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A27052928B7986100BBDA1D /* RoomHeader.swift */; };
 		3A27052C28B7986100BBDA1D /* RoomHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A27052A28B7986100BBDA1D /* RoomHeader.xib */; };
+		3A34F32B28C8CF2900DF1C37 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A34F32A28C8CF2900DF1C37 /* PhotoCell.swift */; };
 		3AA8430528C718E20036F189 /* MakeRoomDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA8430428C718E20036F189 /* MakeRoomDTO.swift */; };
 		3AA8430728C71BFD0036F189 /* RoomRemoteDataSourceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA8430628C71BFD0036F189 /* RoomRemoteDataSourceable.swift */; };
 		3AA8430928C71E830036F189 /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA8430828C71E830036F189 /* Encodable+.swift */; };
@@ -62,7 +63,6 @@
 		F74D201E2831630C0099B5F0 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D1FE52831630C0099B5F0 /* HomeTab.storyboard */; };
 		F74D201F2831630C0099B5F0 /* MakeRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FE72831630C0099B5F0 /* MakeRoomController.swift */; };
 		F74D20202831630C0099B5F0 /* SelectPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FE92831630C0099B5F0 /* SelectPhotoController.swift */; };
-		F74D20212831630C0099B5F0 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FEA2831630C0099B5F0 /* PhotoCell.swift */; };
 		F74D20222831630C0099B5F0 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D1FEB2831630C0099B5F0 /* PopupViewController.swift */; };
 		F74D20232831630C0099B5F0 /* SelectPhoto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D1FED2831630C0099B5F0 /* SelectPhoto.storyboard */; };
 		F74D20242831630C0099B5F0 /* MakeRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D1FEE2831630C0099B5F0 /* MakeRoom.storyboard */; };
@@ -144,6 +144,7 @@
 		3A27052628B7979A00BBDA1D /* CurrentRoomListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentRoomListCell.xib; sourceTree = "<group>"; };
 		3A27052928B7986100BBDA1D /* RoomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomHeader.swift; sourceTree = "<group>"; };
 		3A27052A28B7986100BBDA1D /* RoomHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomHeader.xib; sourceTree = "<group>"; };
+		3A34F32A28C8CF2900DF1C37 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		3AA8430428C718E20036F189 /* MakeRoomDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeRoomDTO.swift; sourceTree = "<group>"; };
 		3AA8430628C71BFD0036F189 /* RoomRemoteDataSourceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRemoteDataSourceable.swift; sourceTree = "<group>"; };
 		3AA8430828C71E830036F189 /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
@@ -181,7 +182,6 @@
 		F74D1FE52831630C0099B5F0 /* HomeTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
 		F74D1FE72831630C0099B5F0 /* MakeRoomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeRoomController.swift; sourceTree = "<group>"; };
 		F74D1FE92831630C0099B5F0 /* SelectPhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPhotoController.swift; sourceTree = "<group>"; };
-		F74D1FEA2831630C0099B5F0 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		F74D1FEB2831630C0099B5F0 /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		F74D1FED2831630C0099B5F0 /* SelectPhoto.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelectPhoto.storyboard; sourceTree = "<group>"; };
 		F74D1FEE2831630C0099B5F0 /* MakeRoom.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MakeRoom.storyboard; sourceTree = "<group>"; };
@@ -315,7 +315,7 @@
 		3A19508828BDC2AB00EB627D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				F74D1FEA2831630C0099B5F0 /* PhotoCell.swift */,
+				3A34F32A28C8CF2900DF1C37 /* PhotoCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1137,6 +1137,7 @@
 				F74D206B283163160099B5F0 /* MapKitView.swift in Sources */,
 				0A67F3482835F9AF00AACCB8 /* SearchTabExtension.swift in Sources */,
 				F74D20302831630C0099B5F0 /* SignUpCompleteViewController.swift in Sources */,
+				3A34F32B28C8CF2900DF1C37 /* PhotoCell.swift in Sources */,
 				3AA8430728C71BFD0036F189 /* RoomRemoteDataSourceable.swift in Sources */,
 				F74D1FD1283163030099B5F0 /* Keychain.swift in Sources */,
 				F74D1FC8283163030099B5F0 /* AuthRepository.swift in Sources */,
@@ -1159,7 +1160,6 @@
 				F74D20312831630C0099B5F0 /* ProfileImageMenuViewController.swift in Sources */,
 				0AA674E528657EB7006A7E72 /* CalendarViewController.swift in Sources */,
 				F75E9F9A27E9470100000DCD /* AppDelegate.swift in Sources */,
-				F74D20212831630C0099B5F0 /* PhotoCell.swift in Sources */,
 				F74D20222831630C0099B5F0 /* PopupViewController.swift in Sources */,
 				3AA8430B28C71EBB0036F189 /* NetworkService.swift in Sources */,
 				3A0F803128BD0A230071A621 /* StartTimePopUpViewController.swift in Sources */,

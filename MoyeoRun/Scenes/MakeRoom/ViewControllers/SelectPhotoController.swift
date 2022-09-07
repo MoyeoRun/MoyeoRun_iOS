@@ -9,13 +9,20 @@ import UIKit
 
 class SelectPhotoController: UIViewController {
     @IBOutlet var imgView: UIImageView!
+    var selectedImage = "IMAGE2"
+    weak var dataDelegate: SendDataDelegate?
+
     let photos = [
-        UIImage(named: "Image-1.png"), UIImage(named: "Image-2.png"), UIImage(named: "Image-3.png"),
-        UIImage(named: "Image-4.png"), UIImage(named: "Image-5.png"), UIImage(named: "Image-6.png"),
-        UIImage(named: "Image-7.png"), UIImage(named: "Image-8.png")
+        "IMAGE1", "IMAGE2", "IMAGE3", "IMAGE4", "IMAGE5", "IMAGE6", "IMAGE7", "IMAGE8", "IMAGE9"
     ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    @IBAction func clickComplete(_ sender: UIButton) {
+        self.dataDelegate?.sendImage(image: selectedImage)
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
 }
 
@@ -26,18 +33,18 @@ extension SelectPhotoController: UICollectionViewDelegate, UICollectionViewDeleg
         else {
             return UICollectionViewCell()
         }
-        guard let img = photos[indexPath.row] else { return UICollectionViewCell() }
-        cell.setData(with: img)
+        cell.setData(with: photos[indexPath.row])
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        imgView.image = photos[indexPath.row]
+        imgView.image = UIImage(named: photos[indexPath.row])
+        selectedImage = photos[indexPath.row]
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let collectionViewCellWidth = collectionView.frame.width / 3
-        return CGSize(width: collectionViewCellWidth - 4, height: collectionViewCellWidth)
+        return CGSize(width: collectionViewCellWidth - 4, height: collectionViewCellWidth - 4)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

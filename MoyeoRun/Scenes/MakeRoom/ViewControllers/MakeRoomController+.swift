@@ -9,9 +9,14 @@ import Foundation
 import UIKit
 
 extension MakeRoomController: SendDataDelegate {
+    func sendImage(image: String) {
+        myRoom.image = image
+        roomImageView.image = UIImage(named: myRoom.image)
+    }
+
     func sendPeopleNum(peopleNum: Int) {
-        self.userCount = peopleNum
-        if let temp = self.userCount {
+        myRoom.userCount = peopleNum
+        if let temp = myRoom.userCount {
             self.peopleButton.setTitle("\(temp)명", for: .normal)
             self.peopleButton.setTitleColor(UIColor(hexString: "#333333"), for: .normal)
         } else {
@@ -21,8 +26,8 @@ extension MakeRoomController: SendDataDelegate {
     }
 
     func sendDistance(distance: Int) {
-        self.distance = distance
-        if let temp = self.distance {
+        myRoom.distance = distance
+        if let temp = myRoom.distance {
             self.distanceButton.setTitle("\(temp)km", for: .normal)
             self.distanceButton.setTitleColor(UIColor(hexString: "#333333"), for: .normal)
         }
@@ -31,8 +36,8 @@ extension MakeRoomController: SendDataDelegate {
     }
 
     func sendPace(pace: Int) {
-        self.pace = pace
-        if let temp = self.pace {
+        myRoom.pace = pace
+        if let temp = myRoom.pace {
             let minutePace = temp / 60
             let secondPace = temp % 60 == 0 ? "00":"30"
             paceButton.setTitle("\(minutePace)’ \(secondPace)”", for: .normal)
@@ -43,8 +48,8 @@ extension MakeRoomController: SendDataDelegate {
     }
 
     func sendStartTime(startTime: String) {
-        self.startTime = startTime
-        if let temp = self.startTime {
+        myRoom.startTime = startTime
+        if let temp = myRoom.startTime {
             startTimeButton.setTitle("\(temp)", for: .normal)
             startTimeButton.setTitleColor(UIColor(hexString: "#333333"), for: .normal)
         }
@@ -62,7 +67,7 @@ extension MakeRoomController: UITextViewDelegate {
 
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            textView.text = name
+            textView.text = myRoom.name
             textView.textColor = .lightGray
         }
     }

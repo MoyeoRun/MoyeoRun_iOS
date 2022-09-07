@@ -10,16 +10,12 @@ import UIKit
 class PhotoCell: UICollectionViewCell {
     @IBOutlet var photo: UIImageView!
 
-    func setData(with data: UIImage) {
-        photo.image = data
+    func setData(with data: String) {
+        photo.image = UIImage(named: data)
     }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-    }
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
     }
 
     required init?(coder aDecoder: NSCoder) {

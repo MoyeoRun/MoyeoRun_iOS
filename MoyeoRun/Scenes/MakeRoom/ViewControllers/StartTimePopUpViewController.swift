@@ -16,6 +16,7 @@ class StartTimePopUpViewController: UIViewController {
     @IBOutlet weak var todayView: UIView!
     @IBOutlet weak var tomorrowView: UIView!
     weak var dataDelegate: SendDataDelegate?
+    let formatter = DateFormatter()
     let todayDate = Date()
     var isToday = true
 
@@ -61,7 +62,6 @@ class StartTimePopUpViewController: UIViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "a hh : mm"
         formatter.locale = Locale(identifier: "ko_KR")
-        print(formatter.string(from: timePicker.date))
     }
 
     @IBAction func cancelPopUp(_ sender: UIButton) {
@@ -69,11 +69,16 @@ class StartTimePopUpViewController: UIViewController {
     }
 
     @IBAction func selected(_ sender: UIButton) {
+        guard
+            let todayYear = Calendar.current.dateComponents([.year], from: todayDate).year,
+            let todayDate = todayDateLabel.text,
+            let tomorrowDate = tomorrowLabel.text
+        else { return }
         let formatter = DateFormatter()
         if isToday {
-            formatter.dateFormat = "오늘 a hh : mm"
+            formatter.dateFormat = "\(todayYear) \(todayDate) a hh : mm"
         } else {
-            formatter.dateFormat = "내일 a hh : mm"
+            formatter.dateFormat = "\(todayYear) \(tomorrowDate) a hh : mm"
         }
         formatter.locale = Locale(identifier: "ko_KR")
         self.dataDelegate?.sendStartTime(startTime: formatter.string(from: timePicker.date))
@@ -82,7 +87,7 @@ class StartTimePopUpViewController: UIViewController {
 }
 
 extension String {
-    func toDate() -> Date? { //"yyyy-MM-dd HH:mm:ss"
+    func toDate() -> Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         dateFormatter.timeZone = TimeZone(identifier: "UTC")

@@ -12,6 +12,7 @@ protocol SendDataDelegate: AnyObject {
     func sendDistance(distance: Int)
     func sendPace(pace: Int)
     func sendStartTime(startTime: String)
+    func sendImage(image: String)
 }
 
 class PopupViewController: UIViewController {
