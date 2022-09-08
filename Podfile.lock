@@ -1,42 +1,59 @@
 PODS:
-  - Alamofire (5.6.1)
+  - Alamofire (5.6.2)
+  - AppAuth (1.5.0):
+    - AppAuth/Core (= 1.5.0)
+    - AppAuth/ExternalUserAgent (= 1.5.0)
+  - AppAuth/Core (1.5.0)
+  - AppAuth/ExternalUserAgent (1.5.0):
+    - AppAuth/Core
   - FSCalendar (2.8.4)
-  - Moya (15.0.0):
-    - Moya/Core (= 15.0.0)
-  - Moya/Core (15.0.0):
-    - Alamofire (~> 5.0)
+  - GoogleSignIn (6.2.3):
+    - AppAuth (~> 1.5)
+    - GTMAppAuth (~> 1.3)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GTMAppAuth (1.3.0):
+    - AppAuth/Core (~> 1.4)
+    - GTMSessionFetcher/Core (~> 1.5)
+  - GTMSessionFetcher/Core (1.7.2)
   - PryntTrimmerView (4.0.2)
   - SteviaLayout (4.7.3)
-  - SwiftLint (0.47.1)
+  - SwiftLint (0.49.1)
   - YPImagePicker (5.2.1):
     - PryntTrimmerView (= 4.0.2)
     - SteviaLayout (= 4.7.3)
 
 DEPENDENCIES:
+  - Alamofire
   - FSCalendar
-  - Moya (~> 15.0)
+  - GoogleSignIn
   - SwiftLint
   - YPImagePicker
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AppAuth
     - FSCalendar
-    - Moya
+    - GoogleSignIn
+    - GTMAppAuth
+    - GTMSessionFetcher
     - PryntTrimmerView
     - SteviaLayout
     - SwiftLint
     - YPImagePicker
 
 SPEC CHECKSUMS:
-  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  AppAuth: 80317d99ac7ff2801a2f18ff86b48cd315ed465d
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
-  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  GoogleSignIn: f4d3939cc0d9264d7509c4b9a924a6c987e30b54
+  GTMAppAuth: 4d8f864896f3646f0c33baf38a28362f4c601e15
+  GTMSessionFetcher: 5595ec75acf5be50814f81e9189490412bad82ba
   PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
   SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
-  SwiftLint: f80f1be7fa96d30e0aa68e58d45d4ea1ccaac519
+  SwiftLint: 32ee33ded0636d0905ef6911b2b67bbaeeedafa5
   YPImagePicker: f36043210c10b0783034eb1947d6e06e31c461e4
 
-PODFILE CHECKSUM: a04c29dea3befba24f38c94a8f0c5c49395e1c19
+PODFILE CHECKSUM: 137b6ef8bcb01f0a3cf266f79818c9a3a96db9c7
 
 COCOAPODS: 1.11.3
