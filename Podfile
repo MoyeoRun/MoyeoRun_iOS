@@ -10,6 +10,7 @@ target 'MoyeoRun' do
   use_frameworks!
 
   # Pods for MoyeoRun
+  pod 'Alamofire'
+  pod 'GoogleSignIn'
   pod 'SwiftLint'
-  pod 'Moya', '~> 15.0'
 end

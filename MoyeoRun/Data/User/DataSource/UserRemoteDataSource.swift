@@ -6,50 +6,57 @@
 //
 
 import Foundation
-import Moya
+import Alamofire
 
 protocol UserRemoteDataSourceable: AnyObject {
-    init(provider: MoyaProvider<UserAPI>)
+    init(service: NetworkServiceable)
 
     func checkNicknameDuplication(
-        requset: DuplicateRequest,
-        completion: @escaping (Result<DuplicateResponse, Error>) -> Void
+        request: DuplicateRequest,
+        completion: @escaping (Response<DuplicateResponse>) -> Void
     )
 
     func inquiryUser(
-        requset: UserRequset,
-        completion: @escaping (Result<UserResponse, Error>) -> Void
+        request: UserRequset,
+        completion: @escaping (Response<UserResponse>) -> Void
     )
 }
 
 final class UserRemoteDataSource: UserRemoteDataSourceable {
-    let provider: MoyaProvider<UserAPI>
+    private let service: NetworkServiceable
 
-    init(provider: MoyaProvider<UserAPI> = .init()) {
-        self.provider = provider
+    required init(service: NetworkServiceable = NetworkService()) {
+        self.service = service
     }
 
     func checkNicknameDuplication(
-        requset: DuplicateRequest,
-        completion: @escaping (Result<DuplicateResponse, Error>) -> Void
+        request: DuplicateRequest,
+        completion: @escaping (Response<DuplicateResponse>) -> Void
     ) {
-        provider.request(.duplicate(request: requset), completion: completion)
+        service.request(router: UserRouter.duplicate(request: request), completion: completion)
     }
 
     func inquiryUser(
-        requset: UserRequset,
-        completion: @escaping (Result<UserResponse, Error>) -> Void
+        request: UserRequset,
+        completion: @escaping (Response<UserResponse>) -> Void
     ) {
-        provider.request(.user(request: requset), completion: completion)
+        service.request(router: UserRouter.user(request: request), completion: completion)
     }
 }
 
-enum UserAPI {
+enum UserRouter: Routable {
     case duplicate(request: DuplicateRequest)
     case user(request: UserRequset)
-}
 
-extension UserAPI: TargetType {
+    var method: HTTPMethod {
+        switch self {
+        case .duplicate:
+            return .post
+        case .user:
+            return .get
+        }
+    }
+
     var path: String {
         switch self {
         case .duplicate:
@@ -59,30 +66,12 @@ extension UserAPI: TargetType {
         }
     }
 
-    var method: Moya.Method {
-        switch self {
-        case .duplicate:
-            return .post
-        case .user:
-            return .get
-        }
-    }
-
-    var task: Task {
+    var parameters: Parameters {
         switch self {
         case let .duplicate(request):
-            return .requestJSONEncodable(request)
+            return request.toParameters
         case .user:
-            return .requestPlain
-        }
-    }
-
-    var headers: [String: String]? {
-        switch self {
-        case .duplicate:
-            return nil
-        case let .user(request):
-            return ["Authorization": "Bearer " + request.accessToken]
+            return Parameters()
         }
     }
 }

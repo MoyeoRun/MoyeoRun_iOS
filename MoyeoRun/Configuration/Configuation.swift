@@ -7,25 +7,35 @@
 
 import Foundation
 
-enum Configuration {
-    private enum Key: String {
-        case baseURL = "BASE_URL"
+enum Configuration: String {
+    case baseURL = "BASE_URL"
+    case clientId = "CLIENT_ID"
+    case serverClientId = "SERVER_CLIENT_ID"
 
-        var value: Any {
-            guard let value = Bundle.main.infoDictionary?[self.rawValue] as? Any else {
-                fatalError("Failed to find value from \(self)")
-            }
-            return value
+    var toString: String {
+        guard let string = self.value as? String else {
+            fatalError("Failed to find value typed: String")
         }
+
+        return string
     }
 
-    static let baseURL: URL = {
+    var toURL: URL {
         guard
-            let urlString = Key.baseURL.value as? String,
+            let urlString = self.value as? String,
             let url = URL(string: urlString)
         else {
-            fatalError("Failed to find baseURL")
+            fatalError("Failed to find value typed: URL")
         }
+
         return url
-    }()
+    }
+
+    private var value: Any? {
+        guard let value = Bundle.main.infoDictionary?[self.rawValue] else {
+            fatalError("Failed to find value of \(self.rawValue)")
+        }
+
+        return value
+    }
 }
