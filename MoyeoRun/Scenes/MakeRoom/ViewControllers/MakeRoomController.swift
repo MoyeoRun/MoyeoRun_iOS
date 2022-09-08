@@ -112,13 +112,12 @@ class MakeRoomController: UIViewController {
         let request = MakeRoomRequest(
             name: name,
             thumbnailImage: myRoom.image,
-            startTime: startTime,
-            targetPace: pace,
+            startTime: Date(),
+            targetPace: "6’ 30”",
             targetDistance: distance,
             limitTime: limitTime,
             limitUserCount: limitUserCount
         )
-
         makeRoom(with: request)
     }
 
@@ -145,14 +144,11 @@ class MakeRoomController: UIViewController {
 
     private func makeRoom(with request: MakeRoomRequest) {
         repository?.inquiryMakeRoom(request: request) { [weak self] result in
+            print(result)
             switch result {
             case .success:
-                let storyBoard = UIStoryboard(name: "Room", bundle: nil)
-                let viewController = storyBoard.instantiateViewController(withIdentifier: "SignUpComplete")
-                viewController.modalPresentationStyle = .fullScreen
-
+                print("success")
                 DispatchQueue.main.async {
-                    self?.present(viewController, animated: true)
                 }
             case .failure:
                 debugPrint("Failed to make Room")

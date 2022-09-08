@@ -64,11 +64,11 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFR-CF-tFo">
                                                 <rect key="frame" x="156.5" y="0.0" width="143.5" height="50"/>
-                                                <color key="tintColor" name="RunBlue"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="선택 완료">
-                                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
-                                                </buttonConfiguration>
+                                                <color key="backgroundColor" name="RunBlue"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="선택 완료"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="4"/>
@@ -161,7 +161,7 @@
                                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <items>
                                                     <navigationItem title="방 만들기" id="dG8-Vj-oUJ">
-                                                        <barButtonItem key="leftBarButtonItem" style="plain" id="dZQ-Dl-JLo">
+                                                        <barButtonItem key="leftBarButtonItem" style="done" id="dZQ-Dl-JLo">
                                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yUf-d0-VVy">
                                                                 <rect key="frame" x="16" y="11" width="25" height="22"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -426,13 +426,15 @@
                                                     <action selector="showStartTimePopup:" destination="OAA-wN-XlX" eventType="touchUpInside" id="aRH-ve-fbI"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsV-Cz-vtU">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsV-Cz-vtU">
                                                 <rect key="frame" x="0.0" y="1114" width="390" height="80"/>
+                                                <color key="backgroundColor" name="RunBlue"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="v6t-eK-t8A"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="방 만들기" cornerStyle="fixed"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="방 만들기"/>
                                                 <connections>
                                                     <action selector="touchCompleteButton:" destination="OAA-wN-XlX" eventType="touchUpInside" id="Kga-wn-Fby"/>
                                                 </connections>
@@ -639,11 +641,11 @@ km당 10초씩 추가시간이 더해집니다</string>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAe-6r-cTi">
                                                 <rect key="frame" x="156.5" y="0.0" width="143.5" height="50"/>
-                                                <color key="tintColor" name="RunBlue"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="선택 완료">
-                                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
-                                                </buttonConfiguration>
+                                                <color key="backgroundColor" name="RunBlue"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="선택 완료"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="4"/>
