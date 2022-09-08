@@ -10,11 +10,15 @@ import Foundation
 protocol AuthLocalDataSourceable: AnyObject {
     init(store: KeychainStorable)
 
+    func getAccessToken() -> Result<String, Error>
+
+    func getRefreshToken() -> Result<String, Error>
+
     @discardableResult
     func storeToken(token: TokenDTO) -> Result<Void, Error>
 
     @discardableResult
-    func refreshToken(token: TokenDTO) -> Result<Void, Error>
+    func refreshAccessToken(accessToken: String) -> Result<Void, Error>
 
     @discardableResult
     func clearToken() -> Result<Void, Error>
@@ -32,6 +36,24 @@ final class AuthLocalDataSource: AuthLocalDataSourceable {
         self.store = store
     }
 
+    func getAccessToken() -> Result<String, Error> {
+        do {
+            let accessToken: String = try store.read(forKey: AuthKey.accessToken)
+            return .success(accessToken)
+        } catch {
+            return .failure(error)
+        }
+    }
+
+    func getRefreshToken() -> Result<String, Error> {
+        do {
+            let refreshToken: String = try store.read(forKey: AuthKey.refreshToken)
+            return .success(refreshToken)
+        } catch {
+            return .failure(error)
+        }
+    }
+
     func storeToken(token: TokenDTO) -> Result<Void, Error> {
         do {
             try store.create(value: token.accessToken, forKey: AuthKey.accessToken)
@@ -42,10 +64,9 @@ final class AuthLocalDataSource: AuthLocalDataSourceable {
         }
     }
 
-    func refreshToken(token: TokenDTO) -> Result<Void, Error> {
+    func refreshAccessToken(accessToken: String) -> Result<Void, Error> {
         do {
-            try store.update(value: token.accessToken, forKey: AuthKey.accessToken)
-            try store.update(value: token.refreshToken, forKey: AuthKey.refreshToken)
+            try store.update(value: accessToken, forKey: AuthKey.accessToken)
             return .success(())
         } catch {
             return .failure(error)

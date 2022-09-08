@@ -114,5 +114,5 @@ iOSInjectionProject/
 .DS_Store
 
 ## Configuration
-Debug.xcconfig
-Release.xcconfig
+MoyeoRun/Configuration/Debug/
+MoyeoRun/Configuration/Release/

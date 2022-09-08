@@ -5,77 +5,77 @@
 //  Created by Jeongho Moon on 2022/05/04.
 //
 
-import Foundation
-import Moya
+import Alamofire
 
 protocol AuthRemoteDataSourceable: AnyObject {
-    init(provider: MoyaProvider<AuthAPI>)
+    init(service: NetworkServiceable)
 
     func signIn(
-        requset: SignInRequest,
-        completion: @escaping (Result<SignInResponse, Error>) -> Void
+        request: SignInRequest,
+        completion: @escaping (Response<SignInResponse>) -> Void
     )
 
     func signUp(
-        requset: SignUpRequest,
-        completion: @escaping (Result<SignUpResponse, Error>) -> Void
+        request: SignUpRequest,
+        completion: @escaping (Response<SignUpResponse>) -> Void
     )
 
     func refreshToken(
-        requset: RefreshRequest,
-        completion: @escaping (Result<RefreshResponse, Error>) -> Void
+        request: RefreshRequest,
+        completion: @escaping (Response<RefreshResponse>) -> Void
     )
 
-    func logout(
-        requset: LogoutRequset,
-        completion: @escaping (Result<LogoutResponse, Error>) -> Void
-    )
+    func logout(completion: @escaping (Response<LogoutResponse>) -> Void)
 }
 
 final class AuthRemoteDataSource: AuthRemoteDataSourceable {
-    let provider: MoyaProvider<AuthAPI>
+    private let service: NetworkServiceable
 
-    required init(provider: MoyaProvider<AuthAPI> = .init()) {
-        self.provider = provider
+    required init(service: NetworkServiceable = NetworkService()) {
+        self.service = service
     }
 
     func signIn(
-        requset: SignInRequest,
-        completion: @escaping (Result<SignInResponse, Error>) -> Void
+        request: SignInRequest,
+        completion: @escaping (Response<SignInResponse>) -> Void
     ) {
-        provider.request(.signIn(request: requset), completion: completion)
+        service.request(router: AuthRouter.signIn(request: request), completion: completion)
     }
 
     func signUp(
-        requset: SignUpRequest,
-        completion: @escaping (Result<SignUpResponse, Error>) -> Void
+        request: SignUpRequest,
+        completion: @escaping (Response<SignUpResponse>) -> Void
     ) {
-        provider.request(.signUp(request: requset), completion: completion)
+        service.request(router: AuthRouter.signUp(request: request), completion: completion)
     }
 
     func refreshToken(
-        requset: RefreshRequest,
-        completion: @escaping (Result<RefreshResponse, Error>) -> Void
+        request: RefreshRequest,
+        completion: @escaping (Response<RefreshResponse>) -> Void
     ) {
-        provider.request(.refresh(request: requset), completion: completion)
+        service.request(router: AuthRouter.refresh(request: request), completion: completion)
     }
 
-    func logout(
-        requset: LogoutRequset,
-        completion: @escaping (Result<LogoutResponse, Error>) -> Void
-    ) {
-        provider.request(.logout(request: requset), completion: completion)
+    func logout(completion: @escaping (Response<LogoutResponse>) -> Void) {
+        service.request(router: AuthRouter.logout, completion: completion)
     }
 }
 
-enum AuthAPI {
+enum AuthRouter: Routable {
     case signIn(request: SignInRequest)
     case signUp(request: SignUpRequest)
     case refresh(request: RefreshRequest)
-    case logout(request: LogoutRequset)
-}
+    case logout
 
-extension AuthAPI: TargetType {
+    var method: HTTPMethod {
+        switch self {
+        case .signIn, .signUp, .refresh:
+            return .post
+        case .logout:
+            return .get
+        }
+    }
+
     var path: String {
         switch self {
         case .signIn:
@@ -89,34 +89,16 @@ extension AuthAPI: TargetType {
         }
     }
 
-    var method: Moya.Method {
-        switch self {
-        case .signIn, .signUp, .refresh:
-            return .post
-        case .logout:
-            return .get
-        }
-    }
-
-    var task: Task {
+    var parameters: Parameters {
         switch self {
         case let .signIn(request):
-            return .requestJSONEncodable(request)
+            return request.toParameters
         case let .signUp(request):
-            return .requestJSONEncodable(request)
+            return request.toParameters
         case let .refresh(request):
-            return .requestJSONEncodable(request)
+            return request.toParameters
         case .logout:
-            return .requestPlain
-        }
-    }
-
-    var headers: [String: String]? {
-        switch self {
-        case .signIn, .signUp, .refresh:
-            return nil
-        case let .logout(request):
-            return ["Authorization": "Bearer " + request.accessToken]
+            return Parameters()
         }
     }
 }

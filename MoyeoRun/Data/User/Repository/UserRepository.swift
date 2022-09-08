@@ -11,34 +11,48 @@ protocol UserRepositable: AnyObject {
     init(remoteDataSource: UserRemoteDataSourceable)
 
     func checkNicknameDuplication(
-        requset: DuplicateRequest,
+        request: DuplicateRequest,
         completion: @escaping (Result<DuplicateResponse, Error>) -> Void
     )
 
     func inquiryUser(
-        requset: UserRequset,
+        request: UserRequset,
         completion: @escaping (Result<UserResponse, Error>) -> Void
     )
 }
 
-final class UserRepository {
+final class UserRepository: UserRepositable {
     let remoteDataSource: UserRemoteDataSourceable
 
-    init(remoteDataSource: UserRemoteDataSource = .init()) {
+    init(remoteDataSource: UserRemoteDataSourceable = UserRemoteDataSource()) {
         self.remoteDataSource = remoteDataSource
     }
 
     func checkNicknameDuplication(
-        requset: DuplicateRequest,
+        request: DuplicateRequest,
         completion: @escaping (Result<DuplicateResponse, Error>) -> Void
     ) {
-        remoteDataSource.checkNicknameDuplication(requset: requset, completion: completion)
+        remoteDataSource.checkNicknameDuplication(request: request) { remoteResult in
+            switch remoteResult {
+            case let .success(success):
+                return completion(.success(success.data))
+            case let .failure(failure):
+                return completion(.failure(NetworkError.responseFailure(case: failure.case)))
+            }
+        }
     }
 
     func inquiryUser(
-        requset: UserRequset,
+        request: UserRequset,
         completion: @escaping (Result<UserResponse, Error>) -> Void
     ) {
-        remoteDataSource.inquiryUser(requset: requset, completion: completion)
+        remoteDataSource.inquiryUser(request: request) { remoteResult in
+            switch remoteResult {
+            case let .success(success):
+                return completion(.success(success.data))
+            case let .failure(failure):
+                return completion(.failure(NetworkError.responseFailure(case: failure.case)))
+            }
+        }
     }
 }

@@ -7,7 +7,9 @@
 
 import Foundation
 
-typealias RefreshRequest = TokenDTO
+struct RefreshRequest: Codable {
+    let refreshToken: String
+}
 
 struct RefreshResponse: Codable {
     let accessToken: String
