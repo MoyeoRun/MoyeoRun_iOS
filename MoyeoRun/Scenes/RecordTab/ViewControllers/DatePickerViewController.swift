@@ -10,7 +10,7 @@ import UIKit
 class DatePickerViewController: UIViewController {
     @IBOutlet var stackView: UIStackView!
     @IBOutlet var datePicker: UIPickerView!
-    private let yearArray: [String] = [ "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028"]
+    private let yearArray: [String] = ["2022", "2023", "2024", "2025", "2026", "2027", "2028"]
     private let monthArray: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,9 @@ class DatePickerViewController: UIViewController {
     @IBAction func onTapCompleteButton(_ sender: Any) {
         let selectedYearRow = datePicker.selectedRow(inComponent: 0)
         let selectedMonthRow = datePicker.selectedRow(inComponent: 2)
-        
+
+        debugPrint(selectedYearRow)
+        debugPrint(selectedMonthRow)
         self.dismiss(animated: false)
     }
 }
@@ -73,6 +75,9 @@ extension DatePickerViewController: UIPickerViewDataSource, UIPickerViewDelegate
         case 3: pickerLabel?.text = "월"
         default: break
         }
-        return pickerLabel!
+        guard let pickerLabel = pickerLabel else {
+            return UIView()
+        }
+        return pickerLabel
     }
 }

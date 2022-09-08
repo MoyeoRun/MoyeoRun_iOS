@@ -8,8 +8,36 @@
 import UIKit
 
 class RecordTabViewController: UIViewController {
+    @IBOutlet var dateCalendarButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        DispatchQueue.main.async {
+            self.setCurrentDate()
+        }
+    }
+
+    private func setCurrentDate() {
+        let now = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMM"
+        let dateString = dateFormatter.string(from: now)
+        self.setSelectedDate(date: dateString)
+    }
+    private func setSelectedDate(date: String) {
+        let currentYear = date.prefix(4)
+        let currentMonth = date.suffix(2)
+        let resultAttributedString = NSMutableAttributedString(string: "")
+        let imageAttachment = NSTextAttachment()
+        imageAttachment.image = UIImage(named: "calendar")?.withTintColor(.white, renderingMode: .alwaysTemplate)
+        imageAttachment.bounds = CGRect(x: 0, y: -2, width: 15, height: 15)
+
+        resultAttributedString.append(NSAttributedString(attachment: imageAttachment))
+        let dateString = " " + currentYear + "년 " + currentMonth + "월"
+        let attributedString = NSMutableAttributedString(string: dateString)
+        resultAttributedString.append(attributedString)
+
+        self.dateCalendarButton.setAttributedTitle(resultAttributedString, for: .normal)
     }
 }
 
