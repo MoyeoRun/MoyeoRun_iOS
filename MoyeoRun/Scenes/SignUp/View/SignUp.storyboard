@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign Up View Controller-->
+        <scene sceneID="4TK-ks-5NJ">
+            <objects>
+                <viewController storyboardIdentifier="SignUpViewController" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="W9t-2w-LOa" customClass="SignUpViewController" customModule="MoyeoRun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hqS-7Q-9lK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qaq-h6-35t">
+                                <rect key="frame" x="151" y="126" width="112" height="112"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="people1" translatesAutoresizingMaskIntoConstraints="NO" id="fuk-5I-oFD">
+                                        <rect key="frame" x="0.0" y="0.0" width="112" height="112"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQI-d8-jEW">
+                                        <rect key="frame" x="77" y="77" width="35" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="93E-uh-vBW"/>
+                                            <constraint firstAttribute="width" secondItem="XQI-d8-jEW" secondAttribute="height" id="L0D-Qd-kbW"/>
+                                        </constraints>
+                                        <buttonConfiguration key="configuration" style="plain" image="camera.circle.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="17"/>
+                                            <color key="baseForegroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onTapCameraSymbolButton:" destination="W9t-2w-LOa" eventType="touchUpInside" id="q9g-TX-omu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="XQI-d8-jEW" firstAttribute="trailing" secondItem="fuk-5I-oFD" secondAttribute="trailing" id="2og-s4-D53"/>
+                                    <constraint firstAttribute="width" constant="112" id="2zp-Lx-3yj"/>
+                                    <constraint firstAttribute="bottom" secondItem="fuk-5I-oFD" secondAttribute="bottom" id="3yH-Js-uXP"/>
+                                    <constraint firstItem="fuk-5I-oFD" firstAttribute="top" secondItem="Qaq-h6-35t" secondAttribute="top" id="F77-z6-rfa"/>
+                                    <constraint firstItem="fuk-5I-oFD" firstAttribute="leading" secondItem="Qaq-h6-35t" secondAttribute="leading" id="QnG-8d-igz"/>
+                                    <constraint firstAttribute="trailing" secondItem="fuk-5I-oFD" secondAttribute="trailing" id="UCr-MX-8hL"/>
+                                    <constraint firstAttribute="height" constant="112" id="gJk-9E-0X8"/>
+                                    <constraint firstItem="XQI-d8-jEW" firstAttribute="bottom" secondItem="fuk-5I-oFD" secondAttribute="bottom" id="m61-Xy-Sbx"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3xW-PR-sdI" userLabel="Nickname Input View" customClass="NicknameInputView" customModule="MoyeoRun" customModuleProvider="target">
+                                <rect key="frame" x="24" y="258" width="366" height="75"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="klr-r6-87h"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="W9t-2w-LOa" id="ggt-uN-MEM"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkl-AV-rsZ" customClass="GenderSelectorView" customModule="MoyeoRun" customModuleProvider="target">
+                                <rect key="frame" x="24" y="357" width="366" height="75"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="IqU-sE-iPn"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="W9t-2w-LOa" id="mRV-8L-oL3"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ch2-Eh-WvJ" userLabel="Next Button">
+                                <rect key="frame" x="24" y="782" width="366" height="56"/>
+                                <color key="backgroundColor" name="Disabled Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="s7v-y5-ugz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="다음">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signUpNext:" destination="W9t-2w-LOa" eventType="touchUpInside" id="CWW-7c-0vf"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wua-YD-HGl">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="기본 정보" id="pcs-6e-tvn">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" id="ihk-Qy-mLL">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="N1H-wa-2gG">
+                                                <rect key="frame" x="20" y="0.0" width="46" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system" title=""/>
+                                                <connections>
+                                                    <action selector="onTapMoveBackwardButton:" destination="W9t-2w-LOa" eventType="touchUpInside" id="oAn-Aq-M2j"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7um-hG-cfq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qaq-h6-35t" firstAttribute="top" secondItem="wua-YD-HGl" secondAttribute="bottom" constant="38" id="3Ix-ku-8Ht"/>
+                            <constraint firstItem="3xW-PR-sdI" firstAttribute="top" secondItem="Qaq-h6-35t" secondAttribute="bottom" constant="20" id="8wO-Zu-0GS"/>
+                            <constraint firstItem="7um-hG-cfq" firstAttribute="trailing" secondItem="qkl-AV-rsZ" secondAttribute="trailing" constant="24" id="EBj-Oa-IUn"/>
+                            <constraint firstItem="7um-hG-cfq" firstAttribute="trailing" secondItem="3xW-PR-sdI" secondAttribute="trailing" constant="24" id="IY9-GO-QOg"/>
+                            <constraint firstItem="Qaq-h6-35t" firstAttribute="centerX" secondItem="7um-hG-cfq" secondAttribute="centerX" id="JMZ-wo-EtF"/>
+                            <constraint firstItem="wua-YD-HGl" firstAttribute="top" secondItem="7um-hG-cfq" secondAttribute="top" id="Sae-8N-lak"/>
+                            <constraint firstItem="7um-hG-cfq" firstAttribute="bottom" secondItem="ch2-Eh-WvJ" secondAttribute="bottom" constant="24" id="Ujt-65-q7c"/>
+                            <constraint firstItem="7um-hG-cfq" firstAttribute="trailing" secondItem="wua-YD-HGl" secondAttribute="trailing" id="XcZ-Em-w8V"/>
+                            <constraint firstItem="3xW-PR-sdI" firstAttribute="leading" secondItem="7um-hG-cfq" secondAttribute="leading" constant="24" id="Y1t-xI-fPP"/>
+                            <constraint firstItem="ch2-Eh-WvJ" firstAttribute="leading" secondItem="7um-hG-cfq" secondAttribute="leading" constant="24" id="Ydw-Pn-S77"/>
+                            <constraint firstItem="qkl-AV-rsZ" firstAttribute="leading" secondItem="7um-hG-cfq" secondAttribute="leading" constant="24" id="gQ0-qN-LPF"/>
+                            <constraint firstItem="wua-YD-HGl" firstAttribute="leading" secondItem="7um-hG-cfq" secondAttribute="leading" id="mpD-Lq-rXl"/>
+                            <constraint firstItem="7um-hG-cfq" firstAttribute="trailing" secondItem="ch2-Eh-WvJ" secondAttribute="trailing" constant="24" id="tCQ-sV-nRz"/>
+                            <constraint firstItem="qkl-AV-rsZ" firstAttribute="top" secondItem="3xW-PR-sdI" secondAttribute="bottom" constant="24" id="yR8-TQ-Ula"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraSymbolButton" destination="XQI-d8-jEW" id="TmC-sM-qkE"/>
+                        <outlet property="genderSelectorView" destination="qkl-AV-rsZ" id="fQi-4a-1Dr"/>
+                        <outlet property="navigationBar" destination="wua-YD-HGl" id="PpF-am-rbO"/>
+                        <outlet property="nextButton" destination="ch2-Eh-WvJ" id="agK-5Q-Pn3"/>
+                        <outlet property="nicknameInputView" destination="3xW-PR-sdI" id="O9O-Pm-wGf"/>
+                        <outlet property="profileImageView" destination="fuk-5I-oFD" id="blN-dk-Y20"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v58-aq-Is7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="249" y="49"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="people1" width="491" height="428"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="Disabled Color">
+            <color red="0.7686274509803922" green="0.7686274509803922" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

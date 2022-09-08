@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GenderSelectorView" customModule="MoyeoRun" customModuleProvider="target">
+            <connections>
+                <outlet property="femaleButton" destination="wB4-R1-kIZ" id="RYp-Tu-tP7"/>
+                <outlet property="maleButton" destination="R0z-So-YlQ" id="5ZJ-x5-jEC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="75"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5d2-iN-qYz" userLabel="Gender Label">
+                    <rect key="frame" x="0.0" y="0.0" width="28" height="19"/>
+                    <attributedString key="attributedText">
+                        <fragment content="성별">
+                            <attributes>
+                                <color key="NSColor" name="Label Color"/>
+                                <font key="NSFont" size="16" name="AppleSDGothicNeo-Regular"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="19" maximumLineHeight="19" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="6tq-3X-nk9" userLabel="Gender Stack View">
+                    <rect key="frame" x="0.0" y="27" width="327" height="48"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wB4-R1-kIZ" userLabel="Female Button">
+                            <rect key="frame" x="0.0" y="0.0" width="159" height="48"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="female.normal"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="BorderColor1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="selectGender:" destination="-1" eventType="touchUpInside" id="pQD-pp-9eO"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0z-So-YlQ" userLabel="Male Button">
+                            <rect key="frame" x="168" y="0.0" width="159" height="48"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="" image="male.normal"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="BorderColor1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="selectGender:" destination="-1" eventType="touchUpInside" id="kIJ-rc-os0"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="ved-Zi-sKx"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="5d2-iN-qYz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0P3-8r-WY5"/>
+                <constraint firstAttribute="trailing" secondItem="6tq-3X-nk9" secondAttribute="trailing" id="3L1-kO-RZH"/>
+                <constraint firstItem="5d2-iN-qYz" firstAttribute="bottom" secondItem="6tq-3X-nk9" secondAttribute="top" constant="-8" id="AXf-KV-dkA"/>
+                <constraint firstItem="5d2-iN-qYz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tqX-eq-uQv"/>
+                <constraint firstAttribute="bottom" secondItem="6tq-3X-nk9" secondAttribute="bottom" id="uKX-lv-IzI"/>
+                <constraint firstItem="6tq-3X-nk9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yyQ-Zk-9Jr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="133" y="88"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="female.normal" width="13" height="20"/>
+        <image name="male.normal" width="21" height="20"/>
+        <namedColor name="BorderColor1">
+            <color red="0.83137254901960789" green="0.83137254901960789" blue="0.83137254901960789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Label Color">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

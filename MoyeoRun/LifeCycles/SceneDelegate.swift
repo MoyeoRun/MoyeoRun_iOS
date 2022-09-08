@@ -5,17 +5,26 @@
 //  Created by Jeongho Moon on 2022/03/22.
 //
 
+import GoogleSignIn
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard (scene as? UIWindowScene) != nil else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+
+        let viewController: SplashViewController = .instantiate(container: .none) { coder in
+            return SplashViewController(coder: coder, repository: AuthRepository())
+        }
+        let navigationController = UINavigationController(rootViewController: viewController)
+
+        window = UIWindow(windowScene: windowScene)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -47,5 +56,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+    }
+
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        // TODO: Mutilple url scheme handling
+        guard let url = URLContexts.first?.url else { return }
+
+        GIDSignIn.sharedInstance.handle(url)
     }
 }
