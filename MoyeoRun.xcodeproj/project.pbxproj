@@ -28,6 +28,7 @@
 		3A27052828B7979A00BBDA1D /* CurrentRoomListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A27052628B7979A00BBDA1D /* CurrentRoomListCell.xib */; };
 		3A27052B28B7986100BBDA1D /* RoomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A27052928B7986100BBDA1D /* RoomHeader.swift */; };
 		3A27052C28B7986100BBDA1D /* RoomHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A27052A28B7986100BBDA1D /* RoomHeader.xib */; };
+		3AAEE3DD28C3C85400B28582 /* RoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEE3DC28C3C85400B28582 /* RoomController.swift */; };
 		3AAEE3DF28C3CDCF00B28582 /* BeforeRoom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AAEE3DE28C3CDCF00B28582 /* BeforeRoom.xib */; };
 		3AAEE3E128C3CDD800B28582 /* AfterRoom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AAEE3E028C3CDD800B28582 /* AfterRoom.xib */; };
 		411A626328BF938700E585E3 /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411A626228BF938700E585E3 /* Encodable+.swift */; };
@@ -1302,6 +1303,14 @@
 				41DBF60828C6598100566346 /* NicknameTextField.swift in Sources */,
 				411A626328BF938700E585E3 /* Encodable+.swift in Sources */,
 				3A27051928B7825100BBDA1D /* CurrentRoomListDTO.swift in Sources */,
+				F74D202F2831630C0099B5F0 /* AppIntroViewController.swift in Sources */,
+				0A5FFF3D283BBDDD004D86E0 /* RunningRecordCell.swift in Sources */,
+				F74D1FC5283163030099B5F0 /* AuthDTO.swift in Sources */,
+				3AAEE3DD28C3C85400B28582 /* RoomController.swift in Sources */,
+				F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */,
+				F74D20262831630C0099B5F0 /* TabBarViewController.swift in Sources */,
+				F75E9FA427E9470100000DCD /* MoyeoRun.xcdatamodeld in Sources */,
+				F74D1FCC283163030099B5F0 /* UserRepository.swift in Sources */,
 				3A27051F28B7976800BBDA1D /* HomeTopCell.swift in Sources */,
 				F74D201F2831630C0099B5F0 /* MakeRoomController.swift in Sources */,
 				F74D1FC9283163030099B5F0 /* DuplicateDTO.swift in Sources */,
