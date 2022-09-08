@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MoyeoRunSymbol" translatesAutoresizingMaskIntoConstraints="NO" id="DQh-XG-E0g">
-                                <rect key="frame" x="62" y="308" width="290" height="290"/>
+                                <rect key="frame" x="78" y="324" width="258" height="258"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="DQh-XG-E0g" secondAttribute="height" id="1Mx-Pv-uqQ"/>
@@ -28,9 +28,7 @@
                         <viewLayoutGuide key="safeArea" id="ffB-xt-7HX"/>
                         <color key="backgroundColor" name="RunBlue"/>
                         <constraints>
-                            <constraint firstItem="DQh-XG-E0g" firstAttribute="leading" secondItem="ffB-xt-7HX" secondAttribute="leading" constant="62" id="4y7-TF-vAi"/>
                             <constraint firstItem="DQh-XG-E0g" firstAttribute="centerX" secondItem="ffB-xt-7HX" secondAttribute="centerX" id="JIU-s7-Kob"/>
-                            <constraint firstItem="ffB-xt-7HX" firstAttribute="trailing" secondItem="DQh-XG-E0g" secondAttribute="trailing" constant="62" id="XUp-Lr-QzB"/>
                             <constraint firstItem="DQh-XG-E0g" firstAttribute="centerY" secondItem="ffB-xt-7HX" secondAttribute="centerY" id="hts-GV-qB3"/>
                         </constraints>
                     </view>

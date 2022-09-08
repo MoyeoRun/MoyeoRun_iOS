@@ -1,0 +1,10 @@
+//
+//  Debug.xcconfig
+//  MoyeoRun
+//
+//  Created by Jeongho Moon on 2022/04/04.
+//
+
+#include "Pods/Target Support Files/Pods-MoyeoRun/Pods-MoyeoRun.debug.xcconfig"
+
+BASE_URL = http:/$()/15.164.169.48:3035 // Server URL
