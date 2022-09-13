@@ -17,9 +17,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
-        let viewController: SplashViewController = .instantiate(container: .none) { coder in
-            return SplashViewController(coder: coder, repository: AuthRepository())
-        }
+//        let viewController: SplashViewController = .instantiate(container: .none) { coder in
+//            return SplashViewController(coder: coder, repository: AuthRepository())
+//        }
+        let viewController: HomeTabViewController = UIStoryboard(name: "HomeTab", bundle: nil).instantiateViewController(withIdentifier: "HomeTab") as! HomeTabViewController
         let navigationController = UINavigationController(rootViewController: viewController)
 
         window = UIWindow(windowScene: windowScene)

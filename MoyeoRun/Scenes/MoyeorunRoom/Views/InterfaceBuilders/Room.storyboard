@@ -260,6 +260,9 @@
                             <constraint firstItem="eWg-sl-Csk" firstAttribute="top" secondItem="oSQ-Ba-T0q" secondAttribute="bottom" constant="32" id="zVp-9s-ChJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="roomView" destination="ywO-JV-126" id="2i4-Il-Imj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QnX-zY-yXr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A027D4028D0F17E00B1FC13 /* BeforeAfterRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A027D3F28D0F17E00B1FC13 /* BeforeAfterRoom.swift */; };
 		0A54156F28629D540050AF60 /* RecordDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A54156E28629D540050AF60 /* RecordDetail.storyboard */; };
 		0A54157128629D780050AF60 /* RecordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A54157028629D780050AF60 /* RecordDetailViewController.swift */; };
 		0A67F3482835F9AF00AACCB8 /* SearchTabExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67F3472835F9AF00AACCB8 /* SearchTabExtension.swift */; };
@@ -130,6 +131,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A027D3F28D0F17E00B1FC13 /* BeforeAfterRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeAfterRoom.swift; sourceTree = "<group>"; };
 		0A54156E28629D540050AF60 /* RecordDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordDetail.storyboard; sourceTree = "<group>"; };
 		0A54157028629D780050AF60 /* RecordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailViewController.swift; sourceTree = "<group>"; };
 		0A5FFF3C283BBDDD004D86E0 /* RunningRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningRecordCell.swift; sourceTree = "<group>"; };
@@ -706,6 +708,7 @@
 		F74D1FD42831630C0099B5F0 /* MoyeorunRoom */ = {
 			isa = PBXGroup;
 			children = (
+				0A027D3F28D0F17E00B1FC13 /* BeforeAfterRoom.swift */,
 				3AAEE3DC28C3C85400B28582 /* RoomController.swift */,
 				F74D1FD52831630C0099B5F0 /* Views */,
 			);
@@ -1260,6 +1263,7 @@
 				41DBF5EE28C3E78F00566346 /* Routable.swift in Sources */,
 				F74D1FC7283163030099B5F0 /* AuthLocalDataSource.swift in Sources */,
 				F74D1FC6283163030099B5F0 /* AuthRemoteDataSource.swift in Sources */,
+				0A027D4028D0F17E00B1FC13 /* BeforeAfterRoom.swift in Sources */,
 				F74D202A2831630C0099B5F0 /* SearchTabViewController.swift in Sources */,
 				41DBF60628C64D9200566346 /* Debouncable.swift in Sources */,
 				F74D1FC4283163030099B5F0 /* SignUpDTO.swift in Sources */,
@@ -1286,8 +1290,6 @@
 				0AA674E72866BECD006A7E72 /* RecordTabExtension.swift in Sources */,
 				F74D1FC3283163030099B5F0 /* LogoutDTO.swift in Sources */,
 				F74D1FC2283163030099B5F0 /* RefreshDTO.swift in Sources */,
-				F74D1FCF283163030099B5F0 /* TargetType+.swift in Sources */,
-				F74D1FCE283163030099B5F0 /* MoyaProvider+.swift in Sources */,
 				0AE2236D28AA1ACF0016F72E /* DatePickerViewController.swift in Sources */,
 				41DBF57928C3E2E000566346 /* SignInViewController.swift in Sources */,
 				411A626628BFA28C00E585E3 /* ControllerInstantiatable.swift in Sources */,
@@ -1309,14 +1311,7 @@
 				41DBF60828C6598100566346 /* NicknameTextField.swift in Sources */,
 				411A626328BF938700E585E3 /* Encodable+.swift in Sources */,
 				3A27051928B7825100BBDA1D /* CurrentRoomListDTO.swift in Sources */,
-				F74D202F2831630C0099B5F0 /* AppIntroViewController.swift in Sources */,
-				0A5FFF3D283BBDDD004D86E0 /* RunningRecordCell.swift in Sources */,
-				F74D1FC5283163030099B5F0 /* AuthDTO.swift in Sources */,
 				3AAEE3DD28C3C85400B28582 /* RoomController.swift in Sources */,
-				F75E9F9C27E9470100000DCD /* SceneDelegate.swift in Sources */,
-				F74D20262831630C0099B5F0 /* TabBarViewController.swift in Sources */,
-				F75E9FA427E9470100000DCD /* MoyeoRun.xcdatamodeld in Sources */,
-				F74D1FCC283163030099B5F0 /* UserRepository.swift in Sources */,
 				3A27051F28B7976800BBDA1D /* HomeTopCell.swift in Sources */,
 				F74D201F2831630C0099B5F0 /* MakeRoomController.swift in Sources */,
 				F74D1FC9283163030099B5F0 /* DuplicateDTO.swift in Sources */,
@@ -1349,7 +1344,7 @@
 /* Begin XCBuildConfiguration section */
 		F75E9FAB27E9470200000DCD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */;
+			baseConfigurationReference = 416E8FED28B6391900BBA05E /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1411,7 +1406,7 @@
 		};
 		F75E9FAC27E9470200000DCD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACF6235AE0ADD0047158FA4F /* Pods-MoyeoRun.release.xcconfig */;
+			baseConfigurationReference = 416E8FEE28B6391900BBA05E /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1467,7 +1462,7 @@
 		};
 		F75E9FAE27E9470200000DCD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 538E40A5DF919EBE4881FE83 /* Pods-MoyeoRun.debug.xcconfig */;
+			baseConfigurationReference = 416E8FED28B6391900BBA05E /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1496,7 +1491,7 @@
 		};
 		F75E9FAF27E9470200000DCD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACF6235AE0ADD0047158FA4F /* Pods-MoyeoRun.release.xcconfig */;
+			baseConfigurationReference = 416E8FEE28B6391900BBA05E /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
